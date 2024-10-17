@@ -1,0 +1,21 @@
+<div class="team-rankings">
+  <h2>NFL Team Rankings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Team</th>
+        <th>Offensive Stats</th>
+        <th>Defensive Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teamRankings">
+        <td>{{ team.ranking }}</td>
+        <td>{{ team.name }}</td>
+        <td>{{ team.offensive_stats | json }}</td>
+        <td>{{ team.defensive_stats | json }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
