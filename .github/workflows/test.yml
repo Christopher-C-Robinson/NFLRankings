@@ -17,4 +17,4 @@ jobs:
             requirements-dev.txt
       - run: pip install -r requirements.txt -r requirements-dev.txt
       - run: pip install --no-deps nfl_data_py==0.3.3
-      - run: pytest -q
+      - run: python -m pytest -q
