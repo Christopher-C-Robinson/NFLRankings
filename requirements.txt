@@ -1,4 +1,4 @@
-beautifulsoup4
-requests
-pandas
-pyyaml
+pandas>=2.2,<3
+pyarrow>=15
+numpy>=1.26
+appdirs>=1.4

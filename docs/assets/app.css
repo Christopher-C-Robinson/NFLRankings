@@ -1,0 +1,60 @@
+:root {
+  --paper: #f3efe4; --ink: #1b1914; --green: #0e3b2e; --leather: #8f3d1b;
+  --rule: #cfc8b4; --muted: #5d584b; --row: #ece7d8;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+a { color: var(--green); text-underline-offset: 2px; }
+a:hover { color: var(--leather); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.masthead { border-bottom: 3px double var(--ink); padding: 20px 0 12px; }
+.masthead h1 { font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; margin: 0; color: var(--green); letter-spacing: -0.01em; }
+.masthead p { margin: 6px 0 0; color: var(--muted); font-family: var(--serif); font-style: italic; }
+.nav { margin-top: 8px; font-size: .9rem; }
+.nav a { margin-right: 14px; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; padding: 14px 0; }
+.controls label { display: flex; flex-direction: column; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); gap: 3px; }
+.controls select, .controls input { font: inherit; font-size: .95rem; color: var(--ink); background: #fbf9f1; border: 1px solid var(--ink); border-radius: 0; padding: 6px 8px; min-height: 36px; }
+.seg { display: inline-flex; border: 1px solid var(--ink); }
+.seg button { font: inherit; font-size: .9rem; background: #fbf9f1; color: var(--ink); border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--green); color: var(--paper); }
+.fresh { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--rule); padding: 8px 0; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--ink); background: #faf7ee; max-height: 75vh; -webkit-overflow-scrolling: touch; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 640px; font-size: .9rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { position: sticky; top: 0; z-index: 2; background: var(--ink); color: var(--paper); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; }
+th.num, td.num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+tbody tr.team { cursor: pointer; }
+tbody tr.team:hover { background: var(--row); }
+tbody tr.team:focus-visible { outline: 2px solid var(--leather); outline-offset: -2px; }
+td.rank { font-weight: 600; width: 3.2em; }
+td.teamname { font-weight: 600; }
+td.teamname small { color: var(--muted); font-weight: 400; margin-left: 6px; }
+tr.first td { background: #e4ecdf; border-bottom: 2px solid var(--green); }
+tr.first td.rank { color: var(--leather); font-family: var(--serif); font-size: 1.15rem; }
+tr.first td.teamname { color: var(--green); }
+.neg { color: var(--leather); }
+.detail td { white-space: normal; background: var(--row); padding: 12px 16px; }
+.detail .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.detail h4 { font-family: var(--serif); margin: 0 0 4px; color: var(--green); }
+.detail dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 1px 14px; font-size: .85rem; }
+.detail dt { color: var(--muted); } .detail dd { margin: 0; text-align: right; }
+.state { padding: 28px 16px; text-align: center; color: var(--muted); font-family: var(--serif); }
+.state.error { color: var(--leather); }
+footer { padding: 20px 0 40px; font-size: .8rem; color: var(--muted); }
+.prose { max-width: 720px; padding-bottom: 20px; }
+.prose h2 { font-family: var(--serif); color: var(--green); border-bottom: 1px solid var(--rule); padding-bottom: 4px; margin-top: 2em; }
+.prose code, .prose pre { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85em; }
+.prose pre { background: var(--row); border-left: 3px solid var(--leather); padding: 10px 14px; overflow-x: auto; }
+.prose table { min-width: 0; font-size: .85rem; } .prose td, .prose th { white-space: normal; }
+.prose th { position: static; }
+@media (max-width: 640px) {
+  .controls { flex-direction: column; align-items: stretch; }
+  .controls label, .controls .seg { width: 100%; }
+  .seg button { flex: 1; }
+  th, td { padding: 8px; }
+}

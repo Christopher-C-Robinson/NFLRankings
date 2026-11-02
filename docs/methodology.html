@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — NFL Rankings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <h1>Methodology</h1>
+  <p>What the numbers are, and what they are not.</p>
+  <div class="nav"><a href="index.html">&larr; Rankings</a></div>
+</div></header>
+<main class="wrap prose">
+
+<h2>v2: schedule-adjusted EPA margin (default)</h2>
+<p>Expected points added (EPA) per play comes from <a href="https://github.com/nflverse">nflverse</a> play-by-play data. For each team we take every regular-season scrimmage play (pass or run, no penalty-only plays, no two-point tries) with a non-null EPA, and compute:</p>
+<ul>
+<li><strong>Raw offensive EPA</strong>: play-weighted mean EPA on the team's offensive plays.</li>
+<li><strong>Raw defensive EPA</strong>: play-weighted mean EPA the team allowed. Lower is better.</li>
+</ul>
+<p>We then adjust for opponents over 20 iterations. Each iteration, a team's offense is its raw EPA minus the play-weighted mean adjusted defensive EPA of the defenses it faced; its defense is raw EPA allowed minus the play-weighted mean adjusted offensive EPA of the offenses it faced. After every iteration both sides are re-centered so the league mean of the adjusted values equals the league mean of the raw values. The rating is <code>v2 = adj_off &minus; adj_def</code>, in EPA per play; higher is better.</p>
+<p><strong>What it is not:</strong> it is not DVOA, it does not adjust for injuries, garbage time, weather or home field, and it is not a betting model. It is a transparent descriptive ranking of what teams have done so far.</p>
+
+<h2>Legacy v1 FUNCTION</h2>
+<p>The original ranking was a spreadsheet formula (NFL2022 workbook). It is kept as a secondary view. For one offense, or one defense (using the opponent versions of the same stats):</p>
+<pre>FUNCTION =
+  ((pts_per_drive * (fg_pct + xp_pct))
+   + (yards_per_play * (first_down_pct + third_down_rate)))
+  * (score_pct + (100 - turnover_pct))
+
+net FUNCTION = offense FUNCTION - defense FUNCTION   (higher is better)</pre>
+
+<h3>The column correction</h3>
+<p>The notes extracted from the workbook described the kicking term as "FGA+FGM" and one of the drive terms as "EXP". <strong>Those labels are wrong.</strong> The cells reproduce every 2022 FUNCTION value (max absolute error about 1e-10) only with:</p>
+<table>
+<tr><th>Term</th><th>Workbook column</th><th>Not</th></tr>
+<tr><td><code>fg_pct + xp_pct</code></td><td>kicking FG% and XP% (Numbers columns Q and T)</td><td>FGA + FGM</td></tr>
+<tr><td><code>first_down_pct</code></td><td>calculated 1stD% (Numbers column AC)</td><td>EXP (unused by the formula)</td></tr>
+</table>
+<p>v1 follows the cells that were actually sorted, not the prose. A test recomputes all 64 offense/defense FUNCTION values and the 32 net values from the exported 2022 CSVs.</p>
+
+<h3>The scale quirk</h3>
+<p>Scales are kept exactly as stored in the workbook. <code>fg_pct</code>, <code>xp_pct</code> and <code>third_down_rate</code> (3D%) are <em>fractions</em> (0.415, because that is how the Numbers paste stored them). <code>first_down_pct</code>, <code>score_pct</code> and <code>turnover_pct</code> are <em>percentage points</em> (30.91, 36.8, 11.1). They are not "fixed", since doing so would change the ranking.</p>
+
+<h3>Reading a negative FUNCTION</h3>
+<p>Net FUNCTION is offense minus defense. A negative value means the team's defensive FUNCTION is larger than its offensive FUNCTION: opponents' production against it outweighs its own. For defense, a <em>lower</em> FUNCTION is better, which is why the net is a subtraction.</p>
+
+<h2>nflverse approximations for live legacy inputs</h2>
+<p>The 2022 workbook used Pro Football Reference tables. Live seasons derive the same eight inputs from nflverse play-by-play (regular season only). Defense values are the same statistics over plays and drives where the team is the defense. Expect magnitudes in the same ballpark, not identical numbers.</p>
+<ul>
+<li><strong>Scrimmage plays:</strong> <code>play_type</code> pass or run, excluding no-plays, rows without a possession team, and two-point attempts.</li>
+<li><strong>yards_per_play:</strong> sum of yards gained / scrimmage plays.</li>
+<li><strong>first_down_pct:</strong> 100 &times; (pass + rush + penalty first downs) / scrimmage plays. If those columns are missing, 100 &times; <code>first_down</code> / plays.</li>
+<li><strong>third_down_rate:</strong> converted / (converted + failed), as a fraction; 0 if none.</li>
+<li><strong>fg_pct, xp_pct:</strong> made / attempts, as fractions; 0 if no attempts.</li>
+<li><strong>Drives:</strong> unique (game, possession team, fixed drive id), ignoring kickoffs and null drive ids.</li>
+<li><strong>score_pct:</strong> 100 &times; drives with an offensive touchdown or made field goal / drives. nflverse's <code>drive_ended_with_score</code> also flags defensive scores (pick-sixes, safeties), so it only counts when the drive result is a touchdown or field goal.</li>
+<li><strong>turnover_pct:</strong> 100 &times; drives containing an offensive interception or lost fumble / drives.</li>
+<li><strong>pts_per_drive:</strong> offensive points (6 per offensive TD, 3 per FG, 1 per XP, 2 per two-point conversion) / drives. Defensive and special-teams scores are excluded.</li>
+</ul>
+
+<h2>Data</h2>
+<p>All data is free: <a href="https://github.com/nflverse">nflverse</a> play-by-play, schedules and team metadata, fetched with the <code>nfl_data_py</code> package. Nothing is scraped, and Pro Football Reference is not used for live data. Records and point differential come from played regular-season games only.</p>
+</main>
+<footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a>. <a href="index.html">Back to rankings</a></div></footer>
+</body>
+</html>

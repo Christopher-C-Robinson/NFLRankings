@@ -1,0 +1,9 @@
+{
+ "seasons": [
+  2026,
+  2022
+ ],
+ "default_season": 2026,
+ "generated_at": "2026-11-02T22:43:44+00:00",
+ "source": "nflverse via nfl_data_py (https://github.com/nflverse)"
+}
