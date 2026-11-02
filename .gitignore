@@ -137,3 +137,8 @@ data/processed/
 
 # Logs directory
 logs/
+
+# nflrankings caches
+*.parquet
+.nfl_data_py_cache/
+.playwright-mcp/

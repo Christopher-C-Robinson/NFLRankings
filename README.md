@@ -1,94 +1,100 @@
-# Automate NFL Team Ranking Calculation Project
+# NFL Rankings
 
-## Objective
-Automate the current manual process of ranking NFL teams based on offensive and defensive statistics using a custom calculation. The aim is to create a system that pulls data, runs calculations, and outputs rankings automatically, removing biases and focusing purely on team performance.
+A free, College Football Index-style NFL rankings site. A Python pipeline pulls
+[nflverse](https://github.com/nflverse) data and writes static JSON/CSV; a
+vanilla HTML/CSS/JS site in `docs/` renders it. No build step, no paid sports
+APIs, no scraping of Pro Football Reference.
 
-## Current Process
-1. Gathering team statistics from Pro Football Reference:
-   - Offensive stats: [2024 NFL Standings & Team Stats](https://www.pro-football-reference.com/years/2024/)
-   - Defensive stats: [2024 NFL Opposition & Defensive Statistics](https://www.pro-football-reference.com/years/2024/opp.htm)
-2. Using a custom calculation to determine each team's ranking based on offensive and defensive outputs.
-   - Offensive calculation example: See attached screenshot (Screenshot 2024-10-16 at 6.30.58 PM.png).
-   - Defensive calculation example: See attached screenshot (Screenshot 2024-10-16 at 6.31.48 PM.png).
-3. Ranking each team based on the values from the calculations.
+## Two models
 
-## Goal for Automation
-- Create a script or tool that can:
-  1. Automatically fetch the offensive and defensive statistics from Pro Football Reference.
-  2. Run the statistics through the provided calculation formulas.
-  3. Rank the teams based purely on the computed values.
+**v2 (default): schedule-adjusted EPA margin.** Play-weighted EPA/play for each
+offense and defense on regular-season scrimmage plays, opponent-adjusted over 20
+iterations and re-centered. `v2 = adj_off - adj_def`; higher is better. It is not
+DVOA and not a betting model. See `docs/methodology.html`.
 
-## Requirements
-- Use the offensive and defensive calculations as provided in the screenshots.
-- Develop a ranking system that updates automatically based on the most recent data.
-- Ensure the solution is scalable to include more statistics or different variations of calculations if needed.
+**Legacy v1 FUNCTION (secondary toggle).** Chris Robinson's original
+spreadsheet formula:
 
-## Tech Stack Suggestions
-- Data scraping: Python (Beautiful Soup, Requests) or an API if available.
-- Automation and scheduling: Python scripts with a scheduler (like cron jobs).
-- Data handling: Pandas or similar data analysis libraries.
-
-## Suggested Project Structure
 ```
-project-root/
-    ├── README.md
-    ├── requirements.txt
-    ├── data/
-    │   ├── raw/
-    │   └── processed/
-    ├── src/
-    │   ├── __init__.py
-    │   ├── main.py
-    │   ├── data_fetcher.py  # Module for scraping or fetching data
-    │   ├── calculations.py  # Module for performing the team ranking calculations
-    │   ├── ranker.py        # Module for creating the ranking output
-    │   └── utils.py         # Helper functions and utilities
-    ├── config/
-    │   └── config.yaml      # Configuration file (e.g., URLs, thresholds)
-    ├── notebooks/
-    │   └── exploration.ipynb  # Jupyter notebook for data exploration
-    ├── tests/
-    │   ├── __init__.py
-    │   ├── test_data_fetcher.py
-    │   ├── test_calculations.py
-    │   └── test_ranker.py
-    ├── scripts/
-    │   └── run_pipeline.sh  # Script to automate the entire pipeline
-    └── logs/
-        └── app.log          # Log file for monitoring execution
+FUNCTION = ((pts_per_drive * (fg_pct + xp_pct))
+            + (yards_per_play * (first_down_pct + third_down_rate)))
+           * (score_pct + (100 - turnover_pct))
+net = offense FUNCTION - defense FUNCTION   # higher is better
 ```
 
-## Setup Instructions
-1. Clone the repository:
-   ```
-   git clone https://github.com/Christopher-C-Robinson/NFLRankings.git
-   cd NFLRankings
-   ```
+### Column correction
 
-2. Create a virtual environment and activate it:
-   ```
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
+The notes extracted from the workbook say "FGA+FGM" and "EXP". Those labels are
+wrong. The cells reproduce every 2022 FUNCTION value (max abs error ~1e-10) only
+with **FG% + XP%** (kicking, Numbers columns Q and T) and the calculated
+**1stD%** (Numbers column AC). EXP is unused. v1 follows the cells Chris actually
+sorted by, not the prose.
 
-3. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+Scales are kept as stored in the workbook: `fg_pct`, `xp_pct` and
+`third_down_rate` (3D%) are fractions (0.415); `first_down_pct`, `score_pct` and
+`turnover_pct` are percentage points (30.91).
 
-## Usage Guidelines
-1. Run the main script to fetch data, perform calculations, and generate rankings:
-   ```
-   python src/main.py
-   ```
+### nflverse approximations for live seasons
 
-2. Check the `data/` directory for raw and processed data files.
+Regular season only (`season_type == "REG"`). Defense = same stats over plays
+and drives where the team is the defense.
 
-3. Check the `logs/` directory for execution logs.
+- Scrimmage plays: `play_type` pass/run, excluding no-plays, null `posteam` and
+  two-point attempts.
+- `yards_per_play`: yards gained / scrimmage plays.
+- `first_down_pct`: 100 * (pass + rush + penalty first downs) / plays; falls back
+  to `first_down` if those columns are missing.
+- `third_down_rate`: converted / (converted + failed), a fraction, 0 if none.
+- `fg_pct`, `xp_pct`: made / attempts, fractions, 0 if none.
+- Drive: `(game_id, posteam, fixed_drive)`, kickoffs and null drive ids ignored.
+- `score_pct`: drives with an offensive TD or made FG / drives. nflverse's
+  `drive_ended_with_score` also flags defensive scores (pick-sixes, safeties), so
+  it is only honored when `fixed_drive_result` is Touchdown or Field goal.
+- `turnover_pct`: drives with an offensive interception or lost fumble (play-level
+  `interception` / `fumble_lost` on scrimmage plays) / drives.
+- `pts_per_drive`: 6/offensive TD + 3/FG + 1/XP + 2/two-point conversion, over
+  drives. Defensive scores are excluded.
 
-4. Use the Jupyter notebook in the `notebooks/` directory for data exploration and analysis.
+nflverse-derived legacy numbers will **not** exactly match the 2022 PFR paste;
+the fixture test locks the formula itself, not the inputs.
 
-## Additional Notes
-- This project aims to eliminate manual bias and ranking based on subjective factors like record or reputation. The focus is solely on statistical output.
+## Data
 
-- Ensure that the configuration file (`config/config.yaml`) is updated with the correct URLs and thresholds for the calculations.
+Free data only: [nflverse](https://github.com/nflverse) (play-by-play, schedules,
+team metadata) via `nfl_data_py`. Thanks to the nflverse project.
+
+## Local setup
+
+Python 3.12. `nfl_data_py` 0.3.3 declares `pandas<2` and will not build on 3.12,
+so it is installed with `--no-deps` after the other requirements:
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+pip install --no-deps nfl_data_py==0.3.3
+scripts/refresh.sh latest          # or: python -m nflrankings --season 2022
+```
+
+`--season latest` uses the current UTC year and falls back to the previous year if
+there are no regular-season plays yet. Output goes to `docs/data/{season}.json`,
+`{season}.csv` and `index.json`. Preview with `python -m http.server -d docs`.
+
+## GitHub Pages
+
+Settings → Pages → Deploy from branch → `main` → `/docs`.
+
+## Weekly refresh
+
+`.github/workflows/refresh.yml` runs Tuesdays at 14:00 UTC (after Monday Night
+Football), or manually with an optional `season` input, and commits changes under
+`docs/data` as "Refresh NFL rankings".
+
+## Tests
+
+```bash
+pytest -q
+```
+
+Tests run offline: the 2022 workbook fixtures (`tests/fixtures/nfl2022/*.csv`)
+lock the legacy formula, and small synthetic frames cover aggregation and the v2
+rating.
