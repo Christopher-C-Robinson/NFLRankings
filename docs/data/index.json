@@ -1,10 +1,11 @@
 {
  "seasons": [
   2026,
+  2025,
   2022
  ],
  "default_season": 2026,
- "generated_at": "2026-11-03T00:54:33+00:00",
+ "generated_at": "2026-11-03T04:56:29+00:00",
  "source": "nflverse via nfl_data_py (https://github.com/nflverse)",
  "ranking": "neutral-round-robin"
 }
