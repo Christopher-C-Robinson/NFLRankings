@@ -73,3 +73,25 @@ def test_published_seasons_recompute():
         assert "wins_above_expected" in teams[0]
         assert teams[0]["weeks"]
         assert teams[0]["off_pass_plays"] > 0
+        assert payload["week_calendar"] in ("wednesday-tuesday", "nflverse-week")
+        unplayed = [game["week"] for game in payload["games"] if not game["played"]]
+        expected_week = min(unplayed) if unplayed else payload["week_max"]
+        assert payload["current_week"] == expected_week
+        assert payload["current_week_reason"] == ("unplayed" if unplayed else "week_max")
+        power = payload["group_power"]
+        assert power["definition"] == "hierarchy-power-1"
+        assert power["team_prior_games"] == 2
+        assert power["division_prior_teams"] == 0.5
+        assert power["conference_prior_divisions"] == 1
+        assert {row["name"] for row in power["conferences"]} == {"AFC", "NFC"}
+        assert len(power["divisions"]) == 8
+        assert all(row["teams"] == 4 for row in power["divisions"])
+        for team in teams:
+            assert "hierarchy_power" in team
+            assert "division_power" in team
+            assert "conference_power" in team
+        if payload["week_calendar"] == "wednesday-tuesday":
+            dated = [row for row in payload["weeks"] if row.get("dated_games")]
+            assert dated
+            assert all(row["aligned"] for row in dated)
+            assert all(row["start"] for row in dated)

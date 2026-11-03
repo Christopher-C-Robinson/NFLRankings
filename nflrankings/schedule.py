@@ -6,6 +6,7 @@ import pandas as pd
 
 from .aggregate import rated_plays
 from .rating import adjust
+from .weeks import parse_gameday
 from .winprob import project_game, shrink_rate
 
 # k = 14 team-games, the middle of the 12–16 band. Selected on 2025 pregame
@@ -89,6 +90,19 @@ def _scoring(record: dict) -> dict:
     }
 
 
+def kickoff_date(record) -> str | None:
+    """ISO kickoff date from a schedule row, when the file has one.
+
+    nflverse publishes ``gameday`` as the local calendar date. A missing
+    column or a blank cell leaves the game on its integer week only.
+    """
+    for name in ("gameday", "game_date"):
+        day = parse_gameday(getattr(record, name, None))
+        if day is not None:
+            return day.isoformat()
+    return None
+
+
 def league_ppg(records: pd.DataFrame) -> float:
     """Points per team per played game. Zero when nobody has played."""
     if records.empty or "points_for" not in records.columns:
@@ -127,7 +141,7 @@ def season_games(sched: pd.DataFrame, teams: list[dict], params: dict, known: se
             float(params.get("_league_ppg", 0.0)),
         )
         week = getattr(record, "week", None)
-        rows.append({
+        row = {
             "week": int(week) if pd.notna(week) else None,
             "home": home,
             "away": away,
@@ -142,7 +156,11 @@ def season_games(sched: pd.DataFrame, teams: list[dict], params: dict, known: se
             "margin_low": proj["margin_low"],
             "margin_high": proj["margin_high"],
             "rating_basis": "season",
-        })
+        }
+        day = kickoff_date(record)
+        if day:
+            row["gameday"] = day
+        rows.append(row)
     rows.sort(key=lambda g: (g["week"] if g["week"] is not None else 99, g["home"], g["away"]))
     return rows
 
