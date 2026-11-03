@@ -40,7 +40,7 @@ shown and are not added into the spread. Team pages (`docs/team.html`) list the
 schedule, expected wins, a projected record, and the season EPA chart. Those
 schedule projections use the current season rating. The week board and the
 accuracy page use a separate frozen pregame rating from earlier weeks, blended with the previous season while that sample is thin.
-Drive starting field position, special-teams EPA, success rate, and explosiveness were screened on earlier seasons and are not in that spread. `python scripts/screen_advanced.py` replays the screen.
+Drive starting field position, special-teams EPA, success rate, and explosiveness were screened on earlier seasons and are not in that spread. `python scripts/screen_advanced.py` replays that screen. A later screen fits a rolling ridge on the rest of the open file — pass and rush, downs, drives, special teams, rest, travel, weather, the quarterback, and players ruled out — with weights that change by season. It did not beat this spread on both 2024 and 2025, so the spread is unchanged. `python scripts/screen_aspects.py` replays it.
 Final scores are nflverse results. A live score feed is not wired up.
 
 ## Data

@@ -72,3 +72,33 @@ def test_success_and_explosive_flags_follow_the_scrimmage_rules():
     explosive = explosive_observations(frame)
     assert success["epa"].tolist() == [1.0, 0.0, 1.0, 0.0]
     assert explosive["epa"].tolist() == [1.0, 0.0, 1.0, 0.0]
+
+
+def test_phase_turnover_and_drive_results_keep_the_offense_direction():
+    from nflrankings.units import (
+        drive_clean_observations,
+        drive_points_observations,
+        drive_score_observations,
+        early_down_observations,
+        late_down_observations,
+        redzone_observations,
+        turnover_observations,
+    )
+
+    frame = pd.DataFrame([
+        _play(play_id=1, down=1, yardline_100=80, interception=0, fumble_lost=0, posteam_score=0, posteam_score_post=0, fixed_drive_result="Touchdown"),
+        _play(play_id=2, down=3, yardline_100=15, interception=0, fumble_lost=0, posteam_score=0, posteam_score_post=7, fixed_drive_result="Touchdown"),
+        _play(play_id=3, fixed_drive=2, posteam="BBB", defteam="AAA", down=1, yardline_100=40, interception=1, fumble_lost=0, posteam_score=7, posteam_score_post=7, fixed_drive_result="Turnover"),
+        _play(play_id=4, season_type="POST", fixed_drive=8, down=1, yardline_100=10, posteam_score=0, posteam_score_post=6, fixed_drive_result="Touchdown"),
+        _play(play_id=5, play_type="kickoff", fixed_drive=9, down=1, yardline_100=10, interception=1),
+    ])
+    assert early_down_observations(frame)["epa"].tolist() == [0.2, 0.2]
+    late = late_down_observations(frame)
+    assert len(late) == 1
+    red = redzone_observations(frame)
+    assert len(red) == 1 and red["posteam"].tolist() == ["AAA"]
+    turns = turnover_observations(frame)
+    assert turns["epa"].tolist() == [1.0, 1.0, 0.0]
+    assert drive_points_observations(frame)["epa"].tolist() == [7.0, 0.0]
+    assert drive_score_observations(frame)["epa"].tolist() == [1.0, 0.0]
+    assert drive_clean_observations(frame)["epa"].tolist() == [1.0, 0.0]
