@@ -71,7 +71,7 @@
       $("week").innerHTML = weeks.map(function (w) { return '<option value="' + w + '">Week ' + w + "</option>"; }).join("");
       var playedWeeks = (data.games || []).filter(function (g) { return g.played; }).map(function (g) { return g.week; });
       $("week").value = String(playedWeeks.length ? Math.max.apply(null, playedWeeks) : data.week_max);
-      $("fresh").textContent = "Season " + data.season + " · pregame ratings use only earlier weeks · scores from nflverse";
+      $("fresh").textContent = "Season " + data.season + " · Week " + $("week").value + " · generated " + String(data.generated_at || "").slice(0, 10);
       render();
     });
   }
