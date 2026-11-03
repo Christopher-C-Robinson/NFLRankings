@@ -158,6 +158,80 @@ def attach_outlook(teams: list[dict], games: list[dict]) -> None:
         team["projected_losses"] = team["losses"] + (remaining - remaining_expected)
 
 
+def attach_pregame(teams: list[dict], games: list[dict], pbp: pd.DataFrame, params: dict, cold_ppg: float = 22.0) -> None:
+    """Fill frozen pregame projections from plays strictly before each week.
+
+    Week 1 has no plays yet, so every team is at the league rating and only
+    home field moves the spread. Scoring rates use points from earlier weeks,
+    shrunk toward the league rate of those earlier games.
+    """
+    ids = [team["team"] for team in teams]
+    plays = rated_plays(pbp)
+    if "week" in plays.columns:
+        plays = plays.copy()
+        plays["week"] = pd.to_numeric(plays["week"], errors="coerce")
+    by_week: dict[int, list[dict]] = {}
+    for game in games:
+        if game["week"] is None:
+            continue
+        by_week.setdefault(int(game["week"]), []).append(game)
+    points_for = {team: 0 for team in ids}
+    points_against = {team: 0 for team in ids}
+    played_games = {team: 0 for team in ids}
+    for week in sorted(by_week):
+        prior = plays[plays["week"] < week] if "week" in plays.columns else plays.iloc[0:0]
+        if prior.empty or prior["posteam"].nunique() < 2 or prior["defteam"].nunique() < 2:
+            ratings = {team: 0.0 for team in ids}
+        else:
+            rated = adjust(prior[["posteam", "defteam", "epa"]]).reindex(ids).fillna(0.0)
+            ratings = {team: float(rated.loc[team, "v2"]) for team in ids}
+        seen = sum(played_games.values())
+        league = (sum(points_for.values()) / seen) if seen else float(cold_ppg)
+
+        def rate(team: str) -> dict:
+            games_played = played_games[team]
+            return {
+                "points_for": (points_for[team] / games_played) if games_played else 0.0,
+                "points_against": (points_against[team] / games_played) if games_played else 0.0,
+                "games": games_played,
+            }
+
+        for game in by_week[week]:
+            venue = "neutral" if game["neutral"] else "a_home"
+            proj = project_game(
+                ratings[game["home"]], ratings[game["away"]], params, venue,
+                rate(game["home"]), rate(game["away"]), league,
+            )
+            game["pregame_spread_home"] = proj["margin"]
+            game["pregame_home_win_chance"] = proj["win_probability"]
+            game["pregame_proj_home"] = proj["score_a"]
+            game["pregame_proj_away"] = proj["score_b"]
+            game["pregame_margin_low"] = proj["margin_low"]
+            game["pregame_margin_high"] = proj["margin_high"]
+        for game in by_week[week]:
+            if not game["played"]:
+                continue
+            points_for[game["home"]] += int(game["home_score"])
+            points_against[game["home"]] += int(game["away_score"])
+            points_for[game["away"]] += int(game["away_score"])
+            points_against[game["away"]] += int(game["home_score"])
+            played_games[game["home"]] += 1
+            played_games[game["away"]] += 1
+
+
+def attach_wins_above_expected(teams: list[dict], games: list[dict]) -> None:
+    """Wins minus the sum of frozen pregame win chances on played games."""
+    expected = {team["team"]: 0.0 for team in teams}
+    for game in games:
+        if not game["played"] or "pregame_home_win_chance" not in game:
+            continue
+        expected[game["home"]] += game["pregame_home_win_chance"]
+        expected[game["away"]] += 1.0 - game["pregame_home_win_chance"]
+    for team in teams:
+        team["pregame_expected_wins"] = expected[team["team"]]
+        team["wins_above_expected"] = team["wins"] - expected[team["team"]]
+
+
 def opponent_strength(teams: list[dict], games: list[dict]) -> None:
     """Average final v2 of opponents already played. Unplayed games are not SOS."""
     ratings = {team["team"]: team["v2"] for team in teams}

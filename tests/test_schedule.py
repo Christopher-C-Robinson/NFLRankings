@@ -75,4 +75,22 @@ def test_pass_and_rush_are_separate_and_schedule_splits_one_win():
     alpha = next(t for t in teams if t["team"] == "AA")
     assert alpha["projected_wins"] == pytest.approx(alpha["wins"] + (1 - games[1]["home_win_chance"]), abs=5e-4)
     assert alpha["sos"] == pytest.approx(next(t["v2"] for t in teams if t["team"] == "BB"))
+
+
+def test_pregame_ignores_the_week_being_predicted():
+    teams = build_teams(_plays(), _sched(), _desc(), PARAMS)
+    games, _ppg = enrich_games(teams, _sched(), PARAMS, {"AA", "BB"}, _plays())
+    week1, week2 = games
+    # No prior plays: the home spread is only home field.
+    assert week1["pregame_spread_home"] == pytest.approx(PARAMS["home_field_points"])
+    # Week 2 is neutral, so a zero rating gap would be a pick. Week 1 plays move it.
+    assert week2["neutral"]
+    assert week2["pregame_spread_home"] != pytest.approx(0)
+    # The huge week-2 plays must not be inside the week-2 pregame rating.
+    # Rebuilding week 2 from week-1 plays only is the contract; the sign follows AA's week-1 edge
+    # from the away side because BB is the designated home team.
+    assert "wins_above_expected" in teams[0]
+    played = [g for g in games if g["played"]]
+    home = next(t for t in teams if t["team"] == played[0]["home"])
+    assert home["wins_above_expected"] == pytest.approx(home["wins"] - played[0]["pregame_home_win_chance"], abs=5e-4)
     assert align_abbr("AA", {"AA"}) == "AA"

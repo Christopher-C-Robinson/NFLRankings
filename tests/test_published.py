@@ -69,5 +69,7 @@ def test_published_seasons_recompute():
         by_epa = sorted(teams, key=lambda t: (-t["v2"], t["name"], t["team"]))
         assert [t["team"] for t in by_epa] == [t["team"] for t in teams]
         assert payload["games"]
+        assert "pregame_home_win_chance" in payload["games"][0]
+        assert "wins_above_expected" in teams[0]
         assert teams[0]["weeks"]
         assert teams[0]["off_pass_plays"] > 0

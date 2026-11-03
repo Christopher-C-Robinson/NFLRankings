@@ -12,7 +12,16 @@ import pandas as pd
 
 from . import rating
 from .aggregate import PBP_COLUMNS, epa_plays, regular_season
-from .schedule import attach_outlook, league_ppg, opponent_strength, season_games, unit_ratings, weekly_v2
+from .schedule import (
+    attach_outlook,
+    attach_pregame,
+    attach_wins_above_expected,
+    league_ppg,
+    opponent_strength,
+    season_games,
+    unit_ratings,
+    weekly_v2,
+)
 from .winprob import apply_win_chances, load_conversion
 
 SOURCE = "nflverse via nfl_data_py (https://github.com/nflverse)"
@@ -33,6 +42,7 @@ CSV_COLUMNS = [
     "points_for", "points_against",
     "off_pass_epa_adj", "def_pass_epa_adj", "off_rush_epa_adj", "def_rush_epa_adj",
     "schedule_expected_wins", "projected_wins", "projected_losses", "sos",
+    "pregame_expected_wins", "wins_above_expected",
 ]
 
 
@@ -220,17 +230,27 @@ def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame,
 
 
 def _round_game(game: dict) -> dict:
-    for key in ("spread_home", "home_win_chance", "proj_home", "proj_away", "margin_low", "margin_high"):
-        game[key] = _clean(game[key], 4 if key != "home_win_chance" else 6)
+    for key, digits in (
+        ("spread_home", 4), ("home_win_chance", 6), ("proj_home", 4), ("proj_away", 4),
+        ("margin_low", 4), ("margin_high", 4), ("pregame_spread_home", 4),
+        ("pregame_home_win_chance", 6), ("pregame_proj_home", 4), ("pregame_proj_away", 4),
+        ("pregame_margin_low", 4), ("pregame_margin_high", 4),
+    ):
+        if key in game and game[key] is not None:
+            game[key] = _clean(game[key], digits)
     return game
 
 
-def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: set[str]) -> tuple[list[dict], float]:
+def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: set[str], pbp: pd.DataFrame | None = None) -> tuple[list[dict], float]:
     """Add schedule projections. Returns (games, league points per team-game)."""
     ppg = league_ppg(pd.DataFrame(teams).set_index("team")) if teams else 0.0
     fitted = dict(params)
     fitted["_league_ppg"] = ppg
-    games = [_round_game(game) for game in season_games(sched, teams, fitted, known, align_abbr)]
+    games = season_games(sched, teams, fitted, known, align_abbr)
+    if pbp is not None:
+        attach_pregame(teams, games, pbp, params)
+        attach_wins_above_expected(teams, games)
+    games = [_round_game(game) for game in games]
     attach_outlook(teams, games)
     opponent_strength(teams, games)
     for team in teams:
@@ -238,6 +258,9 @@ def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: se
         team["projected_wins"] = _clean(team["projected_wins"], 4)
         team["projected_losses"] = _clean(team["projected_losses"], 4)
         team["sos"] = None if team["sos"] is None else _clean(team["sos"])
+        if "wins_above_expected" in team:
+            team["pregame_expected_wins"] = _clean(team["pregame_expected_wins"], 4)
+            team["wins_above_expected"] = _clean(team["wins_above_expected"], 4)
     return games, _clean(ppg) if ppg else 0.0
 
 
@@ -253,7 +276,7 @@ def build_season(season: int, params: dict | None = None):
     sched = download_schedule(season)
     teams = build_teams(pbp, sched, download_teams(), params)
     known = {team["team"] for team in teams}
-    games, ppg = enrich_games(teams, sched, params, known)
+    games, ppg = enrich_games(teams, sched, params, known, pbp)
     return _payload(season, teams, reg, sched, params, games, ppg)
 
 
