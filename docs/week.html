@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23255b7a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="/NFLRankings/assets/app.css">
+<link rel="stylesheet" href="/NFLRankings/assets/cfi-ui.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,7 +30,7 @@
 <main id="main" class="section-shell">
   <div class="page-head">
     <h1>This week</h1>
-    <p>Pregame scores from plays before the week. Finals are nflverse results, not a live score feed.</p>
+    <p>Pregame scores from plays before the week. Finals are nflverse results, not a live score feed. Each card shows the frozen win chance, the projected score, and the final when it is in the file.</p>
   </div>
   <div class="controls">
     <label>Season <select id="season"></select></label>
@@ -43,13 +44,14 @@
     </select></label>
   </div>
   <p class="count" id="count"></p>
-  <div class="tablewrap"><table class="schedule"><thead><tr>
-    <th>Game</th><th class="num">Pregame</th><th class="num">Spread</th><th class="num">Home win</th><th class="num">Final</th><th>Pick</th>
-  </tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="filter-note">Kickoff time and stadium are not in the rankings file. Pass and rush EPA in the card details are the current season rating, and they are not part of the pregame spread.</p>
+  <div id="games-content"><div class="game-day-empty">Loading this week’s games…</div></div>
 </main>
 <footer><div class="section-shell">A live score worker is not wired up. Scores appear here after the nflverse refresh.</div></footer>
 <script src="/NFLRankings/assets/site.js"></script>
 <script src="/NFLRankings/assets/theme.js"></script>
+<script src="/NFLRankings/assets/chart-colors.js"></script>
+<script src="/NFLRankings/assets/game-cards.js"></script>
 <script src="/NFLRankings/assets/week.js"></script>
 <script>
   setTimeout(function () {
