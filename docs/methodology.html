@@ -14,7 +14,9 @@
 <header class="masthead"><div class="wrap">
   <h1>Methodology</h1>
   <p>What the numbers are, and what they are not.</p>
-  <div class="nav"><a href="index.html">&larr; Rankings</a></div>
+  <div class="nav"><a href="index.html">Rankings</a>
+    <a href="matchup.html">Matchup</a>
+    <a href="methodology.html">Methodology</a></div>
 </div></header>
 <main class="wrap prose">
 
@@ -53,6 +55,11 @@
 </ul>
 <p>We then adjust for opponents over 20 iterations. Each iteration, a team's offense is its raw EPA minus the play-weighted mean adjusted defensive EPA of the defenses it faced; its defense is raw EPA allowed minus the play-weighted mean adjusted offensive EPA of the offenses it faced. After every iteration both sides are re-centered so the league mean of the adjusted values equals the league mean of the raw values. The rating is <code>v2 = adj_off − adj_def</code>, in EPA per play; higher is better. Opening a row shows the raw and adjusted EPA figures.</p>
 <p>Penalty-only rows are not scrimmage plays. The current nflverse file has no separate <code>no_play</code> column; if that column is present, those rows are dropped too.</p>
+
+<h2>One game, and a team's schedule</h2>
+<p>The matchup page turns two teams and a venue into a point spread, a win chance, a projected score, and an 80% margin range. The range is the fitted residual, about 11.74 points, treated as a normal distribution around the spread. A 10th-to-90th percentile is the same summary a Monte Carlo draw from that residual would estimate. It is not a separate random model, and it does not simulate drives.</p>
+<p>Projected points use each team's points scored and allowed per game, shrunk toward the league with four prior games, then averaged the way a two-team total is averaged. Pass and rush EPA are schedule-adjusted on those play types alone. They are shown so a matchup can be read. They are not added into the spread.</p>
+<p>A team page lists the regular-season schedule, the current-rating spread for each game, expected wins on that schedule, and a projected record that keeps results already played and adds the win chances of games not yet played. The chart is cumulative schedule-adjusted EPA after each week. These schedule numbers use the rating published for the whole season, so a game already played is described by a rating that includes it. Frozen pregame picks are not these numbers.</p>
 
 <h2>What this is not</h2>
 <p>It is not DVOA. It does not add an injury, weather, or garbage-time adjustment beyond whatever is already inside nflverse EPA. It is not a betting model. Special teams are not given their own term. Home field is not team-specific.</p>

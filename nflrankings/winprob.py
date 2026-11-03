@@ -83,6 +83,87 @@ def predict_matchup(
     }
 
 
+# Central 80% of a normal residual (10th and 90th percentiles).
+MARGIN_Z80 = 1.2815515655446004
+TOTAL_PRIOR_GAMES = 4
+
+
+def margin_interval(margin: float, residual_sd: float) -> tuple[float, float]:
+    """10th and 90th percentile of ``margin + Normal(0, residual_sd)``.
+
+    This is the analytic version of a Monte Carlo margin range when the only
+    game noise is the fitted residual. It does not add a second random model.
+    """
+    sd = float(residual_sd)
+    if not math.isfinite(sd) or sd < 0:
+        raise ValueError("residual_sd must be a non-negative finite number")
+    half = MARGIN_Z80 * sd
+    center = float(margin)
+    return center - half, center + half
+
+
+def shrink_rate(rate: float, games: int, league: float, prior_games: int = TOTAL_PRIOR_GAMES) -> float:
+    """Pull a per-game rate toward the league. Zero games stays at the league."""
+    games = int(games)
+    if games < 0 or prior_games < 0:
+        raise ValueError("game counts must be non-negative")
+    if games == 0:
+        return float(league)
+    return float(league) + (float(rate) - float(league)) * games / (games + prior_games)
+
+
+def projected_total(
+    points_for_a: float,
+    points_against_a: float,
+    games_a: int,
+    points_for_b: float,
+    points_against_b: float,
+    games_b: int,
+    league_ppg: float,
+) -> float:
+    """Expected combined points, shrunk the way a two-team scoring average shrinks.
+
+    ``(shrunk points for A + shrunk points against B + the swap) / 2``.
+    """
+    return max(0.0, (
+        shrink_rate(points_for_a, games_a, league_ppg)
+        + shrink_rate(points_against_b, games_b, league_ppg)
+        + shrink_rate(points_for_b, games_b, league_ppg)
+        + shrink_rate(points_against_a, games_a, league_ppg)
+    ) / 2)
+
+
+def project_game(
+    rating_a: float,
+    rating_b: float,
+    params: Mapping[str, float],
+    venue: str,
+    scoring_a: Mapping[str, float],
+    scoring_b: Mapping[str, float],
+    league_ppg: float,
+) -> dict:
+    """Spread, win chance, projected score, and 80% margin range from A's side.
+
+    ``scoring_*`` needs ``points_for``, ``points_against``, and ``games``.
+    Pass and rush EPA are not folded into the spread.
+    """
+    pred = predict_matchup(rating_a, rating_b, params, venue)
+    total = projected_total(
+        scoring_a["points_for"], scoring_a["points_against"], int(scoring_a["games"]),
+        scoring_b["points_for"], scoring_b["points_against"], int(scoring_b["games"]),
+        league_ppg,
+    )
+    low, high = margin_interval(pred["margin"], params.get("margin_residual_sd", 0.0))
+    return {
+        **pred,
+        "total": total,
+        "score_a": max(0.0, (total + pred["margin"]) / 2),
+        "score_b": max(0.0, (total - pred["margin"]) / 2),
+        "margin_low": low,
+        "margin_high": high,
+    }
+
+
 def _logistic_matrix(margin: np.ndarray, scale: float) -> np.ndarray:
     z = np.asarray(margin, dtype=float) / float(scale)
     # Symmetric clip: clip(z) and clip(-z) stay negations, so P_ij + P_ji = 1.

@@ -84,7 +84,11 @@
       "<dt>Off EPA (adj)</dt><dd>" + fmt(t.off_epa_adj, 3) + "</dd>" +
       "<dt>Def EPA (adj)</dt><dd>" + fmt(t.def_epa_adj, 3) + "</dd>" +
       "<dt>v2 margin</dt><dd>" + fmt(t.v2, 3) + "</dd>" +
-      "</dl></div>" +
+      "<dt>Off pass EPA</dt><dd>" + fmt(t.off_pass_epa_adj, 3) + "</dd>" +
+      "<dt>Off rush EPA</dt><dd>" + fmt(t.off_rush_epa_adj, 3) + "</dd>" +
+      "</dl><p class=\"detail-link\"><a href=\"" +
+      ("team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season)) +
+      "\">Team page</a></p></div>" +
       "<div><h4>" + esc(t.conference || "League") + "</h4><dl>" +
       "<dt>Division</dt><dd>" + esc(t.division || "–") + "</dd>" +
       "<dt>Record</dt><dd>" + record(t) + "</dd>" +
@@ -116,8 +120,9 @@
       var color = accent(t);
       var style = color ? ' style="--accent:' + esc(color) + '"' : "";
       var open = state.open === t.team;
+      var href = "team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season);
       var nm = '<td class="teamcell"><span class="rankbadge">' + t.win_chance_rank + "</span>" + logo(t) +
-        '<span class="teamname">' + esc(t.name) + "<small>" + esc(t.team) + "</small></span></td>";
+        '<span class="teamname"><a class="teamlink" href="' + href + '">' + esc(t.name) + "</a><small>" + esc(t.team) + "</small></span></td>";
       var cells = [
         '<td class="num rank">' + t.win_chance_rank + "</td>",
         nm,
@@ -204,6 +209,7 @@
       if (again) again.focus();
     }
     $("tbody").addEventListener("click", function (e) {
+      if (e.target.closest("a")) return;
       var tr = e.target.closest("tr.team"); if (tr) toggle(tr);
     });
     $("tbody").addEventListener("keydown", function (e) {

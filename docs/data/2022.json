@@ -1,10 +1,12 @@
 {
  "season": 2022,
- "generated_at": "2026-11-03T00:15:22+00:00",
+ "generated_at": "2026-11-03T00:49:59+00:00",
  "source": "nflverse via nfl_data_py (https://github.com/nflverse)",
  "week_min": 1,
  "week_max": 18,
  "games_played": 271,
+ "league_ppg": 21.881919,
+ "rating_basis": "season",
  "ranking": {
   "method": "epa-spread-logistic-v1",
   "ranking": "neutral-round-robin",
@@ -31,6 +33,8 @@
    "losses": 3,
    "ties": 0,
    "point_diff": 127,
+   "points_for": 496,
+   "points_against": 369,
    "v2": 0.180011,
    "off_epa": 0.18526,
    "def_epa": -0.018166,
@@ -44,7 +48,95 @@
    "expected_wins": 23.7781,
    "opponents": 31,
    "win_chance_rank": 1,
-   "v2_rank": 1
+   "v2_rank": 1,
+   "off_pass_epa_adj": 0.241759,
+   "def_pass_epa_adj": -0.009468,
+   "off_pass_plays": 677,
+   "def_pass_plays": 674,
+   "off_rush_epa_adj": 0.08288,
+   "def_rush_epa_adj": 0.012206,
+   "off_rush_plays": 403,
+   "def_rush_plays": 407,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.416382
+    },
+    {
+     "week": 2,
+     "v2": 0.261847
+    },
+    {
+     "week": 3,
+     "v2": 0.099626
+    },
+    {
+     "week": 4,
+     "v2": 0.19685
+    },
+    {
+     "week": 5,
+     "v2": 0.17068
+    },
+    {
+     "week": 6,
+     "v2": 0.187856
+    },
+    {
+     "week": 7,
+     "v2": 0.225295
+    },
+    {
+     "week": 8,
+     "v2": 0.207051
+    },
+    {
+     "week": 9,
+     "v2": 0.166338
+    },
+    {
+     "week": 10,
+     "v2": 0.164407
+    },
+    {
+     "week": 11,
+     "v2": 0.164352
+    },
+    {
+     "week": 12,
+     "v2": 0.16551
+    },
+    {
+     "week": 13,
+     "v2": 0.15109
+    },
+    {
+     "week": 14,
+     "v2": 0.151426
+    },
+    {
+     "week": 15,
+     "v2": 0.148467
+    },
+    {
+     "week": 16,
+     "v2": 0.163201
+    },
+    {
+     "week": 17,
+     "v2": 0.169746
+    },
+    {
+     "week": 18,
+     "v2": 0.180011
+    }
+   ],
+   "schedule_expected_wins": 13.2597,
+   "remaining_games": 0,
+   "projected_wins": 14.0,
+   "projected_losses": 3.0,
+   "sos": -0.02519,
+   "sos_games": 17
   },
   {
    "team": "BUF",
@@ -55,6 +147,8 @@
    "losses": 3,
    "ties": 0,
    "point_diff": 169,
+   "points_for": 455,
+   "points_against": 286,
    "v2": 0.171938,
    "off_epa": 0.115017,
    "def_epa": -0.051629,
@@ -68,7 +162,95 @@
    "expected_wins": 23.4713,
    "opponents": 31,
    "win_chance_rank": 2,
-   "v2_rank": 2
+   "v2_rank": 2,
+   "off_pass_epa_adj": 0.133025,
+   "def_pass_epa_adj": -0.031342,
+   "off_pass_plays": 606,
+   "def_pass_plays": 609,
+   "off_rush_epa_adj": 0.084144,
+   "def_rush_epa_adj": -0.091344,
+   "off_rush_plays": 409,
+   "def_rush_plays": 382,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.44828
+    },
+    {
+     "week": 2,
+     "v2": 0.50401
+    },
+    {
+     "week": 3,
+     "v2": 0.36457
+    },
+    {
+     "week": 4,
+     "v2": 0.345143
+    },
+    {
+     "week": 5,
+     "v2": 0.352453
+    },
+    {
+     "week": 6,
+     "v2": 0.32995
+    },
+    {
+     "week": 7,
+     "v2": 0.323924
+    },
+    {
+     "week": 8,
+     "v2": 0.26252
+    },
+    {
+     "week": 9,
+     "v2": 0.22711
+    },
+    {
+     "week": 10,
+     "v2": 0.197516
+    },
+    {
+     "week": 11,
+     "v2": 0.16941
+    },
+    {
+     "week": 12,
+     "v2": 0.160502
+    },
+    {
+     "week": 13,
+     "v2": 0.170354
+    },
+    {
+     "week": 14,
+     "v2": 0.165789
+    },
+    {
+     "week": 15,
+     "v2": 0.157931
+    },
+    {
+     "week": 16,
+     "v2": 0.174595
+    },
+    {
+     "week": 17,
+     "v2": 0.171416
+    },
+    {
+     "week": 18,
+     "v2": 0.171938
+    }
+   ],
+   "schedule_expected_wins": 11.842,
+   "remaining_games": 0,
+   "projected_wins": 13.0,
+   "projected_losses": 3.0,
+   "sos": 0.007912,
+   "sos_games": 16
   },
   {
    "team": "SF",
@@ -79,6 +261,8 @@
    "losses": 4,
    "ties": 0,
    "point_diff": 173,
+   "points_for": 450,
+   "points_against": 277,
    "v2": 0.168861,
    "off_epa": 0.08498,
    "def_epa": -0.123377,
@@ -92,7 +276,95 @@
    "expected_wins": 23.3523,
    "opponents": 31,
    "win_chance_rank": 3,
-   "v2_rank": 3
+   "v2_rank": 3,
+   "off_pass_epa_adj": 0.142224,
+   "def_pass_epa_adj": -0.089115,
+   "off_pass_plays": 543,
+   "def_pass_plays": 637,
+   "off_rush_epa_adj": -0.018636,
+   "def_rush_epa_adj": -0.120369,
+   "off_rush_plays": 487,
+   "def_rush_plays": 377,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.114666
+    },
+    {
+     "week": 2,
+     "v2": -0.186138
+    },
+    {
+     "week": 3,
+     "v2": -0.150606
+    },
+    {
+     "week": 4,
+     "v2": 0.030047
+    },
+    {
+     "week": 5,
+     "v2": 0.07756
+    },
+    {
+     "week": 6,
+     "v2": 0.029292
+    },
+    {
+     "week": 7,
+     "v2": 0.017195
+    },
+    {
+     "week": 8,
+     "v2": 0.052074
+    },
+    {
+     "week": 9,
+     "v2": 0.042246
+    },
+    {
+     "week": 10,
+     "v2": 0.037395
+    },
+    {
+     "week": 11,
+     "v2": 0.081345
+    },
+    {
+     "week": 12,
+     "v2": 0.088272
+    },
+    {
+     "week": 13,
+     "v2": 0.108425
+    },
+    {
+     "week": 14,
+     "v2": 0.12257
+    },
+    {
+     "week": 15,
+     "v2": 0.139115
+    },
+    {
+     "week": 16,
+     "v2": 0.155815
+    },
+    {
+     "week": 17,
+     "v2": 0.162052
+    },
+    {
+     "week": 18,
+     "v2": 0.168861
+    }
+   ],
+   "schedule_expected_wins": 13.5829,
+   "remaining_games": 0,
+   "projected_wins": 13.0,
+   "projected_losses": 4.0,
+   "sos": -0.034158,
+   "sos_games": 17
   },
   {
    "team": "CIN",
@@ -103,6 +375,8 @@
    "losses": 4,
    "ties": 0,
    "point_diff": 96,
+   "points_for": 418,
+   "points_against": 322,
    "v2": 0.148052,
    "off_epa": 0.077033,
    "def_epa": -0.047459,
@@ -116,7 +390,95 @@
    "expected_wins": 22.5199,
    "opponents": 31,
    "win_chance_rank": 4,
-   "v2_rank": 4
+   "v2_rank": 4,
+   "off_pass_epa_adj": 0.121972,
+   "def_pass_epa_adj": -0.055956,
+   "off_pass_plays": 653,
+   "def_pass_plays": 582,
+   "off_rush_epa_adj": 0.034235,
+   "def_rush_epa_adj": -0.055663,
+   "off_rush_plays": 375,
+   "def_rush_plays": 402,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.098494
+    },
+    {
+     "week": 2,
+     "v2": -0.166523
+    },
+    {
+     "week": 3,
+     "v2": -0.065469
+    },
+    {
+     "week": 4,
+     "v2": 0.108314
+    },
+    {
+     "week": 5,
+     "v2": 0.146905
+    },
+    {
+     "week": 6,
+     "v2": 0.126869
+    },
+    {
+     "week": 7,
+     "v2": 0.147889
+    },
+    {
+     "week": 8,
+     "v2": 0.090885
+    },
+    {
+     "week": 9,
+     "v2": 0.128953
+    },
+    {
+     "week": 10,
+     "v2": 0.124567
+    },
+    {
+     "week": 11,
+     "v2": 0.130261
+    },
+    {
+     "week": 12,
+     "v2": 0.13633
+    },
+    {
+     "week": 13,
+     "v2": 0.135015
+    },
+    {
+     "week": 14,
+     "v2": 0.135771
+    },
+    {
+     "week": 15,
+     "v2": 0.130064
+    },
+    {
+     "week": 16,
+     "v2": 0.139807
+    },
+    {
+     "week": 17,
+     "v2": 0.144073
+    },
+    {
+     "week": 18,
+     "v2": 0.148052
+    }
+   ],
+   "schedule_expected_wins": 10.9761,
+   "remaining_games": 0,
+   "projected_wins": 12.0,
+   "projected_losses": 4.0,
+   "sos": 0.024859,
+   "sos_games": 16
   },
   {
    "team": "PHI",
@@ -127,6 +489,8 @@
    "losses": 3,
    "ties": 0,
    "point_diff": 133,
+   "points_for": 477,
+   "points_against": 344,
    "v2": 0.135001,
    "off_epa": 0.107557,
    "def_epa": -0.063626,
@@ -140,7 +504,95 @@
    "expected_wins": 21.9736,
    "opponents": 31,
    "win_chance_rank": 5,
-   "v2_rank": 5
+   "v2_rank": 5,
+   "off_pass_epa_adj": 0.070563,
+   "def_pass_epa_adj": -0.123751,
+   "off_pass_plays": 579,
+   "def_pass_plays": 622,
+   "off_rush_epa_adj": 0.129445,
+   "def_rush_epa_adj": 0.086914,
+   "off_rush_plays": 522,
+   "def_rush_plays": 437,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.156428
+    },
+    {
+     "week": 2,
+     "v2": 0.658529
+    },
+    {
+     "week": 3,
+     "v2": 0.718474
+    },
+    {
+     "week": 4,
+     "v2": 0.353455
+    },
+    {
+     "week": 5,
+     "v2": 0.189864
+    },
+    {
+     "week": 6,
+     "v2": 0.172246
+    },
+    {
+     "week": 7,
+     "v2": 0.18043
+    },
+    {
+     "week": 8,
+     "v2": 0.213442
+    },
+    {
+     "week": 9,
+     "v2": 0.196607
+    },
+    {
+     "week": 10,
+     "v2": 0.170204
+    },
+    {
+     "week": 11,
+     "v2": 0.146136
+    },
+    {
+     "week": 12,
+     "v2": 0.138501
+    },
+    {
+     "week": 13,
+     "v2": 0.175957
+    },
+    {
+     "week": 14,
+     "v2": 0.193353
+    },
+    {
+     "week": 15,
+     "v2": 0.182721
+    },
+    {
+     "week": 16,
+     "v2": 0.169065
+    },
+    {
+     "week": 17,
+     "v2": 0.146216
+    },
+    {
+     "week": 18,
+     "v2": 0.135001
+    }
+   ],
+   "schedule_expected_wins": 12.7979,
+   "remaining_games": 0,
+   "projected_wins": 14.0,
+   "projected_losses": 3.0,
+   "sos": -0.03195,
+   "sos_games": 17
   },
   {
    "team": "DAL",
@@ -151,6 +603,8 @@
    "losses": 5,
    "ties": 0,
    "point_diff": 125,
+   "points_for": 467,
+   "points_against": 342,
    "v2": 0.088892,
    "off_epa": 0.013737,
    "def_epa": -0.094533,
@@ -164,7 +618,95 @@
    "expected_wins": 19.9109,
    "opponents": 31,
    "win_chance_rank": 6,
-   "v2_rank": 6
+   "v2_rank": 6,
+   "off_pass_epa_adj": 0.041478,
+   "def_pass_epa_adj": -0.096569,
+   "off_pass_plays": 582,
+   "def_pass_plays": 599,
+   "off_rush_epa_adj": -0.031095,
+   "def_rush_epa_adj": -0.065787,
+   "off_rush_plays": 517,
+   "def_rush_plays": 488,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.356442
+    },
+    {
+     "week": 2,
+     "v2": -0.25755
+    },
+    {
+     "week": 3,
+     "v2": -0.126705
+    },
+    {
+     "week": 4,
+     "v2": 0.017495
+    },
+    {
+     "week": 5,
+     "v2": 0.025245
+    },
+    {
+     "week": 6,
+     "v2": 0.036704
+    },
+    {
+     "week": 7,
+     "v2": 0.05227
+    },
+    {
+     "week": 8,
+     "v2": 0.083167
+    },
+    {
+     "week": 9,
+     "v2": 0.08679
+    },
+    {
+     "week": 10,
+     "v2": 0.056545
+    },
+    {
+     "week": 11,
+     "v2": 0.111671
+    },
+    {
+     "week": 12,
+     "v2": 0.11858
+    },
+    {
+     "week": 13,
+     "v2": 0.153214
+    },
+    {
+     "week": 14,
+     "v2": 0.131511
+    },
+    {
+     "week": 15,
+     "v2": 0.118199
+    },
+    {
+     "week": 16,
+     "v2": 0.121022
+    },
+    {
+     "week": 17,
+     "v2": 0.113261
+    },
+    {
+     "week": 18,
+     "v2": 0.088892
+    }
+   ],
+   "schedule_expected_wins": 11.2739,
+   "remaining_games": 0,
+   "projected_wins": 12.0,
+   "projected_losses": 5.0,
+   "sos": -0.019105,
+   "sos_games": 17
   },
   {
    "team": "MIA",
@@ -175,6 +717,8 @@
    "losses": 8,
    "ties": 0,
    "point_diff": -2,
+   "points_for": 397,
+   "points_against": 399,
    "v2": 0.072823,
    "off_epa": 0.049078,
    "def_epa": 0.007083,
@@ -188,7 +732,95 @@
    "expected_wins": 19.1503,
    "opponents": 31,
    "win_chance_rank": 7,
-   "v2_rank": 7
+   "v2_rank": 7,
+   "off_pass_epa_adj": 0.106799,
+   "def_pass_epa_adj": 0.018176,
+   "off_pass_plays": 618,
+   "def_pass_plays": 662,
+   "off_rush_epa_adj": -0.004464,
+   "def_rush_epa_adj": -0.050995,
+   "off_rush_plays": 375,
+   "def_rush_plays": 400,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.286021
+    },
+    {
+     "week": 2,
+     "v2": 0.389138
+    },
+    {
+     "week": 3,
+     "v2": 0.344165
+    },
+    {
+     "week": 4,
+     "v2": 0.2387
+    },
+    {
+     "week": 5,
+     "v2": 0.156983
+    },
+    {
+     "week": 6,
+     "v2": 0.103586
+    },
+    {
+     "week": 7,
+     "v2": 0.073726
+    },
+    {
+     "week": 8,
+     "v2": 0.053979
+    },
+    {
+     "week": 9,
+     "v2": 0.068045
+    },
+    {
+     "week": 10,
+     "v2": 0.119313
+    },
+    {
+     "week": 11,
+     "v2": 0.112606
+    },
+    {
+     "week": 12,
+     "v2": 0.106085
+    },
+    {
+     "week": 13,
+     "v2": 0.089723
+    },
+    {
+     "week": 14,
+     "v2": 0.072848
+    },
+    {
+     "week": 15,
+     "v2": 0.079794
+    },
+    {
+     "week": 16,
+     "v2": 0.071196
+    },
+    {
+     "week": 17,
+     "v2": 0.07467
+    },
+    {
+     "week": 18,
+     "v2": 0.072823
+    }
+   ],
+   "schedule_expected_wins": 9.6957,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 8.0,
+   "sos": 0.023365,
+   "sos_games": 17
   },
   {
    "team": "NE",
@@ -199,6 +831,8 @@
    "losses": 9,
    "ties": 0,
    "point_diff": 17,
+   "points_for": 364,
+   "points_against": 347,
    "v2": 0.050592,
    "off_epa": -0.052385,
    "def_epa": -0.088732,
@@ -212,7 +846,95 @@
    "expected_wins": 18.0708,
    "opponents": 31,
    "win_chance_rank": 8,
-   "v2_rank": 8
+   "v2_rank": 8,
+   "off_pass_epa_adj": -0.067676,
+   "def_pass_epa_adj": -0.117759,
+   "off_pass_plays": 579,
+   "def_pass_plays": 650,
+   "off_rush_epa_adj": -0.044199,
+   "def_rush_epa_adj": -0.084591,
+   "off_rush_plays": 403,
+   "def_rush_plays": 425,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.286021
+    },
+    {
+     "week": 2,
+     "v2": 0.154123
+    },
+    {
+     "week": 3,
+     "v2": 0.047985
+    },
+    {
+     "week": 4,
+     "v2": 0.026708
+    },
+    {
+     "week": 5,
+     "v2": 0.074565
+    },
+    {
+     "week": 6,
+     "v2": 0.101996
+    },
+    {
+     "week": 7,
+     "v2": 0.011046
+    },
+    {
+     "week": 8,
+     "v2": 0.026091
+    },
+    {
+     "week": 9,
+     "v2": 0.058007
+    },
+    {
+     "week": 10,
+     "v2": 0.075232
+    },
+    {
+     "week": 11,
+     "v2": 0.097718
+    },
+    {
+     "week": 12,
+     "v2": 0.090295
+    },
+    {
+     "week": 13,
+     "v2": 0.076773
+    },
+    {
+     "week": 14,
+     "v2": 0.094377
+    },
+    {
+     "week": 15,
+     "v2": 0.076278
+    },
+    {
+     "week": 16,
+     "v2": 0.057666
+    },
+    {
+     "week": 17,
+     "v2": 0.050534
+    },
+    {
+     "week": 18,
+     "v2": 0.050592
+    }
+   ],
+   "schedule_expected_wins": 9.4849,
+   "remaining_games": 0,
+   "projected_wins": 8.0,
+   "projected_losses": 9.0,
+   "sos": 0.010416,
+   "sos_games": 17
   },
   {
    "team": "BAL",
@@ -223,6 +945,8 @@
    "losses": 7,
    "ties": 0,
    "point_diff": 35,
+   "points_for": 350,
+   "points_against": 315,
    "v2": 0.048023,
    "off_epa": 0.00238,
    "def_epa": -0.013454,
@@ -236,7 +960,95 @@
    "expected_wins": 17.9443,
    "opponents": 31,
    "win_chance_rank": 9,
-   "v2_rank": 9
+   "v2_rank": 9,
+   "off_pass_epa_adj": -0.049347,
+   "def_pass_epa_adj": -0.003652,
+   "off_pass_plays": 521,
+   "def_pass_plays": 640,
+   "off_rush_epa_adj": 0.087469,
+   "def_rush_epa_adj": -0.086162,
+   "off_rush_plays": 507,
+   "def_rush_plays": 396,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.256342
+    },
+    {
+     "week": 2,
+     "v2": 0.210649
+    },
+    {
+     "week": 3,
+     "v2": 0.149922
+    },
+    {
+     "week": 4,
+     "v2": 0.182397
+    },
+    {
+     "week": 5,
+     "v2": 0.197974
+    },
+    {
+     "week": 6,
+     "v2": 0.144048
+    },
+    {
+     "week": 7,
+     "v2": 0.075221
+    },
+    {
+     "week": 8,
+     "v2": 0.075358
+    },
+    {
+     "week": 9,
+     "v2": 0.111422
+    },
+    {
+     "week": 10,
+     "v2": 0.107804
+    },
+    {
+     "week": 11,
+     "v2": 0.10429
+    },
+    {
+     "week": 12,
+     "v2": 0.104476
+    },
+    {
+     "week": 13,
+     "v2": 0.080655
+    },
+    {
+     "week": 14,
+     "v2": 0.076763
+    },
+    {
+     "week": 15,
+     "v2": 0.055528
+    },
+    {
+     "week": 16,
+     "v2": 0.059096
+    },
+    {
+     "week": 17,
+     "v2": 0.051295
+    },
+    {
+     "week": 18,
+     "v2": 0.048023
+    }
+   ],
+   "schedule_expected_wins": 8.9323,
+   "remaining_games": 0,
+   "projected_wins": 10.0,
+   "projected_losses": 7.0,
+   "sos": 0.029711,
+   "sos_games": 17
   },
   {
    "team": "JAX",
@@ -247,6 +1059,8 @@
    "losses": 8,
    "ties": 0,
    "point_diff": 54,
+   "points_for": 404,
+   "points_against": 350,
    "v2": 0.037063,
    "off_epa": 0.045245,
    "def_epa": -0.022436,
@@ -260,7 +1074,95 @@
    "expected_wins": 17.4016,
    "opponents": 31,
    "win_chance_rank": 10,
-   "v2_rank": 10
+   "v2_rank": 10,
+   "off_pass_epa_adj": 0.122699,
+   "def_pass_epa_adj": 0.039633,
+   "off_pass_plays": 622,
+   "def_pass_plays": 635,
+   "off_rush_epa_adj": -0.059875,
+   "def_rush_epa_adj": -0.03772,
+   "off_rush_plays": 437,
+   "def_rush_plays": 459,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.023877
+    },
+    {
+     "week": 2,
+     "v2": 0.297804
+    },
+    {
+     "week": 3,
+     "v2": 0.428419
+    },
+    {
+     "week": 4,
+     "v2": 0.25905
+    },
+    {
+     "week": 5,
+     "v2": 0.100662
+    },
+    {
+     "week": 6,
+     "v2": 0.053623
+    },
+    {
+     "week": 7,
+     "v2": 0.031549
+    },
+    {
+     "week": 8,
+     "v2": 0.006219
+    },
+    {
+     "week": 9,
+     "v2": 0.010532
+    },
+    {
+     "week": 10,
+     "v2": 0.00883
+    },
+    {
+     "week": 11,
+     "v2": 0.01437
+    },
+    {
+     "week": 12,
+     "v2": 0.009035
+    },
+    {
+     "week": 13,
+     "v2": -0.03266
+    },
+    {
+     "week": 14,
+     "v2": -0.001143
+    },
+    {
+     "week": 15,
+     "v2": 0.017363
+    },
+    {
+     "week": 16,
+     "v2": 0.031756
+    },
+    {
+     "week": 17,
+     "v2": 0.040394
+    },
+    {
+     "week": 18,
+     "v2": 0.037063
+    }
+   ],
+   "schedule_expected_wins": 10.2496,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 8.0,
+   "sos": -0.035012,
+   "sos_games": 17
   },
   {
    "team": "CLE",
@@ -271,6 +1173,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -20,
+   "points_for": 361,
+   "points_against": 381,
    "v2": 0.018788,
    "off_epa": 0.012375,
    "def_epa": 0.014651,
@@ -284,7 +1188,95 @@
    "expected_wins": 16.4874,
    "opponents": 31,
    "win_chance_rank": 11,
-   "v2_rank": 11
+   "v2_rank": 11,
+   "off_pass_epa_adj": -0.023398,
+   "def_pass_epa_adj": -0.028918,
+   "off_pass_plays": 579,
+   "def_pass_plays": 553,
+   "off_rush_epa_adj": 0.100694,
+   "def_rush_epa_adj": 0.067172,
+   "off_rush_plays": 518,
+   "def_rush_plays": 469,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.000322
+    },
+    {
+     "week": 2,
+     "v2": -0.070741
+    },
+    {
+     "week": 3,
+     "v2": -0.132109
+    },
+    {
+     "week": 4,
+     "v2": -0.08805
+    },
+    {
+     "week": 5,
+     "v2": -0.051673
+    },
+    {
+     "week": 6,
+     "v2": -0.100339
+    },
+    {
+     "week": 7,
+     "v2": -0.068139
+    },
+    {
+     "week": 8,
+     "v2": -0.007006
+    },
+    {
+     "week": 9,
+     "v2": 0.006689
+    },
+    {
+     "week": 10,
+     "v2": -0.037202
+    },
+    {
+     "week": 11,
+     "v2": -0.020075
+    },
+    {
+     "week": 12,
+     "v2": -0.005973
+    },
+    {
+     "week": 13,
+     "v2": -0.010001
+    },
+    {
+     "week": 14,
+     "v2": -0.010654
+    },
+    {
+     "week": 15,
+     "v2": 0.008704
+    },
+    {
+     "week": 16,
+     "v2": 0.002723
+    },
+    {
+     "week": 17,
+     "v2": 0.022159
+    },
+    {
+     "week": 18,
+     "v2": 0.018788
+    }
+   ],
+   "schedule_expected_wins": 8.3779,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": 0.023551,
+   "sos_games": 17
   },
   {
    "team": "PIT",
@@ -295,6 +1287,8 @@
    "losses": 8,
    "ties": 0,
    "point_diff": -38,
+   "points_for": 308,
+   "points_against": 346,
    "v2": 0.018528,
    "off_epa": 0.008921,
    "def_epa": 0.023696,
@@ -308,7 +1302,95 @@
    "expected_wins": 16.4743,
    "opponents": 31,
    "win_chance_rank": 12,
-   "v2_rank": 12
+   "v2_rank": 12,
+   "off_pass_epa_adj": 0.005134,
+   "def_pass_epa_adj": 0.059344,
+   "off_pass_plays": 607,
+   "def_pass_plays": 578,
+   "off_rush_epa_adj": 0.051466,
+   "def_rush_epa_adj": -0.070917,
+   "off_rush_plays": 491,
+   "def_rush_plays": 428,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.098494
+    },
+    {
+     "week": 2,
+     "v2": -0.097642
+    },
+    {
+     "week": 3,
+     "v2": -0.125494
+    },
+    {
+     "week": 4,
+     "v2": -0.094893
+    },
+    {
+     "week": 5,
+     "v2": -0.036519
+    },
+    {
+     "week": 6,
+     "v2": -0.029761
+    },
+    {
+     "week": 7,
+     "v2": -0.042992
+    },
+    {
+     "week": 8,
+     "v2": -0.070602
+    },
+    {
+     "week": 9,
+     "v2": -0.060919
+    },
+    {
+     "week": 10,
+     "v2": -0.031261
+    },
+    {
+     "week": 11,
+     "v2": -0.038616
+    },
+    {
+     "week": 12,
+     "v2": -0.017119
+    },
+    {
+     "week": 13,
+     "v2": -0.012442
+    },
+    {
+     "week": 14,
+     "v2": -0.009858
+    },
+    {
+     "week": 15,
+     "v2": -0.002415
+    },
+    {
+     "week": 16,
+     "v2": 0.002933
+    },
+    {
+     "week": 17,
+     "v2": 0.015442
+    },
+    {
+     "week": 18,
+     "v2": 0.018528
+    }
+   ],
+   "schedule_expected_wins": 8.117,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 8.0,
+   "sos": 0.031832,
+   "sos_games": 17
   },
   {
    "team": "NO",
@@ -319,6 +1401,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -15,
+   "points_for": 330,
+   "points_against": 345,
    "v2": 0.016287,
    "off_epa": -0.040339,
    "def_epa": -0.056569,
@@ -332,7 +1416,95 @@
    "expected_wins": 16.3616,
    "opponents": 31,
    "win_chance_rank": 13,
-   "v2_rank": 13
+   "v2_rank": 13,
+   "off_pass_epa_adj": -0.015439,
+   "def_pass_epa_adj": -0.095142,
+   "off_pass_plays": 548,
+   "def_pass_plays": 582,
+   "off_rush_epa_adj": -0.100007,
+   "def_rush_epa_adj": -0.04049,
+   "off_rush_plays": 453,
+   "def_rush_plays": 482,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.142552
+    },
+    {
+     "week": 2,
+     "v2": -0.054691
+    },
+    {
+     "week": 3,
+     "v2": -0.063345
+    },
+    {
+     "week": 4,
+     "v2": 0.009271
+    },
+    {
+     "week": 5,
+     "v2": -0.012911
+    },
+    {
+     "week": 6,
+     "v2": 0.000788
+    },
+    {
+     "week": 7,
+     "v2": 0.003757
+    },
+    {
+     "week": 8,
+     "v2": 0.059841
+    },
+    {
+     "week": 9,
+     "v2": 0.023772
+    },
+    {
+     "week": 10,
+     "v2": -0.009584
+    },
+    {
+     "week": 11,
+     "v2": -0.02042
+    },
+    {
+     "week": 12,
+     "v2": -0.025498
+    },
+    {
+     "week": 13,
+     "v2": -0.021585
+    },
+    {
+     "week": 14,
+     "v2": -0.027294
+    },
+    {
+     "week": 15,
+     "v2": -0.030536
+    },
+    {
+     "week": 16,
+     "v2": -0.006634
+    },
+    {
+     "week": 17,
+     "v2": 0.017904
+    },
+    {
+     "week": 18,
+     "v2": 0.016287
+    }
+   ],
+   "schedule_expected_wins": 8.9865,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": 0.000142,
+   "sos_games": 17
   },
   {
    "team": "TB",
@@ -343,6 +1515,8 @@
    "losses": 9,
    "ties": 0,
    "point_diff": -45,
+   "points_for": 313,
+   "points_against": 358,
    "v2": 0.006344,
    "off_epa": -0.03593,
    "def_epa": -0.025255,
@@ -356,7 +1530,95 @@
    "expected_wins": 15.8606,
    "opponents": 31,
    "win_chance_rank": 14,
-   "v2_rank": 14
+   "v2_rank": 14,
+   "off_pass_epa_adj": 0.036646,
+   "def_pass_epa_adj": -0.015276,
+   "off_pass_plays": 770,
+   "def_pass_plays": 610,
+   "off_rush_epa_adj": -0.189896,
+   "def_rush_epa_adj": -0.071581,
+   "off_rush_plays": 369,
+   "def_rush_plays": 448,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.356442
+    },
+    {
+     "week": 2,
+     "v2": 0.164323
+    },
+    {
+     "week": 3,
+     "v2": 0.114795
+    },
+    {
+     "week": 4,
+     "v2": 0.12259
+    },
+    {
+     "week": 5,
+     "v2": 0.082193
+    },
+    {
+     "week": 6,
+     "v2": 0.086161
+    },
+    {
+     "week": 7,
+     "v2": 0.026738
+    },
+    {
+     "week": 8,
+     "v2": 0.036682
+    },
+    {
+     "week": 9,
+     "v2": 0.014256
+    },
+    {
+     "week": 10,
+     "v2": 0.021816
+    },
+    {
+     "week": 11,
+     "v2": 0.023536
+    },
+    {
+     "week": 12,
+     "v2": 0.018965
+    },
+    {
+     "week": 13,
+     "v2": 0.016751
+    },
+    {
+     "week": 14,
+     "v2": -0.006184
+    },
+    {
+     "week": 15,
+     "v2": -0.005146
+    },
+    {
+     "week": 16,
+     "v2": 0.01013
+    },
+    {
+     "week": 17,
+     "v2": 0.023497
+    },
+    {
+     "week": 18,
+     "v2": 0.006344
+    }
+   ],
+   "schedule_expected_wins": 8.3493,
+   "remaining_games": 0,
+   "projected_wins": 8.0,
+   "projected_losses": 9.0,
+   "sos": 0.013092,
+   "sos_games": 17
   },
   {
    "team": "WAS",
@@ -367,6 +1629,8 @@
    "losses": 8,
    "ties": 1,
    "point_diff": -22,
+   "points_for": 321,
+   "points_against": 343,
    "v2": -0.004924,
    "off_epa": -0.075846,
    "def_epa": -0.073826,
@@ -380,7 +1644,95 @@
    "expected_wins": 15.2919,
    "opponents": 31,
    "win_chance_rank": 15,
-   "v2_rank": 15
+   "v2_rank": 15,
+   "off_pass_epa_adj": -0.093552,
+   "def_pass_epa_adj": -0.068878,
+   "off_pass_plays": 600,
+   "def_pass_plays": 554,
+   "off_rush_epa_adj": -0.085302,
+   "def_rush_epa_adj": -0.107332,
+   "off_rush_plays": 528,
+   "def_rush_plays": 428,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.023877
+    },
+    {
+     "week": 2,
+     "v2": 0.379303
+    },
+    {
+     "week": 3,
+     "v2": 0.396579
+    },
+    {
+     "week": 4,
+     "v2": 0.032859
+    },
+    {
+     "week": 5,
+     "v2": -0.087258
+    },
+    {
+     "week": 6,
+     "v2": -0.100714
+    },
+    {
+     "week": 7,
+     "v2": -0.082772
+    },
+    {
+     "week": 8,
+     "v2": -0.061604
+    },
+    {
+     "week": 9,
+     "v2": -0.059291
+    },
+    {
+     "week": 10,
+     "v2": -0.005347
+    },
+    {
+     "week": 11,
+     "v2": 0.004068
+    },
+    {
+     "week": 12,
+     "v2": 0.002756
+    },
+    {
+     "week": 13,
+     "v2": 0.017793
+    },
+    {
+     "week": 14,
+     "v2": 0.018908
+    },
+    {
+     "week": 15,
+     "v2": 0.004938
+    },
+    {
+     "week": 16,
+     "v2": -0.008819
+    },
+    {
+     "week": 17,
+     "v2": -0.032609
+    },
+    {
+     "week": 18,
+     "v2": -0.004924
+    }
+   ],
+   "schedule_expected_wins": 8.6207,
+   "remaining_games": 0,
+   "projected_wins": 8.0,
+   "projected_losses": 8.0,
+   "sos": -0.005211,
+   "sos_games": 17
   },
   {
    "team": "DET",
@@ -391,6 +1743,8 @@
    "losses": 8,
    "ties": 0,
    "point_diff": 26,
+   "points_for": 453,
+   "points_against": 427,
    "v2": -0.00702,
    "off_epa": 0.068961,
    "def_epa": 0.079728,
@@ -404,7 +1758,95 @@
    "expected_wins": 15.1861,
    "opponents": 31,
    "win_chance_rank": 16,
-   "v2_rank": 16
+   "v2_rank": 16,
+   "off_pass_epa_adj": 0.160641,
+   "def_pass_epa_adj": 0.050791,
+   "off_pass_plays": 611,
+   "def_pass_plays": 598,
+   "off_rush_epa_adj": -0.068455,
+   "def_rush_epa_adj": 0.095465,
+   "off_rush_plays": 465,
+   "def_rush_plays": 464,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.156428
+    },
+    {
+     "week": 2,
+     "v2": 0.383779
+    },
+    {
+     "week": 3,
+     "v2": 0.453589
+    },
+    {
+     "week": 4,
+     "v2": -0.032676
+    },
+    {
+     "week": 5,
+     "v2": -0.186231
+    },
+    {
+     "week": 6,
+     "v2": -0.174314
+    },
+    {
+     "week": 7,
+     "v2": -0.186215
+    },
+    {
+     "week": 8,
+     "v2": -0.153771
+    },
+    {
+     "week": 9,
+     "v2": -0.136577
+    },
+    {
+     "week": 10,
+     "v2": -0.100522
+    },
+    {
+     "week": 11,
+     "v2": -0.084453
+    },
+    {
+     "week": 12,
+     "v2": -0.072146
+    },
+    {
+     "week": 13,
+     "v2": -0.026751
+    },
+    {
+     "week": 14,
+     "v2": -0.015149
+    },
+    {
+     "week": 15,
+     "v2": -0.007461
+    },
+    {
+     "week": 16,
+     "v2": -0.039196
+    },
+    {
+     "week": 17,
+     "v2": -0.022103
+    },
+    {
+     "week": 18,
+     "v2": -0.00702
+    }
+   ],
+   "schedule_expected_wins": 8.3106,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 8.0,
+   "sos": 0.001781,
+   "sos_games": 17
   },
   {
    "team": "NYJ",
@@ -415,6 +1857,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -20,
+   "points_for": 296,
+   "points_against": 316,
    "v2": -0.007248,
    "off_epa": -0.087495,
    "def_epa": -0.051339,
@@ -428,7 +1872,95 @@
    "expected_wins": 15.1746,
    "opponents": 31,
    "win_chance_rank": 17,
-   "v2_rank": 17
+   "v2_rank": 17,
+   "off_pass_epa_adj": -0.11613,
+   "def_pass_epa_adj": -0.113461,
+   "off_pass_plays": 669,
+   "def_pass_plays": 601,
+   "off_rush_epa_adj": -0.032347,
+   "def_rush_epa_adj": -0.01913,
+   "off_rush_plays": 394,
+   "def_rush_plays": 477,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.256342
+    },
+    {
+     "week": 2,
+     "v2": -0.124052
+    },
+    {
+     "week": 3,
+     "v2": -0.263282
+    },
+    {
+     "week": 4,
+     "v2": -0.127422
+    },
+    {
+     "week": 5,
+     "v2": 0.024477
+    },
+    {
+     "week": 6,
+     "v2": 0.041327
+    },
+    {
+     "week": 7,
+     "v2": 0.023584
+    },
+    {
+     "week": 8,
+     "v2": 0.024353
+    },
+    {
+     "week": 9,
+     "v2": 0.070898
+    },
+    {
+     "week": 10,
+     "v2": 0.07717
+    },
+    {
+     "week": 11,
+     "v2": 0.054221
+    },
+    {
+     "week": 12,
+     "v2": 0.069055
+    },
+    {
+     "week": 13,
+     "v2": 0.055471
+    },
+    {
+     "week": 14,
+     "v2": 0.055748
+    },
+    {
+     "week": 15,
+     "v2": 0.042507
+    },
+    {
+     "week": 16,
+     "v2": 0.01253
+    },
+    {
+     "week": 17,
+     "v2": -0.010598
+    },
+    {
+     "week": 18,
+     "v2": -0.007248
+    }
+   ],
+   "schedule_expected_wins": 7.366,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": 0.031747,
+   "sos_games": 17
   },
   {
    "team": "LAC",
@@ -439,6 +1971,8 @@
    "losses": 7,
    "ties": 0,
    "point_diff": 7,
+   "points_for": 391,
+   "points_against": 384,
    "v2": -0.018208,
    "off_epa": 0.005214,
    "def_epa": 0.006216,
@@ -452,7 +1986,95 @@
    "expected_wins": 14.6218,
    "opponents": 31,
    "win_chance_rank": 18,
-   "v2_rank": 18
+   "v2_rank": 18,
+   "off_pass_epa_adj": -0.011602,
+   "def_pass_epa_adj": -0.059329,
+   "off_pass_plays": 748,
+   "def_pass_plays": 545,
+   "off_rush_epa_adj": -0.011623,
+   "def_rush_epa_adj": 0.086983,
+   "off_rush_plays": 387,
+   "def_rush_plays": 447,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.210019
+    },
+    {
+     "week": 2,
+     "v2": 0.060646
+    },
+    {
+     "week": 3,
+     "v2": -0.046815
+    },
+    {
+     "week": 4,
+     "v2": 0.00318
+    },
+    {
+     "week": 5,
+     "v2": 0.012141
+    },
+    {
+     "week": 6,
+     "v2": -0.010567
+    },
+    {
+     "week": 7,
+     "v2": -0.053585
+    },
+    {
+     "week": 8,
+     "v2": -0.064889
+    },
+    {
+     "week": 9,
+     "v2": -0.060609
+    },
+    {
+     "week": 10,
+     "v2": -0.089299
+    },
+    {
+     "week": 11,
+     "v2": -0.072099
+    },
+    {
+     "week": 12,
+     "v2": -0.077282
+    },
+    {
+     "week": 13,
+     "v2": -0.085885
+    },
+    {
+     "week": 14,
+     "v2": -0.06305
+    },
+    {
+     "week": 15,
+     "v2": -0.056423
+    },
+    {
+     "week": 16,
+     "v2": -0.030636
+    },
+    {
+     "week": 17,
+     "v2": -0.007633
+    },
+    {
+     "week": 18,
+     "v2": -0.018208
+    }
+   ],
+   "schedule_expected_wins": 8.6038,
+   "remaining_games": 0,
+   "projected_wins": 10.0,
+   "projected_losses": 7.0,
+   "sos": -0.020041,
+   "sos_games": 17
   },
   {
    "team": "NYG",
@@ -463,6 +2085,8 @@
    "losses": 7,
    "ties": 1,
    "point_diff": -6,
+   "points_for": 365,
+   "points_against": 371,
    "v2": -0.025585,
    "off_epa": 0.030238,
    "def_epa": 0.045294,
@@ -476,7 +2100,95 @@
    "expected_wins": 14.2506,
    "opponents": 31,
    "win_chance_rank": 19,
-   "v2_rank": 19
+   "v2_rank": 19,
+   "off_pass_epa_adj": 0.001421,
+   "def_pass_epa_adj": 0.025555,
+   "off_pass_plays": 564,
+   "def_pass_plays": 607,
+   "off_rush_epa_adj": 0.0764,
+   "def_rush_epa_adj": 0.104921,
+   "off_rush_plays": 507,
+   "def_rush_plays": 456,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.010619
+    },
+    {
+     "week": 2,
+     "v2": -0.130479
+    },
+    {
+     "week": 3,
+     "v2": -0.284011
+    },
+    {
+     "week": 4,
+     "v2": -0.157649
+    },
+    {
+     "week": 5,
+     "v2": -0.086442
+    },
+    {
+     "week": 6,
+     "v2": -0.057449
+    },
+    {
+     "week": 7,
+     "v2": -0.017971
+    },
+    {
+     "week": 8,
+     "v2": -0.006654
+    },
+    {
+     "week": 9,
+     "v2": -0.002995
+    },
+    {
+     "week": 10,
+     "v2": -0.010304
+    },
+    {
+     "week": 11,
+     "v2": -0.025417
+    },
+    {
+     "week": 12,
+     "v2": -0.031246
+    },
+    {
+     "week": 13,
+     "v2": -0.037979
+    },
+    {
+     "week": 14,
+     "v2": -0.058705
+    },
+    {
+     "week": 15,
+     "v2": -0.046469
+    },
+    {
+     "week": 16,
+     "v2": -0.047325
+    },
+    {
+     "week": 17,
+     "v2": -0.036795
+    },
+    {
+     "week": 18,
+     "v2": -0.025585
+    }
+   ],
+   "schedule_expected_wins": 8.1803,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 7.0,
+   "sos": -0.010891,
+   "sos_games": 17
   },
   {
    "team": "SEA",
@@ -487,6 +2199,8 @@
    "losses": 8,
    "ties": 0,
    "point_diff": 6,
+   "points_for": 407,
+   "points_against": 401,
    "v2": -0.032634,
    "off_epa": -0.001068,
    "def_epa": 0.017026,
@@ -500,7 +2214,95 @@
    "expected_wins": 13.897,
    "opponents": 31,
    "win_chance_rank": 20,
-   "v2_rank": 20
+   "v2_rank": 20,
+   "off_pass_epa_adj": -0.010697,
+   "def_pass_epa_adj": 0.020249,
+   "off_pass_plays": 618,
+   "def_pass_plays": 592,
+   "off_rush_epa_adj": -0.014408,
+   "def_rush_epa_adj": 0.044606,
+   "off_rush_plays": 413,
+   "def_rush_plays": 507,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.063861
+    },
+    {
+     "week": 2,
+     "v2": -0.543805
+    },
+    {
+     "week": 3,
+     "v2": -0.346667
+    },
+    {
+     "week": 4,
+     "v2": -0.068723
+    },
+    {
+     "week": 5,
+     "v2": -0.083073
+    },
+    {
+     "week": 6,
+     "v2": -0.064678
+    },
+    {
+     "week": 7,
+     "v2": -0.006577
+    },
+    {
+     "week": 8,
+     "v2": 0.003747
+    },
+    {
+     "week": 9,
+     "v2": 0.019274
+    },
+    {
+     "week": 10,
+     "v2": -0.002345
+    },
+    {
+     "week": 11,
+     "v2": -0.005295
+    },
+    {
+     "week": 12,
+     "v2": -0.034635
+    },
+    {
+     "week": 13,
+     "v2": -0.019431
+    },
+    {
+     "week": 14,
+     "v2": -0.045083
+    },
+    {
+     "week": 15,
+     "v2": -0.06256
+    },
+    {
+     "week": 16,
+     "v2": -0.061298
+    },
+    {
+     "week": 17,
+     "v2": -0.030688
+    },
+    {
+     "week": 18,
+     "v2": -0.032634
+    }
+   ],
+   "schedule_expected_wins": 8.0863,
+   "remaining_games": 0,
+   "projected_wins": 9.0,
+   "projected_losses": 8.0,
+   "sos": -0.008547,
+   "sos_games": 17
   },
   {
    "team": "MIN",
@@ -511,6 +2313,8 @@
    "losses": 4,
    "ties": 0,
    "point_diff": -3,
+   "points_for": 424,
+   "points_against": 427,
    "v2": -0.032738,
    "off_epa": -0.012672,
    "def_epa": 0.013602,
@@ -524,7 +2328,95 @@
    "expected_wins": 13.8918,
    "opponents": 31,
    "win_chance_rank": 21,
-   "v2_rank": 21
+   "v2_rank": 21,
+   "off_pass_epa_adj": 0.045148,
+   "def_pass_epa_adj": 0.043625,
+   "off_pass_plays": 716,
+   "def_pass_plays": 650,
+   "off_rush_epa_adj": -0.125632,
+   "def_rush_epa_adj": -0.014967,
+   "off_rush_plays": 394,
+   "def_rush_plays": 457,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.32011
+    },
+    {
+     "week": 2,
+     "v2": 0.206086
+    },
+    {
+     "week": 3,
+     "v2": 0.354432
+    },
+    {
+     "week": 4,
+     "v2": -0.012369
+    },
+    {
+     "week": 5,
+     "v2": -0.078124
+    },
+    {
+     "week": 6,
+     "v2": -0.042925
+    },
+    {
+     "week": 7,
+     "v2": -0.038668
+    },
+    {
+     "week": 8,
+     "v2": -0.002189
+    },
+    {
+     "week": 9,
+     "v2": -0.008195
+    },
+    {
+     "week": 10,
+     "v2": 0.050684
+    },
+    {
+     "week": 11,
+     "v2": -0.018465
+    },
+    {
+     "week": 12,
+     "v2": -0.009415
+    },
+    {
+     "week": 13,
+     "v2": 0.01293
+    },
+    {
+     "week": 14,
+     "v2": -0.003693
+    },
+    {
+     "week": 15,
+     "v2": -0.013794
+    },
+    {
+     "week": 16,
+     "v2": -0.02856
+    },
+    {
+     "week": 17,
+     "v2": -0.047705
+    },
+    {
+     "week": 18,
+     "v2": -0.032738
+    }
+   ],
+   "schedule_expected_wins": 7.9622,
+   "remaining_games": 0,
+   "projected_wins": 13.0,
+   "projected_losses": 4.0,
+   "sos": -0.006727,
+   "sos_games": 17
   },
   {
    "team": "GB",
@@ -535,6 +2427,8 @@
    "losses": 9,
    "ties": 0,
    "point_diff": -1,
+   "points_for": 370,
+   "points_against": 371,
    "v2": -0.035043,
    "off_epa": 0.001987,
    "def_epa": 0.036754,
@@ -548,7 +2442,95 @@
    "expected_wins": 13.7765,
    "opponents": 31,
    "win_chance_rank": 22,
-   "v2_rank": 22
+   "v2_rank": 22,
+   "off_pass_epa_adj": -0.034988,
+   "def_pass_epa_adj": -0.027637,
+   "off_pass_plays": 592,
+   "def_pass_plays": 512,
+   "off_rush_epa_adj": 0.035724,
+   "def_rush_epa_adj": 0.092011,
+   "off_rush_plays": 441,
+   "def_rush_plays": 464,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.32011
+    },
+    {
+     "week": 2,
+     "v2": 0.024802
+    },
+    {
+     "week": 3,
+     "v2": 0.128101
+    },
+    {
+     "week": 4,
+     "v2": 0.002453
+    },
+    {
+     "week": 5,
+     "v2": -0.064992
+    },
+    {
+     "week": 6,
+     "v2": -0.097388
+    },
+    {
+     "week": 7,
+     "v2": -0.107293
+    },
+    {
+     "week": 8,
+     "v2": -0.059794
+    },
+    {
+     "week": 9,
+     "v2": -0.063531
+    },
+    {
+     "week": 10,
+     "v2": -0.014418
+    },
+    {
+     "week": 11,
+     "v2": -0.039132
+    },
+    {
+     "week": 12,
+     "v2": -0.030253
+    },
+    {
+     "week": 13,
+     "v2": -0.021603
+    },
+    {
+     "week": 14,
+     "v2": -0.026146
+    },
+    {
+     "week": 15,
+     "v2": -0.024857
+    },
+    {
+     "week": 16,
+     "v2": -0.026977
+    },
+    {
+     "week": 17,
+     "v2": -0.017761
+    },
+    {
+     "week": 18,
+     "v2": -0.035043
+    }
+   ],
+   "schedule_expected_wins": 7.6506,
+   "remaining_games": 0,
+   "projected_wins": 8.0,
+   "projected_losses": 9.0,
+   "sos": -0.001653,
+   "sos_games": 17
   },
   {
    "team": "CAR",
@@ -559,6 +2541,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -27,
+   "points_for": 347,
+   "points_against": 374,
    "v2": -0.039793,
    "off_epa": -0.032804,
    "def_epa": 0.004577,
@@ -572,7 +2556,95 @@
    "expected_wins": 13.5393,
    "opponents": 31,
    "win_chance_rank": 23,
-   "v2_rank": 23
+   "v2_rank": 23,
+   "off_pass_epa_adj": -0.102108,
+   "def_pass_epa_adj": 0.039553,
+   "off_pass_plays": 490,
+   "def_pass_plays": 612,
+   "off_rush_epa_adj": 0.027007,
+   "def_rush_epa_adj": -0.053082,
+   "off_rush_plays": 477,
+   "def_rush_plays": 474,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.000322
+    },
+    {
+     "week": 2,
+     "v2": -0.118842
+    },
+    {
+     "week": 3,
+     "v2": -0.148323
+    },
+    {
+     "week": 4,
+     "v2": -0.168084
+    },
+    {
+     "week": 5,
+     "v2": -0.160467
+    },
+    {
+     "week": 6,
+     "v2": -0.207808
+    },
+    {
+     "week": 7,
+     "v2": -0.120806
+    },
+    {
+     "week": 8,
+     "v2": -0.089179
+    },
+    {
+     "week": 9,
+     "v2": -0.126664
+    },
+    {
+     "week": 10,
+     "v2": -0.12108
+    },
+    {
+     "week": 11,
+     "v2": -0.124074
+    },
+    {
+     "week": 12,
+     "v2": -0.087034
+    },
+    {
+     "week": 13,
+     "v2": -0.088419
+    },
+    {
+     "week": 14,
+     "v2": -0.068777
+    },
+    {
+     "week": 15,
+     "v2": -0.081165
+    },
+    {
+     "week": 16,
+     "v2": -0.046057
+    },
+    {
+     "week": 17,
+     "v2": -0.042184
+    },
+    {
+     "week": 18,
+     "v2": -0.039793
+    }
+   ],
+   "schedule_expected_wins": 7.544,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": -0.001501,
+   "sos_games": 17
   },
   {
    "team": "TEN",
@@ -583,6 +2655,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -61,
+   "points_for": 298,
+   "points_against": 359,
    "v2": -0.066664,
    "off_epa": -0.060675,
    "def_epa": 0.004891,
@@ -596,7 +2670,95 @@
    "expected_wins": 12.2148,
    "opponents": 31,
    "win_chance_rank": 24,
-   "v2_rank": 24
+   "v2_rank": 24,
+   "off_pass_epa_adj": -0.049085,
+   "def_pass_epa_adj": 0.055421,
+   "off_pass_plays": 504,
+   "def_pass_plays": 708,
+   "off_rush_epa_adj": -0.063973,
+   "def_rush_epa_adj": -0.088391,
+   "off_rush_plays": 474,
+   "def_rush_plays": 377,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.010619
+    },
+    {
+     "week": 2,
+     "v2": -0.197912
+    },
+    {
+     "week": 3,
+     "v2": -0.255794
+    },
+    {
+     "week": 4,
+     "v2": -0.121818
+    },
+    {
+     "week": 5,
+     "v2": -0.071947
+    },
+    {
+     "week": 6,
+     "v2": -0.062551
+    },
+    {
+     "week": 7,
+     "v2": -0.037906
+    },
+    {
+     "week": 8,
+     "v2": -0.03525
+    },
+    {
+     "week": 9,
+     "v2": -0.022396
+    },
+    {
+     "week": 10,
+     "v2": -0.014002
+    },
+    {
+     "week": 11,
+     "v2": 0.018314
+    },
+    {
+     "week": 12,
+     "v2": 0.014494
+    },
+    {
+     "week": 13,
+     "v2": -0.02292
+    },
+    {
+     "week": 14,
+     "v2": -0.046169
+    },
+    {
+     "week": 15,
+     "v2": -0.04216
+    },
+    {
+     "week": 16,
+     "v2": -0.066689
+    },
+    {
+     "week": 17,
+     "v2": -0.068776
+    },
+    {
+     "week": 18,
+     "v2": -0.066664
+    }
+   ],
+   "schedule_expected_wins": 7.0314,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": -0.008033,
+   "sos_games": 17
   },
   {
    "team": "LV",
@@ -607,6 +2769,8 @@
    "losses": 11,
    "ties": 0,
    "point_diff": -23,
+   "points_for": 395,
+   "points_against": 418,
    "v2": -0.068669,
    "off_epa": 0.004035,
    "def_epa": 0.06411,
@@ -620,7 +2784,95 @@
    "expected_wins": 12.1174,
    "opponents": 31,
    "win_chance_rank": 25,
-   "v2_rank": 25
+   "v2_rank": 25,
+   "off_pass_epa_adj": 0.02921,
+   "def_pass_epa_adj": 0.121285,
+   "off_pass_plays": 621,
+   "def_pass_plays": 615,
+   "off_rush_epa_adj": -0.005786,
+   "def_rush_epa_adj": 0.032999,
+   "off_rush_plays": 423,
+   "def_rush_plays": 444,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.210019
+    },
+    {
+     "week": 2,
+     "v2": -0.142943
+    },
+    {
+     "week": 3,
+     "v2": -0.292061
+    },
+    {
+     "week": 4,
+     "v2": -0.104588
+    },
+    {
+     "week": 5,
+     "v2": -0.020254
+    },
+    {
+     "week": 6,
+     "v2": -0.019588
+    },
+    {
+     "week": 7,
+     "v2": 0.00771
+    },
+    {
+     "week": 8,
+     "v2": -0.068007
+    },
+    {
+     "week": 9,
+     "v2": -0.085001
+    },
+    {
+     "week": 10,
+     "v2": -0.116988
+    },
+    {
+     "week": 11,
+     "v2": -0.095751
+    },
+    {
+     "week": 12,
+     "v2": -0.083379
+    },
+    {
+     "week": 13,
+     "v2": -0.089036
+    },
+    {
+     "week": 14,
+     "v2": -0.078469
+    },
+    {
+     "week": 15,
+     "v2": -0.059932
+    },
+    {
+     "week": 16,
+     "v2": -0.062185
+    },
+    {
+     "week": 17,
+     "v2": -0.057051
+    },
+    {
+     "week": 18,
+     "v2": -0.068669
+    }
+   ],
+   "schedule_expected_wins": 6.9417,
+   "remaining_games": 0,
+   "projected_wins": 6.0,
+   "projected_losses": 11.0,
+   "sos": -0.010106,
+   "sos_games": 17
   },
   {
    "team": "DEN",
@@ -631,6 +2883,8 @@
    "losses": 12,
    "ties": 0,
    "point_diff": -72,
+   "points_for": 287,
+   "points_against": 359,
    "v2": -0.073885,
    "off_epa": -0.109057,
    "def_epa": -0.048154,
@@ -644,7 +2898,95 @@
    "expected_wins": 11.8652,
    "opponents": 31,
    "win_chance_rank": 26,
-   "v2_rank": 26
+   "v2_rank": 26,
+   "off_pass_epa_adj": -0.145768,
+   "def_pass_epa_adj": -0.065989,
+   "off_pass_plays": 633,
+   "def_pass_plays": 639,
+   "off_rush_epa_adj": -0.073985,
+   "def_rush_epa_adj": -0.014609,
+   "off_rush_plays": 435,
+   "def_rush_plays": 424,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.063861
+    },
+    {
+     "week": 2,
+     "v2": -0.338178
+    },
+    {
+     "week": 3,
+     "v2": -0.154602
+    },
+    {
+     "week": 4,
+     "v2": -0.09502
+    },
+    {
+     "week": 5,
+     "v2": -0.063108
+    },
+    {
+     "week": 6,
+     "v2": -0.04013
+    },
+    {
+     "week": 7,
+     "v2": -0.032274
+    },
+    {
+     "week": 8,
+     "v2": -0.026381
+    },
+    {
+     "week": 9,
+     "v2": -0.021191
+    },
+    {
+     "week": 10,
+     "v2": -0.029562
+    },
+    {
+     "week": 11,
+     "v2": -0.034575
+    },
+    {
+     "week": 12,
+     "v2": -0.072134
+    },
+    {
+     "week": 13,
+     "v2": -0.069408
+    },
+    {
+     "week": 14,
+     "v2": -0.061245
+    },
+    {
+     "week": 15,
+     "v2": -0.044601
+    },
+    {
+     "week": 16,
+     "v2": -0.083053
+    },
+    {
+     "week": 17,
+     "v2": -0.083105
+    },
+    {
+     "week": 18,
+     "v2": -0.073885
+    }
+   ],
+   "schedule_expected_wins": 6.9883,
+   "remaining_games": 0,
+   "projected_wins": 5.0,
+   "projected_losses": 12.0,
+   "sos": -0.014459,
+   "sos_games": 17
   },
   {
    "team": "ATL",
@@ -655,6 +2997,8 @@
    "losses": 10,
    "ties": 0,
    "point_diff": -21,
+   "points_for": 365,
+   "points_against": 386,
    "v2": -0.074183,
    "off_epa": 0.001746,
    "def_epa": 0.077171,
@@ -668,7 +3012,95 @@
    "expected_wins": 11.8509,
    "opponents": 31,
    "win_chance_rank": 27,
-   "v2_rank": 27
+   "v2_rank": 27,
+   "off_pass_epa_adj": -0.030292,
+   "def_pass_epa_adj": 0.14238,
+   "off_pass_plays": 448,
+   "def_pass_plays": 580,
+   "off_rush_epa_adj": 0.05221,
+   "def_rush_epa_adj": 0.012625,
+   "off_rush_plays": 549,
+   "def_rush_plays": 490,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.142552
+    },
+    {
+     "week": 2,
+     "v2": -0.121812
+    },
+    {
+     "week": 3,
+     "v2": -0.228565
+    },
+    {
+     "week": 4,
+     "v2": -0.100674
+    },
+    {
+     "week": 5,
+     "v2": -0.072398
+    },
+    {
+     "week": 6,
+     "v2": -0.024796
+    },
+    {
+     "week": 7,
+     "v2": -0.056924
+    },
+    {
+     "week": 8,
+     "v2": -0.058501
+    },
+    {
+     "week": 9,
+     "v2": -0.067662
+    },
+    {
+     "week": 10,
+     "v2": -0.10726
+    },
+    {
+     "week": 11,
+     "v2": -0.09948
+    },
+    {
+     "week": 12,
+     "v2": -0.094574
+    },
+    {
+     "week": 13,
+     "v2": -0.099858
+    },
+    {
+     "week": 14,
+     "v2": -0.099301
+    },
+    {
+     "week": 15,
+     "v2": -0.101695
+    },
+    {
+     "week": 16,
+     "v2": -0.091201
+    },
+    {
+     "week": 17,
+     "v2": -0.091046
+    },
+    {
+     "week": 18,
+     "v2": -0.074183
+    }
+   ],
+   "schedule_expected_wins": 6.6039,
+   "remaining_games": 0,
+   "projected_wins": 7.0,
+   "projected_losses": 10.0,
+   "sos": -0.000795,
+   "sos_games": 17
   },
   {
    "team": "LA",
@@ -679,6 +3111,8 @@
    "losses": 12,
    "ties": 0,
    "point_diff": -77,
+   "points_for": 307,
+   "points_against": 384,
    "v2": -0.089483,
    "off_epa": -0.088368,
    "def_epa": 0.015645,
@@ -692,7 +3126,95 @@
    "expected_wins": 11.1218,
    "opponents": 31,
    "win_chance_rank": 28,
-   "v2_rank": 28
+   "v2_rank": 28,
+   "off_pass_epa_adj": -0.118217,
+   "def_pass_epa_adj": 0.037384,
+   "off_pass_plays": 588,
+   "def_pass_plays": 592,
+   "off_rush_epa_adj": -0.034168,
+   "def_rush_epa_adj": -0.025513,
+   "off_rush_plays": 399,
+   "def_rush_plays": 443,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.44828
+    },
+    {
+     "week": 2,
+     "v2": -0.029903
+    },
+    {
+     "week": 3,
+     "v2": -0.061174
+    },
+    {
+     "week": 4,
+     "v2": -0.060984
+    },
+    {
+     "week": 5,
+     "v2": -0.054998
+    },
+    {
+     "week": 6,
+     "v2": -0.03743
+    },
+    {
+     "week": 7,
+     "v2": -0.022999
+    },
+    {
+     "week": 8,
+     "v2": -0.069196
+    },
+    {
+     "week": 9,
+     "v2": -0.075736
+    },
+    {
+     "week": 10,
+     "v2": -0.108732
+    },
+    {
+     "week": 11,
+     "v2": -0.104319
+    },
+    {
+     "week": 12,
+     "v2": -0.104957
+    },
+    {
+     "week": 13,
+     "v2": -0.107506
+    },
+    {
+     "week": 14,
+     "v2": -0.122564
+    },
+    {
+     "week": 15,
+     "v2": -0.131155
+    },
+    {
+     "week": 16,
+     "v2": -0.077234
+    },
+    {
+     "week": 17,
+     "v2": -0.090576
+    },
+    {
+     "week": 18,
+     "v2": -0.089483
+    }
+   ],
+   "schedule_expected_wins": 5.9826,
+   "remaining_games": 0,
+   "projected_wins": 5.0,
+   "projected_losses": 12.0,
+   "sos": 0.013767,
+   "sos_games": 17
   },
   {
    "team": "ARI",
@@ -703,6 +3225,8 @@
    "losses": 13,
    "ties": 0,
    "point_diff": -109,
+   "points_for": 340,
+   "points_against": 449,
    "v2": -0.096056,
    "off_epa": -0.090108,
    "def_epa": 0.015629,
@@ -716,7 +3240,95 @@
    "expected_wins": 10.8138,
    "opponents": 31,
    "win_chance_rank": 29,
-   "v2_rank": 29
+   "v2_rank": 29,
+   "off_pass_epa_adj": -0.132554,
+   "def_pass_epa_adj": 0.020479,
+   "off_pass_plays": 706,
+   "def_pass_plays": 629,
+   "off_rush_epa_adj": -0.018126,
+   "def_rush_epa_adj": 0.00508,
+   "off_rush_plays": 427,
+   "def_rush_plays": 429,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.416382
+    },
+    {
+     "week": 2,
+     "v2": -0.172839
+    },
+    {
+     "week": 3,
+     "v2": -0.289532
+    },
+    {
+     "week": 4,
+     "v2": -0.078859
+    },
+    {
+     "week": 5,
+     "v2": -0.018792
+    },
+    {
+     "week": 6,
+     "v2": -0.028935
+    },
+    {
+     "week": 7,
+     "v2": 0.016108
+    },
+    {
+     "week": 8,
+     "v2": 0.001402
+    },
+    {
+     "week": 9,
+     "v2": -0.038477
+    },
+    {
+     "week": 10,
+     "v2": -0.032531
+    },
+    {
+     "week": 11,
+     "v2": -0.075773
+    },
+    {
+     "week": 12,
+     "v2": -0.076711
+    },
+    {
+     "week": 13,
+     "v2": -0.069316
+    },
+    {
+     "week": 14,
+     "v2": -0.088854
+    },
+    {
+     "week": 15,
+     "v2": -0.107136
+    },
+    {
+     "week": 16,
+     "v2": -0.100209
+    },
+    {
+     "week": 17,
+     "v2": -0.090351
+    },
+    {
+     "week": 18,
+     "v2": -0.096056
+    }
+   ],
+   "schedule_expected_wins": 5.7576,
+   "remaining_games": 0,
+   "projected_wins": 4.0,
+   "projected_losses": 13.0,
+   "sos": 0.01025,
+   "sos_games": 17
   },
   {
    "team": "CHI",
@@ -727,6 +3339,8 @@
    "losses": 14,
    "ties": 0,
    "point_diff": -137,
+   "points_for": 326,
+   "points_against": 463,
    "v2": -0.140139,
    "off_epa": -0.043347,
    "def_epa": 0.115492,
@@ -740,7 +3354,95 @@
    "expected_wins": 8.8464,
    "opponents": 31,
    "win_chance_rank": 30,
-   "v2_rank": 30
+   "v2_rank": 30,
+   "off_pass_epa_adj": -0.214795,
+   "def_pass_epa_adj": 0.133228,
+   "off_pass_plays": 434,
+   "def_pass_plays": 498,
+   "off_rush_epa_adj": 0.09954,
+   "def_rush_epa_adj": 0.079389,
+   "off_rush_plays": 546,
+   "def_rush_plays": 520,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.114666
+    },
+    {
+     "week": 2,
+     "v2": -0.218364
+    },
+    {
+     "week": 3,
+     "v2": -0.139809
+    },
+    {
+     "week": 4,
+     "v2": -0.175669
+    },
+    {
+     "week": 5,
+     "v2": -0.162924
+    },
+    {
+     "week": 6,
+     "v2": -0.160354
+    },
+    {
+     "week": 7,
+     "v2": -0.075897
+    },
+    {
+     "week": 8,
+     "v2": -0.083106
+    },
+    {
+     "week": 9,
+     "v2": -0.073475
+    },
+    {
+     "week": 10,
+     "v2": -0.068068
+    },
+    {
+     "week": 11,
+     "v2": -0.066053
+    },
+    {
+     "week": 12,
+     "v2": -0.078641
+    },
+    {
+     "week": 13,
+     "v2": -0.073101
+    },
+    {
+     "week": 14,
+     "v2": -0.07417
+    },
+    {
+     "week": 15,
+     "v2": -0.062731
+    },
+    {
+     "week": 16,
+     "v2": -0.095308
+    },
+    {
+     "week": 17,
+     "v2": -0.124555
+    },
+    {
+     "week": 18,
+     "v2": -0.140139
+    }
+   ],
+   "schedule_expected_wins": 4.6677,
+   "remaining_games": 0,
+   "projected_wins": 3.0,
+   "projected_losses": 14.0,
+   "sos": 0.013183,
+   "sos_games": 17
   },
   {
    "team": "IND",
@@ -751,6 +3453,8 @@
    "losses": 12,
    "ties": 1,
    "point_diff": -138,
+   "points_for": 289,
+   "points_against": 427,
    "v2": -0.151675,
    "off_epa": -0.166331,
    "def_epa": -0.028683,
@@ -764,7 +3468,95 @@
    "expected_wins": 8.3636,
    "opponents": 31,
    "win_chance_rank": 31,
-   "v2_rank": 31
+   "v2_rank": 31,
+   "off_pass_epa_adj": -0.175074,
+   "def_pass_epa_adj": 0.00654,
+   "off_pass_plays": 663,
+   "def_pass_plays": 581,
+   "off_rush_epa_adj": -0.149634,
+   "def_rush_epa_adj": -0.039434,
+   "off_rush_plays": 432,
+   "def_rush_plays": 493,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": 0.166632
+    },
+    {
+     "week": 2,
+     "v2": -0.231042
+    },
+    {
+     "week": 3,
+     "v2": -0.101245
+    },
+    {
+     "week": 4,
+     "v2": -0.145794
+    },
+    {
+     "week": 5,
+     "v2": -0.126988
+    },
+    {
+     "week": 6,
+     "v2": -0.085034
+    },
+    {
+     "week": 7,
+     "v2": -0.089014
+    },
+    {
+     "week": 8,
+     "v2": -0.109741
+    },
+    {
+     "week": 9,
+     "v2": -0.119161
+    },
+    {
+     "week": 10,
+     "v2": -0.090258
+    },
+    {
+     "week": 11,
+     "v2": -0.060491
+    },
+    {
+     "week": 12,
+     "v2": -0.084639
+    },
+    {
+     "week": 13,
+     "v2": -0.117792
+    },
+    {
+     "week": 14,
+     "v2": -0.111952
+    },
+    {
+     "week": 15,
+     "v2": -0.10196
+    },
+    {
+     "week": 16,
+     "v2": -0.131234
+    },
+    {
+     "week": 17,
+     "v2": -0.150216
+    },
+    {
+     "week": 18,
+     "v2": -0.151675
+    }
+   ],
+   "schedule_expected_wins": 4.933,
+   "remaining_games": 0,
+   "projected_wins": 4.0,
+   "projected_losses": 12.0,
+   "sos": -0.012653,
+   "sos_games": 17
   },
   {
    "team": "HOU",
@@ -775,6 +3567,8 @@
    "losses": 13,
    "ties": 1,
    "point_diff": -131,
+   "points_for": 289,
+   "points_against": 420,
    "v2": -0.202459,
    "off_epa": -0.18713,
    "def_epa": 0.001084,
@@ -788,7 +3582,4433 @@
    "expected_wins": 6.4194,
    "opponents": 31,
    "win_chance_rank": 32,
-   "v2_rank": 32
+   "v2_rank": 32,
+   "off_pass_epa_adj": -0.202455,
+   "def_pass_epa_adj": -0.02139,
+   "off_pass_plays": 616,
+   "def_pass_plays": 559,
+   "off_rush_epa_adj": -0.186687,
+   "def_rush_epa_adj": 0.025028,
+   "off_rush_plays": 390,
+   "def_rush_plays": 553,
+   "weeks": [
+    {
+     "week": 1,
+     "v2": -0.166632
+    },
+    {
+     "week": 2,
+     "v2": -0.500467
+    },
+    {
+     "week": 3,
+     "v2": -0.257627
+    },
+    {
+     "week": 4,
+     "v2": -0.28738
+    },
+    {
+     "week": 5,
+     "v2": -0.183956
+    },
+    {
+     "week": 6,
+     "v2": -0.180029
+    },
+    {
+     "week": 7,
+     "v2": -0.182319
+    },
+    {
+     "week": 8,
+     "v2": -0.230901
+    },
+    {
+     "week": 9,
+     "v2": -0.215788
+    },
+    {
+     "week": 10,
+     "v2": -0.212786
+    },
+    {
+     "week": 11,
+     "v2": -0.216625
+    },
+    {
+     "week": 12,
+     "v2": -0.219108
+    },
+    {
+     "week": 13,
+     "v2": -0.230724
+    },
+    {
+     "week": 14,
+     "v2": -0.211149
+    },
+    {
+     "week": 15,
+     "v2": -0.196782
+    },
+    {
+     "week": 16,
+     "v2": -0.185745
+    },
+    {
+     "week": 17,
+     "v2": -0.204456
+    },
+    {
+     "week": 18,
+     "v2": -0.202459
+    }
+   ],
+   "schedule_expected_wins": 3.8434,
+   "remaining_games": 0,
+   "projected_wins": 3.0,
+   "projected_losses": 13.0,
+   "sos": -0.011673,
+   "sos_games": 17
+  }
+ ],
+ "games": [
+  {
+   "week": 1,
+   "home": "ARI",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 44,
+   "spread_home": -11.6589,
+   "home_win_chance": 0.160162,
+   "proj_home": 18.029,
+   "proj_away": 29.6879,
+   "margin_low": -26.7085,
+   "margin_high": 3.3906,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "ATL",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 27,
+   "spread_home": -2.6262,
+   "home_win_chance": 0.407756,
+   "proj_home": 19.8311,
+   "proj_away": 22.4573,
+   "margin_low": -17.6757,
+   "margin_high": 12.4233,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "CAR",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 26,
+   "spread_home": -1.0742,
+   "home_win_chance": 0.461906,
+   "proj_home": 21.0476,
+   "proj_away": 22.1218,
+   "margin_low": -16.1237,
+   "margin_high": 13.9753,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "CHI",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 10,
+   "spread_home": -13.2617,
+   "home_win_chance": 0.131836,
+   "proj_home": 15.5847,
+   "proj_away": 28.8465,
+   "margin_low": -28.3113,
+   "margin_high": 1.7878,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "CIN",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 23,
+   "spread_home": 8.0806,
+   "home_win_chance": 0.759229,
+   "proj_home": 25.3482,
+   "proj_away": 17.2676,
+   "margin_low": -6.9689,
+   "margin_high": 23.1301,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "DAL",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 3,
+   "away_score": 19,
+   "spread_home": 5.7943,
+   "home_win_chance": 0.694983,
+   "proj_home": 24.6842,
+   "proj_away": 18.8899,
+   "margin_low": -9.2552,
+   "margin_high": 20.8439,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "DET",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 38,
+   "spread_home": -5.1351,
+   "home_win_chance": 0.325233,
+   "proj_home": 21.8504,
+   "proj_away": 26.9855,
+   "margin_low": -20.1846,
+   "margin_high": 9.9144,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "HOU",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 20,
+   "spread_home": -0.6947,
+   "home_win_chance": 0.475335,
+   "proj_home": 20.7849,
+   "proj_away": 21.4796,
+   "margin_low": -15.7443,
+   "margin_high": 14.3548,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "LA",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 31,
+   "spread_home": -10.9461,
+   "home_win_chance": 0.174262,
+   "proj_home": 16.2878,
+   "proj_away": 27.2339,
+   "margin_low": -25.9957,
+   "margin_high": 4.1034,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "LAC",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 19,
+   "spread_home": 4.2327,
+   "home_win_chance": 0.646017,
+   "proj_home": 25.1891,
+   "proj_away": 20.9564,
+   "margin_low": -10.8168,
+   "margin_high": 19.2822,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "MIA",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 7,
+   "spread_home": 2.8588,
+   "home_win_chance": 0.600202,
+   "proj_home": 23.5379,
+   "proj_away": 20.6791,
+   "margin_low": -12.1907,
+   "margin_high": 17.9083,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "MIN",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 7,
+   "spread_home": 1.889,
+   "home_win_chance": 0.566719,
+   "proj_home": 24.0649,
+   "proj_away": 22.1759,
+   "margin_low": -13.1605,
+   "margin_high": 16.9386,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "NYJ",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 9,
+   "away_score": 24,
+   "spread_home": -0.9131,
+   "home_win_chance": 0.467602,
+   "proj_home": 18.9138,
+   "proj_away": 19.8269,
+   "margin_low": -15.9626,
+   "margin_high": 14.1364,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "SEA",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 16,
+   "spread_home": 3.7845,
+   "home_win_chance": 0.631317,
+   "proj_home": 23.3697,
+   "proj_away": 19.5853,
+   "margin_low": -11.2651,
+   "margin_high": 18.834,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "TEN",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 21,
+   "spread_home": -0.2224,
+   "home_win_chance": 0.492098,
+   "proj_home": 20.6401,
+   "proj_away": 20.8625,
+   "margin_low": -15.2719,
+   "margin_high": 14.8271,
+   "rating_basis": "season"
+  },
+  {
+   "week": 1,
+   "home": "WAS",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 22,
+   "spread_home": -0.2666,
+   "home_win_chance": 0.490529,
+   "proj_home": 20.9156,
+   "proj_away": 21.1822,
+   "margin_low": -15.3161,
+   "margin_high": 14.7829,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "BAL",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 38,
+   "away_score": 42,
+   "spread_home": 0.5699,
+   "home_win_chance": 0.520237,
+   "proj_home": 21.8458,
+   "proj_away": 21.2759,
+   "margin_low": -14.4797,
+   "margin_high": 15.6194,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "BUF",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 41,
+   "away_score": 7,
+   "spread_home": 13.3893,
+   "home_win_chance": 0.870225,
+   "proj_home": 28.0507,
+   "proj_away": 14.6615,
+   "margin_low": -1.6603,
+   "margin_high": 28.4388,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "CLE",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 31,
+   "spread_home": 3.044,
+   "home_win_chance": 0.606501,
+   "proj_home": 21.809,
+   "proj_away": 18.765,
+   "margin_low": -12.0056,
+   "margin_high": 18.0935,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "DAL",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 17,
+   "spread_home": -1.1024,
+   "home_win_chance": 0.460911,
+   "proj_home": 22.6019,
+   "proj_away": 23.7043,
+   "margin_low": -16.1519,
+   "margin_high": 13.9472,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "DEN",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 9,
+   "spread_home": 8.0344,
+   "home_win_chance": 0.758026,
+   "proj_home": 24.3161,
+   "proj_away": 16.2818,
+   "margin_low": -7.0152,
+   "margin_high": 23.0839,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "DET",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 36,
+   "away_score": 27,
+   "spread_home": 1.6748,
+   "home_win_chance": 0.55923,
+   "proj_home": 23.3864,
+   "proj_away": 21.7115,
+   "margin_low": -13.3747,
+   "margin_high": 16.7244,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "GB",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 10,
+   "spread_home": 6.8917,
+   "home_win_chance": 0.727006,
+   "proj_home": 25.8281,
+   "proj_away": 18.9364,
+   "margin_low": -8.1578,
+   "margin_high": 21.9413,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "JAX",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 0,
+   "spread_home": 10.9624,
+   "home_win_chance": 0.826072,
+   "proj_home": 27.1492,
+   "proj_away": 16.1868,
+   "margin_low": -4.0871,
+   "margin_high": 26.012,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "KC",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": 11.4239,
+   "home_win_chance": 0.835294,
+   "proj_home": 29.4037,
+   "proj_away": 17.9799,
+   "margin_low": -3.6257,
+   "margin_high": 26.4734,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "LA",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 27,
+   "spread_home": 1.0322,
+   "home_win_chance": 0.536611,
+   "proj_home": 21.8508,
+   "proj_away": 20.8185,
+   "margin_low": -14.0173,
+   "margin_high": 16.0818,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "LV",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 29,
+   "spread_home": 3.1097,
+   "home_win_chance": 0.608729,
+   "proj_home": 24.7943,
+   "proj_away": 21.6845,
+   "margin_low": -11.9398,
+   "margin_high": 18.1593,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "NO",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 20,
+   "spread_home": 2.2608,
+   "home_win_chance": 0.579644,
+   "proj_home": 21.3222,
+   "proj_away": 19.0614,
+   "margin_low": -12.7888,
+   "margin_high": 17.3103,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "NYG",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 16,
+   "spread_home": 2.4683,
+   "home_win_chance": 0.586815,
+   "proj_home": 22.7474,
+   "proj_away": 20.2791,
+   "margin_low": -12.5812,
+   "margin_high": 17.5179,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "PHI",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 7,
+   "spread_home": 9.9405,
+   "home_win_chance": 0.804206,
+   "proj_home": 29.043,
+   "proj_away": 19.1025,
+   "margin_low": -5.1091,
+   "margin_high": 24.99,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "PIT",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 17,
+   "spread_home": 0.2163,
+   "home_win_chance": 0.507686,
+   "proj_home": 20.5262,
+   "proj_away": 20.3098,
+   "margin_low": -14.8332,
+   "margin_high": 15.2659,
+   "rating_basis": "season"
+  },
+  {
+   "week": 2,
+   "home": "SF",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 7,
+   "spread_home": 11.5833,
+   "home_win_chance": 0.838388,
+   "proj_home": 28.2334,
+   "proj_away": 16.6501,
+   "margin_low": -3.4662,
+   "margin_high": 26.6328,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "ARI",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 12,
+   "away_score": 20,
+   "spread_home": 1.457,
+   "home_win_chance": 0.551583,
+   "proj_home": 22.5155,
+   "proj_away": 21.0586,
+   "margin_low": -13.5926,
+   "margin_high": 16.5065,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "CAR",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 14,
+   "spread_home": -0.9525,
+   "home_win_chance": 0.466209,
+   "proj_home": 20.3108,
+   "proj_away": 21.2633,
+   "margin_low": -16.002,
+   "margin_high": 14.0971,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "CHI",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 20,
+   "spread_home": 4.8099,
+   "home_win_chance": 0.664543,
+   "proj_home": 24.4063,
+   "proj_away": 19.5964,
+   "margin_low": -10.2397,
+   "margin_high": 19.8594,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "CLE",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 29,
+   "away_score": 17,
+   "spread_home": 1.7895,
+   "home_win_chance": 0.563243,
+   "proj_home": 21.6818,
+   "proj_away": 19.8923,
+   "margin_low": -13.26,
+   "margin_high": 16.839,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "DEN",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 11,
+   "away_score": 10,
+   "spread_home": -10.0372,
+   "home_win_chance": 0.193638,
+   "proj_home": 15.4946,
+   "proj_away": 25.5318,
+   "margin_low": -25.0868,
+   "margin_high": 5.0123,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "IND",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 17,
+   "spread_home": -14.3658,
+   "home_win_chance": 0.114889,
+   "proj_home": 15.8065,
+   "proj_away": 30.1723,
+   "margin_low": -29.4153,
+   "margin_high": 0.6837,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "LAC",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 38,
+   "spread_home": -0.9131,
+   "home_win_chance": 0.467602,
+   "proj_home": 21.9138,
+   "proj_away": 22.8269,
+   "margin_low": -15.9626,
+   "margin_high": 14.1364,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "MIA",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 19,
+   "spread_home": -3.0469,
+   "home_win_chance": 0.393399,
+   "proj_home": 21.4874,
+   "proj_away": 24.5343,
+   "margin_low": -18.0965,
+   "margin_high": 12.0026,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "MIN",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 24,
+   "spread_home": 0.5252,
+   "home_win_chance": 0.518652,
+   "proj_home": 25.0377,
+   "proj_away": 24.5125,
+   "margin_low": -14.5243,
+   "margin_high": 15.5747,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "NE",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 37,
+   "spread_home": 1.9019,
+   "home_win_chance": 0.567168,
+   "proj_home": 21.4999,
+   "proj_away": 19.598,
+   "margin_low": -13.1477,
+   "margin_high": 16.9514,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "NYG",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 23,
+   "spread_home": -3.7946,
+   "home_win_chance": 0.368349,
+   "proj_home": 20.6636,
+   "proj_away": 24.4581,
+   "margin_low": -18.8441,
+   "margin_high": 11.255,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "NYJ",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 12,
+   "away_score": 27,
+   "spread_home": -5.7814,
+   "home_win_chance": 0.305407,
+   "proj_home": 17.9172,
+   "proj_away": 23.6986,
+   "margin_low": -20.8309,
+   "margin_high": 9.2682,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "SEA",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 27,
+   "spread_home": 3.799,
+   "home_win_chance": 0.631796,
+   "proj_home": 24.627,
+   "proj_away": 20.828,
+   "margin_low": -11.2506,
+   "margin_high": 18.8485,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "TB",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 12,
+   "away_score": 14,
+   "spread_home": 3.7911,
+   "home_win_chance": 0.631536,
+   "proj_home": 22.8731,
+   "proj_away": 19.082,
+   "margin_low": -11.2584,
+   "margin_high": 18.8406,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "TEN",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 22,
+   "spread_home": 1.8744,
+   "home_win_chance": 0.56621,
+   "proj_home": 22.6052,
+   "proj_away": 20.7308,
+   "margin_low": -13.1751,
+   "margin_high": 16.924,
+   "rating_basis": "season"
+  },
+  {
+   "week": 3,
+   "home": "WAS",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 8,
+   "away_score": 24,
+   "spread_home": -5.0331,
+   "home_win_chance": 0.328422,
+   "proj_home": 19.33,
+   "proj_away": 24.3631,
+   "margin_low": -20.0826,
+   "margin_high": 10.0164,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "ATL",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 20,
+   "spread_home": -2.7479,
+   "home_win_chance": 0.403586,
+   "proj_home": 20.5678,
+   "proj_away": 23.3157,
+   "margin_low": -17.7974,
+   "margin_high": 12.3016,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "BAL",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 23,
+   "spread_home": -4.2539,
+   "home_win_chance": 0.353295,
+   "proj_home": 19.3244,
+   "proj_away": 23.5783,
+   "margin_low": -19.3034,
+   "margin_high": 10.7956,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "CAR",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 26,
+   "spread_home": 4.5151,
+   "home_win_chance": 0.655139,
+   "proj_home": 24.4017,
+   "proj_away": 19.8866,
+   "margin_low": -10.5344,
+   "margin_high": 19.5646,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "CIN",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 15,
+   "spread_home": 5.4381,
+   "home_win_chance": 0.684147,
+   "proj_home": 25.7174,
+   "proj_away": 20.2793,
+   "margin_low": -9.6114,
+   "margin_high": 20.4877,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "DAL",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 25,
+   "away_score": 10,
+   "spread_home": 6.3427,
+   "home_win_chance": 0.71125,
+   "proj_home": 24.8751,
+   "proj_away": 18.5323,
+   "margin_low": -8.7068,
+   "margin_high": 21.3923,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "DET",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 45,
+   "away_score": 48,
+   "spread_home": 3.0234,
+   "home_win_chance": 0.605804,
+   "proj_home": 25.7749,
+   "proj_away": 22.7515,
+   "margin_low": -12.0261,
+   "margin_high": 18.073,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "GB",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": -2.3909,
+   "home_win_chance": 0.415857,
+   "proj_home": 20.2583,
+   "proj_away": 22.6491,
+   "margin_low": -17.4404,
+   "margin_high": 12.6587,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "HOU",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 34,
+   "spread_home": -7.1904,
+   "home_win_chance": 0.264651,
+   "proj_home": 18.2395,
+   "proj_away": 25.4298,
+   "margin_low": -22.2399,
+   "margin_high": 7.8592,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "IND",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 24,
+   "spread_home": -2.3605,
+   "home_win_chance": 0.416906,
+   "proj_home": 19.333,
+   "proj_away": 21.6935,
+   "margin_low": -17.41,
+   "margin_high": 12.689,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "LV",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 32,
+   "away_score": 23,
+   "spread_home": 2.0307,
+   "home_win_chance": 0.571657,
+   "proj_home": 22.5524,
+   "proj_away": 20.5217,
+   "margin_low": -13.0188,
+   "margin_high": 17.0802,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "NO",
+   "away": "MIN",
+   "neutral": true,
+   "played": true,
+   "home_score": 25,
+   "away_score": 28,
+   "spread_home": 2.386,
+   "home_win_chance": 0.583974,
+   "proj_home": 23.5276,
+   "proj_away": 21.1417,
+   "margin_low": -12.6636,
+   "margin_high": 17.4355,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "NYG",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 12,
+   "spread_home": 7.352,
+   "home_win_chance": 0.739796,
+   "proj_home": 25.9988,
+   "proj_away": 18.6467,
+   "margin_low": -7.6975,
+   "margin_high": 22.4016,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "PHI",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 29,
+   "away_score": 21,
+   "spread_home": 6.5433,
+   "home_win_chance": 0.71707,
+   "proj_home": 26.1897,
+   "proj_away": 19.6463,
+   "margin_low": -8.5062,
+   "margin_high": 21.5929,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "PIT",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 24,
+   "spread_home": 3.0313,
+   "home_win_chance": 0.606071,
+   "proj_home": 20.7551,
+   "proj_away": 17.7237,
+   "margin_low": -12.0182,
+   "margin_high": 18.0809,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "SF",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 9,
+   "spread_home": 14.3501,
+   "home_win_chance": 0.884883,
+   "proj_home": 28.224,
+   "proj_away": 13.8739,
+   "margin_low": -0.6995,
+   "margin_high": 29.3996,
+   "rating_basis": "season"
+  },
+  {
+   "week": 4,
+   "home": "TB",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 41,
+   "spread_home": -6.6753,
+   "home_win_chance": 0.279142,
+   "proj_home": 19.1161,
+   "proj_away": 25.7913,
+   "margin_low": -21.7248,
+   "margin_high": 8.3743,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "ARI",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 20,
+   "spread_home": -9.4683,
+   "home_win_chance": 0.206576,
+   "proj_home": 18.6005,
+   "proj_away": 28.0688,
+   "margin_low": -24.5179,
+   "margin_high": 5.5812,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "BAL",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 17,
+   "spread_home": -3.0914,
+   "home_win_chance": 0.391892,
+   "proj_home": 19.8931,
+   "proj_away": 22.9846,
+   "margin_low": -18.1409,
+   "margin_high": 11.9581,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "BUF",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 38,
+   "away_score": 3,
+   "spread_home": 9.2431,
+   "home_win_chance": 0.788128,
+   "proj_home": 25.9419,
+   "proj_away": 16.6989,
+   "margin_low": -5.8065,
+   "margin_high": 24.2926,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "CAR",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 15,
+   "away_score": 37,
+   "spread_home": -8.378,
+   "home_win_chance": 0.233129,
+   "proj_home": 17.2171,
+   "proj_away": 25.5951,
+   "margin_low": -23.4276,
+   "margin_high": 6.6715,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "CLE",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 30,
+   "spread_home": 3.5774,
+   "home_win_chance": 0.62444,
+   "proj_home": 24.0162,
+   "proj_away": 20.4388,
+   "margin_low": -11.4721,
+   "margin_high": 18.6269,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "DEN",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 9,
+   "away_score": 12,
+   "spread_home": 5.5628,
+   "home_win_chance": 0.687962,
+   "proj_home": 23.1637,
+   "proj_away": 17.6009,
+   "margin_low": -9.4868,
+   "margin_high": 20.6123,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "GB",
+   "away": "NYG",
+   "neutral": true,
+   "played": true,
+   "home_score": 22,
+   "away_score": 27,
+   "spread_home": -0.4603,
+   "home_win_chance": 0.483651,
+   "proj_home": 21.5212,
+   "proj_away": 21.9815,
+   "margin_low": -15.5098,
+   "margin_high": 14.5892,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "JAX",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 6,
+   "away_score": 13,
+   "spread_home": 13.434,
+   "home_win_chance": 0.870942,
+   "proj_home": 28.3017,
+   "proj_away": 14.8676,
+   "margin_low": -1.6155,
+   "margin_high": 28.4836,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "KC",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 29,
+   "spread_home": 13.8797,
+   "home_win_chance": 0.877897,
+   "proj_home": 31.084,
+   "proj_away": 17.2043,
+   "margin_low": -1.1698,
+   "margin_high": 28.9293,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "LA",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 22,
+   "spread_home": -6.9044,
+   "home_win_chance": 0.272636,
+   "proj_home": 18.5729,
+   "proj_away": 25.4773,
+   "margin_low": -21.9539,
+   "margin_high": 8.1451,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "MIN",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 29,
+   "away_score": 22,
+   "spread_home": 7.0039,
+   "home_win_chance": 0.730159,
+   "proj_home": 27.1937,
+   "proj_away": 20.1898,
+   "margin_low": -8.0456,
+   "margin_high": 22.0534,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "NE",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 29,
+   "away_score": 0,
+   "spread_home": 4.5807,
+   "home_win_chance": 0.657245,
+   "proj_home": 25.3988,
+   "proj_away": 20.8181,
+   "margin_low": -10.4688,
+   "margin_high": 19.6303,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "NO",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 39,
+   "away_score": 32,
+   "spread_home": 4.1578,
+   "home_win_chance": 0.643577,
+   "proj_home": 23.9016,
+   "proj_away": 19.7439,
+   "margin_low": -10.8918,
+   "margin_high": 19.2073,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "NYJ",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 40,
+   "away_score": 17,
+   "spread_home": -2.1201,
+   "home_win_chance": 0.425235,
+   "proj_home": 19.8698,
+   "proj_away": 21.9899,
+   "margin_low": -17.1696,
+   "margin_high": 12.9294,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "TB",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 15,
+   "spread_home": 5.696,
+   "home_win_chance": 0.692012,
+   "proj_home": 23.9445,
+   "proj_away": 18.2486,
+   "margin_low": -9.3536,
+   "margin_high": 20.7455,
+   "rating_basis": "season"
+  },
+  {
+   "week": 5,
+   "home": "WAS",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 21,
+   "spread_home": 4.7816,
+   "home_win_chance": 0.663648,
+   "proj_home": 22.285,
+   "proj_away": 17.5034,
+   "margin_low": -10.2679,
+   "margin_high": 19.8312,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "ATL",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 14,
+   "spread_home": -10.0517,
+   "home_win_chance": 0.193316,
+   "proj_home": 16.7374,
+   "proj_away": 26.7891,
+   "margin_low": -25.1013,
+   "margin_high": 4.9978,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "CHI",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 7,
+   "away_score": 12,
+   "spread_home": -4.8039,
+   "home_win_chance": 0.335648,
+   "proj_home": 19.0637,
+   "proj_away": 23.8675,
+   "margin_low": -19.8534,
+   "margin_high": 10.2457,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "CLE",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 15,
+   "away_score": 38,
+   "spread_home": 0.229,
+   "home_win_chance": 0.508136,
+   "proj_home": 21.5801,
+   "proj_away": 21.3511,
+   "margin_low": -14.8205,
+   "margin_high": 15.2785,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "GB",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 27,
+   "spread_home": 0.4241,
+   "home_win_chance": 0.515065,
+   "proj_home": 20.4872,
+   "proj_away": 20.0631,
+   "margin_low": -14.6254,
+   "margin_high": 15.4736,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "IND",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 34,
+   "away_score": 27,
+   "spread_home": -7.4087,
+   "home_win_chance": 0.258655,
+   "proj_home": 17.9636,
+   "proj_away": 25.3724,
+   "margin_low": -22.4583,
+   "margin_high": 7.6408,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "KC",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 24,
+   "spread_home": 2.1698,
+   "home_win_chance": 0.576489,
+   "proj_home": 24.9172,
+   "proj_away": 22.7474,
+   "margin_low": -12.8798,
+   "margin_high": 17.2193,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "LA",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 10,
+   "spread_home": -0.6415,
+   "home_win_chance": 0.477223,
+   "proj_home": 20.6568,
+   "proj_away": 21.2983,
+   "margin_low": -15.691,
+   "margin_high": 14.408,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "LAC",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 16,
+   "spread_home": 4.4866,
+   "home_win_chance": 0.654223,
+   "proj_home": 23.3279,
+   "proj_away": 18.8414,
+   "margin_low": -10.563,
+   "margin_high": 19.5361,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "MIA",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 24,
+   "spread_home": 6.9143,
+   "home_win_chance": 0.727644,
+   "proj_home": 27.2323,
+   "proj_away": 20.318,
+   "margin_low": -8.1352,
+   "margin_high": 21.9639,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "NO",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 30,
+   "spread_home": -4.636,
+   "home_win_chance": 0.34099,
+   "proj_home": 19.2399,
+   "proj_away": 23.8759,
+   "margin_low": -19.6855,
+   "margin_high": 10.4136,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "NYG",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 20,
+   "spread_home": -1.8055,
+   "home_win_chance": 0.436196,
+   "proj_home": 19.9438,
+   "proj_away": 21.7493,
+   "margin_low": -16.8551,
+   "margin_high": 13.244,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "PHI",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 17,
+   "spread_home": 4.0209,
+   "home_win_chance": 0.639103,
+   "proj_home": 25.5832,
+   "proj_away": 21.5623,
+   "margin_low": -11.0286,
+   "margin_high": 19.0704,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "PIT",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 18,
+   "spread_home": 2.3698,
+   "home_win_chance": 0.583416,
+   "proj_home": 21.1267,
+   "proj_away": 18.7569,
+   "margin_low": -12.6797,
+   "margin_high": 17.4194,
+   "rating_basis": "season"
+  },
+  {
+   "week": 6,
+   "home": "SEA",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 9,
+   "spread_home": 4.8635,
+   "home_win_chance": 0.66624,
+   "proj_home": 25.6116,
+   "proj_away": 20.7481,
+   "margin_low": -10.186,
+   "margin_high": 19.913,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "ARI",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 42,
+   "away_score": 34,
+   "spread_home": -3.6907,
+   "home_win_chance": 0.37179,
+   "proj_home": 19.7512,
+   "proj_away": 23.4419,
+   "margin_low": -18.7403,
+   "margin_high": 11.3588,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "BAL",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 20,
+   "spread_home": 3.1997,
+   "home_win_chance": 0.611769,
+   "proj_home": 22.5178,
+   "proj_away": 19.3181,
+   "margin_low": -11.8499,
+   "margin_high": 18.2492,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "CAR",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 3,
+   "spread_home": -0.4686,
+   "home_win_chance": 0.483357,
+   "proj_home": 20.5051,
+   "proj_away": 20.9737,
+   "margin_low": -15.5181,
+   "margin_high": 14.581,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "CIN",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 17,
+   "spread_home": 12.5927,
+   "home_win_chance": 0.856895,
+   "proj_home": 28.759,
+   "proj_away": 16.1663,
+   "margin_low": -2.4568,
+   "margin_high": 27.6422,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "DAL",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 6,
+   "spread_home": 6.4447,
+   "home_win_chance": 0.714218,
+   "proj_home": 27.4975,
+   "proj_away": 21.0528,
+   "margin_low": -8.6048,
+   "margin_high": 21.4943,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "DEN",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 9,
+   "away_score": 16,
+   "spread_home": -1.4663,
+   "home_win_chance": 0.448089,
+   "proj_home": 18.411,
+   "proj_away": 19.8773,
+   "margin_low": -16.5158,
+   "margin_high": 13.5833,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "JAX",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 23,
+   "spread_home": 4.8258,
+   "home_win_chance": 0.665048,
+   "proj_home": 24.319,
+   "proj_away": 19.4932,
+   "margin_low": -10.2237,
+   "margin_high": 19.8754,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "LAC",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 37,
+   "spread_home": 2.4789,
+   "home_win_chance": 0.58718,
+   "proj_home": 24.2527,
+   "proj_away": 21.7738,
+   "margin_low": -12.5706,
+   "margin_high": 17.5285,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "LV",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 38,
+   "away_score": 20,
+   "spread_home": 8.2882,
+   "home_win_chance": 0.764582,
+   "proj_home": 26.4311,
+   "proj_away": 18.1429,
+   "margin_low": -6.7613,
+   "margin_high": 23.3377,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "MIA",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 10,
+   "spread_home": 4.4193,
+   "home_win_chance": 0.652057,
+   "proj_home": 23.6395,
+   "proj_away": 19.2202,
+   "margin_low": -10.6302,
+   "margin_high": 19.4688,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "NE",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 33,
+   "spread_home": 11.0594,
+   "home_win_chance": 0.828044,
+   "proj_home": 27.5548,
+   "proj_away": 16.4954,
+   "margin_low": -3.9901,
+   "margin_high": 26.109,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "SF",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 44,
+   "spread_home": 1.2342,
+   "home_win_chance": 0.543741,
+   "proj_home": 23.7375,
+   "proj_away": 22.5033,
+   "margin_low": -13.8153,
+   "margin_high": 16.2837,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "TEN",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 10,
+   "spread_home": 5.9142,
+   "home_win_chance": 0.698583,
+   "proj_home": 23.4703,
+   "proj_away": 17.5561,
+   "margin_low": -9.1353,
+   "margin_high": 20.9637,
+   "rating_basis": "season"
+  },
+  {
+   "week": 7,
+   "home": "WAS",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 21,
+   "spread_home": 3.2427,
+   "home_win_chance": 0.61322,
+   "proj_home": 22.5155,
+   "proj_away": 19.2728,
+   "margin_low": -11.8068,
+   "margin_high": 18.2922,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "ATL",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 37,
+   "away_score": 34,
+   "spread_home": 0.1031,
+   "home_win_chance": 0.503665,
+   "proj_home": 21.7434,
+   "proj_away": 21.6402,
+   "margin_low": -14.9464,
+   "margin_high": 15.1527,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "BUF",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 17,
+   "spread_home": 11.8503,
+   "home_win_chance": 0.843464,
+   "proj_home": 28.2813,
+   "proj_away": 16.431,
+   "margin_low": -3.1992,
+   "margin_high": 26.8998,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "CLE",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 32,
+   "away_score": 13,
+   "spread_home": -4.5142,
+   "home_win_chance": 0.344888,
+   "proj_home": 20.0984,
+   "proj_away": 24.6126,
+   "margin_low": -19.5638,
+   "margin_high": 10.5353,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "DAL",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 49,
+   "away_score": 29,
+   "spread_home": 12.9234,
+   "home_win_chance": 0.862564,
+   "proj_home": 29.6535,
+   "proj_away": 16.7301,
+   "margin_low": -2.1261,
+   "margin_high": 27.973,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "DET",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 31,
+   "spread_home": -2.109,
+   "home_win_chance": 0.425621,
+   "proj_home": 23.0659,
+   "proj_away": 25.1749,
+   "margin_low": -17.1585,
+   "margin_high": 12.9405,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "HOU",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 17,
+   "spread_home": -4.8321,
+   "home_win_chance": 0.334754,
+   "proj_home": 18.0138,
+   "proj_away": 22.8459,
+   "margin_low": -19.8816,
+   "margin_high": 10.2174,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "IND",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 17,
+   "spread_home": -5.3653,
+   "home_win_chance": 0.318094,
+   "proj_home": 17.9139,
+   "proj_away": 23.2792,
+   "margin_low": -20.4148,
+   "margin_high": 9.6842,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "JAX",
+   "away": "DEN",
+   "neutral": true,
+   "played": true,
+   "home_score": 17,
+   "away_score": 21,
+   "spread_home": 5.3997,
+   "home_win_chance": 0.682965,
+   "proj_home": 23.5345,
+   "proj_away": 18.1348,
+   "margin_low": -9.6499,
+   "margin_high": 20.4492,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "LA",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 31,
+   "spread_home": -10.7964,
+   "home_win_chance": 0.177346,
+   "proj_home": 15.6508,
+   "proj_away": 26.4471,
+   "margin_low": -25.8459,
+   "margin_high": 4.2532,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "MIN",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 34,
+   "away_score": 26,
+   "spread_home": 4.8584,
+   "home_win_chance": 0.66608,
+   "proj_home": 26.121,
+   "proj_away": 21.2626,
+   "margin_low": -10.1911,
+   "margin_high": 19.908,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "NO",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 0,
+   "spread_home": 5.9115,
+   "home_win_chance": 0.698503,
+   "proj_home": 24.838,
+   "proj_away": 18.9265,
+   "margin_low": -9.138,
+   "margin_high": 20.9611,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "NYJ",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 22,
+   "spread_home": -1.0381,
+   "home_win_chance": 0.46318,
+   "proj_home": 19.3989,
+   "proj_away": 20.4371,
+   "margin_low": -16.0877,
+   "margin_high": 14.0114,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "PHI",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 13,
+   "spread_home": 7.4454,
+   "home_win_chance": 0.742343,
+   "proj_home": 25.4502,
+   "proj_away": 18.0048,
+   "margin_low": -7.6041,
+   "margin_high": 22.495,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "SEA",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 13,
+   "spread_home": 1.4338,
+   "home_win_chance": 0.550769,
+   "proj_home": 23.2658,
+   "proj_away": 21.832,
+   "margin_low": -13.6157,
+   "margin_high": 16.4833,
+   "rating_basis": "season"
+  },
+  {
+   "week": 8,
+   "home": "TB",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 27,
+   "spread_home": -0.2516,
+   "home_win_chance": 0.491061,
+   "proj_home": 19.9469,
+   "proj_away": 20.1985,
+   "margin_low": -15.3011,
+   "margin_high": 14.7979,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "ARI",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 31,
+   "spread_home": -1.3098,
+   "home_win_chance": 0.453595,
+   "proj_home": 22.525,
+   "proj_away": 23.8348,
+   "margin_low": -16.3593,
+   "margin_high": 13.7397,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "ATL",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 20,
+   "spread_home": -0.9474,
+   "home_win_chance": 0.466389,
+   "proj_home": 21.861,
+   "proj_away": 22.8083,
+   "margin_low": -15.9969,
+   "margin_high": 14.1022,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "CHI",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 32,
+   "away_score": 35,
+   "spread_home": -8.5877,
+   "home_win_chance": 0.227844,
+   "proj_home": 18.7432,
+   "proj_away": 27.3309,
+   "margin_low": -23.6372,
+   "margin_high": 6.4618,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "CIN",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 42,
+   "away_score": 21,
+   "spread_home": 10.919,
+   "home_win_chance": 0.825183,
+   "proj_home": 27.565,
+   "proj_away": 16.646,
+   "margin_low": -4.1306,
+   "margin_high": 25.9685,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "DET",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 15,
+   "away_score": 9,
+   "spread_home": 3.1407,
+   "home_win_chance": 0.609776,
+   "proj_home": 25.0359,
+   "proj_away": 21.8953,
+   "margin_low": -11.9088,
+   "margin_high": 18.1902,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "HOU",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 29,
+   "spread_home": -14.6468,
+   "home_win_chance": 0.11089,
+   "proj_home": 15.0589,
+   "proj_away": 29.7057,
+   "margin_low": -29.6964,
+   "margin_high": 0.4027,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "JAX",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 20,
+   "spread_home": 6.9227,
+   "home_win_chance": 0.727879,
+   "proj_home": 26.2841,
+   "proj_away": 19.3614,
+   "margin_low": -8.1269,
+   "margin_high": 21.9722,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "KC",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 17,
+   "spread_home": 13.7822,
+   "home_win_chance": 0.876402,
+   "proj_home": 29.1781,
+   "proj_away": 15.396,
+   "margin_low": -1.2674,
+   "margin_high": 28.8317,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "NE",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 3,
+   "spread_home": 11.6209,
+   "home_win_chance": 0.83911,
+   "proj_home": 26.9665,
+   "proj_away": 15.3456,
+   "margin_low": -3.4287,
+   "margin_high": 26.6704,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "NO",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 27,
+   "spread_home": 0.2323,
+   "home_win_chance": 0.508253,
+   "proj_home": 20.2365,
+   "proj_away": 20.0042,
+   "margin_low": -14.8172,
+   "margin_high": 15.2818,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "NYJ",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 17,
+   "spread_home": -6.9439,
+   "home_win_chance": 0.271525,
+   "proj_home": 17.3485,
+   "proj_away": 24.2923,
+   "margin_low": -21.9934,
+   "margin_high": 8.1057,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "TB",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 13,
+   "spread_home": 6.4406,
+   "home_win_chance": 0.714098,
+   "proj_home": 23.6026,
+   "proj_away": 17.162,
+   "margin_low": -8.6089,
+   "margin_high": 21.4901,
+   "rating_basis": "season"
+  },
+  {
+   "week": 9,
+   "home": "WAS",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 20,
+   "spread_home": 3.1305,
+   "home_win_chance": 0.609432,
+   "proj_home": 23.769,
+   "proj_away": 20.6384,
+   "margin_low": -11.919,
+   "margin_high": 18.1801,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "BUF",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 33,
+   "spread_home": 11.7381,
+   "home_win_chance": 0.841347,
+   "proj_home": 29.5347,
+   "proj_away": 17.7966,
+   "margin_low": -3.3114,
+   "margin_high": 26.7877,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "CAR",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 25,
+   "away_score": 15,
+   "spread_home": 3.4506,
+   "home_win_chance": 0.620203,
+   "proj_home": 23.4171,
+   "proj_away": 19.9665,
+   "margin_low": -11.599,
+   "margin_high": 18.5001,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "CHI",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 31,
+   "spread_home": -4.7019,
+   "home_win_chance": 0.338888,
+   "proj_home": 21.6861,
+   "proj_away": 26.388,
+   "margin_low": -19.7514,
+   "margin_high": 10.3477,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "GB",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 28,
+   "spread_home": -4.2549,
+   "home_win_chance": 0.353263,
+   "proj_home": 20.4929,
+   "proj_away": 24.7478,
+   "margin_low": -19.3044,
+   "margin_high": 10.7947,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "KC",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 17,
+   "spread_home": 8.7339,
+   "home_win_chance": 0.775792,
+   "proj_home": 27.8088,
+   "proj_away": 19.0748,
+   "margin_low": -6.3156,
+   "margin_high": 23.7835,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "LA",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 27,
+   "spread_home": 2.0967,
+   "home_win_chance": 0.573954,
+   "proj_home": 22.8354,
+   "proj_away": 20.7387,
+   "margin_low": -12.9528,
+   "margin_high": 17.1463,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "LV",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 25,
+   "spread_home": 5.8166,
+   "home_win_chance": 0.695655,
+   "proj_home": 25.2787,
+   "proj_away": 19.4621,
+   "margin_low": -9.2329,
+   "margin_high": 20.8662,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "MIA",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 39,
+   "away_score": 17,
+   "spread_home": 4.4067,
+   "home_win_chance": 0.651649,
+   "proj_home": 24.6808,
+   "proj_away": 20.2742,
+   "margin_low": -10.6429,
+   "margin_high": 19.4562,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "NYG",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 16,
+   "spread_home": 10.385,
+   "home_win_chance": 0.813964,
+   "proj_home": 26.5629,
+   "proj_away": 16.1778,
+   "margin_low": -4.6645,
+   "margin_high": 25.4346,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "PHI",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 32,
+   "spread_home": 8.5868,
+   "home_win_chance": 0.772134,
+   "proj_home": 26.14,
+   "proj_away": 17.5532,
+   "margin_low": -6.4627,
+   "margin_high": 23.6363,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "PIT",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 10,
+   "spread_home": 1.8859,
+   "home_win_chance": 0.566611,
+   "proj_home": 20.9324,
+   "proj_away": 19.0465,
+   "margin_low": -13.1636,
+   "margin_high": 16.9355,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "SF",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 16,
+   "spread_home": 10.8812,
+   "home_win_chance": 0.824407,
+   "proj_home": 27.4895,
+   "proj_away": 16.6083,
+   "margin_low": -4.1683,
+   "margin_high": 25.9308,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "TB",
+   "away": "SEA",
+   "neutral": true,
+   "played": true,
+   "home_score": 21,
+   "away_score": 16,
+   "spread_home": 1.897,
+   "home_win_chance": 0.566998,
+   "proj_home": 22.7236,
+   "proj_away": 20.8266,
+   "margin_low": -13.1525,
+   "margin_high": 16.9465,
+   "rating_basis": "season"
+  },
+  {
+   "week": 10,
+   "home": "TEN",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 10,
+   "spread_home": 2.1283,
+   "home_win_chance": 0.575049,
+   "proj_home": 20.744,
+   "proj_away": 18.6157,
+   "margin_low": -12.9213,
+   "margin_high": 17.1778,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "ARI",
+   "away": "SF",
+   "neutral": true,
+   "played": true,
+   "home_score": 10,
+   "away_score": 38,
+   "spread_home": -12.8931,
+   "home_win_chance": 0.137948,
+   "proj_home": 15.769,
+   "proj_away": 28.6622,
+   "margin_low": -27.9426,
+   "margin_high": 2.1564,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "ATL",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": 4.9868,
+   "home_win_chance": 0.670126,
+   "proj_home": 24.9947,
+   "proj_away": 20.0079,
+   "margin_low": -10.0627,
+   "margin_high": 20.0364,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "BAL",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 3,
+   "spread_home": 6.0507,
+   "home_win_chance": 0.702652,
+   "proj_home": 23.6933,
+   "proj_away": 17.6426,
+   "margin_low": -8.9988,
+   "margin_high": 21.1003,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "BUF",
+   "away": "CLE",
+   "neutral": true,
+   "played": true,
+   "home_score": 31,
+   "away_score": 23,
+   "spread_home": 7.4536,
+   "home_win_chance": 0.742565,
+   "proj_home": 26.0948,
+   "proj_away": 18.6412,
+   "margin_low": -7.596,
+   "margin_high": 22.5031,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "DEN",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 22,
+   "spread_home": 1.523,
+   "home_win_chance": 0.553904,
+   "proj_home": 22.2985,
+   "proj_away": 20.7755,
+   "margin_low": -13.5265,
+   "margin_high": 16.5725,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "GB",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 27,
+   "spread_home": 3.3158,
+   "home_win_chance": 0.615682,
+   "proj_home": 22.4687,
+   "proj_away": 19.1529,
+   "margin_low": -11.7337,
+   "margin_high": 18.3653,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "HOU",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 23,
+   "spread_home": -7.8369,
+   "home_win_chance": 0.24716,
+   "proj_home": 16.5948,
+   "proj_away": 24.4317,
+   "margin_low": -22.8864,
+   "margin_high": 7.2127,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "IND",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 17,
+   "spread_home": -12.1752,
+   "home_win_chance": 0.150535,
+   "proj_home": 16.378,
+   "proj_away": 28.5532,
+   "margin_low": -27.2248,
+   "margin_high": 2.8743,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "LAC",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 30,
+   "spread_home": -7.8702,
+   "home_win_chance": 0.24628,
+   "proj_home": 19.7567,
+   "proj_away": 27.6269,
+   "margin_low": -22.9197,
+   "margin_high": 7.1794,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "MIN",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 3,
+   "away_score": 40,
+   "spread_home": -4.1427,
+   "home_win_chance": 0.356914,
+   "proj_home": 21.8585,
+   "proj_away": 26.0012,
+   "margin_low": -19.1922,
+   "margin_high": 10.9068,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "NE",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 3,
+   "spread_home": 4.5918,
+   "home_win_chance": 0.6576,
+   "proj_home": 22.2139,
+   "proj_away": 17.6221,
+   "margin_low": -10.4577,
+   "margin_high": 19.6414,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "NO",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 20,
+   "spread_home": 6.9245,
+   "home_win_chance": 0.727931,
+   "proj_home": 23.8921,
+   "proj_away": 16.9676,
+   "margin_low": -8.125,
+   "margin_high": 21.9741,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "NYG",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 18,
+   "away_score": 31,
+   "spread_home": 0.8733,
+   "home_win_chance": 0.53099,
+   "proj_home": 23.8427,
+   "proj_away": 22.9694,
+   "margin_low": -14.1762,
+   "margin_high": 15.9229,
+   "rating_basis": "season"
+  },
+  {
+   "week": 11,
+   "home": "PIT",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 37,
+   "spread_home": -4.5269,
+   "home_win_chance": 0.344482,
+   "proj_home": 19.0445,
+   "proj_away": 23.5713,
+   "margin_low": -19.5764,
+   "margin_high": 10.5226,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "ARI",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 25,
+   "spread_home": -2.0119,
+   "home_win_chance": 0.428998,
+   "proj_home": 21.7811,
+   "proj_away": 23.793,
+   "margin_low": -17.0614,
+   "margin_high": 13.0376,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "CAR",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 10,
+   "spread_home": 3.4361,
+   "home_win_chance": 0.619718,
+   "proj_home": 22.1598,
+   "proj_away": 18.7238,
+   "margin_low": -11.6135,
+   "margin_high": 18.4856,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "CLE",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 17,
+   "spread_home": 2.3825,
+   "home_win_chance": 0.583853,
+   "proj_home": 22.1807,
+   "proj_away": 19.7982,
+   "margin_low": -12.6671,
+   "margin_high": 17.432,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "DAL",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 20,
+   "spread_home": 7.3483,
+   "home_win_chance": 0.739693,
+   "proj_home": 26.235,
+   "proj_away": 18.8867,
+   "margin_low": -7.7013,
+   "margin_high": 22.3978,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "DET",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 25,
+   "away_score": 28,
+   "spread_home": -6.9328,
+   "home_win_chance": 0.271837,
+   "proj_home": 20.5445,
+   "proj_away": 27.4773,
+   "margin_low": -21.9823,
+   "margin_high": 8.1168,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "IND",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 24,
+   "spread_home": -6.5067,
+   "home_win_chance": 0.283988,
+   "proj_home": 17.2242,
+   "proj_away": 23.7308,
+   "margin_low": -21.5562,
+   "margin_high": 8.5429,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "JAX",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 27,
+   "spread_home": 1.2434,
+   "home_win_chance": 0.544067,
+   "proj_home": 21.6826,
+   "proj_away": 20.4391,
+   "margin_low": -13.8061,
+   "margin_high": 16.293,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "KC",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 10,
+   "spread_home": 14.8927,
+   "home_win_chance": 0.892509,
+   "proj_home": 30.1382,
+   "proj_away": 15.2454,
+   "margin_low": -0.1568,
+   "margin_high": 29.9423,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "MIA",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 15,
+   "spread_home": 15.1744,
+   "home_win_chance": 0.89629,
+   "proj_home": 29.6719,
+   "proj_away": 14.4974,
+   "margin_low": 0.1249,
+   "margin_high": 30.2239,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "MIN",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 33,
+   "away_score": 26,
+   "spread_home": -2.2787,
+   "home_win_chance": 0.419735,
+   "proj_home": 21.6239,
+   "proj_away": 23.9026,
+   "margin_low": -17.3282,
+   "margin_high": 12.7708,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "NYJ",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 10,
+   "spread_home": 8.2445,
+   "home_win_chance": 0.76346,
+   "proj_home": 24.9688,
+   "proj_away": 16.7243,
+   "margin_low": -6.8051,
+   "margin_high": 23.294,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "PHI",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 40,
+   "away_score": 33,
+   "spread_home": 10.0526,
+   "home_win_chance": 0.806704,
+   "proj_home": 27.7895,
+   "proj_away": 17.7369,
+   "margin_low": -4.9969,
+   "margin_high": 25.1022,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "SEA",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 34,
+   "away_score": 40,
+   "spread_home": 3.5306,
+   "home_win_chance": 0.62288,
+   "proj_home": 25.2309,
+   "proj_away": 21.7003,
+   "margin_low": -11.5189,
+   "margin_high": 18.5802,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "SF",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 0,
+   "spread_home": 9.2024,
+   "home_win_chance": 0.78716,
+   "proj_home": 25.4597,
+   "proj_away": 16.2573,
+   "margin_low": -5.8471,
+   "margin_high": 24.2519,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "TEN",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 20,
+   "spread_home": -8.6731,
+   "home_win_chance": 0.225716,
+   "proj_home": 17.0071,
+   "proj_away": 25.6801,
+   "margin_low": -23.7226,
+   "margin_high": 6.3765,
+   "rating_basis": "season"
+  },
+  {
+   "week": 12,
+   "home": "WAS",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 13,
+   "spread_home": 5.1476,
+   "home_win_chance": 0.675157,
+   "proj_home": 23.587,
+   "proj_away": 18.4394,
+   "margin_low": -9.902,
+   "margin_high": 20.1971,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "ATL",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 19,
+   "spread_home": -2.7353,
+   "home_win_chance": 0.404019,
+   "proj_home": 19.5265,
+   "proj_away": 22.2618,
+   "margin_low": -17.7848,
+   "margin_high": 12.3143,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "BAL",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 9,
+   "spread_home": 7.7099,
+   "home_win_chance": 0.749468,
+   "proj_home": 23.6301,
+   "proj_away": 15.9202,
+   "margin_low": -7.3396,
+   "margin_high": 22.7595,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "CHI",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 28,
+   "spread_home": -3.338,
+   "home_win_chance": 0.383572,
+   "proj_home": 20.7133,
+   "proj_away": 24.0513,
+   "margin_low": -18.3876,
+   "margin_high": 11.7115,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "CIN",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": 0.2215,
+   "home_win_chance": 0.507868,
+   "proj_home": 23.9305,
+   "proj_away": 23.7091,
+   "margin_low": -14.8281,
+   "margin_high": 15.271,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "DAL",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 54,
+   "away_score": 19,
+   "spread_home": 13.4849,
+   "home_win_chance": 0.871752,
+   "proj_home": 29.0652,
+   "proj_away": 15.5803,
+   "margin_low": -1.5646,
+   "margin_high": 28.5344,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "DET",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 40,
+   "away_score": 14,
+   "spread_home": -0.3686,
+   "home_win_chance": 0.486906,
+   "proj_home": 23.4361,
+   "proj_away": 23.8047,
+   "margin_low": -15.4181,
+   "margin_high": 14.6809,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "HOU",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 27,
+   "spread_home": -8.9909,
+   "home_win_chance": 0.217919,
+   "proj_home": 16.9463,
+   "proj_away": 25.9372,
+   "margin_low": -24.0404,
+   "margin_high": 6.0586,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "LA",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 27,
+   "spread_home": -0.9899,
+   "home_win_chance": 0.464885,
+   "proj_home": 21.5183,
+   "proj_away": 22.5082,
+   "margin_low": -16.0394,
+   "margin_high": 14.0596,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "LV",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 20,
+   "spread_home": -0.679,
+   "home_win_chance": 0.475893,
+   "proj_home": 22.7332,
+   "proj_away": 23.4123,
+   "margin_low": -15.7285,
+   "margin_high": 14.3705,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "MIN",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 22,
+   "spread_home": 0.5363,
+   "home_win_chance": 0.519046,
+   "proj_home": 21.8528,
+   "proj_away": 21.3165,
+   "margin_low": -14.5132,
+   "margin_high": 15.5858,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "NE",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 24,
+   "spread_home": -4.1289,
+   "home_win_chance": 0.357365,
+   "proj_home": 19.9345,
+   "proj_away": 24.0634,
+   "margin_low": -19.1784,
+   "margin_high": 10.9207,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "NYG",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 20,
+   "spread_home": 0.7713,
+   "home_win_chance": 0.527378,
+   "proj_home": 21.2203,
+   "proj_away": 20.449,
+   "margin_low": -14.2782,
+   "margin_high": 15.8208,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "PHI",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 10,
+   "spread_home": 11.5916,
+   "home_win_chance": 0.838547,
+   "proj_home": 27.559,
+   "proj_away": 15.9674,
+   "margin_low": -3.458,
+   "margin_high": 26.6411,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "SF",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 33,
+   "away_score": 17,
+   "spread_home": 6.4509,
+   "home_win_chance": 0.714396,
+   "proj_home": 25.5244,
+   "proj_away": 19.0735,
+   "margin_low": -8.5987,
+   "margin_high": 21.5004,
+   "rating_basis": "season"
+  },
+  {
+   "week": 13,
+   "home": "TB",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 16,
+   "spread_home": 1.2929,
+   "home_win_chance": 0.545811,
+   "proj_home": 20.8383,
+   "proj_away": 19.5453,
+   "margin_low": -13.7566,
+   "margin_high": 16.3425,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "ARI",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 27,
+   "spread_home": -5.3603,
+   "home_win_chance": 0.318249,
+   "proj_home": 19.345,
+   "proj_away": 24.7053,
+   "margin_low": -20.4098,
+   "margin_high": 9.6892,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "BUF",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 12,
+   "spread_home": 10.4976,
+   "home_win_chance": 0.816374,
+   "proj_home": 26.0692,
+   "proj_away": 15.5716,
+   "margin_low": -4.552,
+   "margin_high": 25.5471,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "CIN",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 10,
+   "spread_home": 8.0679,
+   "home_win_chance": 0.7589,
+   "proj_home": 26.3895,
+   "proj_away": 18.3215,
+   "margin_low": -6.9816,
+   "margin_high": 23.1175,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "DAL",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 23,
+   "spread_home": 15.9565,
+   "home_win_chance": 0.906176,
+   "proj_home": 30.2176,
+   "proj_away": 14.2612,
+   "margin_low": 0.9069,
+   "margin_high": 31.006,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "DEN",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 34,
+   "spread_home": -10.5799,
+   "home_win_chance": 0.181879,
+   "proj_home": 16.8661,
+   "proj_away": 27.446,
+   "margin_low": -25.6294,
+   "margin_high": 4.4696,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "DET",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 34,
+   "away_score": 23,
+   "spread_home": 3.0285,
+   "home_win_chance": 0.605976,
+   "proj_home": 26.2894,
+   "proj_away": 23.2609,
+   "margin_low": -12.021,
+   "margin_high": 18.078,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "LA",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 16,
+   "spread_home": 0.7639,
+   "home_win_chance": 0.527114,
+   "proj_home": 22.4547,
+   "proj_away": 21.6908,
+   "margin_low": -14.2857,
+   "margin_high": 15.8134,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "LAC",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 17,
+   "spread_home": -2.6535,
+   "home_win_chance": 0.40682,
+   "proj_home": 21.5436,
+   "proj_away": 24.1971,
+   "margin_low": -17.703,
+   "margin_high": 12.396,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "NYG",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 48,
+   "spread_home": -6.0386,
+   "home_win_chance": 0.297707,
+   "proj_home": 19.6844,
+   "proj_away": 25.723,
+   "margin_low": -21.0882,
+   "margin_high": 9.0109,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "PIT",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 16,
+   "spread_home": 0.3414,
+   "home_win_chance": 0.512127,
+   "proj_home": 20.0411,
+   "proj_away": 19.6997,
+   "margin_low": -14.7082,
+   "margin_high": 15.3909,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "SEA",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 30,
+   "spread_home": 2.1253,
+   "home_win_chance": 0.574945,
+   "proj_home": 23.433,
+   "proj_away": 21.3077,
+   "margin_low": -12.9243,
+   "margin_high": 17.1748,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "SF",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 7,
+   "spread_home": 9.6863,
+   "home_win_chance": 0.798456,
+   "proj_home": 25.654,
+   "proj_away": 15.9677,
+   "margin_low": -5.3632,
+   "margin_high": 24.7358,
+   "rating_basis": "season"
+  },
+  {
+   "week": 14,
+   "home": "TEN",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 36,
+   "spread_home": -3.2714,
+   "home_win_chance": 0.385813,
+   "proj_home": 19.3299,
+   "proj_away": 22.6013,
+   "margin_low": -18.3209,
+   "margin_high": 11.7781,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "BUF",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 32,
+   "away_score": 29,
+   "spread_home": 6.6006,
+   "home_win_chance": 0.718719,
+   "proj_home": 26.3112,
+   "proj_away": 19.7106,
+   "margin_low": -8.4489,
+   "margin_high": 21.6502,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "CAR",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 24,
+   "spread_home": -1.0615,
+   "home_win_chance": 0.462353,
+   "proj_home": 20.0063,
+   "proj_away": 21.0678,
+   "margin_low": -16.1111,
+   "margin_high": 13.988,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "CHI",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 25,
+   "spread_home": -11.6138,
+   "home_win_chance": 0.161026,
+   "proj_home": 17.5277,
+   "proj_away": 29.1416,
+   "margin_low": -26.6633,
+   "margin_high": 3.4357,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "CLE",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 3,
+   "spread_home": 0.354,
+   "home_win_chance": 0.512576,
+   "proj_home": 21.095,
+   "proj_away": 20.741,
+   "margin_low": -14.6955,
+   "margin_high": 15.4036,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "DEN",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 15,
+   "spread_home": 2.8559,
+   "home_win_chance": 0.600103,
+   "proj_home": 22.6793,
+   "proj_away": 19.8234,
+   "margin_low": -12.1937,
+   "margin_high": 17.9054,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "GB",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 12,
+   "spread_home": 4.4264,
+   "home_win_chance": 0.652285,
+   "proj_home": 23.4288,
+   "proj_away": 19.0024,
+   "margin_low": -10.6232,
+   "margin_high": 19.4759,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "HOU",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 30,
+   "spread_home": -16.8374,
+   "home_win_chance": 0.083707,
+   "proj_home": 14.4874,
+   "proj_away": 31.3248,
+   "margin_low": -31.8869,
+   "margin_high": -1.7879,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "JAX",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 40,
+   "away_score": 34,
+   "spread_home": -0.7456,
+   "home_win_chance": 0.473533,
+   "proj_home": 22.4023,
+   "proj_away": 23.1479,
+   "margin_low": -15.7951,
+   "margin_high": 14.3039,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "LAC",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 14,
+   "spread_home": 4.1351,
+   "home_win_chance": 0.642839,
+   "proj_home": 23.2832,
+   "proj_away": 19.148,
+   "margin_low": -10.9144,
+   "margin_high": 19.1847,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "LV",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 24,
+   "spread_home": -4.0274,
+   "home_win_chance": 0.360684,
+   "proj_home": 20.2971,
+   "proj_away": 24.3245,
+   "margin_low": -19.0769,
+   "margin_high": 11.0221,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "MIN",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 39,
+   "away_score": 36,
+   "spread_home": 7.5653,
+   "home_win_chance": 0.745589,
+   "proj_home": 26.6054,
+   "proj_away": 19.0401,
+   "margin_low": -7.4842,
+   "margin_high": 22.6149,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "NO",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 21,
+   "away_score": 18,
+   "spread_home": 6.1799,
+   "home_win_chance": 0.706474,
+   "proj_home": 24.2341,
+   "proj_away": 18.0542,
+   "margin_low": -8.8696,
+   "margin_high": 21.2294,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "NYJ",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 20,
+   "spread_home": 1.7658,
+   "home_win_chance": 0.562412,
+   "proj_home": 22.8128,
+   "proj_away": 21.047,
+   "margin_low": -13.2838,
+   "margin_high": 16.8153,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "SEA",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 21,
+   "spread_home": -8.0296,
+   "home_win_chance": 0.242098,
+   "proj_home": 18.427,
+   "proj_away": 26.4566,
+   "margin_low": -23.0791,
+   "margin_high": 7.0199,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "TB",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 34,
+   "spread_home": -5.1199,
+   "home_win_chance": 0.325708,
+   "proj_home": 18.9503,
+   "proj_away": 24.0702,
+   "margin_low": -20.1694,
+   "margin_high": 9.9297,
+   "rating_basis": "season"
+  },
+  {
+   "week": 15,
+   "home": "WAS",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 12,
+   "away_score": 20,
+   "spread_home": 2.7824,
+   "home_win_chance": 0.597593,
+   "proj_home": 22.2258,
+   "proj_away": 19.4435,
+   "margin_low": -12.2671,
+   "margin_high": 17.8319,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "ARI",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 19,
+   "spread_home": -3.2068,
+   "home_win_chance": 0.38799,
+   "proj_home": 19.9455,
+   "proj_away": 23.1523,
+   "margin_low": -18.2563,
+   "margin_high": 11.8427,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "BAL",
+   "away": "ATL",
+   "neutral": false,
+   "played": true,
+   "home_score": 17,
+   "away_score": 9,
+   "spread_home": 7.7244,
+   "home_win_chance": 0.749855,
+   "proj_home": 24.8873,
+   "proj_away": 17.1629,
+   "margin_low": -7.3251,
+   "margin_high": 22.774,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "CAR",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 37,
+   "away_score": 23,
+   "spread_home": 0.1818,
+   "home_win_chance": 0.506461,
+   "proj_home": 23.3184,
+   "proj_away": 23.1366,
+   "margin_low": -14.8677,
+   "margin_high": 15.2314,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "CHI",
+   "away": "BUF",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 35,
+   "spread_home": -13.4115,
+   "home_win_chance": 0.129419,
+   "proj_home": 16.2218,
+   "proj_away": 29.6333,
+   "margin_low": -28.461,
+   "margin_high": 1.6381,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "CLE",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 17,
+   "spread_home": 1.8986,
+   "home_win_chance": 0.567052,
+   "proj_home": 21.9863,
+   "proj_away": 20.0877,
+   "margin_low": -13.151,
+   "margin_high": 16.9481,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "DAL",
+   "away": "PHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 40,
+   "away_score": 34,
+   "spread_home": -0.4672,
+   "home_win_chance": 0.483406,
+   "proj_home": 23.3391,
+   "proj_away": 23.8063,
+   "margin_low": -15.5167,
+   "margin_high": 14.5823,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "IND",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 3,
+   "away_score": 20,
+   "spread_home": -4.7188,
+   "home_win_chance": 0.338349,
+   "proj_home": 19.5586,
+   "proj_away": 24.2774,
+   "margin_low": -19.7683,
+   "margin_high": 10.3307,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "KC",
+   "away": "SEA",
+   "neutral": false,
+   "played": true,
+   "home_score": 24,
+   "away_score": 10,
+   "spread_home": 12.126,
+   "home_win_chance": 0.848567,
+   "proj_home": 30.1476,
+   "proj_away": 18.0217,
+   "margin_low": -2.9236,
+   "margin_high": 27.1755,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "LA",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 51,
+   "away_score": 14,
+   "spread_home": 1.0177,
+   "home_win_chance": 0.536098,
+   "proj_home": 20.5935,
+   "proj_away": 19.5758,
+   "margin_low": -14.0318,
+   "margin_high": 16.0673,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "MIA",
+   "away": "GB",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 26,
+   "spread_home": 7.0265,
+   "home_win_chance": 0.730792,
+   "proj_home": 25.9789,
+   "proj_away": 18.9523,
+   "margin_low": -8.023,
+   "margin_high": 22.0761,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "MIN",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": 1.4287,
+   "home_win_chance": 0.550591,
+   "proj_home": 23.7752,
+   "proj_away": 22.3465,
+   "margin_low": -13.6208,
+   "margin_high": 16.4783,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "NE",
+   "away": "CIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 18,
+   "away_score": 22,
+   "spread_home": -2.9664,
+   "home_win_chance": 0.396134,
+   "proj_home": 20.5033,
+   "proj_away": 23.4697,
+   "margin_low": -18.0159,
+   "margin_high": 12.0832,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "NYJ",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 3,
+   "away_score": 19,
+   "spread_home": -0.3797,
+   "home_win_chance": 0.486512,
+   "proj_home": 20.24,
+   "proj_away": 20.6197,
+   "margin_low": -15.4292,
+   "margin_high": 14.6698,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "PIT",
+   "away": "LV",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 10,
+   "spread_home": 6.0206,
+   "home_win_chance": 0.701757,
+   "proj_home": 24.6426,
+   "proj_away": 18.622,
+   "margin_low": -9.0289,
+   "margin_high": 21.0701,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "SF",
+   "away": "WAS",
+   "neutral": false,
+   "played": true,
+   "home_score": 37,
+   "away_score": 20,
+   "spread_home": 10.2347,
+   "home_win_chance": 0.810707,
+   "proj_home": 25.8449,
+   "proj_away": 15.6102,
+   "margin_low": -4.8148,
+   "margin_high": 25.2842,
+   "rating_basis": "season"
+  },
+  {
+   "week": 16,
+   "home": "TEN",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 14,
+   "away_score": 19,
+   "spread_home": 8.3858,
+   "home_win_chance": 0.767069,
+   "proj_home": 24.6228,
+   "proj_away": 16.237,
+   "margin_low": -6.6637,
+   "margin_high": 23.4353,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "ATL",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 19,
+   "spread_home": 2.8414,
+   "home_win_chance": 0.599608,
+   "proj_home": 23.922,
+   "proj_away": 21.0806,
+   "margin_low": -12.2082,
+   "margin_high": 17.8909,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "BAL",
+   "away": "PIT",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 16,
+   "spread_home": 3.2123,
+   "home_win_chance": 0.612196,
+   "proj_home": 21.4765,
+   "proj_away": 18.2642,
+   "margin_low": -11.8372,
+   "margin_high": 18.2619,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "DET",
+   "away": "CHI",
+   "neutral": false,
+   "played": true,
+   "home_score": 41,
+   "away_score": 10,
+   "spread_home": 8.2556,
+   "home_win_chance": 0.763745,
+   "proj_home": 28.1648,
+   "proj_away": 19.9093,
+   "margin_low": -6.794,
+   "margin_high": 23.3051,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "GB",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 41,
+   "away_score": 17,
+   "spread_home": 1.6647,
+   "home_win_chance": 0.558874,
+   "proj_home": 23.9527,
+   "proj_away": 22.288,
+   "margin_low": -13.3849,
+   "margin_high": 16.7142,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "HOU",
+   "away": "JAX",
+   "neutral": false,
+   "played": true,
+   "home_score": 3,
+   "away_score": 31,
+   "spread_home": -9.8803,
+   "home_win_chance": 0.197143,
+   "proj_home": 16.6445,
+   "proj_away": 26.5248,
+   "margin_low": -24.9299,
+   "margin_high": 5.1692,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "KC",
+   "away": "DEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 24,
+   "spread_home": 14.1336,
+   "home_win_chance": 0.881712,
+   "proj_home": 29.2229,
+   "proj_away": 15.0893,
+   "margin_low": -0.9159,
+   "margin_high": 29.1831,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "LAC",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 10,
+   "spread_home": 5.2457,
+   "home_win_chance": 0.678207,
+   "proj_home": 24.2432,
+   "proj_away": 18.9975,
+   "margin_low": -9.8038,
+   "margin_high": 20.2952,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "LV",
+   "away": "SF",
+   "neutral": false,
+   "played": true,
+   "home_score": 34,
+   "away_score": 37,
+   "spread_home": -9.7834,
+   "home_win_chance": 0.199333,
+   "proj_home": 17.6096,
+   "proj_away": 27.393,
+   "margin_low": -24.8329,
+   "margin_high": 5.2662,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "NE",
+   "away": "MIA",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 21,
+   "spread_home": 0.6949,
+   "home_win_chance": 0.524671,
+   "proj_home": 22.4559,
+   "proj_away": 21.761,
+   "margin_low": -14.3546,
+   "margin_high": 15.7444,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "NYG",
+   "away": "IND",
+   "neutral": false,
+   "played": true,
+   "home_score": 38,
+   "away_score": 10,
+   "spread_home": 7.9135,
+   "home_win_chance": 0.75486,
+   "proj_home": 25.4104,
+   "proj_away": 17.497,
+   "margin_low": -7.1361,
+   "margin_high": 22.963,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "PHI",
+   "away": "NO",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 20,
+   "spread_home": 7.5545,
+   "home_win_chance": 0.745297,
+   "proj_home": 25.7547,
+   "proj_away": 18.2003,
+   "margin_low": -7.4951,
+   "margin_high": 22.604,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "SEA",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 23,
+   "away_score": 6,
+   "spread_home": 0.5414,
+   "home_win_chance": 0.519225,
+   "proj_home": 21.3434,
+   "proj_away": 20.8021,
+   "margin_low": -14.5082,
+   "margin_high": 15.5909,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "TB",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 24,
+   "spread_home": 4.0223,
+   "home_win_chance": 0.639148,
+   "proj_home": 22.7505,
+   "proj_away": 18.7283,
+   "margin_low": -11.0273,
+   "margin_high": 19.0718,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "TEN",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 27,
+   "spread_home": -5.7938,
+   "home_win_chance": 0.305032,
+   "proj_home": 18.7235,
+   "proj_away": 24.5173,
+   "margin_low": -20.8434,
+   "margin_high": 9.2557,
+   "rating_basis": "season"
+  },
+  {
+   "week": 17,
+   "home": "WAS",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 10,
+   "away_score": 24,
+   "spread_home": 0.6228,
+   "home_win_chance": 0.522115,
+   "proj_home": 21.2175,
+   "proj_away": 20.5947,
+   "margin_low": -14.4267,
+   "margin_high": 15.6724,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "ATL",
+   "away": "TB",
+   "neutral": false,
+   "played": true,
+   "home_score": 30,
+   "away_score": 17,
+   "spread_home": -2.1423,
+   "home_win_chance": 0.424465,
+   "proj_home": 20.0254,
+   "proj_away": 22.1677,
+   "margin_low": -17.1918,
+   "margin_high": 12.9073,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "BUF",
+   "away": "NE",
+   "neutral": false,
+   "played": true,
+   "home_score": 35,
+   "away_score": 23,
+   "spread_home": 7.6826,
+   "home_win_chance": 0.748737,
+   "proj_home": 25.8403,
+   "proj_away": 18.1577,
+   "margin_low": -7.367,
+   "margin_high": 22.7321,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "CHI",
+   "away": "MIN",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 29,
+   "spread_home": -3.4502,
+   "home_win_chance": 0.379809,
+   "proj_home": 21.9667,
+   "proj_away": 25.4169,
+   "margin_low": -18.4997,
+   "margin_high": 11.5993,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "CIN",
+   "away": "BAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 27,
+   "away_score": 16,
+   "spread_home": 6.6451,
+   "home_win_chance": 0.719995,
+   "proj_home": 24.7614,
+   "proj_away": 18.1163,
+   "margin_low": -8.4044,
+   "margin_high": 21.6946,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "DEN",
+   "away": "LAC",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 28,
+   "spread_home": -0.9329,
+   "home_win_chance": 0.466903,
+   "proj_home": 20.6182,
+   "proj_away": 21.5511,
+   "margin_low": -15.9824,
+   "margin_high": 14.1167,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "GB",
+   "away": "DET",
+   "neutral": false,
+   "played": true,
+   "home_score": 16,
+   "away_score": 20,
+   "spread_home": 0.413,
+   "home_win_chance": 0.514671,
+   "proj_home": 23.6721,
+   "proj_away": 23.2591,
+   "margin_low": -14.6365,
+   "margin_high": 15.4625,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "IND",
+   "away": "HOU",
+   "neutral": false,
+   "played": true,
+   "home_score": 31,
+   "away_score": 32,
+   "spread_home": 4.2484,
+   "home_win_chance": 0.646527,
+   "proj_home": 23.2565,
+   "proj_away": 19.0081,
+   "margin_low": -10.8011,
+   "margin_high": 19.298,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "JAX",
+   "away": "TEN",
+   "neutral": false,
+   "played": true,
+   "home_score": 20,
+   "away_score": 16,
+   "spread_home": 6.8251,
+   "home_win_chance": 0.725123,
+   "proj_home": 24.3781,
+   "proj_away": 17.5531,
+   "margin_low": -8.2244,
+   "margin_high": 21.8746,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "LV",
+   "away": "KC",
+   "neutral": false,
+   "played": true,
+   "home_score": 13,
+   "away_score": 31,
+   "spread_home": -10.326,
+   "home_win_chance": 0.187309,
+   "proj_home": 18.9812,
+   "proj_away": 29.3072,
+   "margin_low": -25.3756,
+   "margin_high": 4.7235,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "MIA",
+   "away": "NYJ",
+   "neutral": false,
+   "played": true,
+   "home_score": 11,
+   "away_score": 6,
+   "spread_home": 5.6738,
+   "home_win_chance": 0.691339,
+   "proj_home": 23.7668,
+   "proj_away": 18.093,
+   "margin_low": -9.3757,
+   "margin_high": 20.7233,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "NO",
+   "away": "CAR",
+   "neutral": false,
+   "played": true,
+   "home_score": 7,
+   "away_score": 10,
+   "spread_home": 4.5062,
+   "home_win_chance": 0.654853,
+   "proj_home": 23.0401,
+   "proj_away": 18.5339,
+   "margin_low": -10.5434,
+   "margin_high": 19.5557,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "PHI",
+   "away": "NYG",
+   "neutral": false,
+   "played": true,
+   "home_score": 22,
+   "away_score": 16,
+   "spread_home": 9.5923,
+   "home_win_chance": 0.796298,
+   "proj_home": 27.4999,
+   "proj_away": 17.9075,
+   "margin_low": -5.4572,
+   "margin_high": 24.6419,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "PIT",
+   "away": "CLE",
+   "neutral": false,
+   "played": true,
+   "home_score": 28,
+   "away_score": 14,
+   "spread_home": 1.7642,
+   "home_win_chance": 0.562358,
+   "proj_home": 21.6691,
+   "proj_away": 19.9049,
+   "margin_low": -13.2853,
+   "margin_high": 16.8137,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "SEA",
+   "away": "LA",
+   "neutral": false,
+   "played": true,
+   "home_score": 19,
+   "away_score": 16,
+   "spread_home": 4.5436,
+   "home_win_chance": 0.656055,
+   "proj_home": 24.285,
+   "proj_away": 19.7414,
+   "margin_low": -10.5059,
+   "margin_high": 19.5931,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "SF",
+   "away": "ARI",
+   "neutral": false,
+   "played": true,
+   "home_score": 38,
+   "away_score": 13,
+   "spread_home": 14.67,
+   "home_win_chance": 0.889434,
+   "proj_home": 29.5506,
+   "proj_away": 14.8806,
+   "margin_low": -0.3796,
+   "margin_high": 29.7195,
+   "rating_basis": "season"
+  },
+  {
+   "week": 18,
+   "home": "WAS",
+   "away": "DAL",
+   "neutral": false,
+   "played": true,
+   "home_score": 26,
+   "away_score": 6,
+   "spread_home": -2.789,
+   "home_win_chance": 0.402179,
+   "proj_home": 20.3092,
+   "proj_away": 23.0982,
+   "margin_low": -17.8386,
+   "margin_high": 12.2605,
+   "rating_basis": "season"
   }
  ]
 }

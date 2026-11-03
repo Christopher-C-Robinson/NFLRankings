@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — NFL Rankings</title>
+<meta name="description" content="NFL team schedule, projected record, and season rating chart.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <h1 id="title">Team</h1>
+  <p id="dek">Schedule and the current rating.</p>
+  <div class="nav"><a href="index.html">Rankings</a>
+    <a href="matchup.html">Matchup</a>
+    <a href="methodology.html">Methodology</a></div>
+</div></header>
+<main class="wrap">
+  <div class="controls">
+    <label>Season <select id="season"></select></label>
+    <label>Team <select id="team"></select></label>
+  </div>
+  <div class="fresh" id="fresh">Loading…</div>
+  <div id="result"></div>
+</main>
+<footer><div class="wrap">Schedule projections use the current season rating, including games already played. They are not frozen pregame picks.</div></footer>
+<script src="assets/team.js"></script>
+</body>
+</html>

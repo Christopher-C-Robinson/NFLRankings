@@ -44,11 +44,11 @@ def regular_season(pbp: pd.DataFrame) -> pd.DataFrame:
     return pbp[pbp["season_type"] == "REG"]
 
 
-def scrimmage_plays(pbp: pd.DataFrame) -> pd.DataFrame:
+def scrimmage_plays(pbp: pd.DataFrame, kinds: tuple[str, ...] = SCRIMMAGE) -> pd.DataFrame:
     """Regular-season scrimmage plays with a posteam and defteam."""
     df = regular_season(pbp)
     keep = (
-        _str(df, "play_type").isin(SCRIMMAGE)
+        _str(df, "play_type").isin(kinds)
         & (_num(df, "no_play") != 1)
         & (_num(df, "two_point_attempt") != 1)
         & df["posteam"].notna()
@@ -57,8 +57,19 @@ def scrimmage_plays(pbp: pd.DataFrame) -> pd.DataFrame:
     return df[keep]
 
 
-def epa_plays(pbp: pd.DataFrame) -> pd.DataFrame:
+def rated_plays(pbp: pd.DataFrame, kinds: tuple[str, ...] = SCRIMMAGE) -> pd.DataFrame:
+    """Scrimmage plays with non-null EPA, keeping week and play type when present."""
+    plays = scrimmage_plays(pbp, kinds)
+    plays = plays[plays["epa"].notna()].copy()
+    plays["epa"] = plays["epa"].astype(float)
+    columns = ["posteam", "defteam", "epa"]
+    if "week" in plays.columns:
+        columns.append("week")
+    if "play_type" in plays.columns:
+        columns.append("play_type")
+    return plays[columns]
+
+
+def epa_plays(pbp: pd.DataFrame, kinds: tuple[str, ...] = SCRIMMAGE) -> pd.DataFrame:
     """Scrimmage plays with non-null EPA: columns posteam, defteam, epa."""
-    plays = scrimmage_plays(pbp)
-    plays = plays[plays["epa"].notna()]
-    return plays[["posteam", "defteam", "epa"]].astype({"epa": float})
+    return rated_plays(pbp, kinds)[["posteam", "defteam", "epa"]]
