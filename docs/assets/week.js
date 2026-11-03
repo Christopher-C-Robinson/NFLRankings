@@ -9,6 +9,12 @@
   var $ = function (id) { return document.getElementById(id); };
   var state = { data: null, conf: {}, divisionRank: {}, divisionSize: {} };
 
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
   function name(abbr) { return (state.conf[abbr] && state.conf[abbr].name) || abbr; }
   function weekMeta(week) {
     var found = null;
