@@ -8,15 +8,16 @@ from .aggregate import rated_plays
 from .rating import adjust
 from .winprob import project_game, shrink_rate
 
-# One team plays about one game a week. Four prior games makes week 1 entirely
-# last season, weeks 3–4 a mix, and week 5 the point where the live rating
-# catches the prior (equal weight). A strength of 12–16 team-games would still
-# be about three-quarters prior in week 5.
-BLEND_PRIOR_GAMES = 4
-# Pull a 17-game final rating toward the league before blending. Fourteen
-# pseudo-games is the middle of a 12–16 range, so an outlier keeps about half
-# of last year's margin (17 / 31) instead of arriving intact.
-PRIOR_SHRINK_GAMES = 14
+# k = 14 team-games, the middle of the 12–16 band. Selected on 2025 pregame
+# results with 2024 as the prior, among k in {12, 14, 16} and shrink strengths
+# in {8, 14, 20, 28}. 2026 was not used to pick it. One game a week means the
+# live rating is still the smaller part after four games (4/18) and matches
+# the prior only after 14 games.
+BLEND_PRIOR_GAMES = 14
+# A 17-game final rating keeps 17/45 of its gap to the league. The same 2025
+# grid preferred this over a milder shrink: half-strength priors still swung
+# too many early picks.
+PRIOR_SHRINK_GAMES = 28
 LEAGUE_V2 = 0.0
 
 _EMPTY = {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0, "points_for": 0, "points_against": 0}
@@ -216,7 +217,7 @@ def attach_pregame(
     With no prior, week 1 has no plays yet, so every team is at the league
     rating and only home field moves the spread. When ``prior_v2`` has shrunk
     previous-season ratings, a thin sample is blended toward that prior:
-    ``w * live + (1 - w) * prior`` with ``w = games / (games + 4)``. Scoring
+    ``w * live + (1 - w) * prior`` with ``w = games / (games + 14)``. Scoring
     rates still use points from earlier weeks only, shrunk toward the league
     rate of those earlier games.
     """

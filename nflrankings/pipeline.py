@@ -26,6 +26,9 @@ from .schedule import (
 from .winprob import apply_win_chances, load_conversion
 
 SOURCE = "nflverse via nfl_data_py (https://github.com/nflverse)"
+# The public site starts at 2025. Earlier seasons still build, and they can be
+# written to a directory other than docs/data, but they are not published.
+PUBLIC_SEASON_MIN = 2025
 SCHEDULE_FALLBACK = "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv"
 DEFAULT_OUT = Path(__file__).resolve().parent.parent / "docs" / "data"
 
@@ -272,23 +275,40 @@ def enrich_games(
     return games, _clean(ppg) if ppg else 0.0
 
 
+def _publishes(season: int, out_dir: Path) -> bool:
+    """True when this season should be written for the site or a research directory.
+
+    ``docs/data`` only receives seasons from ``PUBLIC_SEASON_MIN`` forward.
+    Another output directory can still hold an older backfill.
+    """
+    if int(season) >= PUBLIC_SEASON_MIN:
+        return True
+    return out_dir.resolve() != DEFAULT_OUT.resolve()
+
+
 def ensure_prior_season(season: int, out_dir: Path, params: dict) -> dict[str, float]:
     """Load season-1 end ratings, building that season first when the file is missing.
 
     The nested build does not itself fetch a prior, so a 2026 refresh materializes
-    2025 and stops there. An empty result means there is nothing to blend.
+    2025 and stops there. A prior older than the public window is kept in memory
+    instead of being written under ``docs/data``. An empty result means there is
+    nothing to blend.
     """
     prior_year = season - 1
     path = out_dir / f"{prior_year}.json"
-    if not path.exists():
-        payload = build_season(prior_year, params, out_dir=out_dir, fetch_prior=False)
-        if payload is None:
-            print(f"no prior season {prior_year}")
-            return {}
+    if path.exists():
+        data = json.loads(path.read_text())
+        return prior_ratings_from_teams(data.get("teams", []))
+    payload = build_season(prior_year, params, out_dir=out_dir, fetch_prior=False)
+    if payload is None:
+        print(f"no prior season {prior_year}")
+        return {}
+    if _publishes(prior_year, out_dir):
         write_season(payload, out_dir)
         print(f"materialized prior season {prior_year}: {len(payload['teams'])} teams")
-    data = json.loads(path.read_text())
-    return prior_ratings_from_teams(data.get("teams", []))
+    else:
+        print(f"prior season {prior_year} used in memory and not published")
+    return prior_ratings_from_teams(payload.get("teams", []))
 
 
 def build_season(season: int, params: dict | None = None, *, out_dir: Path | None = None, fetch_prior: bool = True):
@@ -326,10 +346,18 @@ def _payload(season, teams, reg, sched, params, games=None, league_points=None) 
     }
 
 
-def write_season(payload: dict, out_dir: Path) -> None:
-    """Write {season}.json and {season}.csv and refresh index.json."""
+def write_season(payload: dict, out_dir: Path) -> bool:
+    """Write {season}.json and {season}.csv and refresh index.json.
+
+    Returns False when the season is withheld from the public site. The payload
+    is still available to the caller, so an older season can be backfilled into
+    a different directory.
+    """
+    season = int(payload["season"])
+    if not _publishes(season, out_dir):
+        print(f"season {season} was not published; public seasons start at {PUBLIC_SEASON_MIN}")
+        return False
     out_dir.mkdir(parents=True, exist_ok=True)
-    season = payload["season"]
     (out_dir / f"{season}.json").write_text(json.dumps(payload, indent=1) + "\n")
     frame = pd.DataFrame(payload["teams"])
     frame = frame.reindex(columns=[c for c in CSV_COLUMNS if c in frame.columns])
@@ -338,6 +366,8 @@ def write_season(payload: dict, out_dir: Path) -> None:
     seasons = set()
     if idx_path.exists():
         seasons = set(json.loads(idx_path.read_text()).get("seasons", []))
+    if out_dir.resolve() == DEFAULT_OUT.resolve():
+        seasons = {int(year) for year in seasons if int(year) >= PUBLIC_SEASON_MIN}
     seasons.add(season)
     seasons = sorted(seasons, reverse=True)
     index = {
@@ -348,6 +378,7 @@ def write_season(payload: dict, out_dir: Path) -> None:
         "ranking": payload.get("ranking", {}).get("ranking", "neutral-round-robin"),
     }
     idx_path.write_text(json.dumps(index, indent=1) + "\n")
+    return True
 
 
 def run(season: str, out_dir: Path = DEFAULT_OUT) -> int:
@@ -359,11 +390,11 @@ def run(season: str, out_dir: Path = DEFAULT_OUT) -> int:
     else:
         candidates = [int(season)]
     for candidate in candidates:
-        payload = build_season(candidate, params)
+        payload = build_season(candidate, params, out_dir=out_dir)
         if payload is None:
             print(f"no regular-season plays for {candidate}")
             continue
-        write_season(payload, out_dir)
-        print(f"wrote season {candidate}: {len(payload['teams'])} teams")
+        if write_season(payload, out_dir):
+            print(f"wrote season {candidate}: {len(payload['teams'])} teams")
         return candidate
     raise SystemExit(f"no data available for {season}")

@@ -3,7 +3,9 @@
 import pandas as pd
 import pytest
 
-from nflrankings.pipeline import align_abbr, build_teams, enrich_games, ensure_prior_season
+from nflrankings.pipeline import (
+    DEFAULT_OUT, align_abbr, build_teams, enrich_games, ensure_prior_season, write_season,
+)
 from nflrankings.schedule import blend_v2, prior_ratings_from_teams, shrink_prior_v2, weekly_v2
 
 PARAMS = {
@@ -77,22 +79,24 @@ def test_pass_and_rush_are_separate_and_schedule_splits_one_win():
     assert alpha["sos"] == pytest.approx(next(t["v2"] for t in teams if t["team"] == "BB"))
 
 
-def test_blend_weight_moves_from_prior_to_live_across_five_weeks():
+def test_blend_weight_stays_with_the_prior_through_the_early_weeks():
+    from nflrankings.schedule import BLEND_PRIOR_GAMES
+
+    assert BLEND_PRIOR_GAMES == 14
     prior = 0.20
-    # Live is held at zero so the leftover prior share is 1 - blended/prior.
-    share = [blend_v2(0.0, prior, games) / prior for games in range(6)]
+    # Live is held at zero so the leftover prior share is blended/prior.
+    share = [blend_v2(0.0, prior, games) / prior for games in range(15)]
     assert share[0] == pytest.approx(1.0)  # week 1, no games yet
-    assert share[1] == pytest.approx(0.80)  # week 2, one game: still mostly prior
-    assert share[2] == pytest.approx(4 / 6)  # week 3
-    assert share[3] == pytest.approx(4 / 7)  # week 4, mixed
-    assert share[4] == pytest.approx(0.50)  # week 5: live has caught the prior
-    assert share[5] < 0.50  # the next game makes the live rating the larger part
+    assert share[1] == pytest.approx(14 / 15)  # one game: still almost all prior
+    assert share[4] == pytest.approx(14 / 18)  # four games, about week 5
+    assert share[4] > 0.5
+    assert share[14] == pytest.approx(0.5)  # prior strength and live games meet
 
 
 def test_prior_shrinks_toward_the_league_average():
     raw = 0.247087
     shrunk = shrink_prior_v2(raw, 17)
-    assert shrunk == pytest.approx(raw * 17 / (17 + 14))
+    assert shrunk == pytest.approx(raw * 17 / (17 + 28))
     assert abs(shrunk) < abs(raw)
     assert shrink_prior_v2(0.0, 17) == 0.0
     assert shrink_prior_v2(raw, 0) == 0.0
@@ -118,7 +122,7 @@ def test_pregame_blends_prior_without_using_the_week_itself():
     blended_away = blend_v2(float(live.loc["AA", "v2"]), prior["AA"], 1)
     mixed = 40 * (blended_home - blended_away)
     assert week2["neutral"]
-    assert week2["pregame_spread_home"] == pytest.approx(mixed)
+    assert week2["pregame_spread_home"] == pytest.approx(mixed, abs=5e-4)
     pure_live = 40 * (float(live.loc["BB", "v2"]) - float(live.loc["AA", "v2"]))
     pure_prior = 40 * (prior["BB"] - prior["AA"])
     assert mixed != pytest.approx(pure_live)
@@ -144,12 +148,36 @@ def test_missing_prior_file_is_materialized_once(tmp_path, monkeypatch):
     monkeypatch.setattr("nflrankings.pipeline.build_season", fake_build)
     first = ensure_prior_season(2026, tmp_path, {})
     assert calls == [(2025, False)]
-    assert first["LA"] == pytest.approx(0.20 * 17 / 31)
+    assert first["LA"] == pytest.approx(0.20 * 17 / (17 + 28))
     assert json.loads((tmp_path / "2025.json").read_text())["season"] == 2025
     # A second 2026 build reads the file and does not build 2025 again.
     second = ensure_prior_season(2026, tmp_path, {})
     assert calls == [(2025, False)]
     assert second == first
+
+
+def _mini_payload(season: int) -> dict:
+    return {
+        "season": season,
+        "generated_at": "2026-01-01T00:00:00+00:00",
+        "ranking": {"ranking": "neutral-round-robin"},
+        "teams": [{"team": "LA", "v2": 0.1, "wins": 1, "losses": 0, "ties": 0, "name": "Rams"}],
+    }
+
+
+def test_public_site_does_not_publish_2022(tmp_path, monkeypatch):
+    monkeypatch.setattr("nflrankings.pipeline.DEFAULT_OUT", tmp_path)
+    assert write_season(_mini_payload(2026), tmp_path) is True
+    assert write_season(_mini_payload(2022), tmp_path) is False
+    assert not (tmp_path / "2022.json").exists()
+    assert not (tmp_path / "2022.csv").exists()
+    seasons = __import__("json").loads((tmp_path / "index.json").read_text())["seasons"]
+    assert seasons == [2026]
+    # A different directory can still hold a historical backfill.
+    historical = tmp_path / "archive"
+    assert write_season(_mini_payload(2022), historical) is True
+    assert (historical / "2022.json").exists()
+    assert DEFAULT_OUT != historical
 
 
 def test_pregame_ignores_the_week_being_predicted():

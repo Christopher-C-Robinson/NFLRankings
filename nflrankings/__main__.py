@@ -1,4 +1,8 @@
-"""CLI: python -m nflrankings --season 2022|latest."""
+"""CLI: python -m nflrankings --season 2025|latest.
+
+Public output starts at 2025. An earlier season still builds, and ``--out``
+can store it somewhere other than ``docs/data``, but it is not published.
+"""
 
 import argparse
 from pathlib import Path
