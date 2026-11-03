@@ -12,6 +12,7 @@ import pandas as pd
 
 from . import rating
 from .aggregate import PBP_COLUMNS, epa_plays, regular_season
+from .group_power import attach_group_power
 from .schedule import (
     attach_outlook,
     attach_pregame,
@@ -23,6 +24,7 @@ from .schedule import (
     unit_ratings,
     weekly_v2,
 )
+from .weeks import describe_weeks
 from .winprob import apply_win_chances, load_conversion
 
 SOURCE = "nflverse via nfl_data_py (https://github.com/nflverse)"
@@ -47,6 +49,7 @@ CSV_COLUMNS = [
     "off_pass_epa_adj", "def_pass_epa_adj", "off_rush_epa_adj", "def_rush_epa_adj",
     "schedule_expected_wins", "projected_wins", "projected_losses", "sos",
     "pregame_expected_wins", "wins_above_expected",
+    "hierarchy_power", "unpooled_power", "division_power", "conference_power",
 ]
 
 
@@ -331,16 +334,24 @@ def build_season(season: int, params: dict | None = None, *, out_dir: Path | Non
 def _payload(season, teams, reg, sched, params, games=None, league_points=None) -> dict:
     weeks = pd.to_numeric(reg["week"], errors="coerce").dropna()
     played = sched[(sched["game_type"] == "REG") & sched["home_score"].notna()]
+    week_max = int(weeks.max())
+    catalog = describe_weeks(games or [], week_max)
+    home_field = float(params.get("home_field_points", 0.0))
     return {
         "season": season,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": SOURCE,
         "week_min": int(weeks.min()),
-        "week_max": int(weeks.max()),
+        "week_max": week_max,
         "games_played": int(len(played)),
         "league_ppg": league_points if league_points is not None else 0.0,
         "rating_basis": "season",
         "ranking": ranking_block(params),
+        "week_calendar": catalog["calendar"],
+        "current_week": catalog["current_week"],
+        "current_week_reason": catalog["current_week_reason"],
+        "weeks": catalog["weeks"],
+        "group_power": attach_group_power(teams, games or [], home_field),
         "teams": teams,
         "games": games or [],
     }

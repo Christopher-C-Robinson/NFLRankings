@@ -79,6 +79,15 @@ def test_pass_and_rush_are_separate_and_schedule_splits_one_win():
     assert alpha["sos"] == pytest.approx(next(t["v2"] for t in teams if t["team"] == "BB"))
 
 
+def test_gameday_is_copied_when_the_schedule_has_one():
+    sched = _sched()
+    sched["gameday"] = ["2026-09-10", None]
+    teams = build_teams(_plays(), sched, _desc(), PARAMS)
+    games, _ppg = enrich_games(teams, sched, PARAMS, {"AA", "BB"})
+    assert games[0]["gameday"] == "2026-09-10"
+    assert "gameday" not in games[1]
+
+
 def test_blend_weight_stays_with_the_prior_through_the_early_weeks():
     from nflrankings.schedule import BLEND_PRIOR_GAMES
 

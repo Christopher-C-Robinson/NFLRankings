@@ -138,7 +138,11 @@
    "projected_wins": 12.0,
    "projected_losses": 5.0,
    "sos": 0.032048,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 11.560677,
+   "unpooled_power": 10.613994,
+   "division_power": 5.756822,
+   "conference_power": 0.381288
   },
   {
    "team": "SEA",
@@ -254,7 +258,11 @@
    "projected_wins": 14.0,
    "projected_losses": 3.0,
    "sos": 0.020555,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 11.837024,
+   "unpooled_power": 10.890341,
+   "division_power": 5.756822,
+   "conference_power": 0.381288
   },
   {
    "team": "HOU",
@@ -370,7 +378,11 @@
    "projected_wins": 12.0,
    "projected_losses": 5.0,
    "sos": 0.035532,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 7.587698,
+   "unpooled_power": 6.967796,
+   "division_power": 2.906671,
+   "conference_power": -0.381288
   },
   {
    "team": "JAX",
@@ -486,7 +498,11 @@
    "projected_wins": 13.0,
    "projected_losses": 4.0,
    "sos": -6.1e-05,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 7.937883,
+   "unpooled_power": 7.317981,
+   "division_power": 2.906671,
+   "conference_power": -0.381288
   },
   {
    "team": "PHI",
@@ -602,7 +618,11 @@
    "projected_wins": 11.0,
    "projected_losses": 6.0,
    "sos": -6.7e-05,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 1.979855,
+   "unpooled_power": 2.367188,
+   "division_power": -2.381731,
+   "conference_power": 0.381288
   },
   {
    "team": "NE",
@@ -718,7 +738,11 @@
    "projected_wins": 14.0,
    "projected_losses": 3.0,
    "sos": -0.0943,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 4.90837,
+   "unpooled_power": 5.360022,
+   "division_power": -1.802383,
+   "conference_power": -0.381288
   },
   {
    "team": "BUF",
@@ -834,7 +858,11 @@
    "projected_wins": 12.0,
    "projected_losses": 5.0,
    "sos": -0.046364,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 3.872079,
+   "unpooled_power": 4.32373,
+   "division_power": -1.802383,
+   "conference_power": -0.381288
   },
   {
    "team": "DEN",
@@ -950,7 +978,11 @@
    "projected_wins": 14.0,
    "projected_losses": 3.0,
    "sos": -0.031296,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 3.1157,
+   "unpooled_power": 3.239665,
+   "division_power": -0.859169,
+   "conference_power": -0.381288
   },
   {
    "team": "IND",
@@ -1066,7 +1098,11 @@
    "projected_wins": 8.0,
    "projected_losses": 9.0,
    "sos": 0.026455,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 4.47794,
+   "unpooled_power": 3.858037,
+   "division_power": 2.906671,
+   "conference_power": -0.381288
   },
   {
    "team": "DET",
@@ -1182,7 +1218,11 @@
    "projected_wins": 9.0,
    "projected_losses": 8.0,
    "sos": 0.004061,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 3.34113,
+   "unpooled_power": 3.350938,
+   "division_power": 1.139504,
+   "conference_power": 0.381288
   },
   {
    "team": "GB",
@@ -1298,7 +1338,11 @@
    "projected_wins": 9.0,
    "projected_losses": 7.0,
    "sos": -0.013946,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 0.98653,
+   "unpooled_power": 0.996338,
+   "division_power": 1.139504,
+   "conference_power": 0.381288
   },
   {
    "team": "KC",
@@ -1414,7 +1458,11 @@
    "projected_wins": 6.0,
    "projected_losses": 11.0,
    "sos": 0.007568,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 1.386587,
+   "unpooled_power": 1.510552,
+   "division_power": -0.859169,
+   "conference_power": -0.381288
   },
   {
    "team": "CHI",
@@ -1530,7 +1578,11 @@
    "projected_wins": 11.0,
    "projected_losses": 6.0,
    "sos": -0.020849,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 0.712931,
+   "unpooled_power": 0.722739,
+   "division_power": 1.139504,
+   "conference_power": 0.381288
   },
   {
    "team": "LAC",
@@ -1646,7 +1698,11 @@
    "projected_wins": 11.0,
    "projected_losses": 6.0,
    "sos": -0.011824,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 0.790913,
+   "unpooled_power": 0.914878,
+   "division_power": -0.859169,
+   "conference_power": -0.381288
   },
   {
    "team": "SF",
@@ -1762,7 +1818,11 @@
    "projected_wins": 12.0,
    "projected_losses": 5.0,
    "sos": 0.034523,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 5.843455,
+   "unpooled_power": 4.896772,
+   "division_power": 5.756822,
+   "conference_power": 0.381288
   },
   {
    "team": "BAL",
@@ -1878,7 +1938,11 @@
    "projected_wins": 8.0,
    "projected_losses": 9.0,
    "sos": -0.00698,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 1.166156,
+   "unpooled_power": 1.528183,
+   "division_power": -2.15156,
+   "conference_power": -0.381288
   },
   {
    "team": "MIN",
@@ -1994,7 +2058,11 @@
    "projected_wins": 9.0,
    "projected_losses": 8.0,
    "sos": 0.00985,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -0.103468,
+   "unpooled_power": -0.093659,
+   "division_power": 1.139504,
+   "conference_power": 0.381288
   },
   {
    "team": "PIT",
@@ -2110,7 +2178,11 @@
    "projected_wins": 10.0,
    "projected_losses": 7.0,
    "sos": -0.014719,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": 0.039859,
+   "unpooled_power": 0.401886,
+   "division_power": -2.15156,
+   "conference_power": -0.381288
   },
   {
    "team": "TB",
@@ -2226,7 +2298,11 @@
    "projected_wins": 8.0,
    "projected_losses": 9.0,
    "sos": 0.012155,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -1.313832,
+   "unpooled_power": -1.082031,
+   "division_power": -2.608155,
+   "conference_power": 0.381288
   },
   {
    "team": "ATL",
@@ -2342,7 +2418,11 @@
    "projected_wins": 8.0,
    "projected_losses": 9.0,
    "sos": -0.008834,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -2.77735,
+   "unpooled_power": -2.545548,
+   "division_power": -2.608155,
+   "conference_power": 0.381288
   },
   {
    "team": "NO",
@@ -2458,7 +2538,11 @@
    "projected_wins": 6.0,
    "projected_losses": 11.0,
    "sos": -0.017523,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -4.433389,
+   "unpooled_power": -4.201587,
+   "division_power": -2.608155,
+   "conference_power": 0.381288
   },
   {
    "team": "ARI",
@@ -2574,7 +2658,11 @@
    "projected_wins": 3.0,
    "projected_losses": 14.0,
    "sos": 0.046117,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -3.5261,
+   "unpooled_power": -4.472783,
+   "division_power": 5.756822,
+   "conference_power": 0.381288
   },
   {
    "team": "NYG",
@@ -2690,7 +2778,11 @@
    "projected_wins": 4.0,
    "projected_losses": 13.0,
    "sos": 0.007232,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -3.582073,
+   "unpooled_power": -3.19474,
+   "division_power": -2.381731,
+   "conference_power": 0.381288
   },
   {
    "team": "DAL",
@@ -2806,7 +2898,11 @@
    "projected_wins": 7.0,
    "projected_losses": 9.0,
    "sos": -0.023127,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -3.883404,
+   "unpooled_power": -3.496071,
+   "division_power": -2.381731,
+   "conference_power": 0.381288
   },
   {
    "team": "CAR",
@@ -2922,7 +3018,11 @@
    "projected_wins": 8.0,
    "projected_losses": 9.0,
    "sos": 0.008254,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -3.402769,
+   "unpooled_power": -3.170967,
+   "division_power": -2.608155,
+   "conference_power": 0.381288
   },
   {
    "team": "WAS",
@@ -3038,7 +3138,11 @@
    "projected_wins": 5.0,
    "projected_losses": 12.0,
    "sos": 0.007675,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -5.422811,
+   "unpooled_power": -5.035478,
+   "division_power": -2.381731,
+   "conference_power": 0.381288
   },
   {
    "team": "CLE",
@@ -3154,7 +3258,11 @@
    "projected_wins": 5.0,
    "projected_losses": 12.0,
    "sos": -0.039553,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -6.48224,
+   "unpooled_power": -6.120214,
+   "division_power": -2.15156,
+   "conference_power": -0.381288
   },
   {
    "team": "MIA",
@@ -3270,7 +3378,11 @@
    "projected_wins": 7.0,
    "projected_losses": 10.0,
    "sos": -0.035341,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -5.619886,
+   "unpooled_power": -5.168234,
+   "division_power": -1.802383,
+   "conference_power": -0.381288
   },
   {
    "team": "CIN",
@@ -3386,7 +3498,11 @@
    "projected_wins": 6.0,
    "projected_losses": 11.0,
    "sos": -0.006603,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -4.215152,
+   "unpooled_power": -3.853126,
+   "division_power": -2.15156,
+   "conference_power": -0.381288
   },
   {
    "team": "TEN",
@@ -3502,7 +3618,11 @@
    "projected_wins": 3.0,
    "projected_losses": 14.0,
    "sos": 0.067515,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -6.732857,
+   "unpooled_power": -7.35276,
+   "division_power": 2.906671,
+   "conference_power": -0.381288
   },
   {
    "team": "LV",
@@ -3618,7 +3738,11 @@
    "projected_wins": 3.0,
    "projected_losses": 14.0,
    "sos": 0.029424,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -8.968816,
+   "unpooled_power": -8.844851,
+   "division_power": -0.859169,
+   "conference_power": -0.381288
   },
   {
    "team": "NYJ",
@@ -3734,7 +3858,11 @@
    "projected_wins": 3.0,
    "projected_losses": 14.0,
    "sos": -0.009816,
-   "sos_games": 17
+   "sos_games": 17,
+   "hierarchy_power": -11.080641,
+   "unpooled_power": -10.628989,
+   "division_power": -1.802383,
+   "conference_power": -0.381288
   }
  ],
  "games": [
@@ -3758,7 +3886,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3780,7 +3909,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3802,7 +3932,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-08"
   },
   {
    "week": 1,
@@ -3824,7 +3955,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3846,7 +3978,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3868,7 +4001,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3890,7 +4024,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3912,7 +4047,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3934,7 +4070,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -3956,7 +4093,8 @@
    "pregame_proj_home": 22.0,
    "pregame_proj_away": 22.0,
    "pregame_margin_low": -15.0495,
-   "pregame_margin_high": 15.0495
+   "pregame_margin_high": 15.0495,
+   "gameday": "2025-09-05"
   },
   {
    "week": 1,
@@ -3978,7 +4116,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -4000,7 +4139,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -4022,7 +4162,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -4044,7 +4185,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-04"
   },
   {
    "week": 1,
@@ -4066,7 +4208,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 1,
@@ -4088,7 +4231,8 @@
    "pregame_proj_home": 22.8884,
    "pregame_proj_away": 21.1116,
    "pregame_margin_low": -13.2727,
-   "pregame_margin_high": 16.8264
+   "pregame_margin_high": 16.8264,
+   "gameday": "2025-09-07"
   },
   {
    "week": 2,
@@ -4110,7 +4254,8 @@
    "pregame_proj_home": 32.8962,
    "pregame_proj_away": 7.0538,
    "pregame_margin_low": 10.793,
-   "pregame_margin_high": 40.892
+   "pregame_margin_high": 40.892,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4132,7 +4277,8 @@
    "pregame_proj_home": 24.2116,
    "pregame_proj_away": 20.2384,
    "pregame_margin_low": -11.0764,
-   "pregame_margin_high": 19.0227
+   "pregame_margin_high": 19.0227,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4154,7 +4300,8 @@
    "pregame_proj_home": 9.5114,
    "pregame_proj_away": 30.4386,
    "pregame_margin_low": -35.9767,
-   "pregame_margin_high": -5.8777
+   "pregame_margin_high": -5.8777,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4176,7 +4323,8 @@
    "pregame_proj_home": 28.3028,
    "pregame_proj_away": 11.8472,
    "pregame_margin_low": 1.4061,
-   "pregame_margin_high": 31.5052
+   "pregame_margin_high": 31.5052,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4198,7 +4346,8 @@
    "pregame_proj_home": 12.7947,
    "pregame_proj_away": 29.3553,
    "pregame_margin_low": -31.6102,
-   "pregame_margin_high": -1.5111
+   "pregame_margin_high": -1.5111,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4220,7 +4369,8 @@
    "pregame_proj_home": 16.7513,
    "pregame_proj_away": 22.9987,
    "pregame_margin_low": -21.2969,
-   "pregame_margin_high": 8.8022
+   "pregame_margin_high": 8.8022,
+   "gameday": "2025-09-11"
   },
   {
    "week": 2,
@@ -4242,7 +4392,8 @@
    "pregame_proj_home": 16.9919,
    "pregame_proj_away": 22.6581,
    "pregame_margin_low": -20.7157,
-   "pregame_margin_high": 9.3834
+   "pregame_margin_high": 9.3834,
+   "gameday": "2025-09-15"
   },
   {
    "week": 2,
@@ -4264,7 +4415,8 @@
    "pregame_proj_home": 28.059,
    "pregame_proj_away": 12.291,
    "pregame_margin_low": 0.7184,
-   "pregame_margin_high": 30.8175
+   "pregame_margin_high": 30.8175,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4286,7 +4438,8 @@
    "pregame_proj_home": 16.9126,
    "pregame_proj_away": 25.3374,
    "pregame_margin_low": -23.4744,
-   "pregame_margin_high": 6.6247
+   "pregame_margin_high": 6.6247,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4308,7 +4461,8 @@
    "pregame_proj_home": 23.8068,
    "pregame_proj_away": 17.3432,
    "pregame_margin_low": -8.586,
-   "pregame_margin_high": 21.5131
+   "pregame_margin_high": 21.5131,
+   "gameday": "2025-09-15"
   },
   {
    "week": 2,
@@ -4330,7 +4484,8 @@
    "pregame_proj_home": 12.1311,
    "pregame_proj_away": 28.3189,
    "pregame_margin_low": -31.2374,
-   "pregame_margin_high": -1.1383
+   "pregame_margin_high": -1.1383,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4352,7 +4507,8 @@
    "pregame_proj_home": 20.752,
    "pregame_proj_away": 21.698,
    "pregame_margin_low": -15.9955,
-   "pregame_margin_high": 14.1036
+   "pregame_margin_high": 14.1036,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4374,7 +4530,8 @@
    "pregame_proj_home": 9.285,
    "pregame_proj_away": 30.065,
    "pregame_margin_low": -35.8295,
-   "pregame_margin_high": -5.7304
+   "pregame_margin_high": -5.7304,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4396,7 +4553,8 @@
    "pregame_proj_home": 29.1879,
    "pregame_proj_away": 18.5621,
    "pregame_margin_low": -4.4238,
-   "pregame_margin_high": 25.6753
+   "pregame_margin_high": 25.6753,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4418,7 +4576,8 @@
    "pregame_proj_home": 29.4847,
    "pregame_proj_away": 13.1653,
    "pregame_margin_low": 1.2699,
-   "pregame_margin_high": 31.369
+   "pregame_margin_high": 31.369,
+   "gameday": "2025-09-14"
   },
   {
    "week": 2,
@@ -4440,7 +4599,8 @@
    "pregame_proj_home": 11.4909,
    "pregame_proj_away": 27.0591,
    "pregame_margin_low": -30.6177,
-   "pregame_margin_high": -0.5186
+   "pregame_margin_high": -0.5186,
+   "gameday": "2025-09-14"
   },
   {
    "week": 3,
@@ -4462,7 +4622,8 @@
    "pregame_proj_home": 26.7079,
    "pregame_proj_away": 24.6671,
    "pregame_margin_low": -13.0088,
-   "pregame_margin_high": 17.0903
+   "pregame_margin_high": 17.0903,
+   "gameday": "2025-09-22"
   },
   {
    "week": 3,
@@ -4484,7 +4645,8 @@
    "pregame_proj_home": 47.2703,
    "pregame_proj_away": 1.6047,
    "pregame_margin_low": 30.6161,
-   "pregame_margin_high": 60.7152
+   "pregame_margin_high": 60.7152,
+   "gameday": "2025-09-18"
   },
   {
    "week": 3,
@@ -4506,7 +4668,8 @@
    "pregame_proj_home": 14.4746,
    "pregame_proj_away": 28.9004,
    "pregame_margin_low": -29.4754,
-   "pregame_margin_high": 0.6237
+   "pregame_margin_high": 0.6237,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4528,7 +4691,8 @@
    "pregame_proj_home": 24.6781,
    "pregame_proj_away": 26.1136,
    "pregame_margin_low": -16.4851,
-   "pregame_margin_high": 13.614
+   "pregame_margin_high": 13.614,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4550,7 +4714,8 @@
    "pregame_proj_home": 9.8918,
    "pregame_proj_away": 35.1499,
    "pregame_margin_low": -40.3076,
-   "pregame_margin_high": -10.2086
+   "pregame_margin_high": -10.2086,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4572,7 +4737,8 @@
    "pregame_proj_home": 27.5907,
    "pregame_proj_away": 15.7843,
    "pregame_margin_low": -3.2431,
-   "pregame_margin_high": 26.8559
+   "pregame_margin_high": 26.8559,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4594,7 +4760,8 @@
    "pregame_proj_home": 26.1613,
    "pregame_proj_away": 18.047,
    "pregame_margin_low": -6.9352,
-   "pregame_margin_high": 23.1638
+   "pregame_margin_high": 23.1638,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4616,7 +4783,8 @@
    "pregame_proj_home": 15.8996,
    "pregame_proj_away": 28.642,
    "pregame_margin_low": -27.7919,
-   "pregame_margin_high": 2.3071
+   "pregame_margin_high": 2.3071,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4638,7 +4806,8 @@
    "pregame_proj_home": 23.6072,
    "pregame_proj_away": 24.0178,
    "pregame_margin_low": -15.4601,
-   "pregame_margin_high": 14.639
+   "pregame_margin_high": 14.639,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4660,7 +4829,8 @@
    "pregame_proj_home": 24.3401,
    "pregame_proj_away": 21.7849,
    "pregame_margin_low": -12.4944,
-   "pregame_margin_high": 17.6046
+   "pregame_margin_high": 17.6046,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4682,7 +4852,8 @@
    "pregame_proj_home": 20.3198,
    "pregame_proj_away": 23.0552,
    "pregame_margin_low": -17.785,
-   "pregame_margin_high": 12.3141
+   "pregame_margin_high": 12.3141,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4704,7 +4875,8 @@
    "pregame_proj_home": 18.8512,
    "pregame_proj_away": 24.6905,
    "pregame_margin_low": -20.8889,
-   "pregame_margin_high": 9.2102
+   "pregame_margin_high": 9.2102,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4726,7 +4898,8 @@
    "pregame_proj_home": 26.1443,
    "pregame_proj_away": 17.4807,
    "pregame_margin_low": -6.386,
-   "pregame_margin_high": 23.7131
+   "pregame_margin_high": 23.7131,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4748,7 +4921,8 @@
    "pregame_proj_home": 36.6311,
    "pregame_proj_away": 9.4105,
    "pregame_margin_low": 12.1711,
-   "pregame_margin_high": 42.2701
+   "pregame_margin_high": 42.2701,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4770,7 +4944,8 @@
    "pregame_proj_home": 17.3595,
    "pregame_proj_away": 28.1822,
    "pregame_margin_low": -25.8722,
-   "pregame_margin_high": 4.2269
+   "pregame_margin_high": 4.2269,
+   "gameday": "2025-09-21"
   },
   {
    "week": 3,
@@ -4792,7 +4967,8 @@
    "pregame_proj_home": 36.272,
    "pregame_proj_away": 5.2697,
    "pregame_margin_low": 15.9528,
-   "pregame_margin_high": 46.0518
+   "pregame_margin_high": 46.0518,
+   "gameday": "2025-09-21"
   },
   {
    "week": 4,
@@ -4814,7 +4990,8 @@
    "pregame_proj_home": 25.3669,
    "pregame_proj_away": 18.526,
    "pregame_margin_low": -8.2086,
-   "pregame_margin_high": 21.8904
+   "pregame_margin_high": 21.8904,
+   "gameday": "2025-09-25"
   },
   {
    "week": 4,
@@ -4836,7 +5013,8 @@
    "pregame_proj_home": 22.0421,
    "pregame_proj_away": 21.1365,
    "pregame_margin_low": -14.144,
-   "pregame_margin_high": 15.9551
+   "pregame_margin_high": 15.9551,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4858,7 +5036,8 @@
    "pregame_proj_home": 29.1504,
    "pregame_proj_away": 19.171,
    "pregame_margin_low": -5.0702,
-   "pregame_margin_high": 25.0289
+   "pregame_margin_high": 25.0289,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4880,7 +5059,8 @@
    "pregame_proj_home": 8.6832,
    "pregame_proj_away": 37.0668,
    "pregame_margin_low": -43.4332,
-   "pregame_margin_high": -13.3341
+   "pregame_margin_high": -13.3341,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4902,7 +5082,8 @@
    "pregame_proj_home": 33.8297,
    "pregame_proj_away": 12.4203,
    "pregame_margin_low": 6.36,
-   "pregame_margin_high": 36.459
+   "pregame_margin_high": 36.459,
+   "gameday": "2025-09-29"
   },
   {
    "week": 4,
@@ -4924,7 +5105,8 @@
    "pregame_proj_home": 36.1937,
    "pregame_proj_away": 11.0563,
    "pregame_margin_low": 10.0879,
-   "pregame_margin_high": 40.187
+   "pregame_margin_high": 40.187,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4946,7 +5128,8 @@
    "pregame_proj_home": 28.7025,
    "pregame_proj_away": 14.1904,
    "pregame_margin_low": -0.5375,
-   "pregame_margin_high": 29.5616
+   "pregame_margin_high": 29.5616,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4968,7 +5151,8 @@
    "pregame_proj_home": 20.9691,
    "pregame_proj_away": 28.2809,
    "pregame_margin_low": -22.3614,
-   "pregame_margin_high": 7.7377
+   "pregame_margin_high": 7.7377,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -4990,7 +5174,8 @@
    "pregame_proj_home": 22.0514,
    "pregame_proj_away": 25.0557,
    "pregame_margin_low": -18.0539,
-   "pregame_margin_high": 12.0452
+   "pregame_margin_high": 12.0452,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5012,7 +5197,8 @@
    "pregame_proj_home": 19.5085,
    "pregame_proj_away": 27.8129,
    "pregame_margin_low": -23.3539,
-   "pregame_margin_high": 6.7452
+   "pregame_margin_high": 6.7452,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5034,7 +5220,8 @@
    "pregame_proj_home": 22.3653,
    "pregame_proj_away": 26.3133,
    "pregame_margin_low": -18.9976,
-   "pregame_margin_high": 11.1015
+   "pregame_margin_high": 11.1015,
+   "gameday": "2025-09-29"
   },
   {
    "week": 4,
@@ -5056,7 +5243,8 @@
    "pregame_proj_home": 14.6063,
    "pregame_proj_away": 28.9294,
    "pregame_margin_low": -29.3726,
-   "pregame_margin_high": 0.7265
+   "pregame_margin_high": 0.7265,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5078,7 +5266,8 @@
    "pregame_proj_home": 11.8378,
    "pregame_proj_away": 32.5551,
    "pregame_margin_low": -35.7669,
-   "pregame_margin_high": -5.6678
+   "pregame_margin_high": -5.6678,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5100,7 +5289,8 @@
    "pregame_proj_home": 16.8971,
    "pregame_proj_away": 29.71,
    "pregame_margin_low": -27.8625,
-   "pregame_margin_high": 2.2366
+   "pregame_margin_high": 2.2366,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5122,7 +5312,8 @@
    "pregame_proj_home": 25.1745,
    "pregame_proj_away": 17.3612,
    "pregame_margin_low": -7.2363,
-   "pregame_margin_high": 22.8628
+   "pregame_margin_high": 22.8628,
+   "gameday": "2025-09-28"
   },
   {
    "week": 4,
@@ -5144,7 +5335,8 @@
    "pregame_proj_home": 25.9099,
    "pregame_proj_away": 20.1258,
    "pregame_margin_low": -9.2654,
-   "pregame_margin_high": 20.8336
+   "pregame_margin_high": 20.8336,
+   "gameday": "2025-09-28"
   },
   {
    "week": 5,
@@ -5166,7 +5358,8 @@
    "pregame_proj_home": 29.5412,
    "pregame_proj_away": 14.1541,
    "pregame_margin_low": 0.3375,
-   "pregame_margin_high": 30.4366
+   "pregame_margin_high": 30.4366,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5188,7 +5381,8 @@
    "pregame_proj_home": 25.0531,
    "pregame_proj_away": 21.8922,
    "pregame_margin_low": -11.8886,
-   "pregame_margin_high": 18.2105
+   "pregame_margin_high": 18.2105,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5210,7 +5404,8 @@
    "pregame_proj_home": 30.7724,
    "pregame_proj_away": 17.8605,
    "pregame_margin_low": -2.1376,
-   "pregame_margin_high": 27.9614
+   "pregame_margin_high": 27.9614,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5232,7 +5427,8 @@
    "pregame_proj_home": 26.1484,
    "pregame_proj_away": 20.2969,
    "pregame_margin_low": -9.198,
-   "pregame_margin_high": 20.901
+   "pregame_margin_high": 20.901,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5254,7 +5450,8 @@
    "pregame_proj_home": 9.3766,
    "pregame_proj_away": 39.1938,
    "pregame_margin_low": -44.8667,
-   "pregame_margin_high": -14.7677
+   "pregame_margin_high": -14.7677,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5276,7 +5473,8 @@
    "pregame_proj_home": 20.3456,
    "pregame_proj_away": 24.1622,
    "pregame_margin_low": -18.8661,
-   "pregame_margin_high": 11.233
+   "pregame_margin_high": 11.233,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5298,7 +5496,8 @@
    "pregame_proj_home": 30.7678,
    "pregame_proj_away": 16.365,
    "pregame_margin_low": -0.6467,
-   "pregame_margin_high": 29.4524
+   "pregame_margin_high": 29.4524,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5320,7 +5519,8 @@
    "pregame_proj_home": 20.1544,
    "pregame_proj_away": 24.4159,
    "pregame_margin_low": -19.311,
-   "pregame_margin_high": 10.788
+   "pregame_margin_high": 10.788,
+   "gameday": "2025-10-06"
   },
   {
    "week": 5,
@@ -5342,7 +5542,8 @@
    "pregame_proj_home": 26.5366,
    "pregame_proj_away": 17.7212,
    "pregame_margin_low": -6.2341,
-   "pregame_margin_high": 23.8649
+   "pregame_margin_high": 23.8649,
+   "gameday": "2025-10-02"
   },
   {
    "week": 5,
@@ -5364,7 +5565,8 @@
    "pregame_proj_home": 25.9288,
    "pregame_proj_away": 19.6416,
    "pregame_margin_low": -8.7623,
-   "pregame_margin_high": 21.3367
+   "pregame_margin_high": 21.3367,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5386,7 +5588,8 @@
    "pregame_proj_home": 22.8135,
    "pregame_proj_away": 23.0069,
    "pregame_margin_low": -15.2429,
-   "pregame_margin_high": 14.8561
+   "pregame_margin_high": 14.8561,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5408,7 +5611,8 @@
    "pregame_proj_home": 24.8634,
    "pregame_proj_away": 26.8944,
    "pregame_margin_low": -17.0805,
-   "pregame_margin_high": 13.0185
+   "pregame_margin_high": 13.0185,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5430,7 +5634,8 @@
    "pregame_proj_home": 27.1078,
    "pregame_proj_away": 18.5875,
    "pregame_margin_low": -6.5292,
-   "pregame_margin_high": 23.5699
+   "pregame_margin_high": 23.5699,
+   "gameday": "2025-10-05"
   },
   {
    "week": 5,
@@ -5452,7 +5657,8 @@
    "pregame_proj_home": 21.2319,
    "pregame_proj_away": 25.2759,
    "pregame_margin_low": -19.0935,
-   "pregame_margin_high": 11.0056
+   "pregame_margin_high": 11.0056,
+   "gameday": "2025-10-05"
   },
   {
    "week": 6,
@@ -5474,7 +5680,8 @@
    "pregame_proj_home": 24.3053,
    "pregame_proj_away": 22.804,
    "pregame_margin_low": -13.5482,
-   "pregame_margin_high": 16.5509
+   "pregame_margin_high": 16.5509,
+   "gameday": "2025-10-13"
   },
   {
    "week": 6,
@@ -5496,7 +5703,8 @@
    "pregame_proj_home": 19.1497,
    "pregame_proj_away": 32.1951,
    "pregame_margin_low": -28.0949,
-   "pregame_margin_high": 2.0041
+   "pregame_margin_high": 2.0041,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5518,7 +5726,8 @@
    "pregame_proj_home": 24.5048,
    "pregame_proj_away": 25.6177,
    "pregame_margin_low": -16.1625,
-   "pregame_margin_high": 13.9366
+   "pregame_margin_high": 13.9366,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5540,7 +5749,8 @@
    "pregame_proj_home": 36.4057,
    "pregame_proj_away": 10.9397,
    "pregame_margin_low": 10.4164,
-   "pregame_margin_high": 40.5155
+   "pregame_margin_high": 40.5155,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5562,7 +5772,8 @@
    "pregame_proj_home": 30.1298,
    "pregame_proj_away": 15.826,
    "pregame_margin_low": -0.7457,
-   "pregame_margin_high": 29.3534
+   "pregame_margin_high": 29.3534,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5584,7 +5795,8 @@
    "pregame_proj_home": 25.4165,
    "pregame_proj_away": 22.0393,
    "pregame_margin_low": -11.6724,
-   "pregame_margin_high": 18.4267
+   "pregame_margin_high": 18.4267,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5606,7 +5818,8 @@
    "pregame_proj_home": 24.8408,
    "pregame_proj_away": 24.8373,
    "pregame_margin_low": -15.046,
-   "pregame_margin_high": 15.0531
+   "pregame_margin_high": 15.0531,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5628,7 +5841,8 @@
    "pregame_proj_home": 23.5728,
    "pregame_proj_away": 21.5497,
    "pregame_margin_low": -13.0264,
-   "pregame_margin_high": 17.0726
+   "pregame_margin_high": 17.0726,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5650,7 +5864,8 @@
    "pregame_proj_home": 18.2914,
    "pregame_proj_away": 27.4978,
    "pregame_margin_low": -24.256,
-   "pregame_margin_high": 5.8431
+   "pregame_margin_high": 5.8431,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5672,7 +5887,8 @@
    "pregame_proj_home": 24.1706,
    "pregame_proj_away": 21.8963,
    "pregame_margin_low": -12.7753,
-   "pregame_margin_high": 17.3238
+   "pregame_margin_high": 17.3238,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5694,7 +5910,8 @@
    "pregame_proj_home": 14.8373,
    "pregame_proj_away": 30.9518,
    "pregame_margin_low": -31.1641,
-   "pregame_margin_high": -1.065
+   "pregame_margin_high": -1.065,
+   "gameday": "2025-10-09"
   },
   {
    "week": 6,
@@ -5716,7 +5933,8 @@
    "pregame_proj_home": 14.4749,
    "pregame_proj_away": 32.5365,
    "pregame_margin_low": -33.1112,
-   "pregame_margin_high": -3.0121
+   "pregame_margin_high": -3.0121,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5738,7 +5956,8 @@
    "pregame_proj_home": 25.5706,
    "pregame_proj_away": 19.6499,
    "pregame_margin_low": -9.1289,
-   "pregame_margin_high": 20.9702
+   "pregame_margin_high": 20.9702,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5760,7 +5979,8 @@
    "pregame_proj_home": 24.2892,
    "pregame_proj_away": 22.7777,
    "pregame_margin_low": -13.5381,
-   "pregame_margin_high": 16.561
+   "pregame_margin_high": 16.561,
+   "gameday": "2025-10-12"
   },
   {
    "week": 6,
@@ -5782,7 +6002,8 @@
    "pregame_proj_home": 27.9315,
    "pregame_proj_away": 20.9556,
    "pregame_margin_low": -8.0736,
-   "pregame_margin_high": 22.0255
+   "pregame_margin_high": 22.0255,
+   "gameday": "2025-10-13"
   },
   {
    "week": 7,
@@ -5804,7 +6025,8 @@
    "pregame_proj_home": 21.7481,
    "pregame_proj_away": 23.5685,
    "pregame_margin_low": -16.8699,
-   "pregame_margin_high": 13.2291
+   "pregame_margin_high": 13.2291,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5826,7 +6048,8 @@
    "pregame_proj_home": 27.4285,
    "pregame_proj_away": 20.477,
    "pregame_margin_low": -8.098,
-   "pregame_margin_high": 22.0011
+   "pregame_margin_high": 22.0011,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5848,7 +6071,8 @@
    "pregame_proj_home": 17.3222,
    "pregame_proj_away": 29.0554,
    "pregame_margin_low": -26.7827,
-   "pregame_margin_high": 3.3164
+   "pregame_margin_high": 3.3164,
+   "gameday": "2025-10-16"
   },
   {
    "week": 7,
@@ -5870,7 +6094,8 @@
    "pregame_proj_home": 22.4087,
    "pregame_proj_away": 22.8859,
    "pregame_margin_low": -15.5268,
-   "pregame_margin_high": 14.5723
+   "pregame_margin_high": 14.5723,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5892,7 +6117,8 @@
    "pregame_proj_home": 23.9744,
    "pregame_proj_away": 26.8203,
    "pregame_margin_low": -17.8954,
-   "pregame_margin_high": 12.2037
+   "pregame_margin_high": 12.2037,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5914,7 +6140,8 @@
    "pregame_proj_home": 27.6618,
    "pregame_proj_away": 15.3328,
    "pregame_margin_low": -2.7206,
-   "pregame_margin_high": 27.3785
+   "pregame_margin_high": 27.3785,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5936,7 +6163,8 @@
    "pregame_proj_home": 25.0108,
    "pregame_proj_away": 25.9339,
    "pregame_margin_low": -15.9726,
-   "pregame_margin_high": 14.1265
+   "pregame_margin_high": 14.1265,
+   "gameday": "2025-10-20"
   },
   {
    "week": 7,
@@ -5958,7 +6186,8 @@
    "pregame_proj_home": 19.9936,
    "pregame_proj_away": 23.951,
    "pregame_margin_low": -19.0069,
-   "pregame_margin_high": 11.0922
+   "pregame_margin_high": 11.0922,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -5980,7 +6209,8 @@
    "pregame_proj_home": 30.3944,
    "pregame_proj_away": 14.6502,
    "pregame_margin_low": 0.6946,
-   "pregame_margin_high": 30.7937
+   "pregame_margin_high": 30.7937,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -6002,7 +6232,8 @@
    "pregame_proj_home": 19.2977,
    "pregame_proj_away": 27.2969,
    "pregame_margin_low": -23.0487,
-   "pregame_margin_high": 7.0503
+   "pregame_margin_high": 7.0503,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -6024,7 +6255,8 @@
    "pregame_proj_home": 21.4079,
    "pregame_proj_away": 24.5864,
    "pregame_margin_low": -18.228,
-   "pregame_margin_high": 11.8711
+   "pregame_margin_high": 11.8711,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -6046,7 +6278,8 @@
    "pregame_proj_home": 21.6782,
    "pregame_proj_away": 25.3665,
    "pregame_margin_low": -18.7378,
-   "pregame_margin_high": 11.3612
+   "pregame_margin_high": 11.3612,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -6068,7 +6301,8 @@
    "pregame_proj_home": 20.0936,
    "pregame_proj_away": 22.9674,
    "pregame_margin_low": -17.9234,
-   "pregame_margin_high": 12.1757
+   "pregame_margin_high": 12.1757,
+   "gameday": "2025-10-20"
   },
   {
    "week": 7,
@@ -6090,7 +6324,8 @@
    "pregame_proj_home": 22.109,
    "pregame_proj_away": 21.1742,
    "pregame_margin_low": -14.1147,
-   "pregame_margin_high": 15.9844
+   "pregame_margin_high": 15.9844,
+   "gameday": "2025-10-19"
   },
   {
    "week": 7,
@@ -6112,7 +6347,8 @@
    "pregame_proj_home": 18.515,
    "pregame_proj_away": 25.6797,
    "pregame_margin_low": -22.2142,
-   "pregame_margin_high": 7.8849
+   "pregame_margin_high": 7.8849,
+   "gameday": "2025-10-19"
   },
   {
    "week": 8,
@@ -6134,7 +6370,8 @@
    "pregame_proj_home": 30.3821,
    "pregame_proj_away": 14.4022,
    "pregame_margin_low": 0.9303,
-   "pregame_margin_high": 31.0294
+   "pregame_margin_high": 31.0294,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6156,7 +6393,8 @@
    "pregame_proj_home": 22.0516,
    "pregame_proj_away": 28.6391,
    "pregame_margin_low": -21.637,
-   "pregame_margin_high": 8.462
+   "pregame_margin_high": 8.462,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6178,7 +6416,8 @@
    "pregame_proj_home": 21.677,
    "pregame_proj_away": 24.6256,
    "pregame_margin_low": -17.9982,
-   "pregame_margin_high": 12.1009
+   "pregame_margin_high": 12.1009,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6200,7 +6439,8 @@
    "pregame_proj_home": 24.3938,
    "pregame_proj_away": 22.4614,
    "pregame_margin_low": -13.1171,
-   "pregame_margin_high": 16.982
+   "pregame_margin_high": 16.982,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6222,7 +6462,8 @@
    "pregame_proj_home": 26.9095,
    "pregame_proj_away": 22.4912,
    "pregame_margin_low": -10.6312,
-   "pregame_margin_high": 19.4678
+   "pregame_margin_high": 19.4678,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6244,7 +6485,8 @@
    "pregame_proj_home": 23.2254,
    "pregame_proj_away": 17.9907,
    "pregame_margin_low": -9.8148,
-   "pregame_margin_high": 20.2842
+   "pregame_margin_high": 20.2842,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6266,7 +6508,8 @@
    "pregame_proj_home": 35.4221,
    "pregame_proj_away": 11.3422,
    "pregame_margin_low": 9.0303,
-   "pregame_margin_high": 39.1294
+   "pregame_margin_high": 39.1294,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6288,7 +6531,8 @@
    "pregame_proj_home": 30.02,
    "pregame_proj_away": 16.7443,
    "pregame_margin_low": -1.7738,
-   "pregame_margin_high": 28.3253
+   "pregame_margin_high": 28.3253,
+   "gameday": "2025-10-27"
   },
   {
    "week": 8,
@@ -6310,7 +6554,8 @@
    "pregame_proj_home": 23.4634,
    "pregame_proj_away": 21.9118,
    "pregame_margin_low": -13.4979,
-   "pregame_margin_high": 16.6012
+   "pregame_margin_high": 16.6012,
+   "gameday": "2025-10-23"
   },
   {
    "week": 8,
@@ -6332,7 +6577,8 @@
    "pregame_proj_home": 24.7895,
    "pregame_proj_away": 18.293,
    "pregame_margin_low": -8.553,
-   "pregame_margin_high": 21.5461
+   "pregame_margin_high": 21.5461,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6354,7 +6600,8 @@
    "pregame_proj_home": 18.5167,
    "pregame_proj_away": 28.2476,
    "pregame_margin_low": -24.7805,
-   "pregame_margin_high": 5.3186
+   "pregame_margin_high": 5.3186,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6376,7 +6623,8 @@
    "pregame_proj_home": 28.6664,
    "pregame_proj_away": 18.3252,
    "pregame_margin_low": -4.7083,
-   "pregame_margin_high": 25.3907
+   "pregame_margin_high": 25.3907,
+   "gameday": "2025-10-26"
   },
   {
    "week": 8,
@@ -6398,7 +6646,8 @@
    "pregame_proj_home": 20.3791,
    "pregame_proj_away": 26.7117,
    "pregame_margin_low": -21.3821,
-   "pregame_margin_high": 8.717
+   "pregame_margin_high": 8.717,
+   "gameday": "2025-10-26"
   },
   {
    "week": 9,
@@ -6420,7 +6669,8 @@
    "pregame_proj_home": 20.1548,
    "pregame_proj_away": 26.4717,
    "pregame_margin_low": -21.3664,
-   "pregame_margin_high": 8.7326
+   "pregame_margin_high": 8.7326,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6442,7 +6692,8 @@
    "pregame_proj_home": 19.5882,
    "pregame_proj_away": 30.455,
    "pregame_margin_low": -25.9163,
-   "pregame_margin_high": 4.1827
+   "pregame_margin_high": 4.1827,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6464,7 +6715,8 @@
    "pregame_proj_home": 26.523,
    "pregame_proj_away": 24.3042,
    "pregame_margin_low": -12.8308,
-   "pregame_margin_high": 17.2683
+   "pregame_margin_high": 17.2683,
+   "gameday": "2025-11-03"
   },
   {
    "week": 9,
@@ -6486,7 +6738,8 @@
    "pregame_proj_home": 33.9046,
    "pregame_proj_away": 14.0515,
    "pregame_margin_low": 4.8035,
-   "pregame_margin_high": 34.9026
+   "pregame_margin_high": 34.9026,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6508,7 +6761,8 @@
    "pregame_proj_home": 31.1749,
    "pregame_proj_away": 15.0386,
    "pregame_margin_low": 1.0868,
-   "pregame_margin_high": 31.1858
+   "pregame_margin_high": 31.1858,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6530,7 +6784,8 @@
    "pregame_proj_home": 24.2585,
    "pregame_proj_away": 18.5005,
    "pregame_margin_low": -9.2916,
-   "pregame_margin_high": 20.8075
+   "pregame_margin_high": 20.8075,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6552,7 +6807,8 @@
    "pregame_proj_home": 31.0021,
    "pregame_proj_away": 12.5182,
    "pregame_margin_low": 3.4343,
-   "pregame_margin_high": 33.5334
+   "pregame_margin_high": 33.5334,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6574,7 +6830,8 @@
    "pregame_proj_home": 15.8963,
    "pregame_proj_away": 27.5598,
    "pregame_margin_low": -26.7131,
-   "pregame_margin_high": 3.386
+   "pregame_margin_high": 3.386,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6596,7 +6853,8 @@
    "pregame_proj_home": 22.8766,
    "pregame_proj_away": 26.9923,
    "pregame_margin_low": -19.1652,
-   "pregame_margin_high": 10.9339
+   "pregame_margin_high": 10.9339,
+   "gameday": "2025-10-30"
   },
   {
    "week": 9,
@@ -6618,7 +6876,8 @@
    "pregame_proj_home": 25.0089,
    "pregame_proj_away": 18.61,
    "pregame_margin_low": -8.6506,
-   "pregame_margin_high": 21.4484
+   "pregame_margin_high": 21.4484,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6640,7 +6899,8 @@
    "pregame_proj_home": 21.0843,
    "pregame_proj_away": 24.0837,
    "pregame_margin_low": -18.0489,
-   "pregame_margin_high": 12.0502
+   "pregame_margin_high": 12.0502,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6662,7 +6922,8 @@
    "pregame_proj_home": 18.3271,
    "pregame_proj_away": 31.4547,
    "pregame_margin_low": -28.1772,
-   "pregame_margin_high": 1.9219
+   "pregame_margin_high": 1.9219,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6684,7 +6945,8 @@
    "pregame_proj_home": 15.7999,
    "pregame_proj_away": 28.9099,
    "pregame_margin_low": -28.1595,
-   "pregame_margin_high": 1.9395
+   "pregame_margin_high": 1.9395,
+   "gameday": "2025-11-02"
   },
   {
    "week": 9,
@@ -6706,7 +6968,8 @@
    "pregame_proj_home": 21.1413,
    "pregame_proj_away": 26.0609,
    "pregame_margin_low": -19.9692,
-   "pregame_margin_high": 10.1298
+   "pregame_margin_high": 10.1298,
+   "gameday": "2025-11-02"
   },
   {
    "week": 10,
@@ -6728,7 +6991,8 @@
    "pregame_proj_home": 23.2074,
    "pregame_proj_away": 20.2513,
    "pregame_margin_low": -12.0934,
-   "pregame_margin_high": 18.0057
+   "pregame_margin_high": 18.0057,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6750,7 +7014,8 @@
    "pregame_proj_home": 28.4967,
    "pregame_proj_away": 22.0548,
    "pregame_margin_low": -8.6076,
-   "pregame_margin_high": 21.4915
+   "pregame_margin_high": 21.4915,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6772,7 +7037,8 @@
    "pregame_proj_home": 29.9212,
    "pregame_proj_away": 14.3483,
    "pregame_margin_low": 0.5234,
-   "pregame_margin_high": 30.6225
+   "pregame_margin_high": 30.6225,
+   "gameday": "2025-11-06"
   },
   {
    "week": 10,
@@ -6794,7 +7060,8 @@
    "pregame_proj_home": 23.8932,
    "pregame_proj_away": 23.5621,
    "pregame_margin_low": -14.7184,
-   "pregame_margin_high": 15.3806
+   "pregame_margin_high": 15.3806,
+   "gameday": "2025-11-10"
   },
   {
    "week": 10,
@@ -6816,7 +7083,8 @@
    "pregame_proj_home": 25.2237,
    "pregame_proj_away": 17.3982,
    "pregame_margin_low": -7.2241,
-   "pregame_margin_high": 22.875
+   "pregame_margin_high": 22.875,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6838,7 +7106,8 @@
    "pregame_proj_home": 28.4036,
    "pregame_proj_away": 18.0678,
    "pregame_margin_low": -4.7138,
-   "pregame_margin_high": 25.3853
+   "pregame_margin_high": 25.3853,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6860,7 +7129,8 @@
    "pregame_proj_home": 26.5578,
    "pregame_proj_away": 20.6572,
    "pregame_margin_low": -9.1489,
-   "pregame_margin_high": 20.9502
+   "pregame_margin_high": 20.9502,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6882,7 +7152,8 @@
    "pregame_proj_home": 17.117,
    "pregame_proj_away": 30.8833,
    "pregame_margin_low": -28.8158,
-   "pregame_margin_high": 1.2833
+   "pregame_margin_high": 1.2833,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6904,7 +7175,8 @@
    "pregame_proj_home": 22.5374,
    "pregame_proj_away": 25.7928,
    "pregame_margin_low": -18.305,
-   "pregame_margin_high": 11.7941
+   "pregame_margin_high": 11.7941,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6926,7 +7198,8 @@
    "pregame_proj_home": 22.021,
    "pregame_proj_away": 22.6842,
    "pregame_margin_low": -15.7127,
-   "pregame_margin_high": 14.3864
+   "pregame_margin_high": 14.3864,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6948,7 +7221,8 @@
    "pregame_proj_home": 27.3074,
    "pregame_proj_away": 18.7728,
    "pregame_margin_low": -6.5149,
-   "pregame_margin_high": 23.5842
+   "pregame_margin_high": 23.5842,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6970,7 +7244,8 @@
    "pregame_proj_home": 17.7238,
    "pregame_proj_away": 25.9495,
    "pregame_margin_low": -23.2752,
-   "pregame_margin_high": 6.8239
+   "pregame_margin_high": 6.8239,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -6992,7 +7267,8 @@
    "pregame_proj_home": 26.6247,
    "pregame_proj_away": 19.5967,
    "pregame_margin_low": -8.0215,
-   "pregame_margin_high": 22.0775
+   "pregame_margin_high": 22.0775,
+   "gameday": "2025-11-09"
   },
   {
    "week": 10,
@@ -7014,7 +7290,8 @@
    "pregame_proj_home": 19.0144,
    "pregame_proj_away": 30.1493,
    "pregame_margin_low": -26.1845,
-   "pregame_margin_high": 3.9146
+   "pregame_margin_high": 3.9146,
+   "gameday": "2025-11-09"
   },
   {
    "week": 11,
@@ -7036,7 +7313,8 @@
    "pregame_proj_home": 22.0608,
    "pregame_proj_away": 23.8985,
    "pregame_margin_low": -16.8872,
-   "pregame_margin_high": 13.2119
+   "pregame_margin_high": 13.2119,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7058,7 +7336,8 @@
    "pregame_proj_home": 25.3122,
    "pregame_proj_away": 17.2873,
    "pregame_margin_low": -7.0247,
-   "pregame_margin_high": 23.0744
+   "pregame_margin_high": 23.0744,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7080,7 +7359,8 @@
    "pregame_proj_home": 23.7938,
    "pregame_proj_away": 24.0687,
    "pregame_margin_low": -15.3244,
-   "pregame_margin_high": 14.7746
+   "pregame_margin_high": 14.7746,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7102,7 +7382,8 @@
    "pregame_proj_home": 20.5399,
    "pregame_proj_away": 25.3994,
    "pregame_margin_low": -19.909,
-   "pregame_margin_high": 10.19
+   "pregame_margin_high": 10.19,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7124,7 +7405,8 @@
    "pregame_proj_home": 20.0561,
    "pregame_proj_away": 23.5186,
    "pregame_margin_low": -18.512,
-   "pregame_margin_high": 11.5871
+   "pregame_margin_high": 11.5871,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7146,7 +7428,8 @@
    "pregame_proj_home": 23.5137,
    "pregame_proj_away": 22.5033,
    "pregame_margin_low": -14.0391,
-   "pregame_margin_high": 16.0599
+   "pregame_margin_high": 16.0599,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7168,7 +7451,8 @@
    "pregame_proj_home": 27.3796,
    "pregame_proj_away": 19.7136,
    "pregame_margin_low": -7.3836,
-   "pregame_margin_high": 22.7155
+   "pregame_margin_high": 22.7155,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7190,7 +7474,8 @@
    "pregame_proj_home": 23.3003,
    "pregame_proj_away": 25.639,
    "pregame_margin_low": -17.3883,
-   "pregame_margin_high": 12.7108
+   "pregame_margin_high": 12.7108,
+   "gameday": "2025-11-17"
   },
   {
    "week": 11,
@@ -7212,7 +7497,8 @@
    "pregame_proj_home": 23.351,
    "pregame_proj_away": 24.5927,
    "pregame_margin_low": -16.2913,
-   "pregame_margin_high": 13.8078
+   "pregame_margin_high": 13.8078,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7234,7 +7520,8 @@
    "pregame_proj_home": 22.7908,
    "pregame_proj_away": 26.1871,
    "pregame_margin_low": -18.4458,
-   "pregame_margin_high": 11.6532
+   "pregame_margin_high": 11.6532,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7256,7 +7543,8 @@
    "pregame_proj_home": 31.2004,
    "pregame_proj_away": 15.7398,
    "pregame_margin_low": 0.4111,
-   "pregame_margin_high": 30.5101
+   "pregame_margin_high": 30.5101,
+   "gameday": "2025-11-13"
   },
   {
    "week": 11,
@@ -7278,7 +7566,8 @@
    "pregame_proj_home": 20.1375,
    "pregame_proj_away": 26.1735,
    "pregame_margin_low": -21.0856,
-   "pregame_margin_high": 9.0135
+   "pregame_margin_high": 9.0135,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7300,7 +7589,8 @@
    "pregame_proj_home": 24.1569,
    "pregame_proj_away": 24.5517,
    "pregame_margin_low": -15.4444,
-   "pregame_margin_high": 14.6547
+   "pregame_margin_high": 14.6547,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7322,7 +7612,8 @@
    "pregame_proj_home": 30.9391,
    "pregame_proj_away": 19.8849,
    "pregame_margin_low": -3.9953,
-   "pregame_margin_high": 26.1038
+   "pregame_margin_high": 26.1038,
+   "gameday": "2025-11-16"
   },
   {
    "week": 11,
@@ -7344,7 +7635,8 @@
    "pregame_proj_home": 11.38,
    "pregame_proj_away": 31.4824,
    "pregame_margin_low": -35.1519,
-   "pregame_margin_high": -5.0528
+   "pregame_margin_high": -5.0528,
+   "gameday": "2025-11-16"
   },
   {
    "week": 12,
@@ -7366,7 +7658,8 @@
    "pregame_proj_home": 21.869,
    "pregame_proj_away": 25.1815,
    "pregame_margin_low": -18.362,
-   "pregame_margin_high": 11.7371
+   "pregame_margin_high": 11.7371,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7388,7 +7681,8 @@
    "pregame_proj_home": 30.7716,
    "pregame_proj_away": 17.4932,
    "pregame_margin_low": -1.7711,
-   "pregame_margin_high": 28.3279
+   "pregame_margin_high": 28.3279,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7410,7 +7704,8 @@
    "pregame_proj_home": 26.7736,
    "pregame_proj_away": 22.2055,
    "pregame_margin_low": -10.4814,
-   "pregame_margin_high": 19.6176
+   "pregame_margin_high": 19.6176,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7432,7 +7727,8 @@
    "pregame_proj_home": 17.6353,
    "pregame_proj_away": 31.8587,
    "pregame_margin_low": -29.2729,
-   "pregame_margin_high": 0.8261
+   "pregame_margin_high": 0.8261,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7454,7 +7750,8 @@
    "pregame_proj_home": 20.9797,
    "pregame_proj_away": 28.8565,
    "pregame_margin_low": -22.9264,
-   "pregame_margin_high": 7.1727
+   "pregame_margin_high": 7.1727,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7476,7 +7773,8 @@
    "pregame_proj_home": 30.966,
    "pregame_proj_away": 17.8995,
    "pregame_margin_low": -1.9831,
-   "pregame_margin_high": 28.116
+   "pregame_margin_high": 28.116,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7498,7 +7796,8 @@
    "pregame_proj_home": 28.0878,
    "pregame_proj_away": 16.8199,
    "pregame_margin_low": -3.7816,
-   "pregame_margin_high": 26.3174
+   "pregame_margin_high": 26.3174,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7520,7 +7819,8 @@
    "pregame_proj_home": 25.6377,
    "pregame_proj_away": 19.9129,
    "pregame_margin_low": -9.3247,
-   "pregame_margin_high": 20.7744
+   "pregame_margin_high": 20.7744,
+   "gameday": "2025-11-20"
   },
   {
    "week": 12,
@@ -7542,7 +7842,8 @@
    "pregame_proj_home": 24.953,
    "pregame_proj_away": 22.669,
    "pregame_margin_low": -12.7656,
-   "pregame_margin_high": 17.3335
+   "pregame_margin_high": 17.3335,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7564,7 +7865,8 @@
    "pregame_proj_home": 28.6402,
    "pregame_proj_away": 18.4103,
    "pregame_margin_low": -4.8196,
-   "pregame_margin_high": 25.2794
+   "pregame_margin_high": 25.2794,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7586,7 +7888,8 @@
    "pregame_proj_home": 21.1117,
    "pregame_proj_away": 20.8674,
    "pregame_margin_low": -14.8053,
-   "pregame_margin_high": 15.2938
+   "pregame_margin_high": 15.2938,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7608,7 +7911,8 @@
    "pregame_proj_home": 22.0356,
    "pregame_proj_away": 21.1935,
    "pregame_margin_low": -14.2075,
-   "pregame_margin_high": 15.8916
+   "pregame_margin_high": 15.8916,
+   "gameday": "2025-11-23"
   },
   {
    "week": 12,
@@ -7630,7 +7934,8 @@
    "pregame_proj_home": 28.1889,
    "pregame_proj_away": 16.4916,
    "pregame_margin_low": -3.3522,
-   "pregame_margin_high": 26.7469
+   "pregame_margin_high": 26.7469,
+   "gameday": "2025-11-24"
   },
   {
    "week": 12,
@@ -7652,7 +7957,8 @@
    "pregame_proj_home": 14.8948,
    "pregame_proj_away": 30.62,
    "pregame_margin_low": -30.7747,
-   "pregame_margin_high": -0.6756
+   "pregame_margin_high": -0.6756,
+   "gameday": "2025-11-23"
   },
   {
    "week": 13,
@@ -7674,7 +7980,8 @@
    "pregame_proj_home": 32.6478,
    "pregame_proj_away": 17.7926,
    "pregame_margin_low": -0.1943,
-   "pregame_margin_high": 29.9048
+   "pregame_margin_high": 29.9048,
+   "gameday": "2025-11-27"
   },
   {
    "week": 13,
@@ -7696,7 +8003,8 @@
    "pregame_proj_home": 11.6457,
    "pregame_proj_away": 31.5997,
    "pregame_margin_low": -35.0036,
-   "pregame_margin_high": -4.9045
+   "pregame_margin_high": -4.9045,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7718,7 +8026,8 @@
    "pregame_proj_home": 17.98,
    "pregame_proj_away": 25.2133,
    "pregame_margin_low": -22.2828,
-   "pregame_margin_high": 7.8162
+   "pregame_margin_high": 7.8162,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7740,7 +8049,8 @@
    "pregame_proj_home": 20.1388,
    "pregame_proj_away": 29.235,
    "pregame_margin_low": -24.1458,
-   "pregame_margin_high": 5.9533
+   "pregame_margin_high": 5.9533,
+   "gameday": "2025-11-27"
   },
   {
    "week": 13,
@@ -7762,7 +8072,8 @@
    "pregame_proj_home": 24.9742,
    "pregame_proj_away": 21.7996,
    "pregame_margin_low": -11.875,
-   "pregame_margin_high": 18.2241
+   "pregame_margin_high": 18.2241,
+   "gameday": "2025-11-27"
   },
   {
    "week": 13,
@@ -7784,7 +8095,8 @@
    "pregame_proj_home": 24.0872,
    "pregame_proj_away": 21.3865,
    "pregame_margin_low": -12.3488,
-   "pregame_margin_high": 17.7502
+   "pregame_margin_high": 17.7502,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7806,7 +8118,8 @@
    "pregame_proj_home": 27.6482,
    "pregame_proj_away": 15.5256,
    "pregame_margin_low": -2.9269,
-   "pregame_margin_high": 27.1722
+   "pregame_margin_high": 27.1722,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7828,7 +8141,8 @@
    "pregame_proj_home": 22.0502,
    "pregame_proj_away": 21.3903,
    "pregame_margin_low": -14.3897,
-   "pregame_margin_high": 15.7094
+   "pregame_margin_high": 15.7094,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7850,7 +8164,8 @@
    "pregame_proj_home": 26.8296,
    "pregame_proj_away": 20.3958,
    "pregame_margin_low": -8.6158,
-   "pregame_margin_high": 21.4833
+   "pregame_margin_high": 21.4833,
+   "gameday": "2025-12-01"
   },
   {
    "week": 13,
@@ -7872,7 +8187,8 @@
    "pregame_proj_home": 19.4546,
    "pregame_proj_away": 25.4525,
    "pregame_margin_low": -21.0474,
-   "pregame_margin_high": 9.0517
+   "pregame_margin_high": 9.0517,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7894,7 +8210,8 @@
    "pregame_proj_home": 28.2925,
    "pregame_proj_away": 19.3813,
    "pregame_margin_low": -6.1383,
-   "pregame_margin_high": 23.9607
+   "pregame_margin_high": 23.9607,
+   "gameday": "2025-11-28"
   },
   {
    "week": 13,
@@ -7916,7 +8233,8 @@
    "pregame_proj_home": 21.9404,
    "pregame_proj_away": 27.0334,
    "pregame_margin_low": -20.1425,
-   "pregame_margin_high": 9.9566
+   "pregame_margin_high": 9.9566,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7938,7 +8256,8 @@
    "pregame_proj_home": 30.6751,
    "pregame_proj_away": 15.632,
    "pregame_margin_low": -0.0064,
-   "pregame_margin_high": 30.0927
+   "pregame_margin_high": 30.0927,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7960,7 +8279,8 @@
    "pregame_proj_home": 26.665,
    "pregame_proj_away": 21.4422,
    "pregame_margin_low": -9.8267,
-   "pregame_margin_high": 20.2723
+   "pregame_margin_high": 20.2723,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -7982,7 +8302,8 @@
    "pregame_proj_home": 16.96,
    "pregame_proj_away": 28.2471,
    "pregame_margin_low": -26.3366,
-   "pregame_margin_high": 3.7625
+   "pregame_margin_high": 3.7625,
+   "gameday": "2025-11-30"
   },
   {
    "week": 13,
@@ -8004,7 +8325,8 @@
    "pregame_proj_home": 18.3627,
    "pregame_proj_away": 26.6444,
    "pregame_margin_low": -23.3312,
-   "pregame_margin_high": 6.7678
+   "pregame_margin_high": 6.7678,
+   "gameday": "2025-11-30"
   },
   {
    "week": 14,
@@ -8026,7 +8348,8 @@
    "pregame_proj_home": 17.7422,
    "pregame_proj_away": 28.4794,
    "pregame_margin_low": -25.7868,
-   "pregame_margin_high": 4.3123
+   "pregame_margin_high": 4.3123,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8048,7 +8371,8 @@
    "pregame_proj_home": 18.9411,
    "pregame_proj_away": 26.468,
    "pregame_margin_low": -22.5764,
-   "pregame_margin_high": 7.5226
+   "pregame_margin_high": 7.5226,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8070,7 +8394,8 @@
    "pregame_proj_home": 24.813,
    "pregame_proj_away": 22.6586,
    "pregame_margin_low": -12.8952,
-   "pregame_margin_high": 17.2039
+   "pregame_margin_high": 17.2039,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8092,7 +8417,8 @@
    "pregame_proj_home": 34.5776,
    "pregame_proj_away": 15.9565,
    "pregame_margin_low": 3.5716,
-   "pregame_margin_high": 33.6706
+   "pregame_margin_high": 33.6706,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8114,7 +8440,8 @@
    "pregame_proj_home": 23.0608,
    "pregame_proj_away": 18.4733,
    "pregame_margin_low": -10.4621,
-   "pregame_margin_high": 19.637
+   "pregame_margin_high": 19.637,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8136,7 +8463,8 @@
    "pregame_proj_home": 30.2737,
    "pregame_proj_away": 22.3542,
    "pregame_margin_low": -7.1301,
-   "pregame_margin_high": 22.969
+   "pregame_margin_high": 22.969,
+   "gameday": "2025-12-04"
   },
   {
    "week": 14,
@@ -8158,7 +8486,8 @@
    "pregame_proj_home": 27.3859,
    "pregame_proj_away": 19.7108,
    "pregame_margin_low": -7.3744,
-   "pregame_margin_high": 22.7246
+   "pregame_margin_high": 22.7246,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8180,7 +8509,8 @@
    "pregame_proj_home": 22.3214,
    "pregame_proj_away": 25.119,
    "pregame_margin_low": -17.8471,
-   "pregame_margin_high": 12.252
+   "pregame_margin_high": 12.252,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8202,7 +8532,8 @@
    "pregame_proj_home": 21.6027,
    "pregame_proj_away": 21.0564,
    "pregame_margin_low": -14.5032,
-   "pregame_margin_high": 15.5959
+   "pregame_margin_high": 15.5959,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8224,7 +8555,8 @@
    "pregame_proj_home": 20.9516,
    "pregame_proj_away": 23.27,
    "pregame_margin_low": -17.3679,
-   "pregame_margin_high": 12.7312
+   "pregame_margin_high": 12.7312,
+   "gameday": "2025-12-08"
   },
   {
    "week": 14,
@@ -8246,7 +8578,8 @@
    "pregame_proj_home": 14.5419,
    "pregame_proj_away": 27.836,
    "pregame_margin_low": -28.3436,
-   "pregame_margin_high": 1.7554
+   "pregame_margin_high": 1.7554,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8268,7 +8601,8 @@
    "pregame_proj_home": 22.0863,
    "pregame_proj_away": 23.4479,
    "pregame_margin_low": -16.4111,
-   "pregame_margin_high": 13.6879
+   "pregame_margin_high": 13.6879,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8290,7 +8624,8 @@
    "pregame_proj_home": 21.3665,
    "pregame_proj_away": 24.2927,
    "pregame_margin_low": -17.9757,
-   "pregame_margin_high": 12.1234
+   "pregame_margin_high": 12.1234,
+   "gameday": "2025-12-07"
   },
   {
    "week": 14,
@@ -8312,7 +8647,8 @@
    "pregame_proj_home": 27.0347,
    "pregame_proj_away": 17.4682,
    "pregame_margin_low": -5.483,
-   "pregame_margin_high": 24.6161
+   "pregame_margin_high": 24.6161,
+   "gameday": "2025-12-07"
   },
   {
    "week": 15,
@@ -8334,7 +8670,8 @@
    "pregame_proj_home": 27.6242,
    "pregame_proj_away": 18.3249,
    "pregame_margin_low": -5.7502,
-   "pregame_margin_high": 24.3489
+   "pregame_margin_high": 24.3489,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8356,7 +8693,8 @@
    "pregame_proj_home": 22.8205,
    "pregame_proj_away": 27.9815,
    "pregame_margin_low": -20.2106,
-   "pregame_margin_high": 9.8885
+   "pregame_margin_high": 9.8885,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8378,7 +8716,8 @@
    "pregame_proj_home": 26.3619,
    "pregame_proj_away": 22.8225,
    "pregame_margin_low": -11.51,
-   "pregame_margin_high": 18.589
+   "pregame_margin_high": 18.589,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8400,7 +8739,8 @@
    "pregame_proj_home": 21.5618,
    "pregame_proj_away": 22.0049,
    "pregame_margin_low": -15.4927,
-   "pregame_margin_high": 14.6064
+   "pregame_margin_high": 14.6064,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8422,7 +8762,8 @@
    "pregame_proj_home": 28.1455,
    "pregame_proj_away": 15.6859,
    "pregame_margin_low": -2.5899,
-   "pregame_margin_high": 27.5091
+   "pregame_margin_high": 27.5091,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8444,7 +8785,8 @@
    "pregame_proj_home": 33.1656,
    "pregame_proj_away": 13.1365,
    "pregame_margin_low": 4.9796,
-   "pregame_margin_high": 35.0786
+   "pregame_margin_high": 35.0786,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8466,7 +8808,8 @@
    "pregame_proj_home": 25.5839,
    "pregame_proj_away": 18.7181,
    "pregame_margin_low": -8.1837,
-   "pregame_margin_high": 21.9153
+   "pregame_margin_high": 21.9153,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8488,7 +8831,8 @@
    "pregame_proj_home": 29.4347,
    "pregame_proj_away": 19.7791,
    "pregame_margin_low": -5.3939,
-   "pregame_margin_high": 24.7051
+   "pregame_margin_high": 24.7051,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8510,7 +8854,8 @@
    "pregame_proj_home": 23.7985,
    "pregame_proj_away": 24.1506,
    "pregame_margin_low": -15.4016,
-   "pregame_margin_high": 14.6975
+   "pregame_margin_high": 14.6975,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8532,7 +8877,8 @@
    "pregame_proj_home": 22.7009,
    "pregame_proj_away": 19.4835,
    "pregame_margin_low": -11.8321,
-   "pregame_margin_high": 18.2669
+   "pregame_margin_high": 18.2669,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8554,7 +8900,8 @@
    "pregame_proj_home": 26.228,
    "pregame_proj_away": 21.7505,
    "pregame_margin_low": -10.572,
-   "pregame_margin_high": 19.5271
+   "pregame_margin_high": 19.5271,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8576,7 +8923,8 @@
    "pregame_proj_home": 30.168,
    "pregame_proj_away": 12.6929,
    "pregame_margin_low": 2.4256,
-   "pregame_margin_high": 32.5247
+   "pregame_margin_high": 32.5247,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8598,7 +8946,8 @@
    "pregame_proj_home": 25.0265,
    "pregame_proj_away": 21.0108,
    "pregame_margin_low": -11.0338,
-   "pregame_margin_high": 19.0653
+   "pregame_margin_high": 19.0653,
+   "gameday": "2025-12-15"
   },
   {
    "week": 15,
@@ -8620,7 +8969,8 @@
    "pregame_proj_home": 25.5189,
    "pregame_proj_away": 22.8126,
    "pregame_margin_low": -12.3432,
-   "pregame_margin_high": 17.7559
+   "pregame_margin_high": 17.7559,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8642,7 +8992,8 @@
    "pregame_proj_home": 29.3128,
    "pregame_proj_away": 14.901,
    "pregame_margin_low": -0.6377,
-   "pregame_margin_high": 29.4614
+   "pregame_margin_high": 29.4614,
+   "gameday": "2025-12-14"
   },
   {
    "week": 15,
@@ -8664,7 +9015,8 @@
    "pregame_proj_home": 26.4824,
    "pregame_proj_away": 19.3491,
    "pregame_margin_low": -7.9163,
-   "pregame_margin_high": 22.1828
+   "pregame_margin_high": 22.1828,
+   "gameday": "2025-12-11"
   },
   {
    "week": 16,
@@ -8686,7 +9038,8 @@
    "pregame_proj_home": 25.0693,
    "pregame_proj_away": 21.6827,
    "pregame_margin_low": -11.6629,
-   "pregame_margin_high": 18.4362
+   "pregame_margin_high": 18.4362,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8708,7 +9061,8 @@
    "pregame_proj_home": 22.117,
    "pregame_proj_away": 24.6627,
    "pregame_margin_low": -17.5952,
-   "pregame_margin_high": 12.5038
+   "pregame_margin_high": 12.5038,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8730,7 +9084,8 @@
    "pregame_proj_home": 20.7153,
    "pregame_proj_away": 24.6478,
    "pregame_margin_low": -18.982,
-   "pregame_margin_high": 11.1171
+   "pregame_margin_high": 11.1171,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8752,7 +9107,8 @@
    "pregame_proj_home": 22.6508,
    "pregame_proj_away": 24.6568,
    "pregame_margin_low": -17.0555,
-   "pregame_margin_high": 13.0436
+   "pregame_margin_high": 13.0436,
+   "gameday": "2025-12-20"
   },
   {
    "week": 16,
@@ -8774,7 +9130,8 @@
    "pregame_proj_home": 17.6761,
    "pregame_proj_away": 28.5481,
    "pregame_margin_low": -25.9216,
-   "pregame_margin_high": 4.1775
+   "pregame_margin_high": 4.1775,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8796,7 +9153,8 @@
    "pregame_proj_home": 23.2904,
    "pregame_proj_away": 26.6282,
    "pregame_margin_low": -18.3874,
-   "pregame_margin_high": 11.7117
+   "pregame_margin_high": 11.7117,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8818,7 +9176,8 @@
    "pregame_proj_home": 23.0187,
    "pregame_proj_away": 22.5944,
    "pregame_margin_low": -14.6252,
-   "pregame_margin_high": 15.4739
+   "pregame_margin_high": 15.4739,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8840,7 +9199,8 @@
    "pregame_proj_home": 29.7469,
    "pregame_proj_away": 20.4218,
    "pregame_margin_low": -5.7244,
-   "pregame_margin_high": 24.3747
+   "pregame_margin_high": 24.3747,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8862,7 +9222,8 @@
    "pregame_proj_home": 32.0956,
    "pregame_proj_away": 9.0453,
    "pregame_margin_low": 8.0007,
-   "pregame_margin_high": 38.0998
+   "pregame_margin_high": 38.0998,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8884,7 +9245,8 @@
    "pregame_proj_home": 27.4256,
    "pregame_proj_away": 19.8819,
    "pregame_margin_low": -7.5058,
-   "pregame_margin_high": 22.5932
+   "pregame_margin_high": 22.5932,
+   "gameday": "2025-12-22"
   },
   {
    "week": 16,
@@ -8906,7 +9268,8 @@
    "pregame_proj_home": 28.242,
    "pregame_proj_away": 20.1489,
    "pregame_margin_low": -6.9564,
-   "pregame_margin_high": 23.1427
+   "pregame_margin_high": 23.1427,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8928,7 +9291,8 @@
    "pregame_proj_home": 27.6847,
    "pregame_proj_away": 16.8173,
    "pregame_margin_low": -4.1822,
-   "pregame_margin_high": 25.9169
+   "pregame_margin_high": 25.9169,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8950,7 +9314,8 @@
    "pregame_proj_home": 23.8394,
    "pregame_proj_away": 22.3571,
    "pregame_margin_low": -13.5672,
-   "pregame_margin_high": 16.5318
+   "pregame_margin_high": 16.5318,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -8972,7 +9337,8 @@
    "pregame_proj_home": 22.1895,
    "pregame_proj_away": 25.007,
    "pregame_margin_low": -17.8671,
-   "pregame_margin_high": 12.232
+   "pregame_margin_high": 12.232,
+   "gameday": "2025-12-18"
   },
   {
    "week": 16,
@@ -8994,7 +9360,8 @@
    "pregame_proj_home": 14.8736,
    "pregame_proj_away": 29.1839,
    "pregame_margin_low": -29.3598,
-   "pregame_margin_high": 0.7392
+   "pregame_margin_high": 0.7392,
+   "gameday": "2025-12-21"
   },
   {
    "week": 16,
@@ -9016,7 +9383,8 @@
    "pregame_proj_home": 17.2635,
    "pregame_proj_away": 27.9607,
    "pregame_margin_low": -25.7467,
-   "pregame_margin_high": 4.3524
+   "pregame_margin_high": 4.3524,
+   "gameday": "2025-12-20"
   },
   {
    "week": 17,
@@ -9038,7 +9406,8 @@
    "pregame_proj_home": 16.2089,
    "pregame_proj_away": 31.0411,
    "pregame_margin_low": -29.8817,
-   "pregame_margin_high": 0.2174
+   "pregame_margin_high": 0.2174,
+   "gameday": "2025-12-29"
   },
   {
    "week": 17,
@@ -9060,7 +9429,8 @@
    "pregame_proj_home": 23.1355,
    "pregame_proj_away": 23.9303,
    "pregame_margin_low": -15.8444,
-   "pregame_margin_high": 14.2547
+   "pregame_margin_high": 14.2547,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9082,7 +9452,8 @@
    "pregame_proj_home": 17.0545,
    "pregame_proj_away": 28.1692,
    "pregame_margin_low": -26.1643,
-   "pregame_margin_high": 3.9348
+   "pregame_margin_high": 3.9348,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9104,7 +9475,8 @@
    "pregame_proj_home": 22.1478,
    "pregame_proj_away": 28.4969,
    "pregame_margin_low": -21.3986,
-   "pregame_margin_high": 8.7005
+   "pregame_margin_high": 8.7005,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9126,7 +9498,8 @@
    "pregame_proj_home": 19.5841,
    "pregame_proj_away": 24.8501,
    "pregame_margin_low": -20.3156,
-   "pregame_margin_high": 9.7835
+   "pregame_margin_high": 9.7835,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9148,7 +9521,8 @@
    "pregame_proj_home": 27.4741,
    "pregame_proj_away": 18.4865,
    "pregame_margin_low": -6.0619,
-   "pregame_margin_high": 24.0372
+   "pregame_margin_high": 24.0372,
+   "gameday": "2025-12-27"
   },
   {
    "week": 17,
@@ -9170,7 +9544,8 @@
    "pregame_proj_home": 25.2787,
    "pregame_proj_away": 23.7871,
    "pregame_margin_low": -13.558,
-   "pregame_margin_high": 16.5411
+   "pregame_margin_high": 16.5411,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9192,7 +9567,8 @@
    "pregame_proj_home": 22.9092,
    "pregame_proj_away": 20.7882,
    "pregame_margin_low": -12.9285,
-   "pregame_margin_high": 17.1705
+   "pregame_margin_high": 17.1705,
+   "gameday": "2025-12-25"
   },
   {
    "week": 17,
@@ -9214,7 +9590,8 @@
    "pregame_proj_home": 19.5565,
    "pregame_proj_away": 23.0093,
    "pregame_margin_low": -18.5023,
-   "pregame_margin_high": 11.5968
+   "pregame_margin_high": 11.5968,
+   "gameday": "2025-12-27"
   },
   {
    "week": 17,
@@ -9236,7 +9613,8 @@
    "pregame_proj_home": 20.6895,
    "pregame_proj_away": 24.0605,
    "pregame_margin_low": -18.4205,
-   "pregame_margin_high": 11.6785
+   "pregame_margin_high": 11.6785,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9258,7 +9636,8 @@
    "pregame_proj_home": 20.8225,
    "pregame_proj_away": 26.0854,
    "pregame_margin_low": -20.3124,
-   "pregame_margin_high": 9.7867
+   "pregame_margin_high": 9.7867,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9280,7 +9659,8 @@
    "pregame_proj_home": 20.9469,
    "pregame_proj_away": 27.0399,
    "pregame_margin_low": -21.1425,
-   "pregame_margin_high": 8.9565
+   "pregame_margin_high": 8.9565,
+   "gameday": "2025-12-25"
   },
   {
    "week": 17,
@@ -9302,7 +9682,8 @@
    "pregame_proj_home": 16.3837,
    "pregame_proj_away": 30.7347,
    "pregame_margin_low": -29.4005,
-   "pregame_margin_high": 0.6986
+   "pregame_margin_high": 0.6986,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9324,7 +9705,8 @@
    "pregame_proj_home": 25.4754,
    "pregame_proj_away": 22.564,
    "pregame_margin_low": -12.1382,
-   "pregame_margin_high": 17.9609
+   "pregame_margin_high": 17.9609,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9346,7 +9728,8 @@
    "pregame_proj_home": 19.9327,
    "pregame_proj_away": 22.6857,
    "pregame_margin_low": -17.8026,
-   "pregame_margin_high": 12.2965
+   "pregame_margin_high": 12.2965,
+   "gameday": "2025-12-28"
   },
   {
    "week": 17,
@@ -9368,7 +9751,8 @@
    "pregame_proj_home": 25.0746,
    "pregame_proj_away": 26.5964,
    "pregame_margin_low": -16.5713,
-   "pregame_margin_high": 13.5278
+   "pregame_margin_high": 13.5278,
+   "gameday": "2025-12-25"
   },
   {
    "week": 18,
@@ -9390,7 +9774,8 @@
    "pregame_proj_home": 23.4356,
    "pregame_proj_away": 20.1292,
    "pregame_margin_low": -11.7431,
-   "pregame_margin_high": 18.3559
+   "pregame_margin_high": 18.3559,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9412,7 +9797,8 @@
    "pregame_proj_home": 34.2899,
    "pregame_proj_away": 14.0749,
    "pregame_margin_low": 5.1655,
-   "pregame_margin_high": 35.2646
+   "pregame_margin_high": 35.2646,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9434,7 +9820,8 @@
    "pregame_proj_home": 25.9048,
    "pregame_proj_away": 25.3851,
    "pregame_margin_low": -14.5298,
-   "pregame_margin_high": 15.5692
+   "pregame_margin_high": 15.5692,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9456,7 +9843,8 @@
    "pregame_proj_home": 23.7662,
    "pregame_proj_away": 22.7237,
    "pregame_margin_low": -14.0071,
-   "pregame_margin_high": 16.092
+   "pregame_margin_high": 16.092,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9478,7 +9866,8 @@
    "pregame_proj_home": 23.4557,
    "pregame_proj_away": 20.2341,
    "pregame_margin_low": -11.828,
-   "pregame_margin_high": 18.2711
+   "pregame_margin_high": 18.2711,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9500,7 +9889,8 @@
    "pregame_proj_home": 24.8891,
    "pregame_proj_away": 20.4257,
    "pregame_margin_low": -10.5861,
-   "pregame_margin_high": 19.5129
+   "pregame_margin_high": 19.5129,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9522,7 +9912,8 @@
    "pregame_proj_home": 31.6473,
    "pregame_proj_away": 14.5426,
    "pregame_margin_low": 2.0552,
-   "pregame_margin_high": 32.1543
+   "pregame_margin_high": 32.1543,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9544,7 +9935,8 @@
    "pregame_proj_home": 33.2281,
    "pregame_proj_away": 15.8867,
    "pregame_margin_low": 2.2919,
-   "pregame_margin_high": 32.391
+   "pregame_margin_high": 32.391,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9566,7 +9958,8 @@
    "pregame_proj_home": 14.6421,
    "pregame_proj_away": 27.4227,
    "pregame_margin_low": -27.8301,
-   "pregame_margin_high": 2.2689
+   "pregame_margin_high": 2.2689,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9588,7 +9981,8 @@
    "pregame_proj_home": 20.2817,
    "pregame_proj_away": 23.7581,
    "pregame_margin_low": -18.526,
-   "pregame_margin_high": 11.5731
+   "pregame_margin_high": 11.5731,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9610,7 +10004,8 @@
    "pregame_proj_home": 28.9495,
    "pregame_proj_away": 17.4653,
    "pregame_margin_low": -3.5653,
-   "pregame_margin_high": 26.5338
+   "pregame_margin_high": 26.5338,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9632,7 +10027,8 @@
    "pregame_proj_home": 26.9864,
    "pregame_proj_away": 24.8034,
    "pregame_margin_low": -12.8665,
-   "pregame_margin_high": 17.2326
+   "pregame_margin_high": 17.2326,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9654,7 +10050,8 @@
    "pregame_proj_home": 29.9978,
    "pregame_proj_away": 15.017,
    "pregame_margin_low": -0.0687,
-   "pregame_margin_high": 30.0304
+   "pregame_margin_high": 30.0304,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9676,7 +10073,8 @@
    "pregame_proj_home": 24.3457,
    "pregame_proj_away": 22.5942,
    "pregame_margin_low": -13.298,
-   "pregame_margin_high": 16.801
+   "pregame_margin_high": 16.801,
+   "gameday": "2026-01-04"
   },
   {
    "week": 18,
@@ -9698,7 +10096,8 @@
    "pregame_proj_home": 22.417,
    "pregame_proj_away": 25.6479,
    "pregame_margin_low": -18.2804,
-   "pregame_margin_high": 11.8187
+   "pregame_margin_high": 11.8187,
+   "gameday": "2026-01-03"
   },
   {
    "week": 18,
@@ -9720,7 +10119,261 @@
    "pregame_proj_home": 25.7612,
    "pregame_proj_away": 19.0787,
    "pregame_margin_low": -8.367,
-   "pregame_margin_high": 21.732
+   "pregame_margin_high": 21.732,
+   "gameday": "2026-01-03"
   }
- ]
+ ],
+ "week_calendar": "wednesday-tuesday",
+ "current_week": 18,
+ "current_week_reason": "week_max",
+ "weeks": [
+  {
+   "week": 1,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-09-03",
+   "end": "2025-09-09",
+   "label": "Wed Sep 3 \u2013 Tue Sep 9",
+   "aligned": true
+  },
+  {
+   "week": 2,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-09-10",
+   "end": "2025-09-16",
+   "label": "Wed Sep 10 \u2013 Tue Sep 16",
+   "aligned": true
+  },
+  {
+   "week": 3,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-09-17",
+   "end": "2025-09-23",
+   "label": "Wed Sep 17 \u2013 Tue Sep 23",
+   "aligned": true
+  },
+  {
+   "week": 4,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-09-24",
+   "end": "2025-09-30",
+   "label": "Wed Sep 24 \u2013 Tue Sep 30",
+   "aligned": true
+  },
+  {
+   "week": 5,
+   "dated_games": 14,
+   "undated_games": 0,
+   "start": "2025-10-01",
+   "end": "2025-10-07",
+   "label": "Wed Oct 1 \u2013 Tue Oct 7",
+   "aligned": true
+  },
+  {
+   "week": 6,
+   "dated_games": 15,
+   "undated_games": 0,
+   "start": "2025-10-08",
+   "end": "2025-10-14",
+   "label": "Wed Oct 8 \u2013 Tue Oct 14",
+   "aligned": true
+  },
+  {
+   "week": 7,
+   "dated_games": 15,
+   "undated_games": 0,
+   "start": "2025-10-15",
+   "end": "2025-10-21",
+   "label": "Wed Oct 15 \u2013 Tue Oct 21",
+   "aligned": true
+  },
+  {
+   "week": 8,
+   "dated_games": 13,
+   "undated_games": 0,
+   "start": "2025-10-22",
+   "end": "2025-10-28",
+   "label": "Wed Oct 22 \u2013 Tue Oct 28",
+   "aligned": true
+  },
+  {
+   "week": 9,
+   "dated_games": 14,
+   "undated_games": 0,
+   "start": "2025-10-29",
+   "end": "2025-11-04",
+   "label": "Wed Oct 29 \u2013 Tue Nov 4",
+   "aligned": true
+  },
+  {
+   "week": 10,
+   "dated_games": 14,
+   "undated_games": 0,
+   "start": "2025-11-05",
+   "end": "2025-11-11",
+   "label": "Wed Nov 5 \u2013 Tue Nov 11",
+   "aligned": true
+  },
+  {
+   "week": 11,
+   "dated_games": 15,
+   "undated_games": 0,
+   "start": "2025-11-12",
+   "end": "2025-11-18",
+   "label": "Wed Nov 12 \u2013 Tue Nov 18",
+   "aligned": true
+  },
+  {
+   "week": 12,
+   "dated_games": 14,
+   "undated_games": 0,
+   "start": "2025-11-19",
+   "end": "2025-11-25",
+   "label": "Wed Nov 19 \u2013 Tue Nov 25",
+   "aligned": true
+  },
+  {
+   "week": 13,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-11-26",
+   "end": "2025-12-02",
+   "label": "Wed Nov 26 \u2013 Tue Dec 2",
+   "aligned": true
+  },
+  {
+   "week": 14,
+   "dated_games": 14,
+   "undated_games": 0,
+   "start": "2025-12-03",
+   "end": "2025-12-09",
+   "label": "Wed Dec 3 \u2013 Tue Dec 9",
+   "aligned": true
+  },
+  {
+   "week": 15,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-12-10",
+   "end": "2025-12-16",
+   "label": "Wed Dec 10 \u2013 Tue Dec 16",
+   "aligned": true
+  },
+  {
+   "week": 16,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-12-17",
+   "end": "2025-12-23",
+   "label": "Wed Dec 17 \u2013 Tue Dec 23",
+   "aligned": true
+  },
+  {
+   "week": 17,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-12-24",
+   "end": "2025-12-30",
+   "label": "Wed Dec 24 \u2013 Tue Dec 30",
+   "aligned": true
+  },
+  {
+   "week": 18,
+   "dated_games": 16,
+   "undated_games": 0,
+   "start": "2025-12-31",
+   "end": "2026-01-06",
+   "label": "Wed Dec 31 \u2013 Tue Jan 6",
+   "aligned": true
+  }
+ ],
+ "group_power": {
+  "definition": "hierarchy-power-1",
+  "margin_cap": 28.0,
+  "team_prior_games": 2.0,
+  "division_prior_teams": 0.5,
+  "conference_prior_divisions": 1.0,
+  "home_field_points": 1.77685,
+  "tuning": "Team ratings shrink toward the division by 2 games, the same per-team prior College Football Index uses. Each division shrinks toward its conference by 0.5 team, not by 1: copying the college prior would over-shrink a four-team division. Each conference shrinks toward zero by 1 division. These group priors are defaults and still need a pregame holdout. They are not added to the neutral win-chance rank or the EPA spread.",
+  "conferences": [
+   {
+    "name": "NFC",
+    "points": 0.381288,
+    "teams": 16,
+    "divisions": 4
+   },
+   {
+    "name": "AFC",
+    "points": -0.381288,
+    "teams": 16,
+    "divisions": 4
+   }
+  ],
+  "divisions": [
+   {
+    "name": "NFC West",
+    "conference": "NFC",
+    "points": 5.756822,
+    "teams": 4
+   },
+   {
+    "name": "AFC South",
+    "conference": "AFC",
+    "points": 2.906671,
+    "teams": 4
+   },
+   {
+    "name": "NFC North",
+    "conference": "NFC",
+    "points": 1.139504,
+    "teams": 4
+   },
+   {
+    "name": "AFC West",
+    "conference": "AFC",
+    "points": -0.859169,
+    "teams": 4
+   },
+   {
+    "name": "AFC East",
+    "conference": "AFC",
+    "points": -1.802383,
+    "teams": 4
+   },
+   {
+    "name": "AFC North",
+    "conference": "AFC",
+    "points": -2.15156,
+    "teams": 4
+   },
+   {
+    "name": "NFC East",
+    "conference": "NFC",
+    "points": -2.381731,
+    "teams": 4
+   },
+   {
+    "name": "NFC South",
+    "conference": "NFC",
+    "points": -2.608155,
+    "teams": 4
+   }
+  ],
+  "diagnostics": {
+   "played_games": 272,
+   "teams": 32,
+   "divisions": 8,
+   "conferences": 2,
+   "residual_sum_squares": 32710.842921,
+   "team_penalty": 1299.455976,
+   "division_penalty": 62.234722,
+   "conference_penalty": 0.290761,
+   "objective": 34072.824381,
+   "unpooled_normal_residual": 0.0,
+   "normal_residual": 0.0
+  }
+ }
 }

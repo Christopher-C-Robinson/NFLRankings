@@ -50,15 +50,14 @@
     var msg = e && e.message ? e.message : "request failed";
     site.setText("fresh", "Could not load accuracy (" + msg + ").");
   }
+  var CURRENT_SEASON = 2026;
   function load(season) {
     return site.getJSON(site.data(season + ".json")).then(render).catch(fail);
   }
   site.getJSON(site.data("index.json")).then(function (idx) {
-    var sel = $("season");
-    if (!sel || !idx || !idx.seasons) throw new Error("season list missing");
-    sel.innerHTML = idx.seasons.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("");
-    sel.value = idx.default_season;
-    sel.onchange = function () { load(sel.value); };
-    return load(idx.default_season);
+    if (!idx || !idx.seasons || idx.seasons.map(Number).indexOf(CURRENT_SEASON) < 0) {
+      throw new Error("2026 is not in the published season list");
+    }
+    return load(CURRENT_SEASON);
   }).catch(fail);
 })();

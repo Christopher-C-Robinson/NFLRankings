@@ -223,6 +223,17 @@
       '<div class="forecast-game-body forecast-analytics-grid">' + probabilityBar(left, right, leftP, rightP, selected, played) + "</div></article>";
   }
 
+  function powerSection(t) {
+    if (t.division_power == null && t.conference_power == null) return "";
+    return "<h2>Division and conference</h2>" +
+      '<dl class="stat-grid">' +
+      "<div><dt>" + esc(t.division || "Division") + " power</dt><dd>" + signed(t.division_power, 1) + "</dd></div>" +
+      "<div><dt>" + esc(t.conference || "Conference") + " power</dt><dd>" + signed(t.conference_power, 1) + "</dd></div>" +
+      "<div><dt>Team rating in the fit</dt><dd>" + signed(t.hierarchy_power, 1) + "</dd></div>" +
+      "</dl>" +
+      '<p class="fresh">Points from the joint score-margin fit. Positive is stronger than the league prior. This does not change the neutral win-chance rank.</p>';
+  }
+
   function render() {
     var sel = $("team");
     if (!sel || !state.data) return;
@@ -251,6 +262,7 @@
       "<div><p class=\"record\">" + record(t) + "</p><p>Projected record <strong>" + fmt(t.projected_wins, 1) + "–" + fmt(t.projected_losses, 1) + "</strong> · schedule expected wins " + fmt(t.schedule_expected_wins, 1) + " · opponent EPA " + fmt(t.sos, 3) + "</p></div></section>" +
       (outlook ? window.NFLSeasonOutlook.render(outlook) : "") +
       "<h2>Season rating</h2><p class=\"chart-caption\">Schedule-adjusted EPA after each played week. This line is weeks[].v2. The bars above are win chance by game.</p>" + chart(t.weeks) +
+      powerSection(t) +
       "<h2>Schedule</h2>" +
       '<p class="schedule-note">Away on the left, home on the right. The bar is each side’s win chance from the current rating.</p>' +
       (cards ? '<div class="forecast-ledger" role="list">' + cards + "</div>" : "<p>No games listed.</p>");
