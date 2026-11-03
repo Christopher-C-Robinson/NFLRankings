@@ -583,3 +583,177 @@ footer .section-shell { padding-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   .rank-toggle-icon { transition: none; }
 }
+
+/* Team schedule cards. Rules below are copied from College Football Index
+   styles.css (compact schedule scoreboards), mobile-team.css (score rows,
+   heading tracks, phone header), and game-team-summary.css (shared team
+   panels). Dark fills follow device-theme.css. NFL keeps one win-chance
+   panel, so that panel spans the analytics grid. */
+.schedule-note { margin: 0 0 10px; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
+.forecast-ledger { display: grid; gap: 16px; }
+.forecast-game { --game-winner-rgb: 71, 124, 153; min-width: 0; padding: 0; border: 1px solid var(--line); border-top: 3px solid #bccbd9; border-radius: 10px; background: var(--paper); overflow: hidden; box-shadow: 0 3px 10px rgba(23,35,51,.035); }
+.forecast-game.is-winner-actual { border-top-color: rgb(var(--game-winner-rgb)); }
+.forecast-game.is-winner-predicted { border-top-color: rgba(var(--game-winner-rgb), .35); }
+.forecast-game-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 5px 16px; padding: 6px 18px; border-bottom: 1px solid var(--line); background: #f5f7fa; }
+.is-winner-actual .forecast-game-heading { background: rgba(var(--game-winner-rgb), .065); }
+.is-winner-predicted .forecast-game-heading { background: rgba(var(--game-winner-rgb), .025); }
+.forecast-date { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--ink-soft); font: 12px/1.5 var(--sans); }
+.forecast-date > span { padding-left: 10px; border-left: 1px solid #cbd5df; }
+.forecast-status-meta, .forecast-venue-meta { color: var(--ink-soft); font: 12px/1.5 var(--sans); }
+.forecast-venue-meta { text-align: right; }
+.forecast-matchup-header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, .62fr) minmax(0, 1fr); align-items: center; gap: 18px; padding: 12px 20px; }
+.forecast-matchup-center { min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.forecast-matchup-status { color: #6a7b8d; font: 600 11px/1.4 var(--sans); letter-spacing: .3px; }
+.forecast-matchup-score { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 5px 0 6px; color: var(--ink); font: 700 35px/1.1 var(--sans); font-variant-numeric: tabular-nums; letter-spacing: -1px; }
+.forecast-matchup-score i { color: #9ba9b8; font: 400 23px/1 var(--sans); letter-spacing: 0; }
+.forecast-matchup-favorite { color: var(--ink-soft); font: 600 12px/1.45 var(--sans); }
+.forecast-matchup-probability, .forecast-neutral-label { color: #6d7e90; font: 12px/1.45 var(--sans); }
+.forecast-neutral-label { margin-bottom: 3px; }
+.forecast-game-body.forecast-analytics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 0 14px 14px; }
+.forecast-game-body.forecast-analytics-grid > .forecast-matchup-outlook:only-child { grid-column: 1 / -1; }
+.forecast-analytics-panel { min-width: 0; padding: 12px 16px; border: 1px solid #e2e8ef; border-radius: 7px; background: #f7f9fc; }
+.forecast-section-title { margin: 0 0 10px; color: #60738a; font: 600 12px/1.4 var(--sans); letter-spacing: .1px; }
+.forecast-probability-headline { display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px 10px; margin-bottom: 11px; }
+.forecast-probability-headline > strong { color: var(--blue-mid); font: 700 30px/1.1 var(--sans); letter-spacing: -.6px; }
+.forecast-probability-headline > span { color: var(--ink-soft); font-size: 12px; line-height: 1.4; }
+.forecast-probability-bar { display: flex; width: 100%; height: 11px; overflow: hidden; border-radius: 5px; background: #dce5ee; }
+.forecast-probability-bar > span { position: relative; display: block; height: 100%; min-width: 0; flex: none; background: rgb(var(--probability-team-rgb, 71, 124, 153)); box-shadow: inset 0 0 0 1px rgba(23,35,51,.25); }
+.forecast-probability-bar > .is-selected { background-color: rgb(var(--probability-team-rgb, 71, 124, 153)); }
+.forecast-probability-bar > .is-opponent { background-color: rgb(var(--probability-team-rgb, 126, 140, 155)); background-image: repeating-linear-gradient(135deg, transparent 0, transparent 3px, rgba(23,35,51,.22) 3px, rgba(23,35,51,.22) 5px); }
+.forecast-probability-bar.has-divider > span + span::before { content: ""; position: absolute; z-index: 2; top: 0; bottom: 0; left: 0; width: 4px; transform: translateX(-50%); background: var(--bar-divider-color); pointer-events: none; }
+.forecast-probability-labels { display: flex; justify-content: space-between; gap: 14px; margin-top: 7px; color: var(--ink-soft); font: 12px/1.4 var(--sans); }
+.forecast-probability-labels > span { min-width: 0; max-width: 48%; }
+.forecast-probability-labels > span:last-child { text-align: right; }
+.forecast-probability-labels strong { display: block; margin-top: 3px; color: var(--ink); font-weight: 600; }
+.forecast-analytics-note { margin: 8px 0 0; color: #6b7d90; font: 11px/1.55 var(--sans); }
+.forecast-unavailable { margin: 0; color: #6b7d90; font-size: 12px; line-height: 1.7; }
+.team-logo { flex: none; display: inline-grid; place-items: center; position: relative; width: var(--team-logo-size, 32px); height: var(--team-logo-size, 32px); border-radius: 6px; overflow: hidden; vertical-align: middle; background: #fff; border: 1px solid rgba(23,35,51,.08); color-scheme: light; }
+.team-logo img { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 3px; opacity: 0; }
+.team-logo[data-logo-state="loaded"] img { opacity: 1; }
+.team-logo-fallback { display: grid; place-items: center; width: 100%; height: 100%; padding: 3px; color: var(--blue); background: var(--blue-light); font: 600 11px var(--sans); }
+.team-logo[data-logo-state="loaded"] .team-logo-fallback { visibility: hidden; }
+.team-logo[data-logo-state="failed"] img { opacity: 0; }
+.team-logo[data-logo-state="failed"] .team-logo-fallback { visibility: visible; }
+@media (max-width: 860px) {
+  .forecast-game-body.forecast-analytics-grid { grid-template-columns: minmax(0, 1fr); }
+  .forecast-matchup-header { grid-template-columns: minmax(0, 1fr) 140px minmax(0, 1fr); gap: 12px; }
+}
+@media (max-width: 680px) {
+  .forecast-matchup-header { grid-template-columns: minmax(0, 1fr) 115px minmax(0, 1fr); gap: 10px; padding: 14px; }
+  .forecast-matchup-score { font-size: 30px; gap: 8px; }
+  .forecast-matchup-status { font-size: 11px; }
+  .forecast-matchup-favorite, .forecast-matchup-probability, .forecast-neutral-label { font-size: 11px; }
+  .forecast-game-heading { padding: 8px 14px; }
+  .forecast-venue-meta { font-size: 11px; text-align: left; }
+  .forecast-game-body.forecast-analytics-grid { gap: 9px; padding: 0 10px 10px; }
+  .forecast-analytics-panel { padding: 13px; }
+  .forecast-probability-headline > strong { font-size: 28px; }
+}
+@media (max-width: 480px) {
+  .forecast-game-body.forecast-analytics-grid { grid-template-columns: 1fr; }
+  .forecast-analytics-panel { padding: 14px 16px; }
+  .forecast-matchup-header { grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1fr); gap: 7px; }
+  .forecast-probability-headline { margin-bottom: 10px; }
+}
+
+/* mobile-team.css: score rows and the compact heading tracks. */
+.forecast-matchup-score-line { min-width: 0; width: 100%; }
+.forecast-matchup-score-line > .forecast-matchup-status { white-space: nowrap; }
+.forecast-matchup-score-line.is-observed { margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line); }
+.forecast-matchup-score-line.is-observed .forecast-matchup-score { font-size: 30px; }
+.forecast-matchup-score-line.is-observed .forecast-matchup-status { color: var(--ink); }
+.forecast-game-heading { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 3px 12px; padding: 6px 14px; }
+.forecast-game-heading > .forecast-date { grid-column: 1; grid-row: 1; flex-wrap: nowrap; gap: 6px; white-space: nowrap; font-size: 11px; }
+.forecast-game-heading > .forecast-date > span { padding-left: 6px; }
+.forecast-game-heading > .forecast-status-meta { grid-column: 3; grid-row: 1; min-width: 0; text-align: right; }
+.forecast-game-heading > .forecast-venue-meta { grid-column: 2; grid-row: 1; min-width: 0; font-size: 11px; line-height: 1.4; text-align: left; }
+@media (max-width: 680px) {
+  .forecast-game-heading { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 7px; padding: 6px 12px; }
+  .forecast-game-heading > .forecast-status-meta { grid-column: 2; }
+  .forecast-game-heading > .forecast-venue-meta { grid-column: 1 / -1; grid-row: 2; text-align: left; }
+  .forecast-game-body.forecast-analytics-grid { grid-template-columns: minmax(0, 1fr); }
+  .forecast-matchup-score-line.is-observed .forecast-matchup-score { font-size: 27px; }
+}
+@media (max-width: 480px) {
+  .forecast-matchup-header { grid-template-columns: minmax(0, 1fr) clamp(84px, 26vw, 108px) minmax(0, 1fr); align-items: start; gap: 7px; padding: 12px; }
+  .forecast-matchup-header > .game-team-summary.is-away { grid-column: 1; grid-row: 2; }
+  .forecast-matchup-header > .game-team-summary.is-home { grid-column: 3; grid-row: 2; }
+  .forecast-matchup-center { grid-column: 2; grid-row: 2; align-self: center; padding: 0; border: 0; overflow-wrap: anywhere; }
+  .forecast-matchup-score { gap: 6px; font-size: clamp(25px, 7.2vw, 31px); white-space: nowrap; }
+  .forecast-matchup-score i { font-size: 20px; }
+  .forecast-matchup-score-line.is-observed .forecast-matchup-score { font-size: clamp(24px, 6.6vw, 28px); }
+  .forecast-matchup-favorite, .forecast-matchup-probability, .forecast-neutral-label { font-size: 11px; line-height: 1.4; }
+}
+@media (max-width: 350px) {
+  .forecast-matchup-header { grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr); gap: 5px; padding: 10px; }
+  .forecast-matchup-status, .forecast-matchup-favorite, .forecast-matchup-probability, .forecast-neutral-label { font-size: 10px; }
+}
+
+/* game-team-summary.css: one team panel for the matchup row. */
+.game-matchup-names { grid-column: 1 / -1; grid-row: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+.game-matchup-name { display: flex; align-items: baseline; gap: 4px; min-width: 0; max-width: 100%; min-height: 32px; margin: 0; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--ink); text-align: left; font: 700 16px/1.35 var(--sans); cursor: pointer; }
+.game-matchup-name:last-child { justify-content: flex-end; text-align: right; }
+.game-matchup-name-text { min-width: 0; overflow-wrap: break-word; }
+.game-matchup-name-rank { flex: none; }
+.game-matchup-name-rank .game-team-rank.forecast-rank { padding: 0; border: 0; background: transparent; color: var(--blue-mid); font: 700 .85em/1.35 var(--sans); }
+.forecast-matchup-header > .game-team-summary.is-away { grid-column: 1; grid-row: 2; }
+.forecast-matchup-header > .game-team-summary.is-home { grid-column: 3; grid-row: 2; }
+.forecast-matchup-header > .forecast-matchup-center { grid-column: 2; grid-row: 2; }
+.game-matchup-winner { display: flex; flex-direction: column; align-items: center; gap: 3px; margin-top: 4px; color: var(--ink-soft); font: 600 11px/1.4 var(--sans); }
+.game-winner-logo { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 3px; border: 0; border-radius: 5px; background: transparent; cursor: pointer; }
+.game-winner-logo .team-logo { border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+.game-winner-logo .team-logo img { padding: 2px; }
+.game-matchup-name:focus-visible, .game-winner-logo:focus-visible, .game-team-identity:focus-visible, a.forecast-score-link:focus-visible { outline: 3px solid var(--blue-mid); outline-offset: 3px; }
+.game-team-summary { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.game-team-summary.is-home { align-items: flex-end; text-align: right; }
+.game-team-identity { display: flex; align-items: center; gap: 9px; max-width: 100%; min-width: 0; min-height: 44px; margin: 0; padding: 0; border: 0; border-radius: 5px; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+.game-team-summary.is-home .game-team-identity { flex-direction: row-reverse; text-align: right; }
+.game-team-identity .team-logo { --team-logo-size: 44px !important; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.game-team-identity .team-logo img { padding: 3px; }
+.game-team-records { display: flex; flex-wrap: wrap; gap: 3px 12px; margin: 0; font: 11px/1.4 var(--sans); }
+.game-team-records > div { display: flex; align-items: baseline; gap: 5px; }
+.game-team-records dt { color: var(--ink-soft); }
+.game-team-records dd { margin: 0; color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.game-team-summary.is-home .game-team-records { justify-content: flex-end; }
+.game-team-conference { max-width: 100%; color: var(--ink-soft); font: 11px/1.4 var(--sans); overflow-wrap: anywhere; }
+a.game-matchup-name, a.game-team-identity, a.game-winner-logo, a.forecast-score-link { color: inherit; text-decoration: none; }
+a.forecast-score-link { display: block; }
+a.game-matchup-name:hover .game-matchup-name-text, a.forecast-score-link:hover .forecast-matchup-score { color: var(--blue-mid); }
+@media (max-width: 680px) {
+  .game-matchup-names { gap: 8px; }
+  .game-matchup-name { min-height: 28px; font-size: clamp(11px, 3.1vw, 14px); }
+  .game-team-summary { gap: 5px; }
+  .game-team-identity, .game-team-summary.is-home .game-team-identity { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .game-team-summary.is-home .game-team-identity { align-items: flex-end; }
+  .game-team-identity .team-logo { --team-logo-size: 38px !important; width: 38px; height: 38px; }
+  .game-team-records { flex-direction: column; gap: 2px; font-size: 10px; }
+  .game-team-summary.is-home .game-team-records { align-items: flex-end; }
+  .game-team-records > div { gap: 4px; }
+  .game-team-conference { font-size: 10px; }
+}
+@media (max-width: 360px) {
+  .game-matchup-names { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .game-matchup-name { min-height: 24px; font-size: 12px; }
+  .game-team-records > div { gap: 3px; }
+}
+
+:root[data-theme="dark"] .forecast-game { box-shadow: 0 2px 10px #0002; }
+:root[data-theme="dark"] .forecast-game-heading,
+:root[data-theme="dark"] .forecast-analytics-panel { background: var(--surface-muted); border-color: var(--line); }
+:root[data-theme="dark"] .is-winner-actual .forecast-game-heading { background: color-mix(in srgb, rgb(var(--game-winner-rgb)) 16%, var(--paper)); }
+:root[data-theme="dark"] .is-winner-predicted .forecast-game-heading { background: color-mix(in srgb, rgb(var(--game-winner-rgb)) 8%, var(--paper)); }
+:root[data-theme="dark"] .forecast-probability-bar { background: #40546a; }
+:root[data-theme="dark"] .forecast-probability-bar > span { box-shadow: inset 0 0 0 1px #dde8f78c; }
+:root[data-theme="dark"] .team-logo { background: #fff; border-color: #708296; color-scheme: light; }
+:root[data-theme="dark"] .team-logo-fallback { color: #172333; background: #e0e9ee; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .forecast-game { box-shadow: 0 2px 10px #0002; }
+  :root:not([data-theme="light"]) .forecast-game-heading,
+  :root:not([data-theme="light"]) .forecast-analytics-panel { background: var(--surface-muted); border-color: var(--line); }
+  :root:not([data-theme="light"]) .is-winner-actual .forecast-game-heading { background: color-mix(in srgb, rgb(var(--game-winner-rgb)) 16%, var(--paper)); }
+  :root:not([data-theme="light"]) .is-winner-predicted .forecast-game-heading { background: color-mix(in srgb, rgb(var(--game-winner-rgb)) 8%, var(--paper)); }
+  :root:not([data-theme="light"]) .forecast-probability-bar { background: #40546a; }
+  :root:not([data-theme="light"]) .forecast-probability-bar > span { box-shadow: inset 0 0 0 1px #dde8f78c; }
+  :root:not([data-theme="light"]) .team-logo { background: #fff; border-color: #708296; color-scheme: light; }
+  :root:not([data-theme="light"]) .team-logo-fallback { color: #172333; background: #e0e9ee; }
+}
