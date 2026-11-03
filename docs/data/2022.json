@@ -1,6 +1,6 @@
 {
  "season": 2022,
- "generated_at": "2026-11-03T00:49:59+00:00",
+ "generated_at": "2026-11-03T00:54:32+00:00",
  "source": "nflverse via nfl_data_py (https://github.com/nflverse)",
  "week_min": 1,
  "week_max": 18,
@@ -131,6 +131,8 @@
      "v2": 0.180011
     }
    ],
+   "pregame_expected_wins": 12.5894,
+   "wins_above_expected": 1.4106,
    "schedule_expected_wins": 13.2597,
    "remaining_games": 0,
    "projected_wins": 14.0,
@@ -245,6 +247,8 @@
      "v2": 0.171938
     }
    ],
+   "pregame_expected_wins": 12.326,
+   "wins_above_expected": 0.674,
    "schedule_expected_wins": 11.842,
    "remaining_games": 0,
    "projected_wins": 13.0,
@@ -359,6 +363,8 @@
      "v2": 0.168861
     }
    ],
+   "pregame_expected_wins": 10.7009,
+   "wins_above_expected": 2.2991,
    "schedule_expected_wins": 13.5829,
    "remaining_games": 0,
    "projected_wins": 13.0,
@@ -473,6 +479,8 @@
      "v2": 0.148052
     }
    ],
+   "pregame_expected_wins": 9.7483,
+   "wins_above_expected": 2.2517,
    "schedule_expected_wins": 10.9761,
    "remaining_games": 0,
    "projected_wins": 12.0,
@@ -587,6 +595,8 @@
      "v2": 0.135001
     }
    ],
+   "pregame_expected_wins": 13.0894,
+   "wins_above_expected": 0.9106,
    "schedule_expected_wins": 12.7979,
    "remaining_games": 0,
    "projected_wins": 14.0,
@@ -701,6 +711,8 @@
      "v2": 0.088892
     }
    ],
+   "pregame_expected_wins": 9.6177,
+   "wins_above_expected": 2.3823,
    "schedule_expected_wins": 11.2739,
    "remaining_games": 0,
    "projected_wins": 12.0,
@@ -815,6 +827,8 @@
      "v2": 0.072823
     }
    ],
+   "pregame_expected_wins": 11.3347,
+   "wins_above_expected": -2.3347,
    "schedule_expected_wins": 9.6957,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -929,6 +943,8 @@
      "v2": 0.050592
     }
    ],
+   "pregame_expected_wins": 8.9421,
+   "wins_above_expected": -0.9421,
    "schedule_expected_wins": 9.4849,
    "remaining_games": 0,
    "projected_wins": 8.0,
@@ -1043,6 +1059,8 @@
      "v2": 0.048023
     }
    ],
+   "pregame_expected_wins": 10.2873,
+   "wins_above_expected": -0.2873,
    "schedule_expected_wins": 8.9323,
    "remaining_games": 0,
    "projected_wins": 10.0,
@@ -1157,6 +1175,8 @@
      "v2": 0.037063
     }
    ],
+   "pregame_expected_wins": 9.3146,
+   "wins_above_expected": -0.3146,
    "schedule_expected_wins": 10.2496,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -1271,6 +1291,8 @@
      "v2": 0.018788
     }
    ],
+   "pregame_expected_wins": 7.5662,
+   "wins_above_expected": -0.5662,
    "schedule_expected_wins": 8.3779,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -1385,6 +1407,8 @@
      "v2": 0.018528
     }
    ],
+   "pregame_expected_wins": 7.5852,
+   "wins_above_expected": 1.4148,
    "schedule_expected_wins": 8.117,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -1499,6 +1523,8 @@
      "v2": 0.016287
     }
    ],
+   "pregame_expected_wins": 7.6739,
+   "wins_above_expected": -0.6739,
    "schedule_expected_wins": 8.9865,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -1613,6 +1639,8 @@
      "v2": 0.006344
     }
    ],
+   "pregame_expected_wins": 10.2853,
+   "wins_above_expected": -2.2853,
    "schedule_expected_wins": 8.3493,
    "remaining_games": 0,
    "projected_wins": 8.0,
@@ -1727,6 +1755,8 @@
      "v2": -0.004924
     }
    ],
+   "pregame_expected_wins": 9.0572,
+   "wins_above_expected": -1.0572,
    "schedule_expected_wins": 8.6207,
    "remaining_games": 0,
    "projected_wins": 8.0,
@@ -1841,6 +1871,8 @@
      "v2": -0.00702
     }
    ],
+   "pregame_expected_wins": 7.3955,
+   "wins_above_expected": 1.6045,
    "schedule_expected_wins": 8.3106,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -1955,6 +1987,8 @@
      "v2": -0.007248
     }
    ],
+   "pregame_expected_wins": 7.754,
+   "wins_above_expected": -0.754,
    "schedule_expected_wins": 7.366,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -2069,6 +2103,8 @@
      "v2": -0.018208
     }
    ],
+   "pregame_expected_wins": 7.927,
+   "wins_above_expected": 2.073,
    "schedule_expected_wins": 8.6038,
    "remaining_games": 0,
    "projected_wins": 10.0,
@@ -2183,6 +2219,8 @@
      "v2": -0.025585
     }
    ],
+   "pregame_expected_wins": 7.2317,
+   "wins_above_expected": 1.7683,
    "schedule_expected_wins": 8.1803,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -2297,6 +2335,8 @@
      "v2": -0.032634
     }
    ],
+   "pregame_expected_wins": 7.2761,
+   "wins_above_expected": 1.7239,
    "schedule_expected_wins": 8.0863,
    "remaining_games": 0,
    "projected_wins": 9.0,
@@ -2411,6 +2451,8 @@
      "v2": -0.032738
     }
    ],
+   "pregame_expected_wins": 8.7671,
+   "wins_above_expected": 4.2329,
    "schedule_expected_wins": 7.9622,
    "remaining_games": 0,
    "projected_wins": 13.0,
@@ -2525,6 +2567,8 @@
      "v2": -0.035043
     }
    ],
+   "pregame_expected_wins": 7.3537,
+   "wins_above_expected": 0.6463,
    "schedule_expected_wins": 7.6506,
    "remaining_games": 0,
    "projected_wins": 8.0,
@@ -2639,6 +2683,8 @@
      "v2": -0.039793
     }
    ],
+   "pregame_expected_wins": 6.3382,
+   "wins_above_expected": 0.6618,
    "schedule_expected_wins": 7.544,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -2753,6 +2799,8 @@
      "v2": -0.066664
     }
    ],
+   "pregame_expected_wins": 6.8754,
+   "wins_above_expected": 0.1246,
    "schedule_expected_wins": 7.0314,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -2867,6 +2915,8 @@
      "v2": -0.068669
     }
    ],
+   "pregame_expected_wins": 7.0786,
+   "wins_above_expected": -1.0786,
    "schedule_expected_wins": 6.9417,
    "remaining_games": 0,
    "projected_wins": 6.0,
@@ -2981,6 +3031,8 @@
      "v2": -0.073885
     }
    ],
+   "pregame_expected_wins": 7.9444,
+   "wins_above_expected": -2.9444,
    "schedule_expected_wins": 6.9883,
    "remaining_games": 0,
    "projected_wins": 5.0,
@@ -3095,6 +3147,8 @@
      "v2": -0.074183
     }
    ],
+   "pregame_expected_wins": 7.8847,
+   "wins_above_expected": -0.8847,
    "schedule_expected_wins": 6.6039,
    "remaining_games": 0,
    "projected_wins": 7.0,
@@ -3209,6 +3263,8 @@
      "v2": -0.089483
     }
    ],
+   "pregame_expected_wins": 7.1446,
+   "wins_above_expected": -2.1446,
    "schedule_expected_wins": 5.9826,
    "remaining_games": 0,
    "projected_wins": 5.0,
@@ -3323,6 +3379,8 @@
      "v2": -0.096056
     }
    ],
+   "pregame_expected_wins": 6.56,
+   "wins_above_expected": -2.56,
    "schedule_expected_wins": 5.7576,
    "remaining_games": 0,
    "projected_wins": 4.0,
@@ -3437,6 +3495,8 @@
      "v2": -0.140139
     }
    ],
+   "pregame_expected_wins": 7.4678,
+   "wins_above_expected": -4.4678,
    "schedule_expected_wins": 4.6677,
    "remaining_games": 0,
    "projected_wins": 3.0,
@@ -3551,6 +3611,8 @@
      "v2": -0.151675
     }
    ],
+   "pregame_expected_wins": 6.6405,
+   "wins_above_expected": -2.6405,
    "schedule_expected_wins": 4.933,
    "remaining_games": 0,
    "projected_wins": 4.0,
@@ -3665,6 +3727,8 @@
      "v2": -0.202459
     }
    ],
+   "pregame_expected_wins": 3.2429,
+   "wins_above_expected": -0.2429,
    "schedule_expected_wins": 3.8434,
    "remaining_games": 0,
    "projected_wins": 3.0,
@@ -3688,7 +3752,13 @@
    "proj_away": 29.6879,
    "margin_low": -26.7085,
    "margin_high": 3.3906,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3704,7 +3774,13 @@
    "proj_away": 22.4573,
    "margin_low": -17.6757,
    "margin_high": 12.4233,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3720,7 +3796,13 @@
    "proj_away": 22.1218,
    "margin_low": -16.1237,
    "margin_high": 13.9753,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3736,7 +3818,13 @@
    "proj_away": 28.8465,
    "margin_low": -28.3113,
    "margin_high": 1.7878,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3752,7 +3840,13 @@
    "proj_away": 17.2676,
    "margin_low": -6.9689,
    "margin_high": 23.1301,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3768,7 +3862,13 @@
    "proj_away": 18.8899,
    "margin_low": -9.2552,
    "margin_high": 20.8439,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3784,7 +3884,13 @@
    "proj_away": 26.9855,
    "margin_low": -20.1846,
    "margin_high": 9.9144,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3800,7 +3906,13 @@
    "proj_away": 21.4796,
    "margin_low": -15.7443,
    "margin_high": 14.3548,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3816,7 +3928,13 @@
    "proj_away": 27.2339,
    "margin_low": -25.9957,
    "margin_high": 4.1034,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3832,7 +3950,13 @@
    "proj_away": 20.9564,
    "margin_low": -10.8168,
    "margin_high": 19.2822,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3848,7 +3972,13 @@
    "proj_away": 20.6791,
    "margin_low": -12.1907,
    "margin_high": 17.9083,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3864,7 +3994,13 @@
    "proj_away": 22.1759,
    "margin_low": -13.1605,
    "margin_high": 16.9386,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3880,7 +4016,13 @@
    "proj_away": 19.8269,
    "margin_low": -15.9626,
    "margin_high": 14.1364,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3896,7 +4038,13 @@
    "proj_away": 19.5853,
    "margin_low": -11.2651,
    "margin_high": 18.834,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3912,7 +4060,13 @@
    "proj_away": 20.8625,
    "margin_low": -15.2719,
    "margin_high": 14.8271,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 1,
@@ -3928,7 +4082,13 @@
    "proj_away": 21.1822,
    "margin_low": -15.3161,
    "margin_high": 14.7829,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7769,
+   "pregame_home_win_chance": 0.5628,
+   "pregame_proj_home": 22.8884,
+   "pregame_proj_away": 21.1116,
+   "pregame_margin_low": -13.2727,
+   "pregame_margin_high": 16.8264
   },
   {
    "week": 2,
@@ -3944,7 +4104,13 @@
    "proj_away": 21.2759,
    "margin_low": -14.4797,
    "margin_high": 15.6194,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.3324,
+   "pregame_home_win_chance": 0.511809,
+   "pregame_proj_home": 19.9912,
+   "pregame_proj_away": 19.6588,
+   "pregame_margin_low": -14.7171,
+   "pregame_margin_high": 15.382
   },
   {
    "week": 2,
@@ -3960,7 +4126,13 @@
    "proj_away": 14.6615,
    "margin_low": -1.6603,
    "margin_high": 28.4388,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 23.0772,
+   "pregame_home_win_chance": 0.963731,
+   "pregame_proj_home": 32.4636,
+   "pregame_proj_away": 9.3864,
+   "pregame_margin_low": 8.0276,
+   "pregame_margin_high": 38.1267
   },
   {
    "week": 2,
@@ -3976,7 +4148,13 @@
    "proj_away": 18.765,
    "margin_low": -12.0056,
    "margin_high": 18.0935,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 14.237,
+   "pregame_home_win_chance": 0.883236,
+   "pregame_proj_home": 28.0935,
+   "pregame_proj_away": 13.8565,
+   "pregame_margin_low": -0.8126,
+   "pregame_margin_high": 29.2865
   },
   {
    "week": 2,
@@ -3992,7 +4170,13 @@
    "proj_away": 23.7043,
    "margin_low": -16.1519,
    "margin_high": 13.9472,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -10.7771,
+   "pregame_home_win_chance": 0.177745,
+   "pregame_proj_home": 14.6864,
+   "pregame_proj_away": 25.4636,
+   "pregame_margin_low": -25.8266,
+   "pregame_margin_high": 4.2724
   },
   {
    "week": 2,
@@ -4008,7 +4192,13 @@
    "proj_away": 16.2818,
    "margin_low": -7.0152,
    "margin_high": 23.0839,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.9946,
+   "pregame_home_win_chance": 0.863758,
+   "pregame_proj_home": 26.9723,
+   "pregame_proj_away": 13.9777,
+   "pregame_margin_low": -2.055,
+   "pregame_margin_high": 28.0441
   },
   {
    "week": 2,
@@ -4024,7 +4214,13 @@
    "proj_away": 21.7115,
    "margin_low": -13.3747,
    "margin_high": 16.7244,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.6742,
+   "pregame_home_win_chance": 0.33977,
+   "pregame_proj_home": 20.6379,
+   "pregame_proj_away": 25.3121,
+   "pregame_margin_low": -19.7237,
+   "pregame_margin_high": 10.3753
   },
   {
    "week": 2,
@@ -4040,7 +4236,13 @@
    "proj_away": 18.9364,
    "margin_low": -8.1578,
    "margin_high": 21.9413,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -19.3831,
+   "pregame_home_win_chance": 0.059815,
+   "pregame_proj_home": 10.0835,
+   "pregame_proj_away": 29.4665,
+   "pregame_margin_low": -34.4326,
+   "pregame_margin_high": -4.3335
   },
   {
    "week": 2,
@@ -4056,7 +4258,13 @@
    "proj_away": 16.1868,
    "margin_low": -4.0871,
    "margin_high": 26.012,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.1708,
+   "pregame_home_win_chance": 0.32412,
+   "pregame_proj_home": 18.7396,
+   "pregame_proj_away": 23.9104,
+   "pregame_margin_low": -20.2203,
+   "pregame_margin_high": 9.8787
   },
   {
    "week": 2,
@@ -4072,7 +4280,13 @@
    "proj_away": 17.9799,
    "margin_low": -3.6257,
    "margin_high": 26.4734,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 11.8203,
+   "pregame_home_win_chance": 0.842899,
+   "pregame_proj_home": 28.1351,
+   "pregame_proj_away": 16.3149,
+   "pregame_margin_low": -3.2293,
+   "pregame_margin_high": 26.8698
   },
   {
    "week": 2,
@@ -4088,7 +4302,13 @@
    "proj_away": 20.8185,
    "margin_low": -14.0173,
    "margin_high": 16.0818,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -13.1025,
+   "pregame_home_win_chance": 0.134448,
+   "pregame_proj_home": 14.9738,
+   "pregame_proj_away": 28.0762,
+   "pregame_margin_low": -28.152,
+   "pregame_margin_high": 1.9471
   },
   {
    "week": 2,
@@ -4104,7 +4324,13 @@
    "proj_away": 21.6845,
    "margin_low": -11.9398,
    "margin_high": 18.1593,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 11.8203,
+   "pregame_home_win_chance": 0.842899,
+   "pregame_proj_home": 28.1351,
+   "pregame_proj_away": 16.3149,
+   "pregame_margin_low": -3.2293,
+   "pregame_margin_high": 26.8698
   },
   {
    "week": 2,
@@ -4120,7 +4346,13 @@
    "proj_away": 19.0614,
    "margin_low": -12.7888,
    "margin_high": 17.3103,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.6329,
+   "pregame_home_win_chance": 0.226716,
+   "pregame_proj_home": 16.2586,
+   "pregame_proj_away": 24.8914,
+   "pregame_margin_low": -23.6824,
+   "pregame_margin_high": 6.4167
   },
   {
    "week": 2,
@@ -4136,7 +4368,13 @@
    "proj_away": 20.2791,
    "margin_low": -12.5812,
    "margin_high": 17.5179,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.2444,
+   "pregame_home_win_chance": 0.544099,
+   "pregame_proj_home": 21.9972,
+   "pregame_proj_away": 20.7528,
+   "pregame_margin_low": -13.8052,
+   "pregame_margin_high": 16.2939
   },
   {
    "week": 2,
@@ -4152,7 +4390,13 @@
    "proj_away": 19.1025,
    "margin_low": -5.1091,
    "margin_high": 24.99,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.1893,
+   "pregame_home_win_chance": 0.293249,
+   "pregame_proj_home": 18.8803,
+   "pregame_proj_away": 25.0697,
+   "pregame_margin_low": -21.2388,
+   "pregame_margin_high": 8.8602
   },
   {
    "week": 2,
@@ -4168,7 +4412,13 @@
    "proj_away": 20.3098,
    "margin_low": -14.8332,
    "margin_high": 15.2659,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 20.4906,
+   "pregame_home_win_chance": 0.948448,
+   "pregame_proj_home": 30.5703,
+   "pregame_proj_away": 10.0797,
+   "pregame_margin_low": 5.4411,
+   "pregame_margin_high": 35.5402
   },
   {
    "week": 2,
@@ -4184,7 +4434,13 @@
    "proj_away": 16.6501,
    "margin_low": -3.4662,
    "margin_high": 26.6328,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.6958,
+   "pregame_home_win_chance": 0.475298,
+   "pregame_proj_home": 19.5771,
+   "pregame_proj_away": 20.2729,
+   "pregame_margin_low": -15.7453,
+   "pregame_margin_high": 14.3537
   },
   {
    "week": 3,
@@ -4200,7 +4456,13 @@
    "proj_away": 21.0586,
    "margin_low": -13.5926,
    "margin_high": 16.5065,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.1796,
+   "pregame_home_win_chance": 0.323845,
+   "pregame_proj_home": 20.681,
+   "pregame_proj_away": 25.8607,
+   "pregame_margin_low": -20.2292,
+   "pregame_margin_high": 9.8699
   },
   {
    "week": 3,
@@ -4216,7 +4478,13 @@
    "proj_away": 21.2633,
    "margin_low": -16.002,
    "margin_high": 14.0971,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.3453,
+   "pregame_home_win_chance": 0.452345,
+   "pregame_proj_home": 20.5982,
+   "pregame_proj_away": 21.9435,
+   "pregame_margin_low": -16.3948,
+   "pregame_margin_high": 13.7042
   },
   {
    "week": 3,
@@ -4232,7 +4500,13 @@
    "proj_away": 19.5964,
    "margin_low": -10.2397,
    "margin_high": 19.8594,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 15.5064,
+   "pregame_home_win_chance": 0.900594,
+   "pregame_proj_home": 27.4823,
+   "pregame_proj_away": 11.976,
+   "pregame_margin_low": 0.4568,
+   "pregame_margin_high": 30.5559
   },
   {
    "week": 3,
@@ -4248,7 +4522,13 @@
    "proj_away": 19.8923,
    "margin_low": -13.26,
    "margin_high": 16.839,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.0861,
+   "pregame_home_win_chance": 0.607927,
+   "pregame_proj_home": 23.5222,
+   "pregame_proj_away": 20.4361,
+   "pregame_margin_low": -11.9635,
+   "pregame_margin_high": 18.1356
   },
   {
    "week": 3,
@@ -4264,7 +4544,13 @@
    "proj_away": 25.5318,
    "margin_low": -25.0868,
    "margin_high": 5.0123,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.6227,
+   "pregame_home_win_chance": 0.310212,
+   "pregame_proj_home": 16.5011,
+   "pregame_proj_away": 22.1239,
+   "pregame_margin_low": -20.6723,
+   "pregame_margin_high": 9.4268
   },
   {
    "week": 3,
@@ -4280,7 +4566,13 @@
    "proj_away": 30.1723,
    "margin_low": -29.4153,
    "margin_high": 0.6837,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -22.2113,
+   "pregame_home_win_chance": 0.040825,
+   "pregame_proj_home": 10.6652,
+   "pregame_proj_away": 32.8765,
+   "pregame_margin_low": -37.2608,
+   "pregame_margin_high": -7.1618
   },
   {
    "week": 3,
@@ -4296,7 +4588,13 @@
    "proj_away": 22.8269,
    "margin_low": -15.9626,
    "margin_high": 14.1364,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -9.7653,
+   "pregame_home_win_chance": 0.199744,
+   "pregame_proj_home": 16.3882,
+   "pregame_proj_away": 26.1535,
+   "pregame_margin_low": -24.8148,
+   "pregame_margin_high": 5.2842
   },
   {
    "week": 3,
@@ -4312,7 +4610,13 @@
    "proj_away": 24.5343,
    "margin_low": -18.0965,
    "margin_high": 12.0026,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.8138,
+   "pregame_home_win_chance": 0.367715,
+   "pregame_proj_home": 20.5306,
+   "pregame_proj_away": 24.3444,
+   "pregame_margin_low": -18.8633,
+   "pregame_margin_high": 11.2358
   },
   {
    "week": 3,
@@ -4328,7 +4632,13 @@
    "proj_away": 24.5125,
    "margin_low": -14.5243,
    "margin_high": 15.5747,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.8712,
+   "pregame_home_win_chance": 0.273573,
+   "pregame_proj_home": 19.0436,
+   "pregame_proj_away": 25.9148,
+   "pregame_margin_low": -21.9207,
+   "pregame_margin_high": 8.1783
   },
   {
    "week": 3,
@@ -4344,7 +4654,13 @@
    "proj_away": 19.598,
    "margin_low": -13.1477,
    "margin_high": 16.9514,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.9742,
+   "pregame_home_win_chance": 0.465442,
+   "pregame_proj_home": 20.9088,
+   "pregame_proj_away": 21.8829,
+   "pregame_margin_low": -16.0237,
+   "pregame_margin_high": 14.0754
   },
   {
    "week": 3,
@@ -4360,7 +4676,13 @@
    "proj_away": 24.4581,
    "margin_low": -18.8441,
    "margin_high": 11.255,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.9612,
+   "pregame_home_win_chance": 0.756114,
+   "pregame_proj_home": 23.8764,
+   "pregame_proj_away": 15.9152,
+   "pregame_margin_low": -7.0883,
+   "pregame_margin_high": 23.0108
   },
   {
    "week": 3,
@@ -4376,7 +4698,13 @@
    "proj_away": 23.6986,
    "margin_low": -20.8309,
    "margin_high": 9.2682,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.8439,
+   "pregame_home_win_chance": 0.633279,
+   "pregame_proj_home": 23.4428,
+   "pregame_proj_away": 19.5989,
+   "pregame_margin_low": -11.2057,
+   "pregame_margin_high": 18.8934
   },
   {
    "week": 3,
@@ -4392,7 +4720,13 @@
    "proj_away": 20.828,
    "margin_low": -11.2506,
    "margin_high": 18.8485,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -18.7609,
+   "pregame_home_win_chance": 0.064986,
+   "pregame_proj_home": 12.3071,
+   "pregame_proj_away": 31.0679,
+   "pregame_margin_low": -33.8104,
+   "pregame_margin_high": -3.7113
   },
   {
    "week": 3,
@@ -4408,7 +4742,13 @@
    "proj_away": 19.082,
    "margin_low": -11.2584,
    "margin_high": 18.8406,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.5672,
+   "pregame_home_win_chance": 0.771642,
+   "pregame_proj_home": 23.5127,
+   "pregame_proj_away": 14.9456,
+   "pregame_margin_low": -6.4824,
+   "pregame_margin_high": 23.6167
   },
   {
    "week": 3,
@@ -4424,7 +4764,13 @@
    "proj_away": 20.7308,
    "margin_low": -13.1751,
    "margin_high": 16.924,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.8984,
+   "pregame_home_win_chance": 0.468122,
+   "pregame_proj_home": 21.4883,
+   "pregame_proj_away": 22.3867,
+   "pregame_margin_low": -15.9479,
+   "pregame_margin_high": 14.1511
   },
   {
    "week": 3,
@@ -4440,7 +4786,13 @@
    "proj_away": 24.3631,
    "margin_low": -20.0826,
    "margin_high": 10.0164,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -11.8127,
+   "pregame_home_win_chance": 0.157244,
+   "pregame_proj_home": 17.4062,
+   "pregame_proj_away": 29.2188,
+   "pregame_margin_low": -26.8622,
+   "pregame_margin_high": 3.2369
   },
   {
    "week": 4,
@@ -4456,7 +4808,13 @@
    "proj_away": 23.3157,
    "margin_low": -17.7974,
    "margin_high": 12.3016,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.9175,
+   "pregame_home_win_chance": 0.397797,
+   "pregame_proj_home": 21.9222,
+   "pregame_proj_away": 24.8397,
+   "pregame_margin_low": -17.9671,
+   "pregame_margin_high": 12.132
   },
   {
    "week": 4,
@@ -4472,7 +4830,13 @@
    "proj_away": 23.5783,
    "margin_low": -19.3034,
    "margin_high": 10.7956,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.6697,
+   "pregame_home_win_chance": 0.225799,
+   "pregame_proj_home": 18.5818,
+   "pregame_proj_away": 27.2515,
+   "pregame_margin_low": -23.7193,
+   "pregame_margin_high": 6.3798
   },
   {
    "week": 4,
@@ -4488,7 +4852,13 @@
    "proj_away": 19.8866,
    "margin_low": -10.5344,
    "margin_high": 19.5646,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.6493,
+   "pregame_home_win_chance": 0.773693,
+   "pregame_proj_home": 25.9913,
+   "pregame_proj_away": 17.342,
+   "pregame_margin_low": -6.4002,
+   "pregame_margin_high": 23.6988
   },
   {
    "week": 4,
@@ -4504,7 +4874,13 @@
    "proj_away": 20.2793,
    "margin_low": -9.6114,
    "margin_high": 20.4877,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -18.1594,
+   "pregame_home_win_chance": 0.070377,
+   "pregame_proj_home": 12.4441,
+   "pregame_proj_away": 30.6035,
+   "pregame_margin_low": -33.209,
+   "pregame_margin_high": -3.1099
   },
   {
    "week": 4,
@@ -4520,7 +4896,13 @@
    "proj_away": 18.5323,
    "margin_low": -8.7068,
    "margin_high": 21.3923,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -23.6906,
+   "pregame_home_win_chance": 0.033342,
+   "pregame_proj_home": 8.8571,
+   "pregame_proj_away": 32.5477,
+   "pregame_margin_low": -38.7401,
+   "pregame_margin_high": -8.641
   },
   {
    "week": 4,
@@ -4536,7 +4918,13 @@
    "proj_away": 22.7515,
    "margin_low": -12.0261,
    "margin_high": 18.073,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 40.7241,
+   "pregame_home_win_chance": 0.996945,
+   "pregame_proj_home": 43.2787,
+   "pregame_proj_away": 2.5546,
+   "pregame_margin_low": 25.6746,
+   "pregame_margin_high": 55.7737
   },
   {
    "week": 4,
@@ -4552,7 +4940,13 @@
    "proj_away": 22.6491,
    "margin_low": -17.4404,
    "margin_high": 12.6587,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.676,
+   "pregame_home_win_chance": 0.691406,
+   "pregame_proj_home": 22.5047,
+   "pregame_proj_away": 16.8287,
+   "pregame_margin_low": -9.3736,
+   "pregame_margin_high": 20.7255
   },
   {
    "week": 4,
@@ -4568,7 +4962,13 @@
    "proj_away": 25.4298,
    "margin_low": -22.2399,
    "margin_high": 7.8592,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.483,
+   "pregame_home_win_chance": 0.230471,
+   "pregame_proj_home": 16.7109,
+   "pregame_proj_away": 25.1939,
+   "pregame_margin_low": -23.5326,
+   "pregame_margin_high": 6.5665
   },
   {
    "week": 4,
@@ -4584,7 +4984,13 @@
    "proj_away": 21.6935,
    "margin_low": -17.41,
    "margin_high": 12.689,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.2985,
+   "pregame_home_win_chance": 0.78944,
+   "pregame_proj_home": 25.1016,
+   "pregame_proj_away": 15.8031,
+   "pregame_margin_low": -5.751,
+   "pregame_margin_high": 24.348
   },
   {
    "week": 4,
@@ -4600,7 +5006,13 @@
    "proj_away": 20.5217,
    "margin_low": -13.0188,
    "margin_high": 17.0802,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.9131,
+   "pregame_home_win_chance": 0.332196,
+   "pregame_proj_home": 17.4244,
+   "pregame_proj_away": 22.3375,
+   "pregame_margin_low": -19.9626,
+   "pregame_margin_high": 10.1365
   },
   {
    "week": 4,
@@ -4616,7 +5028,13 @@
    "proj_away": 21.1417,
    "margin_low": -12.6636,
    "margin_high": 17.4355,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -20.3326,
+   "pregame_home_win_chance": 0.052661,
+   "pregame_proj_home": 10.1432,
+   "pregame_proj_away": 30.4758,
+   "pregame_margin_low": -35.3821,
+   "pregame_margin_high": -5.2831
   },
   {
    "week": 4,
@@ -4632,7 +5050,13 @@
    "proj_away": 18.6467,
    "margin_low": -7.6975,
    "margin_high": 22.4016,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.2412,
+   "pregame_home_win_chance": 0.321932,
+   "pregame_proj_home": 17.4032,
+   "pregame_proj_away": 22.6444,
+   "pregame_margin_low": -20.2907,
+   "pregame_margin_high": 9.8083
   },
   {
    "week": 4,
@@ -4648,7 +5072,13 @@
    "proj_away": 19.6463,
    "margin_low": -8.5062,
    "margin_high": 21.5929,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 15.8934,
+   "pregame_home_win_chance": 0.905412,
+   "pregame_proj_home": 29.1848,
+   "pregame_proj_away": 13.2914,
+   "pregame_margin_low": 0.8439,
+   "pregame_margin_high": 30.9429
   },
   {
    "week": 4,
@@ -4664,7 +5094,13 @@
    "proj_away": 17.7237,
    "margin_low": -12.0182,
    "margin_high": 18.0809,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.4828,
+   "pregame_home_win_chance": 0.769523,
+   "pregame_proj_home": 25.3009,
+   "pregame_proj_away": 16.8181,
+   "pregame_margin_low": -6.5667,
+   "pregame_margin_high": 23.5323
   },
   {
    "week": 4,
@@ -4680,7 +5116,13 @@
    "proj_away": 13.8739,
    "margin_low": -0.6995,
    "margin_high": 29.3996,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.5757,
+   "pregame_home_win_chance": 0.409491,
+   "pregame_proj_home": 18.4145,
+   "pregame_proj_away": 20.9902,
+   "pregame_margin_low": -17.6252,
+   "pregame_margin_high": 12.4738
   },
   {
    "week": 4,
@@ -4696,7 +5138,13 @@
    "proj_away": 25.7913,
    "margin_low": -21.7248,
    "margin_high": 8.3743,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.5151,
+   "pregame_home_win_chance": 0.588424,
+   "pregame_proj_home": 21.5313,
+   "pregame_proj_away": 19.0163,
+   "pregame_margin_low": -12.5345,
+   "pregame_margin_high": 17.5646
   },
   {
    "week": 5,
@@ -4712,7 +5160,13 @@
    "proj_away": 28.0688,
    "margin_low": -24.5179,
    "margin_high": 5.5812,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -19.2633,
+   "pregame_home_win_chance": 0.06078,
+   "pregame_proj_home": 13.1145,
+   "pregame_proj_away": 32.3777,
+   "pregame_margin_low": -34.3128,
+   "pregame_margin_high": -4.2137
   },
   {
    "week": 5,
@@ -4728,7 +5182,13 @@
    "proj_away": 22.9846,
    "margin_low": -18.1409,
    "margin_high": 11.9581,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.3823,
+   "pregame_home_win_chance": 0.682431,
+   "pregame_proj_home": 25.531,
+   "pregame_proj_away": 20.1487,
+   "pregame_margin_low": -9.6672,
+   "pregame_margin_high": 20.4319
   },
   {
    "week": 5,
@@ -4744,7 +5204,13 @@
    "proj_away": 16.6989,
    "margin_low": -5.8065,
    "margin_high": 24.2926,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 23.1928,
+   "pregame_home_win_chance": 0.964301,
+   "pregame_proj_home": 33.0612,
+   "pregame_proj_away": 9.8685,
+   "pregame_margin_low": 8.1432,
+   "pregame_margin_high": 38.2423
   },
   {
    "week": 5,
@@ -4760,7 +5226,13 @@
    "proj_away": 25.5951,
    "margin_low": -23.4276,
    "margin_high": 6.6715,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -7.8659,
+   "pregame_home_win_chance": 0.246394,
+   "pregame_proj_home": 15.7819,
+   "pregame_proj_away": 23.6478,
+   "pregame_margin_low": -22.9154,
+   "pregame_margin_high": 7.1837
   },
   {
    "week": 5,
@@ -4776,7 +5248,13 @@
    "proj_away": 20.4388,
    "margin_low": -11.4721,
    "margin_high": 18.6269,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.6632,
+   "pregame_home_win_chance": 0.406487,
+   "pregame_proj_home": 22.1332,
+   "pregame_proj_away": 24.7964,
+   "pregame_margin_low": -17.7127,
+   "pregame_margin_high": 12.3863
   },
   {
    "week": 5,
@@ -4792,7 +5270,13 @@
    "proj_away": 17.6009,
    "margin_low": -9.4868,
    "margin_high": 20.6123,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.2479,
+   "pregame_home_win_chance": 0.646511,
+   "pregame_proj_home": 21.7138,
+   "pregame_proj_away": 17.4659,
+   "pregame_margin_low": -10.8016,
+   "pregame_margin_high": 19.2975
   },
   {
    "week": 5,
@@ -4808,7 +5292,13 @@
    "proj_away": 21.9815,
    "margin_low": -15.5098,
    "margin_high": 14.5892,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.7919,
+   "pregame_home_win_chance": 0.75165,
+   "pregame_proj_home": 23.9546,
+   "pregame_proj_away": 16.1626,
+   "pregame_margin_low": -7.2576,
+   "pregame_margin_high": 22.8415
   },
   {
    "week": 5,
@@ -4824,7 +5314,13 @@
    "proj_away": 14.8676,
    "margin_low": -1.6155,
    "margin_high": 28.4836,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 28.3708,
+   "pregame_home_win_chance": 0.982574,
+   "pregame_proj_home": 35.7127,
+   "pregame_proj_away": 7.342,
+   "pregame_margin_low": 13.3212,
+   "pregame_margin_high": 43.4203
   },
   {
    "week": 5,
@@ -4840,7 +5336,13 @@
    "proj_away": 17.2043,
    "margin_low": -1.1698,
    "margin_high": 28.9293,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 16.4474,
+   "pregame_home_win_chance": 0.911942,
+   "pregame_proj_home": 32.3448,
+   "pregame_proj_away": 15.8974,
+   "pregame_margin_low": 1.3978,
+   "pregame_margin_high": 31.4969
   },
   {
    "week": 5,
@@ -4856,7 +5358,13 @@
    "proj_away": 25.4773,
    "margin_low": -21.9539,
    "margin_high": 8.1451,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.0426,
+   "pregame_home_win_chance": 0.427929,
+   "pregame_proj_home": 19.2248,
+   "pregame_proj_away": 21.2674,
+   "pregame_margin_low": -17.0921,
+   "pregame_margin_high": 13.0069
   },
   {
    "week": 5,
@@ -4872,7 +5380,13 @@
    "proj_away": 20.1898,
    "margin_low": -8.0456,
    "margin_high": 22.0534,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.7244,
+   "pregame_home_win_chance": 0.799326,
+   "pregame_proj_home": 25.4208,
+   "pregame_proj_away": 15.6964,
+   "pregame_margin_low": -5.3251,
+   "pregame_margin_high": 24.774
   },
   {
    "week": 5,
@@ -4888,7 +5402,13 @@
    "proj_away": 20.8181,
    "margin_low": -10.4688,
    "margin_high": 19.6303,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.6669,
+   "pregame_home_win_chance": 0.659999,
+   "pregame_proj_home": 27.4546,
+   "pregame_proj_away": 22.7876,
+   "pregame_margin_low": -10.3826,
+   "pregame_margin_high": 19.7165
   },
   {
    "week": 5,
@@ -4904,7 +5424,13 @@
    "proj_away": 19.7439,
    "margin_low": -10.8918,
    "margin_high": 19.2073,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.5727,
+   "pregame_home_win_chance": 0.688265,
+   "pregame_proj_home": 25.6887,
+   "pregame_proj_away": 20.116,
+   "pregame_margin_low": -9.4768,
+   "pregame_margin_high": 20.6222
   },
   {
    "week": 5,
@@ -4920,7 +5446,13 @@
    "proj_away": 21.9899,
    "margin_low": -17.1696,
    "margin_high": 12.9294,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -16.0418,
+   "pregame_home_win_chance": 0.092798,
+   "pregame_proj_home": 14.3815,
+   "pregame_proj_away": 30.4232,
+   "pregame_margin_low": -31.0913,
+   "pregame_margin_high": -0.9922
   },
   {
    "week": 5,
@@ -4936,7 +5468,13 @@
    "proj_away": 18.2486,
    "margin_low": -9.3536,
    "margin_high": 20.7455,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.6428,
+   "pregame_home_win_chance": 0.857766,
+   "pregame_proj_home": 28.3487,
+   "pregame_proj_away": 15.706,
+   "pregame_margin_low": -2.4068,
+   "pregame_margin_high": 27.6923
   },
   {
    "week": 5,
@@ -4952,7 +5490,13 @@
    "proj_away": 17.5034,
    "margin_low": -10.2679,
    "margin_high": 19.8312,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.3047,
+   "pregame_home_win_chance": 0.789587,
+   "pregame_proj_home": 26.7422,
+   "pregame_proj_away": 17.4375,
+   "pregame_margin_low": -5.7448,
+   "pregame_margin_high": 24.3543
   },
   {
    "week": 6,
@@ -4968,7 +5512,13 @@
    "proj_away": 26.7891,
    "margin_low": -25.1013,
    "margin_high": 4.9978,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.5214,
+   "pregame_home_win_chance": 0.313301,
+   "pregame_proj_home": 18.3032,
+   "pregame_proj_away": 23.8246,
+   "pregame_margin_low": -20.5709,
+   "pregame_margin_high": 9.5281
   },
   {
    "week": 6,
@@ -4984,7 +5534,13 @@
    "proj_away": 23.8675,
    "margin_low": -19.8534,
    "margin_high": 10.2457,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.9057,
+   "pregame_home_win_chance": 0.432698,
+   "pregame_proj_home": 20.1388,
+   "pregame_proj_away": 22.0445,
+   "pregame_margin_low": -16.9553,
+   "pregame_margin_high": 13.1438
   },
   {
    "week": 6,
@@ -5000,7 +5556,13 @@
    "proj_away": 21.3511,
    "margin_low": -14.8205,
    "margin_high": 15.2785,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.3669,
+   "pregame_home_win_chance": 0.349633,
+   "pregame_proj_home": 20.2693,
+   "pregame_proj_away": 24.6362,
+   "pregame_margin_low": -19.4165,
+   "pregame_margin_high": 10.6826
   },
   {
    "week": 6,
@@ -5016,7 +5578,13 @@
    "proj_away": 20.0631,
    "margin_low": -14.6254,
    "margin_high": 15.4736,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.5775,
+   "pregame_home_win_chance": 0.409429,
+   "pregame_proj_home": 20.2751,
+   "pregame_proj_away": 22.8526,
+   "pregame_margin_low": -17.627,
+   "pregame_margin_high": 12.472
   },
   {
    "week": 6,
@@ -5032,7 +5600,13 @@
    "proj_away": 25.3724,
    "margin_low": -22.4583,
    "margin_high": 7.6408,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -9.3025,
+   "pregame_home_win_chance": 0.210465,
+   "pregame_proj_home": 14.8849,
+   "pregame_proj_away": 24.1874,
+   "pregame_margin_low": -24.352,
+   "pregame_margin_high": 5.747
   },
   {
    "week": 6,
@@ -5048,7 +5622,13 @@
    "proj_away": 22.7474,
    "margin_low": -12.8798,
    "margin_high": 17.2193,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -7.0697,
+   "pregame_home_win_chance": 0.268001,
+   "pregame_proj_home": 19.9735,
+   "pregame_proj_away": 27.0432,
+   "pregame_margin_low": -22.1193,
+   "pregame_margin_high": 7.9798
   },
   {
    "week": 6,
@@ -5064,7 +5644,13 @@
    "proj_away": 21.2983,
    "margin_low": -15.691,
    "margin_high": 14.408,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.9099,
+   "pregame_home_win_chance": 0.727518,
+   "pregame_proj_home": 24.5744,
+   "pregame_proj_away": 17.6645,
+   "pregame_margin_low": -8.1397,
+   "pregame_margin_high": 21.9594
   },
   {
    "week": 6,
@@ -5080,7 +5666,13 @@
    "proj_away": 18.8414,
    "margin_low": -10.563,
    "margin_high": 19.5361,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.4391,
+   "pregame_home_win_chance": 0.684177,
+   "pregame_proj_home": 23.8946,
+   "pregame_proj_away": 18.4554,
+   "pregame_margin_low": -9.6104,
+   "pregame_margin_high": 20.4886
   },
   {
    "week": 6,
@@ -5096,7 +5688,13 @@
    "proj_away": 20.318,
    "margin_low": -8.1352,
    "margin_high": 21.9639,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 13.2192,
+   "pregame_home_win_chance": 0.86747,
+   "pregame_proj_home": 29.1735,
+   "pregame_proj_away": 15.9543,
+   "pregame_margin_low": -1.8304,
+   "pregame_margin_high": 28.2687
   },
   {
    "week": 6,
@@ -5112,7 +5710,13 @@
    "proj_away": 23.8759,
    "margin_low": -19.6855,
    "margin_high": 10.4136,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.0011,
+   "pregame_home_win_chance": 0.298822,
+   "pregame_proj_home": 18.9244,
+   "pregame_proj_away": 24.9256,
+   "pregame_margin_low": -21.0507,
+   "pregame_margin_high": 9.0484
   },
   {
    "week": 6,
@@ -5128,7 +5732,13 @@
    "proj_away": 21.7493,
    "margin_low": -16.8551,
    "margin_high": 13.244,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -12.0653,
+   "pregame_home_win_chance": 0.152545,
+   "pregame_proj_home": 16.1979,
+   "pregame_proj_away": 28.2632,
+   "pregame_margin_low": -27.1148,
+   "pregame_margin_high": 2.9843
   },
   {
    "week": 6,
@@ -5144,7 +5754,13 @@
    "proj_away": 21.5623,
    "margin_low": -11.0286,
    "margin_high": 19.0704,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.7886,
+   "pregame_home_win_chance": 0.800786,
+   "pregame_proj_home": 25.3749,
+   "pregame_proj_away": 15.5862,
+   "pregame_margin_low": -5.2609,
+   "pregame_margin_high": 24.8382
   },
   {
    "week": 6,
@@ -5160,7 +5776,13 @@
    "proj_away": 18.7569,
    "margin_low": -12.6797,
    "margin_high": 17.4194,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.0007,
+   "pregame_home_win_chance": 0.361561,
+   "pregame_proj_home": 18.5636,
+   "pregame_proj_away": 22.5642,
+   "pregame_margin_low": -19.0502,
+   "pregame_margin_high": 11.0489
   },
   {
    "week": 6,
@@ -5176,7 +5798,13 @@
    "proj_away": 20.7481,
    "margin_low": -10.186,
    "margin_high": 19.913,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.3516,
+   "pregame_home_win_chance": 0.452122,
+   "pregame_proj_home": 23.1659,
+   "pregame_proj_away": 24.5175,
+   "pregame_margin_low": -16.4012,
+   "pregame_margin_high": 13.6979
   },
   {
    "week": 7,
@@ -5192,7 +5820,13 @@
    "proj_away": 23.4419,
    "margin_low": -18.7403,
    "margin_high": 11.3588,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.3303,
+   "pregame_home_win_chance": 0.511733,
+   "pregame_proj_home": 22.6933,
+   "pregame_proj_away": 22.3631,
+   "pregame_margin_low": -14.7193,
+   "pregame_margin_high": 15.3798
   },
   {
    "week": 7,
@@ -5208,7 +5842,13 @@
    "proj_away": 19.3181,
    "margin_low": -11.8499,
    "margin_high": 18.2492,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 13.6708,
+   "pregame_home_win_chance": 0.874678,
+   "pregame_proj_home": 30.7386,
+   "pregame_proj_away": 17.0678,
+   "pregame_margin_low": -1.3787,
+   "pregame_margin_high": 28.7203
   },
   {
    "week": 7,
@@ -5224,7 +5864,13 @@
    "proj_away": 20.9737,
    "margin_low": -15.5181,
    "margin_high": 14.581,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -12.5302,
+   "pregame_home_win_chance": 0.144197,
+   "pregame_proj_home": 14.2131,
+   "pregame_proj_away": 26.7433,
+   "pregame_margin_low": -27.5798,
+   "pregame_margin_high": 2.5193
   },
   {
    "week": 7,
@@ -5240,7 +5886,13 @@
    "proj_away": 16.1663,
    "margin_low": -2.4568,
    "margin_high": 27.6422,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.1582,
+   "pregame_home_win_chance": 0.786105,
+   "pregame_proj_home": 26.6073,
+   "pregame_proj_away": 17.4491,
+   "pregame_margin_low": -5.8914,
+   "pregame_margin_high": 24.2077
   },
   {
    "week": 7,
@@ -5256,7 +5908,13 @@
    "proj_away": 21.0528,
    "margin_low": -8.6048,
    "margin_high": 21.4943,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.0468,
+   "pregame_home_win_chance": 0.847115,
+   "pregame_proj_home": 28.9684,
+   "pregame_proj_away": 16.9217,
+   "pregame_margin_low": -3.0028,
+   "pregame_margin_high": 27.0963
   },
   {
    "week": 7,
@@ -5272,7 +5930,13 @@
    "proj_away": 19.8773,
    "margin_low": -16.5158,
    "margin_high": 13.5833,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.1875,
+   "pregame_home_win_chance": 0.422895,
+   "pregame_proj_home": 19.0844,
+   "pregame_proj_away": 21.2719,
+   "pregame_margin_low": -17.237,
+   "pregame_margin_high": 12.862
   },
   {
    "week": 7,
@@ -5288,7 +5952,13 @@
    "proj_away": 19.4932,
    "margin_low": -10.2237,
    "margin_high": 19.8754,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.1826,
+   "pregame_home_win_chance": 0.735133,
+   "pregame_proj_home": 24.5445,
+   "pregame_proj_away": 17.3619,
+   "pregame_margin_low": -7.867,
+   "pregame_margin_high": 22.2321
   },
   {
    "week": 7,
@@ -5304,7 +5974,13 @@
    "proj_away": 21.7738,
    "margin_low": -12.5706,
    "margin_high": 17.5285,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.4103,
+   "pregame_home_win_chance": 0.651768,
+   "pregame_proj_home": 25.9084,
+   "pregame_proj_away": 21.498,
+   "pregame_margin_low": -10.6392,
+   "pregame_margin_high": 19.4599
   },
   {
    "week": 7,
@@ -5320,7 +5996,13 @@
    "proj_away": 18.1429,
    "margin_low": -6.7613,
    "margin_high": 23.3377,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.5853,
+   "pregame_home_win_chance": 0.796134,
+   "pregame_proj_home": 26.6295,
+   "pregame_proj_away": 17.0442,
+   "pregame_margin_low": -5.4643,
+   "pregame_margin_high": 24.6348
   },
   {
    "week": 7,
@@ -5336,7 +6018,13 @@
    "proj_away": 19.2202,
    "margin_low": -10.6302,
    "margin_high": 19.4688,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.2667,
+   "pregame_home_win_chance": 0.76403,
+   "pregame_proj_home": 26.0115,
+   "pregame_proj_away": 17.7449,
+   "pregame_margin_low": -6.7829,
+   "pregame_margin_high": 23.3162
   },
   {
    "week": 7,
@@ -5352,7 +6040,13 @@
    "proj_away": 16.4954,
    "margin_low": -3.9901,
    "margin_high": 26.109,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 14.545,
+   "pregame_home_win_chance": 0.887676,
+   "pregame_proj_home": 27.5507,
+   "pregame_proj_away": 13.0057,
+   "pregame_margin_low": -0.5045,
+   "pregame_margin_high": 29.5946
   },
   {
    "week": 7,
@@ -5368,7 +6062,13 @@
    "proj_away": 22.5033,
    "margin_low": -13.8153,
    "margin_high": 16.2837,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.9402,
+   "pregame_home_win_chance": 0.30064,
+   "pregame_proj_home": 19.1581,
+   "pregame_proj_away": 25.0983,
+   "pregame_margin_low": -20.9897,
+   "pregame_margin_high": 9.1093
   },
   {
    "week": 7,
@@ -5384,7 +6084,13 @@
    "proj_away": 17.5561,
    "margin_low": -9.1353,
    "margin_high": 20.9637,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.8711,
+   "pregame_home_win_chance": 0.600621,
+   "pregame_proj_home": 22.1139,
+   "pregame_proj_away": 19.2428,
+   "pregame_margin_low": -12.1785,
+   "pregame_margin_high": 17.9206
   },
   {
    "week": 7,
@@ -5400,7 +6106,13 @@
    "proj_away": 19.2728,
    "margin_low": -11.8068,
    "margin_high": 18.2922,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.615,
+   "pregame_home_win_chance": 0.557132,
+   "pregame_proj_home": 21.1357,
+   "pregame_proj_away": 19.5207,
+   "pregame_margin_low": -13.4345,
+   "pregame_margin_high": 16.6645
   },
   {
    "week": 8,
@@ -5416,7 +6128,13 @@
    "proj_away": 21.6402,
    "margin_low": -14.9464,
    "margin_high": 15.1527,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.8859,
+   "pregame_home_win_chance": 0.666947,
+   "pregame_proj_home": 24.1307,
+   "pregame_proj_away": 19.2448,
+   "pregame_margin_low": -10.1636,
+   "pregame_margin_high": 19.9354
   },
   {
    "week": 8,
@@ -5432,7 +6150,13 @@
    "proj_away": 16.431,
    "margin_low": -3.1992,
    "margin_high": 26.8998,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 22.7635,
+   "pregame_home_win_chance": 0.96214,
+   "pregame_proj_home": 32.3209,
+   "pregame_proj_away": 9.5574,
+   "pregame_margin_low": 7.714,
+   "pregame_margin_high": 37.8131
   },
   {
    "week": 8,
@@ -5448,7 +6172,13 @@
    "proj_away": 24.6126,
    "margin_low": -19.5638,
    "margin_high": 10.5353,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.7369,
+   "pregame_home_win_chance": 0.224134,
+   "pregame_proj_home": 18.5011,
+   "pregame_proj_away": 27.238,
+   "pregame_margin_low": -23.7864,
+   "pregame_margin_high": 6.3126
   },
   {
    "week": 8,
@@ -5464,7 +6194,13 @@
    "proj_away": 16.7301,
    "margin_low": -2.1261,
    "margin_high": 27.973,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.0146,
+   "pregame_home_win_chance": 0.757509,
+   "pregame_proj_home": 23.1723,
+   "pregame_proj_away": 15.1577,
+   "pregame_margin_low": -7.035,
+   "pregame_margin_high": 23.0641
   },
   {
    "week": 8,
@@ -5480,7 +6216,13 @@
    "proj_away": 25.1749,
    "margin_low": -17.1585,
    "margin_high": 12.9405,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -10.8741,
+   "pregame_home_win_chance": 0.17574,
+   "pregame_proj_home": 18.4407,
+   "pregame_proj_away": 29.3148,
+   "pregame_margin_low": -25.9236,
+   "pregame_margin_high": 4.1755
   },
   {
    "week": 8,
@@ -5496,7 +6238,13 @@
    "proj_away": 22.8459,
    "margin_low": -19.8816,
    "margin_high": 10.2174,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.2515,
+   "pregame_home_win_chance": 0.321613,
+   "pregame_proj_home": 18.2057,
+   "pregame_proj_away": 23.4572,
+   "pregame_margin_low": -20.301,
+   "pregame_margin_high": 9.798
   },
   {
    "week": 8,
@@ -5512,7 +6260,13 @@
    "proj_away": 23.2792,
    "margin_low": -20.4148,
    "margin_high": 9.6842,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.473,
+   "pregame_home_win_chance": 0.552149,
+   "pregame_proj_home": 20.7651,
+   "pregame_proj_away": 19.2921,
+   "pregame_margin_low": -13.5765,
+   "pregame_margin_high": 16.5226
   },
   {
    "week": 8,
@@ -5528,7 +6282,13 @@
    "proj_away": 18.1348,
    "margin_low": -9.6499,
    "margin_high": 20.4492,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.1062,
+   "pregame_home_win_chance": 0.608608,
+   "pregame_proj_home": 20.9681,
+   "pregame_proj_away": 17.8619,
+   "pregame_margin_low": -11.9434,
+   "pregame_margin_high": 18.1557
   },
   {
    "week": 8,
@@ -5544,7 +6304,13 @@
    "proj_away": 26.4471,
    "margin_low": -25.8459,
    "margin_high": 4.2532,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.1793,
+   "pregame_home_win_chance": 0.49363,
+   "pregame_proj_home": 20.2654,
+   "pregame_proj_away": 20.4447,
+   "pregame_margin_low": -15.2288,
+   "pregame_margin_high": 14.8702
   },
   {
    "week": 8,
@@ -5560,7 +6326,13 @@
    "proj_away": 21.2626,
    "margin_low": -10.1911,
    "margin_high": 19.908,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.889,
+   "pregame_home_win_chance": 0.468454,
+   "pregame_proj_home": 21.8128,
+   "pregame_proj_away": 22.7018,
+   "pregame_margin_low": -15.9386,
+   "pregame_margin_high": 14.1605
   },
   {
    "week": 8,
@@ -5576,7 +6348,13 @@
    "proj_away": 18.9265,
    "margin_low": -9.138,
    "margin_high": 20.9611,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.5845,
+   "pregame_home_win_chance": 0.556061,
+   "pregame_proj_home": 25.4268,
+   "pregame_proj_away": 23.8424,
+   "pregame_margin_low": -13.4651,
+   "pregame_margin_high": 16.634
   },
   {
    "week": 8,
@@ -5592,7 +6370,13 @@
    "proj_away": 20.4371,
    "margin_low": -16.0877,
    "margin_high": 14.0114,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.387,
+   "pregame_home_win_chance": 0.58401,
+   "pregame_proj_home": 22.654,
+   "pregame_proj_away": 20.2669,
+   "pregame_margin_low": -12.6625,
+   "pregame_margin_high": 17.4366
   },
   {
    "week": 8,
@@ -5608,7 +6392,13 @@
    "proj_away": 18.0048,
    "margin_low": -7.6041,
    "margin_high": 22.495,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.6504,
+   "pregame_home_win_chance": 0.857899,
+   "pregame_proj_home": 27.3757,
+   "pregame_proj_away": 14.7253,
+   "pregame_margin_low": -2.3991,
+   "pregame_margin_high": 27.7
   },
   {
    "week": 8,
@@ -5624,7 +6414,13 @@
    "proj_away": 21.832,
    "margin_low": -13.6157,
    "margin_high": 16.4833,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.3314,
+   "pregame_home_win_chance": 0.582088,
+   "pregame_proj_home": 23.8079,
+   "pregame_proj_away": 21.4766,
+   "pregame_margin_low": -12.7182,
+   "pregame_margin_high": 17.3809
   },
   {
    "week": 8,
@@ -5640,7 +6436,13 @@
    "proj_away": 20.1985,
    "margin_low": -15.3011,
    "margin_high": 14.7979,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.5827,
+   "pregame_home_win_chance": 0.479306,
+   "pregame_proj_home": 21.01,
+   "pregame_proj_away": 21.5927,
+   "pregame_margin_low": -15.6323,
+   "pregame_margin_high": 14.4668
   },
   {
    "week": 9,
@@ -5656,7 +6458,13 @@
    "proj_away": 23.8348,
    "margin_low": -16.3593,
    "margin_high": 13.7397,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.6627,
+   "pregame_home_win_chance": 0.558805,
+   "pregame_proj_home": 24.8183,
+   "pregame_proj_away": 23.1556,
+   "pregame_margin_low": -13.3868,
+   "pregame_margin_high": 16.7122
   },
   {
    "week": 9,
@@ -5672,7 +6480,13 @@
    "proj_away": 22.8083,
    "margin_low": -15.9969,
    "margin_high": 14.1022,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.0877,
+   "pregame_home_win_chance": 0.573641,
+   "pregame_proj_home": 25.1353,
+   "pregame_proj_away": 23.0476,
+   "pregame_margin_low": -12.9618,
+   "pregame_margin_high": 17.1373
   },
   {
    "week": 9,
@@ -5688,7 +6502,13 @@
    "proj_away": 27.3309,
    "margin_low": -23.6372,
    "margin_high": 6.4618,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.8948,
+   "pregame_home_win_chance": 0.33277,
+   "pregame_proj_home": 19.5604,
+   "pregame_proj_away": 24.4552,
+   "pregame_margin_low": -19.9444,
+   "pregame_margin_high": 10.1547
   },
   {
    "week": 9,
@@ -5704,7 +6524,13 @@
    "proj_away": 16.646,
    "margin_low": -4.1306,
    "margin_high": 25.9685,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 10.5403,
+   "pregame_home_win_chance": 0.817282,
+   "pregame_proj_home": 27.0279,
+   "pregame_proj_away": 16.4876,
+   "pregame_margin_low": -4.5092,
+   "pregame_margin_high": 25.5898
   },
   {
    "week": 9,
@@ -5720,7 +6546,13 @@
    "proj_away": 21.8953,
    "margin_low": -11.9088,
    "margin_high": 18.1902,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.7969,
+   "pregame_home_win_chance": 0.401912,
+   "pregame_proj_home": 21.9033,
+   "pregame_proj_away": 24.7001,
+   "pregame_margin_low": -17.8464,
+   "pregame_margin_high": 12.2527
   },
   {
    "week": 9,
@@ -5736,7 +6568,13 @@
    "proj_away": 29.7057,
    "margin_low": -29.6964,
    "margin_high": 0.4027,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -19.8486,
+   "pregame_home_win_chance": 0.0562,
+   "pregame_proj_home": 11.3115,
+   "pregame_proj_away": 31.1601,
+   "pregame_margin_low": -34.8982,
+   "pregame_margin_high": -4.7991
   },
   {
    "week": 9,
@@ -5752,7 +6590,13 @@
    "proj_away": 19.3614,
    "margin_low": -8.1269,
    "margin_high": 21.9722,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.3893,
+   "pregame_home_win_chance": 0.682645,
+   "pregame_proj_home": 24.86,
+   "pregame_proj_away": 19.4707,
+   "pregame_margin_low": -9.6602,
+   "pregame_margin_high": 20.4388
   },
   {
    "week": 9,
@@ -5768,7 +6612,13 @@
    "proj_away": 15.396,
    "margin_low": -1.2674,
    "margin_high": 28.8317,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 13.5693,
+   "pregame_home_win_chance": 0.873087,
+   "pregame_proj_home": 29.8613,
+   "pregame_proj_away": 16.292,
+   "pregame_margin_low": -1.4803,
+   "pregame_margin_high": 28.6188
   },
   {
    "week": 9,
@@ -5784,7 +6634,13 @@
    "proj_away": 15.3456,
    "margin_low": -3.4287,
    "margin_high": 26.6704,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.3876,
+   "pregame_home_win_chance": 0.767115,
+   "pregame_proj_home": 24.5349,
+   "pregame_proj_away": 16.1473,
+   "pregame_margin_low": -6.6619,
+   "pregame_margin_high": 23.4372
   },
   {
    "week": 9,
@@ -5800,7 +6656,13 @@
    "proj_away": 20.0042,
    "margin_low": -14.8172,
    "margin_high": 15.2818,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.0217,
+   "pregame_home_win_chance": 0.536238,
+   "pregame_proj_home": 24.2686,
+   "pregame_proj_away": 23.247,
+   "pregame_margin_low": -14.0279,
+   "pregame_margin_high": 16.0712
   },
   {
    "week": 9,
@@ -5816,7 +6678,13 @@
    "proj_away": 24.2923,
    "margin_low": -21.9934,
    "margin_high": 8.1057,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -9.8144,
+   "pregame_home_win_chance": 0.19863,
+   "pregame_proj_home": 16.5441,
+   "pregame_proj_away": 26.3585,
+   "pregame_margin_low": -24.864,
+   "pregame_margin_high": 5.2351
   },
   {
    "week": 9,
@@ -5832,7 +6700,13 @@
    "proj_away": 17.162,
    "margin_low": -8.6089,
    "margin_high": 21.4901,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.9298,
+   "pregame_home_win_chance": 0.728079,
+   "pregame_proj_home": 23.5336,
+   "pregame_proj_away": 16.6039,
+   "pregame_margin_low": -8.1198,
+   "pregame_margin_high": 21.9793
   },
   {
    "week": 9,
@@ -5848,7 +6722,13 @@
    "proj_away": 20.6384,
    "margin_low": -11.919,
    "margin_high": 18.1801,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.1148,
+   "pregame_home_win_chance": 0.460472,
+   "pregame_proj_home": 20.8201,
+   "pregame_proj_away": 21.9349,
+   "pregame_margin_low": -16.1643,
+   "pregame_margin_high": 13.9347
   },
   {
    "week": 10,
@@ -5864,7 +6744,13 @@
    "proj_away": 17.7966,
    "margin_low": -3.3114,
    "margin_high": 26.7877,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 13.2288,
+   "pregame_home_win_chance": 0.867628,
+   "pregame_proj_home": 28.3007,
+   "pregame_proj_away": 15.0719,
+   "pregame_margin_low": -1.8207,
+   "pregame_margin_high": 28.2783
   },
   {
    "week": 10,
@@ -5880,7 +6766,13 @@
    "proj_away": 19.9665,
    "margin_low": -11.599,
    "margin_high": 18.5001,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.0947,
+   "pregame_home_win_chance": 0.461183,
+   "pregame_proj_home": 22.49,
+   "pregame_proj_away": 23.5847,
+   "pregame_margin_low": -16.1442,
+   "pregame_margin_high": 13.9548
   },
   {
    "week": 10,
@@ -5896,7 +6788,13 @@
    "proj_away": 26.388,
    "margin_low": -19.7514,
    "margin_high": 10.3477,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.848,
+   "pregame_home_win_chance": 0.665748,
+   "pregame_proj_home": 25.9557,
+   "pregame_proj_away": 21.1077,
+   "pregame_margin_low": -10.2016,
+   "pregame_margin_high": 19.8975
   },
   {
    "week": 10,
@@ -5912,7 +6810,13 @@
    "proj_away": 24.7478,
    "margin_low": -19.3044,
    "margin_high": 10.7947,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.539,
+   "pregame_home_win_chance": 0.312762,
+   "pregame_proj_home": 17.3807,
+   "pregame_proj_away": 22.9198,
+   "pregame_margin_low": -20.5886,
+   "pregame_margin_high": 9.5105
   },
   {
    "week": 10,
@@ -5928,7 +6832,13 @@
    "proj_away": 19.0748,
    "margin_low": -6.3156,
    "margin_high": 23.7835,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.3597,
+   "pregame_home_win_chance": 0.790881,
+   "pregame_proj_home": 27.9198,
+   "pregame_proj_away": 18.5602,
+   "pregame_margin_low": -5.6899,
+   "pregame_margin_high": 24.4092
   },
   {
    "week": 10,
@@ -5944,7 +6854,13 @@
    "proj_away": 20.7387,
    "margin_low": -12.9528,
    "margin_high": 17.1463,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.0365,
+   "pregame_home_win_chance": 0.498704,
+   "pregame_proj_home": 21.8436,
+   "pregame_proj_away": 21.88,
+   "pregame_margin_low": -15.086,
+   "pregame_margin_high": 15.0131
   },
   {
    "week": 10,
@@ -5960,7 +6876,13 @@
    "proj_away": 19.4621,
    "margin_low": -9.2329,
    "margin_high": 20.8662,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.4394,
+   "pregame_home_win_chance": 0.619829,
+   "pregame_proj_home": 22.7674,
+   "pregame_proj_away": 19.328,
+   "pregame_margin_low": -11.6102,
+   "pregame_margin_high": 18.4889
   },
   {
    "week": 10,
@@ -5976,7 +6898,13 @@
    "proj_away": 20.2742,
    "margin_low": -10.6429,
    "margin_high": 19.4562,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.7629,
+   "pregame_home_win_chance": 0.663054,
+   "pregame_proj_home": 26.0878,
+   "pregame_proj_away": 21.3249,
+   "pregame_margin_low": -10.2866,
+   "pregame_margin_high": 19.8125
   },
   {
    "week": 10,
@@ -5992,7 +6920,13 @@
    "proj_away": 16.1778,
    "margin_low": -4.6645,
    "margin_high": 25.4346,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.1331,
+   "pregame_home_win_chance": 0.848698,
+   "pregame_proj_home": 26.5862,
+   "pregame_proj_away": 14.453,
+   "pregame_margin_low": -2.9164,
+   "pregame_margin_high": 27.1827
   },
   {
    "week": 10,
@@ -6008,7 +6942,13 @@
    "proj_away": 17.5532,
    "margin_low": -6.4627,
    "margin_high": 23.6363,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 14.231,
+   "pregame_home_win_chance": 0.883148,
+   "pregame_proj_home": 28.3555,
+   "pregame_proj_away": 14.1245,
+   "pregame_margin_low": -0.8185,
+   "pregame_margin_high": 29.2806
   },
   {
    "week": 10,
@@ -6024,7 +6964,13 @@
    "proj_away": 19.0465,
    "margin_low": -13.1636,
    "margin_high": 16.9355,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.3449,
+   "pregame_home_win_chance": 0.417445,
+   "pregame_proj_home": 20.864,
+   "pregame_proj_away": 23.2089,
+   "pregame_margin_low": -17.3945,
+   "pregame_margin_high": 12.7046
   },
   {
    "week": 10,
@@ -6040,7 +6986,13 @@
    "proj_away": 16.6083,
    "margin_low": -4.1683,
    "margin_high": 25.9308,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.7827,
+   "pregame_home_win_chance": 0.72392,
+   "pregame_proj_home": 25.5151,
+   "pregame_proj_away": 18.7324,
+   "pregame_margin_low": -8.2669,
+   "pregame_margin_high": 21.8322
   },
   {
    "week": 10,
@@ -6056,7 +7008,13 @@
    "proj_away": 20.8266,
    "margin_low": -13.1525,
    "margin_high": 16.9465,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.2442,
+   "pregame_home_win_chance": 0.491324,
+   "pregame_proj_home": 21.7229,
+   "pregame_proj_away": 21.9671,
+   "pregame_margin_low": -15.2937,
+   "pregame_margin_high": 14.8053
   },
   {
    "week": 10,
@@ -6072,7 +7030,13 @@
    "proj_away": 18.6157,
    "margin_low": -12.9213,
    "margin_high": 17.1778,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7182,
+   "pregame_home_win_chance": 0.560748,
+   "pregame_proj_home": 19.7954,
+   "pregame_proj_away": 18.0772,
+   "pregame_margin_low": -13.3313,
+   "pregame_margin_high": 16.7677
   },
   {
    "week": 11,
@@ -6088,7 +7052,13 @@
    "proj_away": 28.6622,
    "margin_low": -27.9426,
    "margin_high": 2.1564,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.4032,
+   "pregame_home_win_chance": 0.381385,
+   "pregame_proj_home": 20.4518,
+   "pregame_proj_away": 23.855,
+   "pregame_margin_low": -18.4527,
+   "pregame_margin_high": 11.6464
   },
   {
    "week": 11,
@@ -6104,7 +7074,13 @@
    "proj_away": 20.0079,
    "margin_low": -10.0627,
    "margin_high": 20.0364,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.1305,
+   "pregame_home_win_chance": 0.495362,
+   "pregame_proj_home": 23.0838,
+   "pregame_proj_away": 23.2143,
+   "pregame_margin_low": -15.1801,
+   "pregame_margin_high": 14.919
   },
   {
    "week": 11,
@@ -6120,7 +7096,13 @@
    "proj_away": 17.6426,
    "margin_low": -8.9988,
    "margin_high": 21.1003,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.9163,
+   "pregame_home_win_chance": 0.862443,
+   "pregame_proj_home": 29.2256,
+   "pregame_proj_away": 16.3093,
+   "pregame_margin_low": -2.1332,
+   "pregame_margin_high": 27.9658
   },
   {
    "week": 11,
@@ -6136,7 +7118,13 @@
    "proj_away": 18.6412,
    "margin_low": -7.596,
    "margin_high": 22.5031,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 11.4234,
+   "pregame_home_win_chance": 0.835284,
+   "pregame_proj_home": 28.9107,
+   "pregame_proj_away": 17.4873,
+   "pregame_margin_low": -3.6262,
+   "pregame_margin_high": 26.4729
   },
   {
    "week": 11,
@@ -6152,7 +7140,13 @@
    "proj_away": 20.7755,
    "margin_low": -13.5265,
    "margin_high": 16.5725,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.0317,
+   "pregame_home_win_chance": 0.702089,
+   "pregame_proj_home": 23.3879,
+   "pregame_proj_away": 17.3562,
+   "pregame_margin_low": -9.0178,
+   "pregame_margin_high": 21.0813
   },
   {
    "week": 11,
@@ -6168,7 +7162,13 @@
    "proj_away": 19.1529,
    "margin_low": -11.7337,
    "margin_high": 18.3653,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.7566,
+   "pregame_home_win_chance": 0.562093,
+   "pregame_proj_home": 20.9589,
+   "pregame_proj_away": 19.2023,
+   "pregame_margin_low": -13.2929,
+   "pregame_margin_high": 16.8062
   },
   {
    "week": 11,
@@ -6184,7 +7184,13 @@
    "proj_away": 24.4317,
    "margin_low": -22.8864,
    "margin_high": 7.2127,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.3189,
+   "pregame_home_win_chance": 0.234635,
+   "pregame_proj_home": 16.3978,
+   "pregame_proj_away": 24.7167,
+   "pregame_margin_low": -23.3684,
+   "pregame_margin_high": 6.7307
   },
   {
    "week": 11,
@@ -6200,7 +7206,13 @@
    "proj_away": 28.5532,
    "margin_low": -27.2248,
    "margin_high": 2.8743,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -10.8994,
+   "pregame_home_win_chance": 0.175219,
+   "pregame_proj_home": 15.418,
+   "pregame_proj_away": 26.3174,
+   "pregame_margin_low": -25.949,
+   "pregame_margin_high": 4.1501
   },
   {
    "week": 11,
@@ -6216,7 +7228,13 @@
    "proj_away": 27.6269,
    "margin_low": -22.9197,
    "margin_high": 7.1794,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -10.5706,
+   "pregame_home_win_chance": 0.182075,
+   "pregame_proj_home": 18.8367,
+   "pregame_proj_away": 29.4074,
+   "pregame_margin_low": -25.6202,
+   "pregame_margin_high": 4.4789
   },
   {
    "week": 11,
@@ -6232,7 +7250,13 @@
    "proj_away": 26.0012,
    "margin_low": -19.1922,
    "margin_high": 10.9068,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.4916,
+   "pregame_home_win_chance": 0.552802,
+   "pregame_proj_home": 22.714,
+   "pregame_proj_away": 21.2224,
+   "pregame_margin_low": -13.5579,
+   "pregame_margin_high": 16.5412
   },
   {
    "week": 11,
@@ -6248,7 +7272,13 @@
    "proj_away": 17.6221,
    "margin_low": -10.4577,
    "margin_high": 19.6414,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.6825,
+   "pregame_home_win_chance": 0.5595,
+   "pregame_proj_home": 21.8287,
+   "pregame_proj_away": 20.1462,
+   "pregame_margin_low": -13.367,
+   "pregame_margin_high": 16.7321
   },
   {
    "week": 11,
@@ -6264,7 +7294,13 @@
    "proj_away": 16.9676,
    "margin_low": -8.125,
    "margin_high": 21.9741,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.6022,
+   "pregame_home_win_chance": 0.718764,
+   "pregame_proj_home": 24.8652,
+   "pregame_proj_away": 18.263,
+   "pregame_margin_low": -8.4473,
+   "pregame_margin_high": 21.6517
   },
   {
    "week": 11,
@@ -6280,7 +7316,13 @@
    "proj_away": 22.9694,
    "margin_low": -14.1762,
    "margin_high": 15.9229,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.1676,
+   "pregame_home_win_chance": 0.706111,
+   "pregame_proj_home": 26.0328,
+   "pregame_proj_away": 19.8652,
+   "pregame_margin_low": -8.8819,
+   "pregame_margin_high": 21.2171
   },
   {
    "week": 11,
@@ -6296,7 +7338,13 @@
    "proj_away": 23.5713,
    "margin_low": -19.5764,
    "margin_high": 10.5226,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.8071,
+   "pregame_home_win_chance": 0.304632,
+   "pregame_proj_home": 18.4493,
+   "pregame_proj_away": 24.2564,
+   "pregame_margin_low": -20.8566,
+   "pregame_margin_high": 9.2424
   },
   {
    "week": 12,
@@ -6312,7 +7360,13 @@
    "proj_away": 23.793,
    "margin_low": -17.0614,
    "margin_high": 13.0376,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.598,
+   "pregame_home_win_chance": 0.556537,
+   "pregame_proj_home": 24.4238,
+   "pregame_proj_away": 22.8258,
+   "pregame_margin_low": -13.4515,
+   "pregame_margin_high": 16.6476
   },
   {
    "week": 12,
@@ -6328,7 +7382,13 @@
    "proj_away": 18.7238,
    "margin_low": -11.6135,
    "margin_high": 18.4856,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.579,
+   "pregame_home_win_chance": 0.409378,
+   "pregame_proj_home": 18.1365,
+   "pregame_proj_away": 20.7154,
+   "pregame_margin_low": -17.6285,
+   "pregame_margin_high": 12.4706
   },
   {
    "week": 12,
@@ -6344,7 +7404,13 @@
    "proj_away": 19.7982,
    "margin_low": -12.6671,
    "margin_high": 17.432,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.3456,
+   "pregame_home_win_chance": 0.487722,
+   "pregame_proj_home": 21.6373,
+   "pregame_proj_away": 21.9829,
+   "pregame_margin_low": -15.3952,
+   "pregame_margin_high": 14.7039
   },
   {
    "week": 12,
@@ -6360,7 +7426,13 @@
    "proj_away": 18.8867,
    "margin_low": -7.7013,
    "margin_high": 22.3978,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.4487,
+   "pregame_home_win_chance": 0.768662,
+   "pregame_proj_home": 25.2309,
+   "pregame_proj_away": 16.7822,
+   "pregame_margin_low": -6.6008,
+   "pregame_margin_high": 23.4982
   },
   {
    "week": 12,
@@ -6376,7 +7448,13 @@
    "proj_away": 27.4773,
    "margin_low": -21.9823,
    "margin_high": 8.1168,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -10.5783,
+   "pregame_home_win_chance": 0.181912,
+   "pregame_proj_home": 18.5745,
+   "pregame_proj_away": 29.1528,
+   "pregame_margin_low": -25.6278,
+   "pregame_margin_high": 4.4712
   },
   {
    "week": 12,
@@ -6392,7 +7470,13 @@
    "proj_away": 23.7308,
    "margin_low": -21.5562,
    "margin_high": 8.5429,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.7122,
+   "pregame_home_win_chance": 0.525284,
+   "pregame_proj_home": 20.3297,
+   "pregame_proj_away": 19.6175,
+   "pregame_margin_low": -14.3373,
+   "pregame_margin_high": 15.7617
   },
   {
    "week": 12,
@@ -6408,7 +7492,13 @@
    "proj_away": 20.4391,
    "margin_low": -13.8061,
    "margin_high": 16.293,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.5994,
+   "pregame_home_win_chance": 0.408675,
+   "pregame_proj_home": 20.439,
+   "pregame_proj_away": 23.0384,
+   "pregame_margin_low": -17.649,
+   "pregame_margin_high": 12.4501
   },
   {
    "week": 12,
@@ -6424,7 +7514,13 @@
    "proj_away": 15.2454,
    "margin_low": -0.1568,
    "margin_high": 29.9423,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 14.8527,
+   "pregame_home_win_chance": 0.891962,
+   "pregame_proj_home": 30.2364,
+   "pregame_proj_away": 15.3838,
+   "pregame_margin_low": -0.1969,
+   "pregame_margin_high": 29.9022
   },
   {
    "week": 12,
@@ -6440,7 +7536,13 @@
    "proj_away": 14.4974,
    "margin_low": 0.1249,
    "margin_high": 30.2239,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 17.8,
+   "pregame_home_win_chance": 0.926207,
+   "pregame_proj_home": 30.8887,
+   "pregame_proj_away": 13.0887,
+   "pregame_margin_low": 2.7505,
+   "pregame_margin_high": 32.8495
   },
   {
    "week": 12,
@@ -6456,7 +7558,13 @@
    "proj_away": 23.9026,
    "margin_low": -17.3282,
    "margin_high": 12.7708,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.8776,
+   "pregame_home_win_chance": 0.365608,
+   "pregame_proj_home": 19.3356,
+   "pregame_proj_away": 23.2132,
+   "pregame_margin_low": -18.9271,
+   "pregame_margin_high": 11.1719
   },
   {
    "week": 12,
@@ -6472,7 +7580,13 @@
    "proj_away": 16.7243,
    "margin_low": -6.8051,
    "margin_high": 23.294,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.6304,
+   "pregame_home_win_chance": 0.74734,
+   "pregame_proj_home": 25.3043,
+   "pregame_proj_away": 17.6738,
+   "pregame_margin_low": -7.4191,
+   "pregame_margin_high": 22.68
   },
   {
    "week": 12,
@@ -6488,7 +7602,13 @@
    "proj_away": 17.7369,
    "margin_low": -4.9969,
    "margin_high": 25.1022,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 10.7936,
+   "pregame_home_win_chance": 0.822596,
+   "pregame_proj_home": 26.8084,
+   "pregame_proj_away": 16.0149,
+   "pregame_margin_low": -4.256,
+   "pregame_margin_high": 25.8431
   },
   {
    "week": 12,
@@ -6504,7 +7624,13 @@
    "proj_away": 21.7003,
    "margin_low": -11.5189,
    "margin_high": 18.5802,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.1792,
+   "pregame_home_win_chance": 0.706453,
+   "pregame_proj_home": 26.5604,
+   "pregame_proj_away": 20.3812,
+   "pregame_margin_low": -8.8704,
+   "pregame_margin_high": 21.2287
   },
   {
    "week": 12,
@@ -6520,7 +7646,13 @@
    "proj_away": 16.2573,
    "margin_low": -5.8471,
    "margin_high": 24.2519,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.7296,
+   "pregame_home_win_chance": 0.72241,
+   "pregame_proj_home": 25.2991,
+   "pregame_proj_away": 18.5695,
+   "pregame_margin_low": -8.3199,
+   "pregame_margin_high": 21.7791
   },
   {
    "week": 12,
@@ -6536,7 +7668,13 @@
    "proj_away": 25.6801,
    "margin_low": -23.7226,
    "margin_high": 6.3765,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.6715,
+   "pregame_home_win_chance": 0.37243,
+   "pregame_proj_home": 19.7244,
+   "pregame_proj_away": 23.3958,
+   "pregame_margin_low": -18.721,
+   "pregame_margin_high": 11.3781
   },
   {
    "week": 12,
@@ -6552,7 +7690,13 @@
    "proj_away": 18.4394,
    "margin_low": -9.902,
    "margin_high": 20.1971,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.8164,
+   "pregame_home_win_chance": 0.724876,
+   "pregame_proj_home": 25.3976,
+   "pregame_proj_away": 18.5813,
+   "pregame_margin_low": -8.2332,
+   "pregame_margin_high": 21.8659
   },
   {
    "week": 13,
@@ -6568,7 +7712,13 @@
    "proj_away": 22.2618,
    "margin_low": -17.7848,
    "margin_high": 12.3143,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.9928,
+   "pregame_home_win_chance": 0.429664,
+   "pregame_proj_home": 21.0769,
+   "pregame_proj_away": 23.0697,
+   "pregame_margin_low": -17.0423,
+   "pregame_margin_high": 13.0568
   },
   {
    "week": 13,
@@ -6584,7 +7734,13 @@
    "proj_away": 15.9202,
    "margin_low": -7.3396,
    "margin_high": 22.7595,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 10.3722,
+   "pregame_home_win_chance": 0.813688,
+   "pregame_proj_home": 25.2472,
+   "pregame_proj_away": 14.875,
+   "pregame_margin_low": -4.6773,
+   "pregame_margin_high": 25.4217
   },
   {
    "week": 13,
@@ -6600,7 +7756,13 @@
    "proj_away": 24.0513,
    "margin_low": -18.3876,
    "margin_high": 11.7115,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.5781,
+   "pregame_home_win_chance": 0.479471,
+   "pregame_proj_home": 21.9714,
+   "pregame_proj_away": 22.5495,
+   "pregame_margin_low": -15.6276,
+   "pregame_margin_high": 14.4714
   },
   {
    "week": 13,
@@ -6616,7 +7778,13 @@
    "proj_away": 23.7091,
    "margin_low": -14.8281,
    "margin_high": 15.271,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.3567,
+   "pregame_home_win_chance": 0.512672,
+   "pregame_proj_home": 24.1061,
+   "pregame_proj_away": 23.7494,
+   "pregame_margin_low": -14.6928,
+   "pregame_margin_high": 15.4063
   },
   {
    "week": 13,
@@ -6632,7 +7800,13 @@
    "proj_away": 15.5803,
    "margin_low": -1.5646,
    "margin_high": 28.5344,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 11.6672,
+   "pregame_home_win_chance": 0.839997,
+   "pregame_proj_home": 26.0433,
+   "pregame_proj_away": 14.3761,
+   "pregame_margin_low": -3.3823,
+   "pregame_margin_high": 26.7168
   },
   {
    "week": 13,
@@ -6648,7 +7822,13 @@
    "proj_away": 23.8047,
    "margin_low": -15.4181,
    "margin_high": 14.6809,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.1741,
+   "pregame_home_win_chance": 0.423361,
+   "pregame_proj_home": 22.4407,
+   "pregame_proj_away": 24.6148,
+   "pregame_margin_low": -17.2236,
+   "pregame_margin_high": 12.8755
   },
   {
    "week": 13,
@@ -6664,7 +7844,13 @@
    "proj_away": 25.9372,
    "margin_low": -24.0404,
    "margin_high": 6.0586,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.5961,
+   "pregame_home_win_chance": 0.227633,
+   "pregame_proj_home": 17.9297,
+   "pregame_proj_away": 26.5258,
+   "pregame_margin_low": -23.6456,
+   "pregame_margin_high": 6.4534
   },
   {
    "week": 13,
@@ -6680,7 +7866,13 @@
    "proj_away": 22.5082,
    "margin_low": -16.0394,
    "margin_high": 14.0596,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.6456,
+   "pregame_home_win_chance": 0.441794,
+   "pregame_proj_home": 21.7383,
+   "pregame_proj_away": 23.3839,
+   "pregame_margin_low": -16.6952,
+   "pregame_margin_high": 13.4039
   },
   {
    "week": 13,
@@ -6696,7 +7888,13 @@
    "proj_away": 23.4123,
    "margin_low": -15.7285,
    "margin_high": 14.3705,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.4801,
+   "pregame_home_win_chance": 0.552398,
+   "pregame_proj_home": 24.5012,
+   "pregame_proj_away": 23.021,
+   "pregame_margin_low": -13.5694,
+   "pregame_margin_high": 16.5297
   },
   {
    "week": 13,
@@ -6712,7 +7910,13 @@
    "proj_away": 21.3165,
    "margin_low": -14.5132,
    "margin_high": 15.5858,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.0421,
+   "pregame_home_win_chance": 0.427945,
+   "pregame_proj_home": 20.5734,
+   "pregame_proj_away": 22.6155,
+   "pregame_margin_low": -17.0917,
+   "pregame_margin_high": 13.0074
   },
   {
    "week": 13,
@@ -6728,7 +7932,13 @@
    "proj_away": 24.0634,
    "margin_low": -19.1784,
    "margin_high": 10.9207,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.64,
+   "pregame_home_win_chance": 0.44199,
+   "pregame_proj_home": 20.8411,
+   "pregame_proj_away": 22.4811,
+   "pregame_margin_low": -16.6896,
+   "pregame_margin_high": 13.4095
   },
   {
    "week": 13,
@@ -6744,7 +7954,13 @@
    "proj_away": 20.449,
    "margin_low": -14.2782,
    "margin_high": 15.8208,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.122,
+   "pregame_home_win_chance": 0.504334,
+   "pregame_proj_home": 20.6676,
+   "pregame_proj_away": 20.5456,
+   "pregame_margin_low": -14.9275,
+   "pregame_margin_high": 15.1715
   },
   {
    "week": 13,
@@ -6760,7 +7976,13 @@
    "proj_away": 15.9674,
    "margin_low": -3.458,
    "margin_high": 26.6411,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.8121,
+   "pregame_home_win_chance": 0.752183,
+   "pregame_proj_home": 25.3005,
+   "pregame_proj_away": 17.4884,
+   "pregame_margin_low": -7.2375,
+   "pregame_margin_high": 22.8616
   },
   {
    "week": 13,
@@ -6776,7 +7998,13 @@
    "proj_away": 19.0735,
    "margin_low": -8.5987,
    "margin_high": 21.5004,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.9099,
+   "pregame_home_win_chance": 0.532287,
+   "pregame_proj_home": 22.2994,
+   "pregame_proj_away": 21.3895,
+   "pregame_margin_low": -14.1396,
+   "pregame_margin_high": 15.9595
   },
   {
    "week": 13,
@@ -6792,7 +8020,13 @@
    "proj_away": 19.5453,
    "margin_low": -13.7566,
    "margin_high": 16.3425,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.9408,
+   "pregame_home_win_chance": 0.636473,
+   "pregame_proj_home": 22.6145,
+   "pregame_proj_away": 18.6737,
+   "pregame_margin_low": -11.1087,
+   "pregame_margin_high": 18.9903
   },
   {
    "week": 14,
@@ -6808,7 +8042,13 @@
    "proj_away": 24.7053,
    "margin_low": -20.4098,
    "margin_high": 9.6892,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.3331,
+   "pregame_home_win_chance": 0.319088,
+   "pregame_proj_home": 19.3819,
+   "pregame_proj_away": 24.7149,
+   "pregame_margin_low": -20.3826,
+   "pregame_margin_high": 9.7164
   },
   {
    "week": 14,
@@ -6824,7 +8064,13 @@
    "proj_away": 15.5716,
    "margin_low": -4.552,
    "margin_high": 25.5471,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.368,
+   "pregame_home_win_chance": 0.740233,
+   "pregame_proj_home": 25.0605,
+   "pregame_proj_away": 17.6925,
+   "pregame_margin_low": -7.6815,
+   "pregame_margin_high": 22.4175
   },
   {
    "week": 14,
@@ -6840,7 +8086,13 @@
    "proj_away": 18.3215,
    "margin_low": -6.9816,
    "margin_high": 23.1175,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.8346,
+   "pregame_home_win_chance": 0.77827,
+   "pregame_proj_home": 27.9813,
+   "pregame_proj_away": 19.1467,
+   "pregame_margin_low": -6.215,
+   "pregame_margin_high": 23.8841
   },
   {
    "week": 14,
@@ -6856,7 +8108,13 @@
    "proj_away": 14.2612,
    "margin_low": 0.9069,
    "margin_high": 31.006,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 20.4625,
+   "pregame_home_win_chance": 0.948252,
+   "pregame_proj_home": 31.5609,
+   "pregame_proj_away": 11.0984,
+   "pregame_margin_low": 5.413,
+   "pregame_margin_high": 35.512
   },
   {
    "week": 14,
@@ -6872,7 +8130,13 @@
    "proj_away": 27.446,
    "margin_low": -25.6294,
    "margin_high": 4.4696,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.9545,
+   "pregame_home_win_chance": 0.218803,
+   "pregame_proj_home": 16.4774,
+   "pregame_proj_away": 25.4319,
+   "pregame_margin_low": -24.004,
+   "pregame_margin_high": 6.0951
   },
   {
    "week": 14,
@@ -6888,7 +8152,13 @@
    "proj_away": 23.2609,
    "margin_low": -12.021,
    "margin_high": 18.078,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.1543,
+   "pregame_home_win_chance": 0.494516,
+   "pregame_proj_home": 24.2681,
+   "pregame_proj_away": 24.4224,
+   "pregame_margin_low": -15.2039,
+   "pregame_margin_high": 14.8952
   },
   {
    "week": 14,
@@ -6904,7 +8174,13 @@
    "proj_away": 21.6908,
    "margin_low": -14.2857,
    "margin_high": 15.8134,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.878,
+   "pregame_home_win_chance": 0.531154,
+   "pregame_proj_home": 22.628,
+   "pregame_proj_away": 21.75,
+   "pregame_margin_low": -14.1716,
+   "pregame_margin_high": 15.9275
   },
   {
    "week": 14,
@@ -6920,7 +8196,13 @@
    "proj_away": 24.1971,
    "margin_low": -17.703,
    "margin_high": 12.396,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.7697,
+   "pregame_home_win_chance": 0.276449,
+   "pregame_proj_home": 20.3667,
+   "pregame_proj_away": 27.1364,
+   "pregame_margin_low": -21.8192,
+   "pregame_margin_high": 8.2798
   },
   {
    "week": 14,
@@ -6936,7 +8218,13 @@
    "proj_away": 25.723,
    "margin_low": -21.0882,
    "margin_high": 9.0109,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.6351,
+   "pregame_home_win_chance": 0.226659,
+   "pregame_proj_home": 17.7465,
+   "pregame_proj_away": 26.3816,
+   "pregame_margin_low": -23.6847,
+   "pregame_margin_high": 6.4144
   },
   {
    "week": 14,
@@ -6952,7 +8240,13 @@
    "proj_away": 19.6997,
    "margin_low": -14.7082,
    "margin_high": 15.3909,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.754,
+   "pregame_home_win_chance": 0.403376,
+   "pregame_proj_home": 19.9058,
+   "pregame_proj_away": 22.6598,
+   "pregame_margin_low": -17.8036,
+   "pregame_margin_high": 12.2955
   },
   {
    "week": 14,
@@ -6968,7 +8262,13 @@
    "proj_away": 21.3077,
    "margin_low": -12.9243,
    "margin_high": 17.1748,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.1344,
+   "pregame_home_win_chance": 0.674746,
+   "pregame_proj_home": 25.5219,
+   "pregame_proj_away": 20.3874,
+   "pregame_margin_low": -9.9151,
+   "pregame_margin_high": 20.184
   },
   {
    "week": 14,
@@ -6984,7 +8284,13 @@
    "proj_away": 15.9677,
    "margin_low": -5.3632,
    "margin_high": 24.7358,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.2385,
+   "pregame_home_win_chance": 0.708197,
+   "pregame_proj_home": 22.7926,
+   "pregame_proj_away": 16.5542,
+   "pregame_margin_low": -8.8111,
+   "pregame_margin_high": 21.288
   },
   {
    "week": 14,
@@ -7000,7 +8306,13 @@
    "proj_away": 22.6013,
    "margin_low": -18.3209,
    "margin_high": 11.7781,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.2509,
+   "pregame_home_win_chance": 0.579302,
+   "pregame_proj_home": 22.0645,
+   "pregame_proj_away": 19.8136,
+   "pregame_margin_low": -12.7986,
+   "pregame_margin_high": 17.3004
   },
   {
    "week": 15,
@@ -7016,7 +8328,13 @@
    "proj_away": 19.7106,
    "margin_low": -8.4489,
    "margin_high": 21.6502,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.3001,
+   "pregame_home_win_chance": 0.710005,
+   "pregame_proj_home": 26.007,
+   "pregame_proj_away": 19.7068,
+   "pregame_margin_low": -8.7494,
+   "pregame_margin_high": 21.3497
   },
   {
    "week": 15,
@@ -7032,7 +8350,13 @@
    "proj_away": 21.0678,
    "margin_low": -16.1111,
    "margin_high": 13.988,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.0906,
+   "pregame_home_win_chance": 0.461326,
+   "pregame_proj_home": 20.3704,
+   "pregame_proj_away": 21.461,
+   "pregame_margin_low": -16.1402,
+   "pregame_margin_high": 13.9589
   },
   {
    "week": 15,
@@ -7048,7 +8372,13 @@
    "proj_away": 29.1416,
    "margin_low": -26.6633,
    "margin_high": 3.4357,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -11.2431,
+   "pregame_home_win_chance": 0.168272,
+   "pregame_proj_home": 17.7501,
+   "pregame_proj_away": 28.9931,
+   "pregame_margin_low": -26.2926,
+   "pregame_margin_high": 3.8065
   },
   {
    "week": 15,
@@ -7064,7 +8394,13 @@
    "proj_away": 20.741,
    "margin_low": -14.6955,
    "margin_high": 15.4036,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.4776,
+   "pregame_home_win_chance": 0.412865,
+   "pregame_proj_home": 21.2063,
+   "pregame_proj_away": 23.6839,
+   "pregame_margin_low": -17.5272,
+   "pregame_margin_high": 12.5719
   },
   {
    "week": 15,
@@ -7080,7 +8416,13 @@
    "proj_away": 19.8234,
    "margin_low": -12.1937,
    "margin_high": 17.9054,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.1205,
+   "pregame_home_win_chance": 0.609094,
+   "pregame_proj_home": 22.2848,
+   "pregame_proj_away": 19.1643,
+   "pregame_margin_low": -11.929,
+   "pregame_margin_high": 18.17
   },
   {
    "week": 15,
@@ -7096,7 +8438,13 @@
    "proj_away": 19.0024,
    "margin_low": -10.6232,
    "margin_high": 19.4759,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.4694,
+   "pregame_home_win_chance": 0.714932,
+   "pregame_proj_home": 24.2828,
+   "pregame_proj_away": 17.8134,
+   "pregame_margin_low": -8.5802,
+   "pregame_margin_high": 21.5189
   },
   {
    "week": 15,
@@ -7112,7 +8460,13 @@
    "proj_away": 31.3248,
    "margin_low": -31.8869,
    "margin_high": -1.7879,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -15.8692,
+   "pregame_home_win_chance": 0.094884,
+   "pregame_proj_home": 14.9959,
+   "pregame_proj_away": 30.865,
+   "pregame_margin_low": -30.9187,
+   "pregame_margin_high": -0.8196
   },
   {
    "week": 15,
@@ -7128,7 +8482,13 @@
    "proj_away": 23.1479,
    "margin_low": -15.7951,
    "margin_high": 14.3039,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -4.6792,
+   "pregame_home_win_chance": 0.339609,
+   "pregame_proj_home": 20.1496,
+   "pregame_proj_away": 24.8289,
+   "pregame_margin_low": -19.7288,
+   "pregame_margin_high": 10.3703
   },
   {
    "week": 15,
@@ -7144,7 +8504,13 @@
    "proj_away": 19.148,
    "margin_low": -10.9144,
    "margin_high": 19.1847,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 0.9552,
+   "pregame_home_win_chance": 0.533889,
+   "pregame_proj_home": 22.3933,
+   "pregame_proj_away": 21.4381,
+   "pregame_margin_low": -14.0943,
+   "pregame_margin_high": 16.0048
   },
   {
    "week": 15,
@@ -7160,7 +8526,13 @@
    "proj_away": 24.3245,
    "margin_low": -19.0769,
    "margin_high": 11.0221,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.6353,
+   "pregame_home_win_chance": 0.280285,
+   "pregame_proj_home": 18.5686,
+   "pregame_proj_away": 25.204,
+   "pregame_margin_low": -21.6849,
+   "pregame_margin_high": 8.4142
   },
   {
    "week": 15,
@@ -7176,7 +8548,13 @@
    "proj_away": 19.0401,
    "margin_low": -7.4842,
    "margin_high": 22.6149,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.0456,
+   "pregame_home_win_chance": 0.731327,
+   "pregame_proj_home": 25.3503,
+   "pregame_proj_away": 18.3047,
+   "pregame_margin_low": -8.0039,
+   "pregame_margin_high": 22.0952
   },
   {
    "week": 15,
@@ -7192,7 +8570,13 @@
    "proj_away": 18.0542,
    "margin_low": -8.8696,
    "margin_high": 21.2294,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.2813,
+   "pregame_home_win_chance": 0.679312,
+   "pregame_proj_home": 24.9093,
+   "pregame_proj_away": 19.628,
+   "pregame_margin_low": -9.7682,
+   "pregame_margin_high": 20.3309
   },
   {
    "week": 15,
@@ -7208,7 +8592,13 @@
    "proj_away": 21.047,
    "margin_low": -13.2838,
    "margin_high": 16.8153,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.2273,
+   "pregame_home_win_chance": 0.677637,
+   "pregame_proj_home": 25.4853,
+   "pregame_proj_away": 20.2579,
+   "pregame_margin_low": -9.8222,
+   "pregame_margin_high": 20.2769
   },
   {
    "week": 15,
@@ -7224,7 +8614,13 @@
    "proj_away": 26.4566,
    "margin_low": -23.0791,
    "margin_high": 7.0199,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -6.3826,
+   "pregame_home_win_chance": 0.287588,
+   "pregame_proj_home": 19.4891,
+   "pregame_proj_away": 25.8717,
+   "pregame_margin_low": -21.4321,
+   "pregame_margin_high": 8.667
   },
   {
    "week": 15,
@@ -7240,7 +8636,13 @@
    "proj_away": 24.0702,
    "margin_low": -20.1694,
    "margin_high": 9.9297,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.1319,
+   "pregame_home_win_chance": 0.325332,
+   "pregame_proj_home": 18.4674,
+   "pregame_proj_away": 23.5993,
+   "pregame_margin_low": -20.1814,
+   "pregame_margin_high": 9.9176
   },
   {
    "week": 15,
@@ -7256,7 +8658,13 @@
    "proj_away": 19.4435,
    "margin_low": -12.2671,
    "margin_high": 17.8319,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.5541,
+   "pregame_home_win_chance": 0.687699,
+   "pregame_proj_home": 23.781,
+   "pregame_proj_away": 18.2269,
+   "pregame_margin_low": -9.4954,
+   "pregame_margin_high": 20.6037
   },
   {
    "week": 16,
@@ -7272,7 +8680,13 @@
    "proj_away": 23.1523,
    "margin_low": -18.2563,
    "margin_high": 11.8427,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.1869,
+   "pregame_home_win_chance": 0.388663,
+   "pregame_proj_home": 19.9616,
+   "pregame_proj_away": 23.1485,
+   "pregame_margin_low": -18.2364,
+   "pregame_margin_high": 11.8627
   },
   {
    "week": 16,
@@ -7288,7 +8702,13 @@
    "proj_away": 17.1629,
    "margin_low": -7.3251,
    "margin_high": 22.774,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.4287,
+   "pregame_home_win_chance": 0.792498,
+   "pregame_proj_home": 26.3666,
+   "pregame_proj_away": 16.938,
+   "pregame_margin_low": -5.6209,
+   "pregame_margin_high": 24.4782
   },
   {
    "week": 16,
@@ -7304,7 +8724,13 @@
    "proj_away": 23.1366,
    "margin_low": -14.8677,
    "margin_high": 15.2314,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.8102,
+   "pregame_home_win_chance": 0.436033,
+   "pregame_proj_home": 22.3722,
+   "pregame_proj_away": 24.1824,
+   "pregame_margin_low": -16.8598,
+   "pregame_margin_high": 13.2393
   },
   {
    "week": 16,
@@ -7320,7 +8746,13 @@
    "proj_away": 29.6333,
    "margin_low": -28.461,
    "margin_high": 1.6381,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.9624,
+   "pregame_home_win_chance": 0.21861,
+   "pregame_proj_home": 18.2405,
+   "pregame_proj_away": 27.2029,
+   "pregame_margin_low": -24.012,
+   "pregame_margin_high": 6.0871
   },
   {
    "week": 16,
@@ -7336,7 +8768,13 @@
    "proj_away": 20.0877,
    "margin_low": -13.151,
    "margin_high": 16.9481,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.6866,
+   "pregame_home_win_chance": 0.628073,
+   "pregame_proj_home": 23.9678,
+   "pregame_proj_away": 20.2812,
+   "pregame_margin_low": -11.3629,
+   "pregame_margin_high": 18.7361
   },
   {
    "week": 16,
@@ -7352,7 +8790,13 @@
    "proj_away": 23.8063,
    "margin_low": -15.5167,
    "margin_high": 14.5823,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.3634,
+   "pregame_home_win_chance": 0.451709,
+   "pregame_proj_home": 22.8595,
+   "pregame_proj_away": 24.2228,
+   "pregame_margin_low": -16.4129,
+   "pregame_margin_high": 13.6862
   },
   {
    "week": 16,
@@ -7368,7 +8812,13 @@
    "proj_away": 24.2774,
    "margin_low": -19.7683,
    "margin_high": 10.3307,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.4394,
+   "pregame_home_win_chance": 0.484394,
+   "pregame_proj_home": 21.8215,
+   "pregame_proj_away": 22.2609,
+   "pregame_margin_low": -15.4889,
+   "pregame_margin_high": 14.6102
   },
   {
    "week": 16,
@@ -7384,7 +8834,13 @@
    "proj_away": 18.0217,
    "margin_low": -2.9236,
    "margin_high": 27.1755,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 12.0472,
+   "pregame_home_win_chance": 0.847123,
+   "pregame_proj_home": 31.0092,
+   "pregame_proj_away": 18.962,
+   "pregame_margin_low": -3.0023,
+   "pregame_margin_high": 27.0967
   },
   {
    "week": 16,
@@ -7400,7 +8856,13 @@
    "proj_away": 19.5758,
    "margin_low": -14.0318,
    "margin_high": 16.0673,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -2.4356,
+   "pregame_home_win_chance": 0.414314,
+   "pregame_proj_home": 17.865,
+   "pregame_proj_away": 20.3006,
+   "pregame_margin_low": -17.4851,
+   "pregame_margin_high": 12.6139
   },
   {
    "week": 16,
@@ -7416,7 +8878,13 @@
    "proj_away": 18.9523,
    "margin_low": -8.023,
    "margin_high": 22.0761,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.87,
+   "pregame_home_win_chance": 0.726395,
+   "pregame_proj_home": 26.254,
+   "pregame_proj_away": 19.3839,
+   "pregame_margin_low": -8.1795,
+   "pregame_margin_high": 21.9196
   },
   {
    "week": 16,
@@ -7432,7 +8900,13 @@
    "proj_away": 22.3465,
    "margin_low": -13.6208,
    "margin_high": 16.4783,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.3671,
+   "pregame_home_win_chance": 0.617405,
+   "pregame_proj_home": 24.6275,
+   "pregame_proj_away": 21.2604,
+   "pregame_margin_low": -11.6825,
+   "pregame_margin_high": 18.4166
   },
   {
    "week": 16,
@@ -7448,7 +8922,13 @@
    "proj_away": 23.4697,
    "margin_low": -18.0159,
    "margin_high": 12.0832,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -0.8408,
+   "pregame_home_win_chance": 0.47016,
+   "pregame_proj_home": 21.5096,
+   "pregame_proj_away": 22.3505,
+   "pregame_margin_low": -15.8904,
+   "pregame_margin_high": 14.2087
   },
   {
    "week": 16,
@@ -7464,7 +8944,13 @@
    "proj_away": 20.6197,
    "margin_low": -15.4292,
    "margin_high": 14.6698,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 3.0006,
+   "pregame_home_win_chance": 0.605028,
+   "pregame_proj_home": 23.1526,
+   "pregame_proj_away": 20.152,
+   "pregame_margin_low": -12.049,
+   "pregame_margin_high": 18.0501
   },
   {
    "week": 16,
@@ -7480,7 +8966,13 @@
    "proj_away": 18.622,
    "margin_low": -9.0289,
    "margin_high": 21.0701,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.5761,
+   "pregame_home_win_chance": 0.657097,
+   "pregame_proj_home": 24.3431,
+   "pregame_proj_away": 19.767,
+   "pregame_margin_low": -10.4734,
+   "pregame_margin_high": 19.6257
   },
   {
    "week": 16,
@@ -7496,7 +8988,13 @@
    "proj_away": 15.6102,
    "margin_low": -4.8148,
    "margin_high": 25.2842,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 8.307,
+   "pregame_home_win_chance": 0.765063,
+   "pregame_proj_home": 24.1808,
+   "pregame_proj_away": 15.8738,
+   "pregame_margin_low": -6.7425,
+   "pregame_margin_high": 23.3566
   },
   {
    "week": 16,
@@ -7512,7 +9010,13 @@
    "proj_away": 16.237,
    "margin_low": -6.6637,
    "margin_high": 23.4353,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 9.3021,
+   "pregame_home_win_chance": 0.789524,
+   "pregame_proj_home": 25.2061,
+   "pregame_proj_away": 15.904,
+   "pregame_margin_low": -5.7475,
+   "pregame_margin_high": 24.3516
   },
   {
    "week": 17,
@@ -7528,7 +9032,13 @@
    "proj_away": 21.0806,
    "margin_low": -12.2082,
    "margin_high": 17.8909,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 2.2153,
+   "pregame_home_win_chance": 0.578067,
+   "pregame_proj_home": 23.6809,
+   "pregame_proj_away": 21.4656,
+   "pregame_margin_low": -12.8343,
+   "pregame_margin_high": 17.2648
   },
   {
    "week": 17,
@@ -7544,7 +9054,13 @@
    "proj_away": 18.2642,
    "margin_low": -11.8372,
    "margin_high": 18.2619,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.5102,
+   "pregame_home_win_chance": 0.654983,
+   "pregame_proj_home": 22.3547,
+   "pregame_proj_away": 17.8444,
+   "pregame_margin_low": -10.5393,
+   "pregame_margin_high": 19.5598
   },
   {
    "week": 17,
@@ -7560,7 +9076,13 @@
    "proj_away": 19.9093,
    "margin_low": -6.794,
    "margin_high": 23.3051,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.5078,
+   "pregame_home_win_chance": 0.654904,
+   "pregame_proj_home": 26.4719,
+   "pregame_proj_away": 21.9641,
+   "pregame_margin_low": -10.5418,
+   "pregame_margin_high": 19.5573
   },
   {
    "week": 17,
@@ -7576,7 +9098,13 @@
    "proj_away": 22.288,
    "margin_low": -13.3849,
    "margin_high": 16.7142,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.8539,
+   "pregame_home_win_chance": 0.565493,
+   "pregame_proj_home": 23.9476,
+   "pregame_proj_away": 22.0937,
+   "pregame_margin_low": -13.1956,
+   "pregame_margin_high": 16.9034
   },
   {
    "week": 17,
@@ -7592,7 +9120,13 @@
    "proj_away": 26.5248,
    "margin_low": -24.9299,
    "margin_high": 5.1692,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.8086,
+   "pregame_home_win_chance": 0.222367,
+   "pregame_proj_home": 17.2742,
+   "pregame_proj_away": 26.0828,
+   "pregame_margin_low": -23.8581,
+   "pregame_margin_high": 6.2409
   },
   {
    "week": 17,
@@ -7608,7 +9142,13 @@
    "proj_away": 15.0893,
    "margin_low": -0.9159,
    "margin_high": 29.1831,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 13.7616,
+   "pregame_home_win_chance": 0.876086,
+   "pregame_proj_home": 28.6909,
+   "pregame_proj_away": 14.9293,
+   "pregame_margin_low": -1.2879,
+   "pregame_margin_high": 28.8112
   },
   {
    "week": 17,
@@ -7624,7 +9164,13 @@
    "proj_away": 18.9975,
    "margin_low": -9.8038,
    "margin_high": 20.2952,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.0447,
+   "pregame_home_win_chance": 0.639883,
+   "pregame_proj_home": 23.6219,
+   "pregame_proj_away": 19.5772,
+   "pregame_margin_low": -11.0048,
+   "pregame_margin_high": 19.0942
   },
   {
    "week": 17,
@@ -7640,7 +9186,13 @@
    "proj_away": 27.393,
    "margin_low": -24.8329,
    "margin_high": 5.2662,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -8.8329,
+   "pregame_home_win_chance": 0.221771,
+   "pregame_proj_home": 17.3542,
+   "pregame_proj_away": 26.1871,
+   "pregame_margin_low": -23.8824,
+   "pregame_margin_high": 6.2166
   },
   {
    "week": 17,
@@ -7656,7 +9208,13 @@
    "proj_away": 21.761,
    "margin_low": -14.3546,
    "margin_high": 15.7444,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.1184,
+   "pregame_home_win_chance": 0.539655,
+   "pregame_proj_home": 22.8693,
+   "pregame_proj_away": 21.7509,
+   "pregame_margin_low": -13.9311,
+   "pregame_margin_high": 16.1679
   },
   {
    "week": 17,
@@ -7672,7 +9230,13 @@
    "proj_away": 17.497,
    "margin_low": -7.1361,
    "margin_high": 22.963,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.8606,
+   "pregame_home_win_chance": 0.696976,
+   "pregame_proj_home": 24.0693,
+   "pregame_proj_away": 18.2087,
+   "pregame_margin_low": -9.1889,
+   "pregame_margin_high": 20.9101
   },
   {
    "week": 17,
@@ -7688,7 +9252,13 @@
    "proj_away": 18.2003,
    "margin_low": -7.4951,
    "margin_high": 22.604,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 10.3279,
+   "pregame_home_win_chance": 0.81273,
+   "pregame_proj_home": 27.9609,
+   "pregame_proj_away": 17.633,
+   "pregame_margin_low": -4.7217,
+   "pregame_margin_high": 25.3774
   },
   {
    "week": 17,
@@ -7704,7 +9274,13 @@
    "proj_away": 20.8021,
    "margin_low": -14.5082,
    "margin_high": 15.5909,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.8163,
+   "pregame_home_win_chance": 0.435822,
+   "pregame_proj_home": 20.9546,
+   "pregame_proj_away": 22.7709,
+   "pregame_margin_low": -16.8658,
+   "pregame_margin_high": 13.2333
   },
   {
    "week": 17,
@@ -7720,7 +9296,13 @@
    "proj_away": 18.7283,
    "margin_low": -11.0273,
    "margin_high": 19.0718,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.5114,
+   "pregame_home_win_chance": 0.65502,
+   "pregame_proj_home": 22.9342,
+   "pregame_proj_away": 18.4228,
+   "pregame_margin_low": -10.5382,
+   "pregame_margin_high": 19.5609
   },
   {
    "week": 17,
@@ -7736,7 +9318,13 @@
    "proj_away": 24.5173,
    "margin_low": -20.8434,
    "margin_high": 9.2557,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -7.3588,
+   "pregame_home_win_chance": 0.26002,
+   "pregame_proj_home": 18.2886,
+   "pregame_proj_away": 25.6474,
+   "pregame_margin_low": -22.4083,
+   "pregame_margin_high": 7.6908
   },
   {
    "week": 17,
@@ -7752,7 +9340,13 @@
    "proj_away": 20.5947,
    "margin_low": -14.4267,
    "margin_high": 15.6724,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.2151,
+   "pregame_home_win_chance": 0.543068,
+   "pregame_proj_home": 21.865,
+   "pregame_proj_away": 20.6499,
+   "pregame_margin_low": -13.8344,
+   "pregame_margin_high": 16.2647
   },
   {
    "week": 18,
@@ -7768,7 +9362,13 @@
    "proj_away": 22.1677,
    "margin_low": -17.1918,
    "margin_high": 12.9073,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -3.7978,
+   "pregame_home_win_chance": 0.368244,
+   "pregame_proj_home": 19.0933,
+   "pregame_proj_away": 22.891,
+   "pregame_margin_low": -18.8473,
+   "pregame_margin_high": 11.2518
   },
   {
    "week": 18,
@@ -7784,7 +9384,13 @@
    "proj_away": 18.1577,
    "margin_low": -7.367,
    "margin_high": 22.7321,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.66,
+   "pregame_home_win_chance": 0.748134,
+   "pregame_proj_home": 25.4871,
+   "pregame_proj_away": 17.8271,
+   "pregame_margin_low": -7.3895,
+   "pregame_margin_high": 22.7096
   },
   {
    "week": 18,
@@ -7800,7 +9406,13 @@
    "proj_away": 25.4169,
    "margin_low": -18.4997,
    "margin_high": 11.5993,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.9633,
+   "pregame_home_win_chance": 0.430691,
+   "pregame_proj_home": 22.8605,
+   "pregame_proj_away": 24.8238,
+   "pregame_margin_low": -17.0128,
+   "pregame_margin_high": 13.0862
   },
   {
    "week": 18,
@@ -7816,7 +9428,13 @@
    "proj_away": 18.1163,
    "margin_low": -8.4044,
    "margin_high": 21.6946,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 6.2922,
+   "pregame_home_win_chance": 0.709774,
+   "pregame_proj_home": 24.5999,
+   "pregame_proj_away": 18.3077,
+   "pregame_margin_low": -8.7573,
+   "pregame_margin_high": 21.3418
   },
   {
    "week": 18,
@@ -7832,7 +9450,13 @@
    "proj_away": 21.5511,
    "margin_low": -15.9824,
    "margin_high": 14.1167,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -1.8963,
+   "pregame_home_win_chance": 0.433028,
+   "pregame_proj_home": 19.7315,
+   "pregame_proj_away": 21.6278,
+   "pregame_margin_low": -16.9458,
+   "pregame_margin_high": 13.1533
   },
   {
    "week": 18,
@@ -7848,7 +9472,13 @@
    "proj_away": 23.2591,
    "margin_low": -14.6365,
    "margin_high": 15.4625,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.9882,
+   "pregame_home_win_chance": 0.570177,
+   "pregame_proj_home": 24.7488,
+   "pregame_proj_away": 22.7606,
+   "pregame_margin_low": -13.0613,
+   "pregame_margin_high": 17.0377
   },
   {
    "week": 18,
@@ -7864,7 +9494,13 @@
    "proj_away": 19.0081,
    "margin_low": -10.8011,
    "margin_high": 19.298,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.4166,
+   "pregame_home_win_chance": 0.651971,
+   "pregame_proj_home": 22.838,
+   "pregame_proj_away": 18.4213,
+   "pregame_margin_low": -10.6329,
+   "pregame_margin_high": 19.4662
   },
   {
    "week": 18,
@@ -7880,7 +9516,13 @@
    "proj_away": 17.5531,
    "margin_low": -8.2244,
    "margin_high": 21.8746,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 7.09,
+   "pregame_home_win_chance": 0.732564,
+   "pregame_proj_home": 24.6747,
+   "pregame_proj_away": 17.5847,
+   "pregame_margin_low": -7.9595,
+   "pregame_margin_high": 22.1395
   },
   {
    "week": 18,
@@ -7896,7 +9538,13 @@
    "proj_away": 29.3072,
    "margin_low": -25.3756,
    "margin_high": 4.7235,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -9.261,
+   "pregame_home_win_chance": 0.211446,
+   "pregame_proj_home": 19.6366,
+   "pregame_proj_away": 28.8977,
+   "pregame_margin_low": -24.3106,
+   "pregame_margin_high": 5.7885
   },
   {
    "week": 18,
@@ -7912,7 +9560,13 @@
    "proj_away": 18.093,
    "margin_low": -9.3757,
    "margin_high": 20.7233,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 5.9267,
+   "pregame_home_win_chance": 0.698958,
+   "pregame_proj_home": 24.5305,
+   "pregame_proj_away": 18.6038,
+   "pregame_margin_low": -9.1228,
+   "pregame_margin_high": 20.9763
   },
   {
    "week": 18,
@@ -7928,7 +9582,13 @@
    "proj_away": 18.5339,
    "margin_low": -10.5434,
    "margin_high": 19.5557,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.7012,
+   "pregame_home_win_chance": 0.661091,
+   "pregame_proj_home": 23.7678,
+   "pregame_proj_away": 19.0665,
+   "pregame_margin_low": -10.3483,
+   "pregame_margin_high": 19.7508
   },
   {
    "week": 18,
@@ -7944,7 +9604,13 @@
    "proj_away": 17.9075,
    "margin_low": -5.4572,
    "margin_high": 24.6419,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 10.6837,
+   "pregame_home_win_chance": 0.820307,
+   "pregame_proj_home": 28.2465,
+   "pregame_proj_away": 17.5628,
+   "pregame_margin_low": -4.3658,
+   "pregame_margin_high": 25.7333
   },
   {
    "week": 18,
@@ -7960,7 +9626,13 @@
    "proj_away": 19.9049,
    "margin_low": -13.2853,
    "margin_high": 16.8137,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 1.4499,
+   "pregame_home_win_chance": 0.551336,
+   "pregame_proj_home": 21.5171,
+   "pregame_proj_away": 20.0672,
+   "pregame_margin_low": -13.5996,
+   "pregame_margin_high": 16.4995
   },
   {
    "week": 18,
@@ -7976,7 +9648,13 @@
    "proj_away": 19.7414,
    "margin_low": -10.5059,
    "margin_high": 19.5931,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 4.6915,
+   "pregame_home_win_chance": 0.660782,
+   "pregame_proj_home": 24.6004,
+   "pregame_proj_away": 19.9089,
+   "pregame_margin_low": -10.358,
+   "pregame_margin_high": 19.741
   },
   {
    "week": 18,
@@ -7992,7 +9670,13 @@
    "proj_away": 14.8806,
    "margin_low": -0.3796,
    "margin_high": 29.7195,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": 14.0609,
+   "pregame_home_win_chance": 0.88063,
+   "pregame_proj_home": 29.0976,
+   "pregame_proj_away": 15.0367,
+   "pregame_margin_low": -0.9886,
+   "pregame_margin_high": 29.1104
   },
   {
    "week": 18,
@@ -8008,7 +9692,13 @@
    "proj_away": 23.0982,
    "margin_low": -17.8386,
    "margin_high": 12.2605,
-   "rating_basis": "season"
+   "rating_basis": "season",
+   "pregame_spread_home": -5.3224,
+   "pregame_home_win_chance": 0.319418,
+   "pregame_proj_home": 19.3435,
+   "pregame_proj_away": 24.6659,
+   "pregame_margin_low": -20.3719,
+   "pregame_margin_high": 9.7271
   }
  ]
 }

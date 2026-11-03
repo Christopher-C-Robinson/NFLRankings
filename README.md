@@ -36,8 +36,9 @@ The matchup page (`docs/matchup.html`) projects one game: spread, win chance,
 score, and an 80% margin range from the fitted residual. Pass and rush EPA are
 shown and are not added into the spread. Team pages (`docs/team.html`) list the
 schedule, expected wins, a projected record, and the season EPA chart. Those
-schedule projections use the current season rating. A week board, frozen
-pregame accuracy, and live scores are not part of this page yet.
+schedule projections use the current season rating. The week board and the
+accuracy page use a separate frozen pregame rating from earlier weeks only.
+Final scores are nflverse results. A live score feed is not wired up.
 
 ## Data
 

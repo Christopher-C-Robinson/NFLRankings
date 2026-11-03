@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accuracy — NFL Rankings</title>
+<meta name="description" content="How often the frozen pregame pick had the right NFL winner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <h1>Accuracy</h1>
+  <p>Frozen pregame picks against nflverse final scores.</p>
+  <div class="nav"><a href="index.html">Rankings</a>
+    <a href="matchup.html">Matchup</a>
+    <a href="week.html">Week</a>
+    <a href="accuracy.html">Accuracy</a>
+    <a href="methodology.html">Methodology</a>
+    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
+</div></header>
+<main class="wrap">
+  <div class="controls"><label>Season <select id="season"></select></label></div>
+  <div class="fresh" id="fresh">Loading…</div>
+  <div id="result"></div>
+  <p class="fresh">There is no live ESPN score worker. Finals update when the rankings data is refreshed from nflverse. Week 1 picks are home field only, because no plays have been rated yet.</p>
+</main>
+<footer><div class="wrap"><a href="methodology.html">How a pregame pick is frozen</a></div></footer>
+<script src="assets/theme.js"></script>
+<script src="assets/accuracy.js"></script>
+</body>
+</html>

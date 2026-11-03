@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week — NFL Rankings</title>
+<meta name="description" content="This week's NFL games with frozen pregame scores and the winner hit rate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+  <h1>This week</h1>
+  <p>Pregame scores from plays before the week. Finals are nflverse results, not a live score feed.</p>
+  <div class="nav"><a href="index.html">Rankings</a>
+    <a href="matchup.html">Matchup</a>
+    <a href="week.html">Week</a>
+    <a href="accuracy.html">Accuracy</a>
+    <a href="methodology.html">Methodology</a>
+    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
+</div></header>
+<main class="wrap">
+  <div class="controls">
+    <label>Season <select id="season"></select></label>
+    <label>Week <select id="week"></select></label>
+    <label>Conference <select id="conf"><option value="">All</option><option>AFC</option><option>NFC</option></select></label>
+    <label>Games <select id="played"><option value="">All</option><option value="played">Played</option><option value="left">Not played</option></select></label>
+    <label>Sort <select id="sort">
+      <option value="spread">Biggest spread</option>
+      <option value="chance">Win chance</option>
+      <option value="name">Away team</option>
+    </select></label>
+  </div>
+  <div class="fresh" id="fresh">Loading…</div>
+  <p class="count" id="count"></p>
+  <div class="tablewrap"><table class="schedule"><thead><tr>
+    <th>Game</th><th class="num">Pregame</th><th class="num">Spread</th><th class="num">Home win</th><th class="num">Final</th><th>Pick</th>
+  </tr></thead><tbody id="rows"></tbody></table></div>
+</main>
+<footer><div class="wrap">A live score worker is not wired up. Scores appear here after the nflverse refresh.</div></footer>
+<script src="assets/theme.js"></script>
+<script src="assets/week.js"></script>
+</body>
+</html>

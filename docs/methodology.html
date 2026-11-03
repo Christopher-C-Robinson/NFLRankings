@@ -16,7 +16,10 @@
   <p>What the numbers are, and what they are not.</p>
   <div class="nav"><a href="index.html">Rankings</a>
     <a href="matchup.html">Matchup</a>
-    <a href="methodology.html">Methodology</a></div>
+    <a href="week.html">Week</a>
+    <a href="accuracy.html">Accuracy</a>
+    <a href="methodology.html">Methodology</a>
+    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
 </div></header>
 <main class="wrap prose">
 
@@ -59,15 +62,21 @@
 <h2>One game, and a team's schedule</h2>
 <p>The matchup page turns two teams and a venue into a point spread, a win chance, a projected score, and an 80% margin range. The range is the fitted residual, about 11.74 points, treated as a normal distribution around the spread. A 10th-to-90th percentile is the same summary a Monte Carlo draw from that residual would estimate. It is not a separate random model, and it does not simulate drives.</p>
 <p>Projected points use each team's points scored and allowed per game, shrunk toward the league with four prior games, then averaged the way a two-team total is averaged. Pass and rush EPA are schedule-adjusted on those play types alone. They are shown so a matchup can be read. They are not added into the spread.</p>
-<p>A team page lists the regular-season schedule, the current-rating spread for each game, expected wins on that schedule, and a projected record that keeps results already played and adds the win chances of games not yet played. The chart is cumulative schedule-adjusted EPA after each week. These schedule numbers use the rating published for the whole season, so a game already played is described by a rating that includes it. Frozen pregame picks are not these numbers.</p>
+<p>A team page lists the regular-season schedule, the current-rating spread for each game, expected wins on that schedule, and a projected record that keeps results already played and adds the win chances of games not yet played. The chart is cumulative schedule-adjusted EPA after each week. These schedule numbers use the rating published for the whole season, so a game already played is described by a rating that includes it.</p>
+
+<h2>Frozen pregame picks</h2>
+<p>The week board and the accuracy page use a different number. Before week <em>w</em>, the rating is fit only on regular-season plays from earlier weeks. Points per game are likewise only earlier games, shrunk toward the league rate of those games. With no earlier plays, every team is at zero and the spread is home field alone (about 1.78 points, or zero at a neutral site). That pick is stored with the game and is not refit after the game is played.</p>
+<p>Winner hit rate ignores ties and exact 50/50 picks. Brier score is the average squared error of the pregame home win chance on the same games. Wins above expected, on the rankings board, is actual wins minus the sum of those pregame win chances. Schedule strength is the average final EPA margin of opponents already played.</p>
+<p>Final scores on the week board are the nflverse schedule. This site does not poll a live score feed. A small score worker can be added later; until then, finals show up when the rankings file is refreshed.</p>
 
 <h2>What this is not</h2>
 <p>It is not DVOA. It does not add an injury, weather, or garbage-time adjustment beyond whatever is already inside nflverse EPA. It is not a betting model. Special teams are not given their own term. Home field is not team-specific.</p>
-<p>Not on this board yet: a matchup simulator, team pages, a week-by-week games view, live scores, and an accuracy backtest. <code>predict_matchup</code> already turns two ratings and a venue into one spread and one win chance for a later matchup view. It does not simulate draws.</p>
+<p>The margin range does not simulate drives. Pass and rush EPA are not a second spread model. Live in-game scores are not polled.</p>
 
 <h2>Data</h2>
 <p>All data is free: <a href="https://github.com/nflverse">nflverse</a> play-by-play, schedules, and team metadata, fetched with <code>nfl_data_py</code>. Nothing is scraped. Records and point differential come from played regular-season games only. Logos prefer <code>team_logo_espn</code>, then <code>team_logo_wikipedia</code>, and only https URLs are kept. Colors are <code>team_color</code> and <code>team_color2</code> when they are hex colors.</p>
 </main>
 <footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a>. <a href="index.html">Back to rankings</a></div></footer>
+<script src="assets/theme.js"></script>
 </body>
 </html>

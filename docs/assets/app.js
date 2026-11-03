@@ -43,7 +43,7 @@
 
   var COLS = [
     ["Rank", "rank"], ["Team", "team"], ["Avg win chance", "num"], ["Neutral margin", "num"],
-    ["v2 EPA", "num"], ["Record", "num"], ["Point diff", "num"]
+    ["v2 EPA", "num"], ["Record", "num"], ["Point diff", "num"], ["SOS", "num"], ["WAE", "num"]
   ];
 
   function head() {
@@ -130,7 +130,9 @@
         '<td class="num" data-label="Neutral margin">' + signed(t.mean_margin, 1) + "</td>",
         '<td class="num" data-label="v2 EPA">' + fmt(t.v2, 3) + "</td>",
         '<td class="num" data-label="Record">' + record(t) + "</td>",
-        '<td class="num' + (t.point_diff < 0 ? " neg" : "") + '" data-label="Point diff">' + signed(t.point_diff, 0) + "</td>"
+        '<td class="num' + (t.point_diff < 0 ? " neg" : "") + '" data-label="Point diff">' + signed(t.point_diff, 0) + "</td>",
+        '<td class="num" data-label="SOS">' + fmt(t.sos, 3) + "</td>",
+        '<td class="num' + (t.wins_above_expected < 0 ? " neg" : "") + '" data-label="Wins above expected">' + signed(t.wins_above_expected, 1) + "</td>"
       ];
       var first = t.win_chance_rank === 1 ? " first" : "";
       return '<tr class="team' + first + '" tabindex="0" role="button" aria-expanded="' + open + '" data-team="' + esc(t.team) + '"' + style + ">" +
@@ -146,11 +148,12 @@
     if (!state.data) return;
     var rows = [["Rank", "Team", "Abbr", "Conference", "Division", "Wins", "Losses", "Ties",
       "Avg win chance", "Neutral margin", "Expected wins", "v2 EPA", "v2 rank",
-      "Adj off EPA", "Adj def EPA", "Point diff"]];
+      "Adj off EPA", "Adj def EPA", "Point diff", "SOS", "Wins above expected"]];
     visible().forEach(function (t) {
       rows.push([t.win_chance_rank, t.name, t.team, t.conference, t.division, t.wins, t.losses, t.ties,
         (t.win_chance * 100).toFixed(2), Number(t.mean_margin).toFixed(2), Number(t.expected_wins).toFixed(2),
-        Number(t.v2).toFixed(3), t.v2_rank, Number(t.off_epa_adj).toFixed(3), Number(t.def_epa_adj).toFixed(3), t.point_diff]);
+        Number(t.v2).toFixed(3), t.v2_rank, Number(t.off_epa_adj).toFixed(3), Number(t.def_epa_adj).toFixed(3), t.point_diff,
+        t.sos == null ? "" : Number(t.sos).toFixed(3), t.wins_above_expected == null ? "" : Number(t.wins_above_expected).toFixed(2)]);
     });
     var blob = new Blob([rows.map(function (r) { return r.map(csvCell).join(","); }).join("\n") + "\n"], { type: "text/csv;charset=utf-8" });
     var link = document.createElement("a");
