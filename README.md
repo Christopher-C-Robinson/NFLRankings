@@ -40,6 +40,7 @@ shown and are not added into the spread. Team pages (`docs/team.html`) list the
 schedule, expected wins, a projected record, and the season EPA chart. Those
 schedule projections use the current season rating. The week board and the
 accuracy page use a separate frozen pregame rating from earlier weeks, blended with the previous season while that sample is thin.
+Drive starting field position, special-teams EPA, success rate, and explosiveness were screened on earlier seasons and are not in that spread. `python scripts/screen_advanced.py` replays the screen.
 Final scores are nflverse results. A live score feed is not wired up.
 
 ## Data

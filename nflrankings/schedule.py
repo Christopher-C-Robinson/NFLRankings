@@ -11,9 +11,12 @@ from .winprob import project_game, shrink_rate
 
 # k = 14 team-games, the middle of the 12–16 band. Selected on 2025 pregame
 # results with 2024 as the prior, among k in {12, 14, 16} and shrink strengths
-# in {8, 14, 20, 28}. 2026 was not used to pick it. One game a week means the
-# live rating is still the smaller part after four games (4/18) and matches
-# the prior only after 14 games.
+# in {8, 14, 20, 28}. 2026 was not used to pick it. A wider later grid,
+# k in {0, 4, 8, 12, 14, 16, 20, 28, 40}, still gives 14 the most pooled
+# 2018–2024 winners. k = 8 is higher only on 2025 and 2026, and lower before
+# that, so it is not a replacement. One game a week means the live rating is
+# still the smaller part after four games (4/18) and matches the prior only
+# after 14 games.
 BLEND_PRIOR_GAMES = 14
 # A 17-game final rating keeps 17/45 of its gap to the league. The same 2025
 # grid preferred this over a milder shrink: half-strength priors still swung
@@ -238,6 +241,10 @@ def attach_pregame(
     ``w * live + (1 - w) * prior`` with ``w = games / (games + 14)``. Scoring
     rates still use points from earlier weeks only, shrunk toward the league
     rate of those earlier games.
+
+    Drive starts, special-teams EPA, success rate, and explosiveness are
+    defined in ``units`` for the walk-forward screen. They are not added
+    here. On 2024 and 2025 they did not both beat this scrimmage-EPA spread.
     """
     ids = [team["team"] for team in teams]
     plays = rated_plays(pbp)
