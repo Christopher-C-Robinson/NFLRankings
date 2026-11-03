@@ -60,10 +60,24 @@
       return "<tr><td>" + g.week + "</td><td>" + where + "</td><td><a class=\"teamlink\" href=\"team.html?team=" + esc(opp) + "&season=" + state.data.season + "\">" + esc(state.names[opp] || opp) + "</a></td><td class=\"num\">" + result + "</td><td class=\"num\">" + signed(spread, 1) + "</td><td class=\"num\">" + (chance * 100).toFixed(1) + "%</td><td class=\"num\"><a class=\"teamlink\" href=\"" + href + "\">" + fmt(projFor, 1) + "–" + fmt(projAgainst, 1) + "</a></td></tr>";
     }).join("");
     var color = /^#[0-9A-Fa-f]{6}$/.test(t.color || "") ? t.color : "#0e3b2e";
+    var gamesPlayed = t.wins + t.losses + t.ties;
     $("result").innerHTML =
       '<section class="teamhead" style="--accent:' + color + '">' +
-      (t.logo ? '<img class="teamlogo" alt="" src="' + esc(t.logo) + '" width="56" height="56">' : "") +
-      "<div><p class=\"record\">" + record(t) + "</p><p>Projected record <strong>" + fmt(t.projected_wins, 1) + "–" + fmt(t.projected_losses, 1) + "</strong> · schedule expected wins " + fmt(t.schedule_expected_wins, 1) + " · opponent EPA " + fmt(t.sos, 3) + "</p></div></section>" +
+      (t.logo ? '<img class="teamlogo" alt="" src="' + esc(t.logo) + '">' : "") +
+      '<div class="record-blocks">' +
+      "<div><strong>" + record(t) + "</strong><span>Record</span></div>" +
+      "<div><strong>" + t.win_chance_rank + "</strong><span>Overall rank</span></div>" +
+      "<div><strong>" + (t.win_chance * 100).toFixed(1) + "%</strong><span>Avg win chance</span></div>" +
+      "<div><strong>" + fmt(t.projected_wins, 1) + "–" + fmt(t.projected_losses, 1) + "</strong><span>Projected record</span></div>" +
+      "<div><strong>" + (gamesPlayed ? fmt(t.points_for / gamesPlayed, 1) : "–") + " / " + (gamesPlayed ? fmt(t.points_against / gamesPlayed, 1) : "–") + "</strong><span>Points for / against</span></div>" +
+      "<div><strong>" + signed(t.wins_above_expected, 1) + "</strong><span>Wins above expected</span></div>" +
+      "<div><strong>" + signed(t.sos, 3) + "</strong><span>Opponent EPA</span></div>" +
+      "</div></section>" +
+      '<article class="panel"><h2>Passing and rushing</h2><p class="sub">Schedule-adjusted EPA per play. Shown beside the rating. Not added into the spread.</p>' +
+      '<table class="units"><tbody>' +
+      "<tr><th>Off pass</th><td class=\"num\">" + fmt(t.off_pass_epa_adj, 3) + "</td><th>Def pass</th><td class=\"num\">" + fmt(t.def_pass_epa_adj, 3) + "</td></tr>" +
+      "<tr><th>Off rush</th><td class=\"num\">" + fmt(t.off_rush_epa_adj, 3) + "</td><th>Def rush</th><td class=\"num\">" + fmt(t.def_rush_epa_adj, 3) + "</td></tr>" +
+      "</tbody></table></article>" +
       "<h2>Season rating</h2>" + chart(t.weeks) +
       "<h2>Schedule</h2>" +
       '<div class="tablewrap"><table class="schedule"><thead><tr><th>Week</th><th></th><th>Opponent</th><th class="num">Result</th><th class="num">Spread</th><th class="num">Win chance</th><th class="num">Projected</th></tr></thead><tbody>' +

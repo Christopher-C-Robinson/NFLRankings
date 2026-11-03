@@ -3,47 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NFL Rankings — average win chance</title>
+<meta name="color-scheme" content="light dark">
+<title>NFL Index — average win chance</title>
 <meta name="description" content="NFL power rankings by average neutral-site win chance, from schedule-adjusted EPA and free nflverse data.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23255b7a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<header class="masthead"><div class="wrap">
-  <h1>NFL Rankings</h1>
-  <p>Average neutral win chance against the other 31 teams, from schedule-adjusted EPA.</p>
-  <div class="nav"><a href="index.html">Rankings</a>
-    <a href="matchup.html">Matchup</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">NF</span><span class="brand-name">NFL <b>INDEX</b></span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="index.html" aria-current="page">Rankings</a>
     <a href="week.html">Week</a>
+    <a href="team.html">Teams</a>
+    <a href="matchup.html">Matchups</a>
     <a href="accuracy.html">Accuracy</a>
-    <a href="methodology.html">Methodology</a>
-    <button type="button" class="theme" data-theme-toggle aria-pressed="false">Theme</button>
-    <a href="https://github.com/nflverse">nflverse</a></div>
-</div></header>
-<main class="wrap">
-  <div class="controls">
-    <label>Season <select id="season"></select></label>
-    <label>Conference <select id="conf"><option value="">All</option><option>AFC</option><option>NFC</option></select></label>
-    <label>Division <select id="div"><option value="">All</option></select></label>
-    <label>Search <input id="q" type="search" placeholder="Team name" autocomplete="off"></label>
-    <button type="button" id="export" disabled>Download CSV</button>
+    <a href="methodology.html">Model</a>
+  </nav>
+  <div class="header-actions">
+    <span id="data-status" class="data-status"><span class="status-dot"></span> Loading</span>
+    <button type="button" class="theme" data-theme-toggle>Theme</button>
   </div>
-  <div class="fresh" id="fresh" aria-live="polite">Loading…</div>
-  <p class="count" id="count" aria-live="polite"></p>
-  <div class="tablewrap" id="tablewrap">
-    <table id="tbl">
-      <caption class="sr-only">Teams ranked by average neutral-site win chance. Filters hide teams and do not renumber ranks.</caption>
-      <thead id="thead"></thead>
-      <tbody id="tbody"></tbody>
-    </table>
-  </div>
-  <div class="state" id="state" hidden></div>
-  <p class="fresh">Click a row for EPA detail. Ranks stay the full-league order when you filter. <a href="methodology.html">How this works</a>.</p>
+</header>
+<main id="main" class="section-shell">
+  <p class="eyebrow">NFL Index</p>
+  <h1>The full field, on neutral ground.</h1>
+  <p class="deck">Every team faces the other 31. The rank is average win chance. Filters hide rows and leave that rank alone.</p>
+  <div class="snapshot-strip" id="snapshot" aria-label="Season coverage"></div>
+  <article class="panel board-panel">
+    <div class="panel-heading">
+      <div>
+        <h2>Overall rankings</h2>
+        <p class="sub">Higher average neutral win chance means a higher rank.</p>
+      </div>
+      <button type="button" id="export" class="button" disabled>Download CSV</button>
+    </div>
+    <div class="filters">
+      <label>Season <select id="season"></select></label>
+      <label>Conference <select id="conf"><option value="">All</option><option>AFC</option><option>NFC</option></select></label>
+      <label>Division <select id="div"><option value="">All</option></select></label>
+      <label>Search <input id="q" type="search" placeholder="Team name" autocomplete="off"></label>
+    </div>
+    <p class="note" id="count" aria-live="polite"></p>
+    <p class="note" id="fresh" aria-live="polite">Loading…</p>
+    <div class="state" id="state" hidden></div>
+    <div class="rank-table-wrap" id="tablewrap">
+      <table class="rank-table" id="tbl">
+        <caption class="sr-only">Teams ranked by average neutral-site win chance. Filters do not renumber ranks.</caption>
+        <thead><tr>
+          <th>Team</th><th class="num">Record</th><th class="num">EPA margin</th><th class="num">Schedule</th><th class="num">Avg win chance</th><th class="num">WAE</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </article>
+  <article class="panel">
+    <h2>Strength and schedule</h2>
+    <p class="sub">Up is schedule-adjusted EPA. Right is a tougher set of opponents already played. A logo opens that team.</p>
+    <div class="field" id="field"></div>
+  </article>
+  <details class="panel how">
+    <summary>How these rankings work</summary>
+    <div>
+      <p>Each team plays each of the other 31 once on a neutral field. Its score is the average win chance. Home field is fit from nflverse and is not added here, so a venue cannot move a rank.</p>
+      <p>EPA margin is the schedule-adjusted rating underneath that chance. Schedule is the average final EPA of opponents already played. Wins above expected uses frozen pregame chances, not this season-long rating.</p>
+      <p><a href="methodology.html">Full methodology</a></p>
+    </div>
+  </details>
 </main>
-<footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a> via nfl_data_py. Free data only. Logos and colors from nflverse team metadata.</div></footer>
+<footer class="section-shell">Data: <a href="https://github.com/nflverse">nflverse</a> via nfl_data_py. Logos and colors from nflverse team metadata.</footer>
 <script src="assets/theme.js"></script>
 <script src="assets/app.js"></script>
 </body>

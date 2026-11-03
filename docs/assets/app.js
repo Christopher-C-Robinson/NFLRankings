@@ -70,7 +70,7 @@
     var rank = state.data.ranking || {};
     var hfa = Number(rank.home_field_points);
     var homeLine = isNaN(hfa) ? "" : "<dt>Home margin vs the field</dt><dd>" + signed(t.mean_margin + hfa, 1) + "</dd>";
-    return '<tr class="detail"><td colspan="' + COLS.length + '"><div class="grid">' +
+    return '<tr class="detail"><td colspan="6"><div class="grid">' +
       "<div><h4>Win chance</h4><dl>" +
       "<dt>Avg win chance</dt><dd>" + pct(t.win_chance) + "</dd>" +
       "<dt>Expected wins vs 31</dt><dd>" + fmt(t.expected_wins, 2) + "</dd>" +
@@ -106,38 +106,46 @@
     });
   }
 
+  function fieldMap(rows) {
+    var box = $("field");
+    if (!box) return;
+    if (rows.length < 2) { box.innerHTML = ""; return; }
+    var xs = rows.map(function (t) { return Number(t.sos) || 0; });
+    var ys = rows.map(function (t) { return Number(t.v2) || 0; });
+    var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
+    var minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+    if (minX === maxX) { minX -= 0.05; maxX += 0.05; }
+    if (minY === maxY) { minY -= 0.05; maxY += 0.05; }
+    box.innerHTML = '<div class="field-axis" style="left:8%;right:8%;top:50%;height:1px"></div><div class="field-axis" style="top:8%;bottom:8%;left:50%;width:1px"></div>' +
+      '<span class="field-label" style="left:10px;bottom:8px">easier schedule</span><span class="field-label" style="right:10px;bottom:8px">tougher schedule</span>' +
+      rows.map(function (t) {
+        var x = 8 + ((Number(t.sos) || 0) - minX) / (maxX - minX) * 84;
+        var y = 8 + ((Number(t.v2) || 0) - minY) / (maxY - minY) * 84;
+        var href = "team.html?team=" + encodeURIComponent(t.team) + "&season=" + state.data.season;
+        return '<a class="field-dot" style="left:' + x + "%;bottom:" + y + '%" href="' + href + '" title="' + esc(t.name) + " " + pct(t.win_chance) + '">' + logo(t) + "</a>";
+      }).join("");
+  }
+
   function render() {
     if (!state.data) return;
     var rows = visible();
-    head();
     var total = state.data.teams.length;
-    $("count").textContent = rows.length === total
-      ? total + " teams. Ranks are the full-league order."
-      : "Showing " + rows.length + " of " + total + ". Ranks stay the full-league order.";
-    if (!rows.length) { showEmpty("No teams match these filters."); return; }
+    $("count").textContent = rows.length + " teams shown · " + total + " rated · ranks stay the full-league order";
+    if (!rows.length) { showEmpty("No teams match these filters."); fieldMap([]); return; }
     hideState();
     $("tbody").innerHTML = rows.map(function (t) {
-      var color = accent(t);
-      var style = color ? ' style="--accent:' + esc(color) + '"' : "";
       var open = state.open === t.team;
       var href = "team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season);
-      var nm = '<td class="teamcell"><span class="rankbadge">' + t.win_chance_rank + "</span>" + logo(t) +
-        '<span class="teamname"><a class="teamlink" href="' + href + '">' + esc(t.name) + "</a><small>" + esc(t.team) + "</small></span></td>";
-      var cells = [
-        '<td class="num rank">' + t.win_chance_rank + "</td>",
-        nm,
-        '<td class="num win" data-label="Avg win chance">' + pct(t.win_chance) + "</td>",
-        '<td class="num" data-label="Neutral margin">' + signed(t.mean_margin, 1) + "</td>",
-        '<td class="num" data-label="v2 EPA">' + fmt(t.v2, 3) + "</td>",
-        '<td class="num" data-label="Record">' + record(t) + "</td>",
-        '<td class="num' + (t.point_diff < 0 ? " neg" : "") + '" data-label="Point diff">' + signed(t.point_diff, 0) + "</td>",
-        '<td class="num" data-label="SOS">' + fmt(t.sos, 3) + "</td>",
-        '<td class="num' + (t.wins_above_expected < 0 ? " neg" : "") + '" data-label="Wins above expected">' + signed(t.wins_above_expected, 1) + "</td>"
-      ];
-      var first = t.win_chance_rank === 1 ? " first" : "";
-      return '<tr class="team' + first + '" tabindex="0" role="button" aria-expanded="' + open + '" data-team="' + esc(t.team) + '"' + style + ">" +
-        cells.join("") + "</tr>" + (open ? detail(t) : "");
+      return '<tr class="rank-row' + (t.win_chance_rank === 1 ? " first" : "") + '" tabindex="0" role="button" aria-expanded="' + open + '" data-team="' + esc(t.team) + '">' +
+        "<td><span class=\"rank-number\">" + t.win_chance_rank + "</span> <a class=\"rank-team\" href=\"" + href + "\">" + logo(t) + "<span>" + esc(t.name) + "</span></a></td>" +
+        '<td class="num" data-label="Record">' + record(t) + "</td>" +
+        '<td class="num" data-label="EPA margin">' + signed(t.v2, 3) + "</td>" +
+        '<td class="num" data-label="Schedule">' + signed(t.sos, 3) + "</td>" +
+        '<td class="num rank-index" data-label="Avg win chance">' + pct(t.win_chance) + "</td>" +
+        '<td class="num' + (t.wins_above_expected < 0 ? " neg" : "") + '" data-label="Wins above expected">' + signed(t.wins_above_expected, 1) + "</td>" +
+        "</tr>" + (open ? detail(t) : "");
     }).join("");
+    fieldMap(rows);
   }
 
   function csvCell(value) {
@@ -182,6 +190,18 @@
     if (rank.home_field_points != null) parts.push("home field " + signed(rank.home_field_points, 2) + " pts, not used in the rank");
     parts.push("generated " + String(d.generated_at).replace("T", " ").replace(/\+00:00$/, " UTC"));
     $("fresh").textContent = parts.join(" · ");
+    var snap = $("snapshot");
+    if (snap) {
+      var afc = d.teams.filter(function (t) { return t.conference === "AFC"; }).length;
+      snap.innerHTML = [
+        ["32", "teams"], [String(d.games_played || 0), "games played"],
+        [d.week_max ? "Wk " + d.week_max : "—", "through"], [String(afc) + " / " + (d.teams.length - afc), "AFC / NFC"]
+      ].map(function (pair) {
+        return '<div class="snapshot-item"><strong>' + esc(pair[0]) + "</strong><span>" + esc(pair[1]) + "</span></div>";
+      }).join("");
+    }
+    var status = $("data-status");
+    if (status) { status.className = "data-status is-ready"; status.innerHTML = '<span class="status-dot"></span> ' + esc(String(d.season)); }
   }
 
   function loadSeason(season) {
@@ -213,13 +233,12 @@
     }
     $("tbody").addEventListener("click", function (e) {
       if (e.target.closest("a")) return;
-      var tr = e.target.closest("tr.team"); if (tr) toggle(tr);
+      var tr = e.target.closest("tr.rank-row"); if (tr) toggle(tr);
     });
     $("tbody").addEventListener("keydown", function (e) {
       if (e.key !== "Enter" && e.key !== " ") return;
-      var tr = e.target.closest("tr.team"); if (tr) { e.preventDefault(); toggle(tr); }
+      var tr = e.target.closest("tr.rank-row"); if (tr) { e.preventDefault(); toggle(tr); }
     });
-    head();
     getJSON("data/index.json").then(function (idx) {
       state.index = idx;
       if (!idx.seasons || !idx.seasons.length) {

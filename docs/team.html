@@ -12,17 +12,17 @@
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<header class="masthead"><div class="wrap">
-  <h1 id="title">Team</h1>
-  <p id="dek">Schedule and the current rating.</p>
-  <div class="nav"><a href="index.html">Rankings</a>
-    <a href="matchup.html">Matchup</a>
-    <a href="week.html">Week</a>
-    <a href="accuracy.html">Accuracy</a>
-    <a href="methodology.html">Methodology</a>
-    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
-</div></header>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">NF</span><span class="brand-name">NFL <b>INDEX</b></span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="index.html">Rankings</a><a href="week.html">Week</a><a href="team.html" aria-current="page">Teams</a><a href="matchup.html">Matchups</a><a href="accuracy.html">Accuracy</a><a href="methodology.html">Model</a>
+  </nav>
+  <div class="header-actions"><button type="button" class="theme" data-theme-toggle>Theme</button></div>
+</header>
 <main class="wrap">
+  <p class="eyebrow">Team explorer</p>
+  <h1 id="title">One team. The whole season.</h1>
+  <p class="deck" id="dek">Schedule, projected record, and opponent-adjusted strength.</p>
   <div class="controls">
     <label>Season <select id="season"></select></label>
     <label>Team <select id="team"></select></label>

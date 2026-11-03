@@ -33,7 +33,13 @@
     games.forEach(function (g) { if (weeks.indexOf(g.week) < 0) weeks.push(g.week); });
     weeks.sort(function (a, b) { return a - b; });
     $("fresh").textContent = "Season " + data.season + " · " + games.filter(function (g) { return g.played; }).length + " finals in the file";
-    $("result").innerHTML = '<div class="tablewrap"><table class="schedule"><thead><tr><th>Slice</th><th class="num">Picks</th><th class="num">Winners</th><th class="num">Brier</th></tr></thead><tbody>' +
+    var seasonGames = games.filter(decisive);
+    var seasonHits = seasonGames.filter(hit).length;
+    var seasonBrier = brier(seasonGames);
+    $("result").innerHTML = '<div class="metrics"><div class="metric"><span>Winner hit rate</span><strong>' + (seasonGames.length ? (100 * seasonHits / seasonGames.length).toFixed(1) + "%" : "—") + "</strong></div>" +
+      '<div class="metric"><span>Picks</span><strong>' + seasonHits + "/" + seasonGames.length + "</strong></div>" +
+      '<div class="metric"><span>Brier score</span><strong>' + (seasonBrier == null ? "—" : seasonBrier.toFixed(3)) + "</strong></div></div>" +
+      '<div class="tablewrap"><table class="schedule"><thead><tr><th>Slice</th><th class="num">Picks</th><th class="num">Winners</th><th class="num">Brier</th></tr></thead><tbody>' +
       row("Season", games) +
       weeks.map(function (w) { return row("Week " + w, games.filter(function (g) { return g.week === w; })); }).join("") +
       "</tbody></table></div>";

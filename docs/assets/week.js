@@ -44,16 +44,28 @@
     var graded = games.map(grade).filter(function (x) { return x !== null; });
     var hits = graded.filter(Boolean).length;
     $("count").textContent = games.length + " games" + (graded.length ? " · winner hit rate " + hits + "/" + graded.length + " (" + (100 * hits / graded.length).toFixed(0) + "%)" : "");
-    $("rows").innerHTML = games.map(function (g) {
+    var box = $("rows");
+    box.className = "game-list";
+    box.innerHTML = games.map(function (g) {
       var result = grade(g);
-      var pick = result === null ? (g.played ? "Tie" : "—") : (result ? "Hit" : "Miss");
-      var finalScore = g.played ? g.away_score + "–" + g.home_score : "—";
-      return "<tr><td><a class=\"teamlink\" href=\"team.html?team=" + esc(g.away) + "&season=" + state.data.season + "\">" + esc(name(g.away)) + "</a> at <a class=\"teamlink\" href=\"team.html?team=" + esc(g.home) + "&season=" + state.data.season + "\">" + esc(name(g.home)) + "</a>" + (g.neutral ? " · neutral" : "") + "</td>" +
-        "<td class=\"num game-score\">" + fmt(g.pregame_proj_away, 1) + "–" + fmt(g.pregame_proj_home, 1) + "</td>" +
-        "<td class=\"num\">" + signed(g.pregame_spread_home, 1) + "</td>" +
-        "<td class=\"num\">" + (g.pregame_home_win_chance * 100).toFixed(1) + "%</td>" +
-        "<td class=\"num\">" + finalScore + "</td>" +
-        "<td class=\"" + (result === true ? "hit" : result === false ? "miss" : "") + "\">" + pick + "</td></tr>";
+      var pick = result === null ? (g.played ? "Tie" : "Upcoming") : (result ? "Hit" : "Miss");
+      var home = state.conf[g.home] || { team: g.home, name: g.home };
+      var away = state.conf[g.away] || { team: g.away, name: g.away };
+      function mark(team) {
+        var src = typeof team.logo === "string" && team.logo.indexOf("https://") === 0 ? '<img alt="" width="28" height="28" src="' + esc(team.logo) + '">' : "";
+        return '<span class="logo">' + src + '<span class="logo-fallback">' + esc(team.team || "") + "</span></span>";
+      }
+      var p = g.pregame_home_win_chance || 0;
+      var fav = p >= 0.5 ? name(g.home) : name(g.away);
+      var favP = Math.max(p, 1 - p);
+      return '<article class="game-card"><header><span>' + (g.neutral ? "Neutral" : "Home / away") + "</span><span class=\"" + (result === true ? "hit" : result === false ? "miss" : "") + "\">" + pick + "</span></header>" +
+        '<div class="game-match"><div class="game-side away"><a href="team.html?team=' + esc(g.away) + "&season=" + state.data.season + '">' + mark(away) + esc(name(g.away)) + "</a></div>" +
+        '<div class="game-mid"><span>Pregame</span><strong>' + fmt(g.pregame_proj_away, 1) + "–" + fmt(g.pregame_proj_home, 1) + "</strong>" +
+        (g.played ? "<span>Final " + g.away_score + "–" + g.home_score + "</span>" : "<span>Not played</span>") + "</div>" +
+        '<div class="game-side"><a href="team.html?team=' + esc(g.home) + "&season=" + state.data.season + '">' + mark(home) + esc(name(g.home)) + "</a></div></div>" +
+        '<div class="prob"><div class="prob-labels"><span>' + esc(name(g.away)) + " " + ((1 - p) * 100).toFixed(0) + '%</span><span>' + esc(fav) + " " + (favP * 100).toFixed(0) + '%</span><span>' + esc(name(g.home)) + " " + (p * 100).toFixed(0) + "%</span></div>" +
+        '<div class="prob-bar" aria-hidden="true"><i style="width:' + ((1 - p) * 100).toFixed(1) + '%;background:' + esc(away.color || "#477c99") + '"></i><i style="width:' + (p * 100).toFixed(1) + '%;background:' + esc(home.color || "#255b7a") + '"></i></div>' +
+        '<p class="note">Home spread ' + signed(g.pregame_spread_home, 1) + "</p></div></article>";
     }).join("");
   }
 

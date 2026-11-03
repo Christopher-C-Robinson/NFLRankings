@@ -57,8 +57,10 @@
     box.innerHTML =
       '<article class="matchup">' +
       '<p class="matchup-venue">' + esc(venue) + "</p>" +
-      '<div class="matchup-score"><div><a class="teamlink" href="team.html?team=' + esc(a.team) + "&season=" + state.data.season + '">' + esc(a.name) + "</a><strong>" + fmt(proj.scoreA, 1) + "</strong><span>" + (proj.winProbability * 100).toFixed(1) + "% win chance</span></div>" +
-      "<div><a class=\"teamlink\" href=\"team.html?team=" + esc(b.team) + "&season=" + state.data.season + "\">" + esc(b.name) + "</a><strong>" + fmt(proj.scoreB, 1) + "</strong><span>" + ((1 - proj.winProbability) * 100).toFixed(1) + "% win chance</span></div></div>" +
+      '<div class="matchup-score"><div><a href="team.html?team=' + esc(a.team) + "&season=" + state.data.season + '">' + esc(a.name) + "</a><strong>" + fmt(proj.scoreA, 1) + "</strong><span>" + (proj.winProbability * 100).toFixed(1) + "% win chance</span></div>" +
+      "<div><a href=\"team.html?team=" + esc(b.team) + "&season=" + state.data.season + "\">" + esc(b.name) + "</a><strong>" + fmt(proj.scoreB, 1) + "</strong><span>" + ((1 - proj.winProbability) * 100).toFixed(1) + "% win chance</span></div></div>" +
+      '<div class="prob"><div class="prob-labels"><span>' + esc(a.team) + "</span><span>" + esc(b.team) + "</span></div>" +
+      '<div class="prob-bar"><i style="width:' + (proj.winProbability * 100).toFixed(1) + "%;background:" + esc(a.color || "#255b7a") + '"></i><i style="width:' + ((1 - proj.winProbability) * 100).toFixed(1) + "%;background:" + esc(b.color || "#477c99") + '"></i></div></div>' +
       "<dl class=\"matchup-facts\">" +
       "<dt>Spread, team A</dt><dd>" + signed(proj.margin, 1) + "</dd>" +
       "<dt>80% margin range</dt><dd>" + signed(proj.marginLow, 1) + " to " + signed(proj.marginHigh, 1) + "</dd>" +

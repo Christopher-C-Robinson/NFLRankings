@@ -12,17 +12,17 @@
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<header class="masthead"><div class="wrap">
-  <h1>Accuracy</h1>
-  <p>Frozen pregame picks against nflverse final scores.</p>
-  <div class="nav"><a href="index.html">Rankings</a>
-    <a href="matchup.html">Matchup</a>
-    <a href="week.html">Week</a>
-    <a href="accuracy.html">Accuracy</a>
-    <a href="methodology.html">Methodology</a>
-    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
-</div></header>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">NF</span><span class="brand-name">NFL <b>INDEX</b></span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="index.html">Rankings</a><a href="week.html">Week</a><a href="team.html">Teams</a><a href="matchup.html">Matchups</a><a href="accuracy.html" aria-current="page">Accuracy</a><a href="methodology.html">Model</a>
+  </nav>
+  <div class="header-actions"><button type="button" class="theme" data-theme-toggle>Theme</button></div>
+</header>
 <main class="wrap">
+  <p class="eyebrow">Frozen picks</p>
+  <h1>Did the pregame favorite win?</h1>
+  <p class="deck">Each pick uses only plays from earlier weeks. Ties are left out. Finals are nflverse, not a live feed.</p>
   <div class="controls"><label>Season <select id="season"></select></label></div>
   <div class="fresh" id="fresh">Loading…</div>
   <div id="result"></div>
