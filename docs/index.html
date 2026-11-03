@@ -12,18 +12,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23255b7a'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="/NFLRankings/assets/app.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="NFL Rankings home"><span class="brand-mark" aria-hidden="true">NF</span><span class="brand-name">NFL <b>RANKINGS</b></span></a>
+  <a class="brand" href="/NFLRankings/index.html" aria-label="NFL Rankings home"><span class="brand-mark" aria-hidden="true">NF</span><span class="brand-name">NFL <b>RANKINGS</b></span></a>
   <nav class="main-nav" aria-label="Main">
-    <a href="index.html" aria-current="page">Rankings</a>
-    <a href="week.html">Week</a>
-    <a href="matchup.html">Matchups</a>
-    <a href="accuracy.html">Accuracy</a>
-    <a href="methodology.html">Model &amp; data</a>
+    <a href="/NFLRankings/index.html" aria-current="page">Rankings</a>
+    <a href="/NFLRankings/week.html">Week</a>
+    <a href="/NFLRankings/matchup.html">Matchups</a>
+    <a href="/NFLRankings/accuracy.html">Accuracy</a>
+    <a href="/NFLRankings/methodology.html">Model &amp; data</a>
   </nav>
   <p class="data-status"><span class="status-dot" aria-hidden="true"></span><span id="fresh">Loading…</span></p>
   <button type="button" class="theme" data-theme-toggle aria-pressed="false">Theme</button>
@@ -52,13 +52,22 @@
     <summary>How these rankings work <span>Neutral matchups · full field</span></summary>
     <div class="ranking-explanation">
       <p id="home-note">Home field is not used in the rank. Every team faces the other 31 on a neutral field.</p>
-      <p>Sort is average win chance, then neutral margin, then name. Display rounding does not decide ties. <a href="methodology.html">Model &amp; data</a>.</p>
+      <p>Sort is average win chance, then neutral margin, then name. Display rounding does not decide ties. <a href="/NFLRankings/methodology.html">Model &amp; data</a>.</p>
       <button type="button" class="button-outline" id="export" disabled>Download rankings CSV</button>
     </div>
   </details>
 </main>
 <footer><div class="section-shell">Data: <a href="https://github.com/nflverse">nflverse</a> via nfl_data_py. Free data only. Logos and colors from nflverse team metadata.</div></footer>
-<script src="assets/theme.js"></script>
-<script src="assets/app.js"></script>
+<script src="/NFLRankings/assets/site.js"></script>
+<script src="/NFLRankings/assets/theme.js"></script>
+<script src="/NFLRankings/assets/app.js"></script>
+<script>
+  setTimeout(function () {
+    var el = document.getElementById("fresh");
+    if (el && el.textContent.indexOf("Loading") === 0) {
+      el.textContent = "Could not load this page. Hard-refresh and try again.";
+    }
+  }, 12000);
+</script>
 </body>
 </html>

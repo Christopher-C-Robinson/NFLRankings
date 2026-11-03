@@ -62,7 +62,18 @@ scripts/refresh.sh latest          # or: python -m nflrankings --season 2022
 
 `--season latest` uses the current UTC year and falls back to the previous year if
 there are no regular-season plays yet. Output goes to `docs/data/{season}.json`,
-`{season}.csv` and `index.json`. Preview with `python -m http.server -d docs`.
+`{season}.csv` and `index.json`. Styles, scripts, and JSON use root-absolute
+`/NFLRankings/...` URLs, the same path GitHub project Pages serves. Preview
+under that prefix:
+
+```bash
+mkdir -p /tmp/nfl-preview
+ln -sfn "$PWD/docs" /tmp/nfl-preview/NFLRankings
+python -m http.server -d /tmp/nfl-preview 8000
+```
+
+Open http://127.0.0.1:8000/NFLRankings/ . A URL without the trailing slash
+should load the same board.
 
 ## GitHub Pages
 
