@@ -5,6 +5,8 @@ A free, College Football Index-style NFL rankings site. A Python pipeline pulls
 vanilla HTML/CSS/JS site in `docs/` renders it. No build step, no paid sports
 APIs, no scraping of Pro Football Reference.
 
+**Live site:** [NFL Rankings](https://christopher-c-robinson.github.io/NFLRankings/)
+
 ## The ranking
 
 Teams are ranked by **average neutral-site win chance against the other 31
