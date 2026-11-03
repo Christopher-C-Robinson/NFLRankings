@@ -242,9 +242,10 @@ def attach_pregame(
     rates still use points from earlier weeks only, shrunk toward the league
     rate of those earlier games.
 
-    Drive starts, special-teams EPA, success rate, and explosiveness are
-    defined in ``units`` for the walk-forward screen. They are not added
-    here. On 2024 and 2025 they did not both beat this scrimmage-EPA spread.
+    Drive starts, special-teams EPA, success rate, explosiveness, and the
+    wider aspect ridge in ``scripts/screen_aspects.py`` were measured on
+    earlier seasons. They are not added here. On 2024 and 2025 none of those
+    screens beat this scrimmage-EPA spread on both seasons.
     """
     ids = [team["team"] for team in teams]
     plays = rated_plays(pbp)

@@ -1,0 +1,1333 @@
+{
+  "method": "rolling-ridge-aspects-v1",
+  "promoted": false,
+  "decision": "Keep the published pregame spread on scrimmage EPA. The dynamic ridge did not raise winners on both 2024 and 2025 without raising Brier.",
+  "window_seasons": 4,
+  "half_life_seasons": 2.0,
+  "lambdas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "check_seasons": [
+    2024,
+    2025
+  ],
+  "report_season": 2026,
+  "weight_floor_points": 0.25,
+  "features": [
+    {
+      "name": "pass_matchup",
+      "group": "style",
+      "summary": "Pass EPA of the home offense against the away pass defense, minus the swap."
+    },
+    {
+      "name": "rush_matchup",
+      "group": "style",
+      "summary": "Rush EPA of the home offense against the away rush defense, minus the swap."
+    },
+    {
+      "name": "pass_exposed",
+      "group": "style",
+      "summary": "Pass matchup weighted by each offense's passing share."
+    },
+    {
+      "name": "rush_exposed",
+      "group": "style",
+      "summary": "Rush matchup weighted by each offense's rushing share."
+    },
+    {
+      "name": "early_matchup",
+      "group": "phase",
+      "summary": "Early-down EPA matchup, first and second down."
+    },
+    {
+      "name": "late_matchup",
+      "group": "phase",
+      "summary": "Late-down EPA matchup, third and fourth down."
+    },
+    {
+      "name": "redzone_matchup",
+      "group": "phase",
+      "summary": "EPA matchup inside the opponent's 20."
+    },
+    {
+      "name": "comp_matchup",
+      "group": "phase",
+      "summary": "EPA matchup on plays with pre-play win probability from 10% to 90%."
+    },
+    {
+      "name": "success_matchup",
+      "group": "rates",
+      "summary": "Success-rate matchup."
+    },
+    {
+      "name": "explosive_matchup",
+      "group": "rates",
+      "summary": "Explosiveness matchup, 20-yard passes and 10-yard runs."
+    },
+    {
+      "name": "ypp_matchup",
+      "group": "rates",
+      "summary": "Yards-per-play matchup."
+    },
+    {
+      "name": "turnover_matchup",
+      "group": "ball",
+      "summary": "Matchup of plays without an interception or a lost fumble."
+    },
+    {
+      "name": "sack_matchup",
+      "group": "ball",
+      "summary": "Matchup of pass plays that are not sacks."
+    },
+    {
+      "name": "pressure_matchup",
+      "group": "ball",
+      "summary": "Matchup of pass plays without a quarterback hit or a sack."
+    },
+    {
+      "name": "penalty_matchup",
+      "group": "ball",
+      "summary": "Matchup of penalty yards, with a defensive penalty as a plus for the offense."
+    },
+    {
+      "name": "start_matchup",
+      "group": "drive",
+      "summary": "Matchup of drive-start yards from the offense's own goal."
+    },
+    {
+      "name": "ppd_matchup",
+      "group": "drive",
+      "summary": "Points-per-drive matchup."
+    },
+    {
+      "name": "score_drive_matchup",
+      "group": "drive",
+      "summary": "Share of drives that end in a touchdown or a field goal."
+    },
+    {
+      "name": "clean_drive_matchup",
+      "group": "drive",
+      "summary": "Share of drives that do not end in a turnover."
+    },
+    {
+      "name": "st_matchup",
+      "group": "special",
+      "summary": "Special-teams EPA matchup on kickoffs, punts, field goals, and extra points."
+    },
+    {
+      "name": "rest_diff",
+      "group": "situation",
+      "summary": "Home rest days minus away rest days, from the schedule."
+    },
+    {
+      "name": "travel_diff",
+      "group": "situation",
+      "summary": "Away travel miles minus home travel miles, in thousands."
+    },
+    {
+      "name": "wind_pass",
+      "group": "situation",
+      "summary": "Wind speed times how much more the away team passes."
+    },
+    {
+      "name": "cold_pass",
+      "group": "situation",
+      "summary": "Degrees under 45, when a temperature is listed, times the away passing edge."
+    },
+    {
+      "name": "qb_edge",
+      "group": "personnel",
+      "summary": "Shrunk career pass EPA of the expected home starter minus the away starter."
+    },
+    {
+      "name": "out_diff",
+      "group": "personnel",
+      "summary": "Players ruled out for the away team minus players ruled out for the home team."
+    }
+  ],
+  "accuracy": {
+    "baseline": {
+      "2018": {
+        "hits": 165,
+        "n": 254,
+        "brier": 0.22247,
+        "mae": 10.3177,
+        "games": 256
+      },
+      "2019": {
+        "hits": 163,
+        "n": 255,
+        "brier": 0.224779,
+        "mae": 10.623,
+        "games": 256
+      },
+      "2020": {
+        "hits": 161,
+        "n": 255,
+        "brier": 0.22507,
+        "mae": 10.2421,
+        "games": 256
+      },
+      "2021": {
+        "hits": 167,
+        "n": 271,
+        "brier": 0.232739,
+        "mae": 11.3568,
+        "games": 272
+      },
+      "2022": {
+        "hits": 172,
+        "n": 269,
+        "brier": 0.226836,
+        "mae": 9.0118,
+        "games": 271
+      },
+      "2023": {
+        "hits": 169,
+        "n": 272,
+        "brier": 0.229651,
+        "mae": 10.3774,
+        "games": 272
+      },
+      "2024": {
+        "hits": 183,
+        "n": 272,
+        "brier": 0.215312,
+        "mae": 10.1921,
+        "games": 272
+      },
+      "2025": {
+        "hits": 172,
+        "n": 271,
+        "brier": 0.231224,
+        "mae": 10.4561,
+        "games": 272
+      },
+      "2026": {
+        "hits": 73,
+        "n": 120,
+        "brier": 0.23416,
+        "mae": 9.7775,
+        "games": 121,
+        "weeks_1_4": {
+          "hits": 40,
+          "n": 64,
+          "brier": 0.234933,
+          "mae": 9.7792,
+          "games": 64
+        },
+        "weeks_5_plus": {
+          "hits": 33,
+          "n": 56,
+          "brier": 0.233278,
+          "mae": 9.7756,
+          "games": 57
+        }
+      }
+    },
+    "dynamic": {
+      "2018": {
+        "hits": 165,
+        "n": 254,
+        "brier": 0.222075,
+        "mae": 10.3077,
+        "games": 256
+      },
+      "2019": {
+        "hits": 164,
+        "n": 255,
+        "brier": 0.224659,
+        "mae": 10.6179,
+        "games": 256
+      },
+      "2020": {
+        "hits": 161,
+        "n": 255,
+        "brier": 0.224793,
+        "mae": 10.2346,
+        "games": 256
+      },
+      "2021": {
+        "hits": 167,
+        "n": 271,
+        "brier": 0.231014,
+        "mae": 11.29,
+        "games": 272
+      },
+      "2022": {
+        "hits": 174,
+        "n": 269,
+        "brier": 0.224266,
+        "mae": 9.0526,
+        "games": 271
+      },
+      "2023": {
+        "hits": 176,
+        "n": 272,
+        "brier": 0.227336,
+        "mae": 10.252,
+        "games": 272
+      },
+      "2024": {
+        "hits": 182,
+        "n": 272,
+        "brier": 0.211982,
+        "mae": 10.0521,
+        "games": 272
+      },
+      "2025": {
+        "hits": 168,
+        "n": 271,
+        "brier": 0.232604,
+        "mae": 10.3551,
+        "games": 272
+      },
+      "2026": {
+        "hits": 75,
+        "n": 120,
+        "brier": 0.223383,
+        "mae": 9.7435,
+        "games": 121,
+        "weeks_1_4": {
+          "hits": 38,
+          "n": 64,
+          "brier": 0.22923,
+          "mae": 9.8887,
+          "games": 64
+        },
+        "weeks_5_plus": {
+          "hits": 37,
+          "n": 56,
+          "brier": 0.216702,
+          "mae": 9.5805,
+          "games": 57
+        }
+      }
+    },
+    "static_frozen": {
+      "2018": {
+        "hits": 168,
+        "n": 254,
+        "brier": 0.217269,
+        "mae": 10.1953,
+        "games": 256
+      },
+      "2019": {
+        "hits": 159,
+        "n": 255,
+        "brier": 0.221438,
+        "mae": 10.5215,
+        "games": 256
+      },
+      "2020": {
+        "hits": 168,
+        "n": 255,
+        "brier": 0.219368,
+        "mae": 10.0857,
+        "games": 256
+      },
+      "2021": {
+        "hits": 169,
+        "n": 271,
+        "brier": 0.226372,
+        "mae": 11.1263,
+        "games": 272
+      },
+      "2022": {
+        "hits": 172,
+        "n": 269,
+        "brier": 0.222087,
+        "mae": 8.9633,
+        "games": 271
+      },
+      "2023": {
+        "hits": 176,
+        "n": 272,
+        "brier": 0.22672,
+        "mae": 10.2058,
+        "games": 272
+      },
+      "2024": {
+        "hits": 185,
+        "n": 272,
+        "brier": 0.209275,
+        "mae": 10.002,
+        "games": 272
+      },
+      "2025": {
+        "hits": 165,
+        "n": 271,
+        "brier": 0.236235,
+        "mae": 10.5666,
+        "games": 272
+      },
+      "2026": {
+        "hits": 71,
+        "n": 120,
+        "brier": 0.229718,
+        "mae": 9.846,
+        "games": 121,
+        "weeks_1_4": {
+          "hits": 37,
+          "n": 64,
+          "brier": 0.233052,
+          "mae": 9.9129,
+          "games": 64
+        },
+        "weeks_5_plus": {
+          "hits": 34,
+          "n": 56,
+          "brier": 0.225908,
+          "mae": 9.7709,
+          "games": 57
+        }
+      }
+    }
+  },
+  "pooled": {
+    "2018_2023": {
+      "baseline": {
+        "hits": 997,
+        "n": 1576,
+        "brier": 0.227015,
+        "mae": 10.3201,
+        "games": 1583
+      },
+      "dynamic": {
+        "hits": 1007,
+        "n": 1576,
+        "brier": 0.225752,
+        "mae": 10.2904,
+        "games": 1583
+      },
+      "static_frozen": {
+        "hits": 1012,
+        "n": 1576,
+        "brier": 0.222302,
+        "mae": 10.1812,
+        "games": 1583
+      }
+    },
+    "2024_2025": {
+      "baseline": {
+        "hits": 355,
+        "n": 543,
+        "brier": 0.223253,
+        "mae": 10.3241,
+        "games": 544
+      },
+      "dynamic": {
+        "hits": 350,
+        "n": 543,
+        "brier": 0.222274,
+        "mae": 10.2036,
+        "games": 544
+      },
+      "static_frozen": {
+        "hits": 350,
+        "n": 543,
+        "brier": 0.22273,
+        "mae": 10.2843,
+        "games": 544
+      }
+    }
+  },
+  "weights_by_season": [
+    {
+      "season": 2018,
+      "lambda": 100.0,
+      "train_seasons": [
+        2016,
+        2017
+      ],
+      "train_games": 512,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.01110106944215497,
+        "rush_matchup": 0.006906936912252239,
+        "pass_exposed": 0.01137366646407336,
+        "rush_exposed": 0.006629287909834214,
+        "early_matchup": 0.007417297132096966,
+        "late_matchup": 0.014711786959729188,
+        "redzone_matchup": -0.005284514251092986,
+        "comp_matchup": 0.010334557605063794,
+        "success_matchup": 0.010173096807809865,
+        "explosive_matchup": -0.004480113489206262,
+        "ypp_matchup": 0.006783380314866735,
+        "turnover_matchup": 9.864978420086911e-06,
+        "sack_matchup": 0.0013349013742813144,
+        "pressure_matchup": 0.003373110123610407,
+        "penalty_matchup": 0.004424161088837752,
+        "start_matchup": -0.002700206090132037,
+        "ppd_matchup": 0.008797976185054393,
+        "score_drive_matchup": 0.013608320476862541,
+        "clean_drive_matchup": 0.0012781099774980917,
+        "st_matchup": 0.0153880060605372,
+        "rest_diff": 0.0074794324609377145,
+        "travel_diff": 0.0038522719614741676,
+        "wind_pass": 0.005248977428687301,
+        "cold_pass": 0.005841289597659501,
+        "qb_edge": 0.018647544434796142,
+        "out_diff": 0.011346599313960338
+      }
+    },
+    {
+      "season": 2019,
+      "lambda": 100.0,
+      "train_seasons": [
+        2016,
+        2017,
+        2018
+      ],
+      "train_games": 768,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.015796981711935477,
+        "rush_matchup": 0.009538136934208805,
+        "pass_exposed": 0.015402427308820283,
+        "rush_exposed": 0.009999678173517206,
+        "early_matchup": 0.014809026709437324,
+        "late_matchup": 0.01467056102723481,
+        "redzone_matchup": 0.002749754819469101,
+        "comp_matchup": 0.01566534908788834,
+        "success_matchup": 0.01552084098401473,
+        "explosive_matchup": 0.00040281723777480134,
+        "ypp_matchup": 0.01085580656769251,
+        "turnover_matchup": 0.00039353672431085223,
+        "sack_matchup": 0.0024770590403370707,
+        "pressure_matchup": 0.006410140376849371,
+        "penalty_matchup": -0.0023881145697125564,
+        "start_matchup": -0.0037628569637826828,
+        "ppd_matchup": 0.014607389010702321,
+        "score_drive_matchup": 0.018038566534327588,
+        "clean_drive_matchup": 0.0027301378889339058,
+        "st_matchup": 0.008087034965172128,
+        "rest_diff": 0.004272104524018623,
+        "travel_diff": 0.005743887980535043,
+        "wind_pass": 0.002073709072487036,
+        "cold_pass": 0.006941868357484502,
+        "qb_edge": 0.020711042104584118,
+        "out_diff": 0.00899422111550373
+      }
+    },
+    {
+      "season": 2020,
+      "lambda": 100.0,
+      "train_seasons": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "train_games": 1024,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.012628979408101213,
+        "rush_matchup": 0.005674076819061538,
+        "pass_exposed": 0.01233072965626671,
+        "rush_exposed": 0.006521128227763283,
+        "early_matchup": 0.013076927042051484,
+        "late_matchup": 0.008542465431415958,
+        "redzone_matchup": 0.003045489441683757,
+        "comp_matchup": 0.012994840371953531,
+        "success_matchup": 0.0125676874366,
+        "explosive_matchup": -0.0011393154885235494,
+        "ypp_matchup": 0.006753509229090469,
+        "turnover_matchup": 0.0016647289366177825,
+        "sack_matchup": 0.0035138928552098814,
+        "pressure_matchup": 0.0049964558305904344,
+        "penalty_matchup": -0.01265884283166079,
+        "start_matchup": -0.0022333846619714912,
+        "ppd_matchup": 0.012886509971490698,
+        "score_drive_matchup": 0.01672801835349019,
+        "clean_drive_matchup": 0.007447015447286273,
+        "st_matchup": 0.0034348245463339797,
+        "rest_diff": -0.0018162822373076,
+        "travel_diff": 0.0037711906472892914,
+        "wind_pass": 0.009847248285899628,
+        "cold_pass": 0.003595882503402786,
+        "qb_edge": 0.021830120425279553,
+        "out_diff": 0.005563475695375052
+      }
+    },
+    {
+      "season": 2021,
+      "lambda": 10.0,
+      "train_seasons": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "train_games": 1024,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.06698853962211135,
+        "rush_matchup": 0.016760316668665492,
+        "pass_exposed": 0.06661292886715742,
+        "rush_exposed": 0.023716098685508648,
+        "early_matchup": 0.06621404705704584,
+        "late_matchup": 0.03508081984462301,
+        "redzone_matchup": 0.06216675701753564,
+        "comp_matchup": 0.07195380929204576,
+        "success_matchup": 0.03905394146405911,
+        "explosive_matchup": -0.05687190552467451,
+        "ypp_matchup": -0.011509917804939932,
+        "turnover_matchup": -0.005807807351708153,
+        "sack_matchup": -0.003988324967684286,
+        "pressure_matchup": 0.010805067100258078,
+        "penalty_matchup": -0.13440896094691665,
+        "start_matchup": 0.0053516100893280395,
+        "ppd_matchup": 0.066175402402921,
+        "score_drive_matchup": 0.08279398051436904,
+        "clean_drive_matchup": 0.01939909454278742,
+        "st_matchup": 0.04714316739621498,
+        "rest_diff": -0.009517977623069586,
+        "travel_diff": -0.03815397618362053,
+        "wind_pass": 0.042353699489537384,
+        "cold_pass": 0.05436461087888776,
+        "qb_edge": 0.1695223677066012,
+        "out_diff": 0.07816793309576228
+      }
+    },
+    {
+      "season": 2022,
+      "lambda": 1.0,
+      "train_seasons": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "train_games": 1040,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.029250863671796457,
+        "rush_matchup": 0.09856309025071994,
+        "pass_exposed": 0.07795473263078495,
+        "rush_exposed": 0.1376372520877675,
+        "early_matchup": 0.30527664991528436,
+        "late_matchup": -0.12373687328324348,
+        "redzone_matchup": -0.02470012636541142,
+        "comp_matchup": 0.11355937337572314,
+        "success_matchup": 0.2003377277821797,
+        "explosive_matchup": -0.3725895967267785,
+        "ypp_matchup": -0.21856069887972193,
+        "turnover_matchup": -0.037669696648080564,
+        "sack_matchup": -0.04881263950343861,
+        "pressure_matchup": 0.036720262349243485,
+        "penalty_matchup": -0.6893131310534826,
+        "start_matchup": 0.2150535308439878,
+        "ppd_matchup": 0.20363428495704716,
+        "score_drive_matchup": 0.22923803582947866,
+        "clean_drive_matchup": -0.12185653960614767,
+        "st_matchup": 0.10935468024791856,
+        "rest_diff": -0.08778430051736379,
+        "travel_diff": -0.3583291459246297,
+        "wind_pass": 0.13732611826039604,
+        "cold_pass": -0.0021381539134910504,
+        "qb_edge": 0.8829123031052216,
+        "out_diff": 0.3950523072670328
+      }
+    },
+    {
+      "season": 2023,
+      "lambda": 1.0,
+      "train_seasons": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "train_games": 1055,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.0965663815615022,
+        "rush_matchup": 0.22709089697366588,
+        "pass_exposed": 0.08186231029417763,
+        "rush_exposed": 0.19918943598877528,
+        "early_matchup": 0.07451656365461842,
+        "late_matchup": 0.17475780029945612,
+        "redzone_matchup": -0.12556786551643515,
+        "comp_matchup": 0.1621617175609508,
+        "success_matchup": 0.0036162969958480227,
+        "explosive_matchup": -0.10785706195328494,
+        "ypp_matchup": -0.054285402260065674,
+        "turnover_matchup": -0.048120512542053455,
+        "sack_matchup": 0.08340480171978258,
+        "pressure_matchup": -0.059873610368725884,
+        "penalty_matchup": -0.31910794140565135,
+        "start_matchup": 0.1835189671705349,
+        "ppd_matchup": 0.14759150458230427,
+        "score_drive_matchup": 0.14269940848812884,
+        "clean_drive_matchup": -0.1872725068639918,
+        "st_matchup": 0.03402807723525354,
+        "rest_diff": -0.04674142869566164,
+        "travel_diff": -0.31864075654844937,
+        "wind_pass": 0.07764840266489614,
+        "cold_pass": -0.32499508623069834,
+        "qb_edge": 0.45121410554340413,
+        "out_diff": 0.4499379160597991
+      }
+    },
+    {
+      "season": 2024,
+      "lambda": 10.0,
+      "train_seasons": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "train_games": 1071,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.04468300357227776,
+        "rush_matchup": 0.0370100578795683,
+        "pass_exposed": 0.044438956473794214,
+        "rush_exposed": 0.03863549171760484,
+        "early_matchup": 0.004502701508717039,
+        "late_matchup": 0.09396984035249677,
+        "redzone_matchup": 0.02487897912364951,
+        "comp_matchup": 0.05834126380927769,
+        "success_matchup": 0.07022858807543621,
+        "explosive_matchup": 0.03951530989728845,
+        "ypp_matchup": 0.05753932273390685,
+        "turnover_matchup": -0.0278900130964821,
+        "sack_matchup": 0.017319148467297117,
+        "pressure_matchup": 0.03232761923886198,
+        "penalty_matchup": -0.004473350540053508,
+        "start_matchup": 0.023105746970352652,
+        "ppd_matchup": 0.06044680506418664,
+        "score_drive_matchup": 0.05781862370685935,
+        "clean_drive_matchup": -0.08893411202975639,
+        "st_matchup": -0.026271494980877903,
+        "rest_diff": 0.04214924161262611,
+        "travel_diff": -0.0669826986154972,
+        "wind_pass": 0.01897395359716598,
+        "cold_pass": -0.06210928501687725,
+        "qb_edge": 0.1329922239613929,
+        "out_diff": 0.08745794305450906
+      }
+    },
+    {
+      "season": 2025,
+      "lambda": 1.0,
+      "train_seasons": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "train_games": 1087,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.16687057036892372,
+        "rush_matchup": 0.00145168282868486,
+        "pass_exposed": 0.13738832448747867,
+        "rush_exposed": 0.05680400991194764,
+        "early_matchup": -0.04563656395743184,
+        "late_matchup": 0.4075306789225321,
+        "redzone_matchup": -0.2352648950837979,
+        "comp_matchup": 0.024899410715272227,
+        "success_matchup": 0.24200734314072891,
+        "explosive_matchup": 0.33523999659892295,
+        "ypp_matchup": 0.2079971236682286,
+        "turnover_matchup": -0.21637901728504136,
+        "sack_matchup": 0.23770192325089362,
+        "pressure_matchup": 0.14421750607237513,
+        "penalty_matchup": 0.3131253066881785,
+        "start_matchup": -0.0348670295551648,
+        "ppd_matchup": 0.028627993431905897,
+        "score_drive_matchup": 0.04717749286112363,
+        "clean_drive_matchup": -0.33243457334243837,
+        "st_matchup": -0.08938673636424034,
+        "rest_diff": 0.2521521770650927,
+        "travel_diff": -0.42045105796855764,
+        "wind_pass": 0.15588309955263813,
+        "cold_pass": -0.349189102861464,
+        "qb_edge": 0.5646638613071482,
+        "out_diff": 0.5559453140598701
+      }
+    },
+    {
+      "season": 2026,
+      "lambda": 1.0,
+      "train_seasons": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "train_games": 1087,
+      "beta_points_per_sd": {
+        "pass_matchup": 0.15548526681688865,
+        "rush_matchup": -0.004247617022991248,
+        "pass_exposed": 0.10514780465016593,
+        "rush_exposed": 0.011327001201313597,
+        "early_matchup": -0.06613957012257407,
+        "late_matchup": 0.3471277541738084,
+        "redzone_matchup": -0.26641692713181037,
+        "comp_matchup": 0.05687698004059045,
+        "success_matchup": 0.17905668213077605,
+        "explosive_matchup": 0.28870505004866964,
+        "ypp_matchup": 0.24177899297827019,
+        "turnover_matchup": -0.36085652456487305,
+        "sack_matchup": 0.41476004654712234,
+        "pressure_matchup": 0.07458253158352025,
+        "penalty_matchup": 0.5102185742939751,
+        "start_matchup": -0.5036545153724694,
+        "ppd_matchup": -0.1553915811793098,
+        "score_drive_matchup": -0.2510936427578607,
+        "clean_drive_matchup": -0.49414269382174775,
+        "st_matchup": -0.49395887172238506,
+        "rest_diff": 0.3470940919510321,
+        "travel_diff": -0.3004477613216167,
+        "wind_pass": 0.08855976520619432,
+        "cold_pass": 0.08675880548422282,
+        "qb_edge": 0.5124843835724705,
+        "out_diff": 0.6373041555343971
+      }
+    }
+  ],
+  "weight_leaders": [
+    {
+      "name": "qb_edge",
+      "mean_abs_beta": 0.3488,
+      "carries_weight": true
+    },
+    {
+      "name": "out_diff",
+      "mean_abs_beta": 0.3217,
+      "carries_weight": true
+    },
+    {
+      "name": "late_matchup",
+      "mean_abs_beta": 0.2508,
+      "carries_weight": true
+    },
+    {
+      "name": "travel_diff",
+      "mean_abs_beta": 0.2437,
+      "carries_weight": false
+    },
+    {
+      "name": "clean_drive_matchup",
+      "mean_abs_beta": 0.2107,
+      "carries_weight": false
+    },
+    {
+      "name": "cold_pass",
+      "mean_abs_beta": 0.2056,
+      "carries_weight": false
+    },
+    {
+      "name": "explosive_matchup",
+      "mean_abs_beta": 0.1874,
+      "carries_weight": false
+    },
+    {
+      "name": "penalty_matchup",
+      "mean_abs_beta": 0.1588,
+      "carries_weight": false
+    },
+    {
+      "name": "success_matchup",
+      "mean_abs_beta": 0.1561,
+      "carries_weight": false
+    },
+    {
+      "name": "rest_diff",
+      "mean_abs_beta": 0.1472,
+      "carries_weight": false
+    },
+    {
+      "name": "ypp_matchup",
+      "mean_abs_beta": 0.1328,
+      "carries_weight": false
+    },
+    {
+      "name": "redzone_matchup",
+      "mean_abs_beta": 0.1301,
+      "carries_weight": false
+    },
+    {
+      "name": "sack_matchup",
+      "mean_abs_beta": 0.1275,
+      "carries_weight": false
+    },
+    {
+      "name": "turnover_matchup",
+      "mean_abs_beta": 0.1221,
+      "carries_weight": false
+    },
+    {
+      "name": "pass_matchup",
+      "mean_abs_beta": 0.1058,
+      "carries_weight": false
+    },
+    {
+      "name": "pass_exposed",
+      "mean_abs_beta": 0.0909,
+      "carries_weight": false
+    },
+    {
+      "name": "pressure_matchup",
+      "mean_abs_beta": 0.0883,
+      "carries_weight": false
+    },
+    {
+      "name": "wind_pass",
+      "mean_abs_beta": 0.0874,
+      "carries_weight": false
+    },
+    {
+      "name": "st_matchup",
+      "mean_abs_beta": 0.0578,
+      "carries_weight": false
+    },
+    {
+      "name": "score_drive_matchup",
+      "mean_abs_beta": 0.0525,
+      "carries_weight": false
+    },
+    {
+      "name": "rush_exposed",
+      "mean_abs_beta": 0.0477,
+      "carries_weight": false
+    },
+    {
+      "name": "ppd_matchup",
+      "mean_abs_beta": 0.0445,
+      "carries_weight": false
+    },
+    {
+      "name": "comp_matchup",
+      "mean_abs_beta": 0.0416,
+      "carries_weight": false
+    },
+    {
+      "name": "start_matchup",
+      "mean_abs_beta": 0.029,
+      "carries_weight": false
+    },
+    {
+      "name": "early_matchup",
+      "mean_abs_beta": 0.0251,
+      "carries_weight": false
+    },
+    {
+      "name": "rush_matchup",
+      "mean_abs_beta": 0.0192,
+      "carries_weight": false
+    }
+  ],
+  "in_the_spread": [],
+  "ablation_2021_2023": {
+    "full": {
+      "hits": 517,
+      "n": 812,
+      "brier": 0.227546,
+      "mae": 10.1996,
+      "games": 815
+    },
+    "without_style": {
+      "hits": 509,
+      "n": 812,
+      "brier": 0.229361,
+      "mae": 10.3057,
+      "games": 815
+    },
+    "without_phase": {
+      "hits": 509,
+      "n": 812,
+      "brier": 0.229846,
+      "mae": 10.3542,
+      "games": 815
+    },
+    "without_rates": {
+      "hits": 517,
+      "n": 812,
+      "brier": 0.228222,
+      "mae": 10.1808,
+      "games": 815
+    },
+    "without_ball": {
+      "hits": 516,
+      "n": 812,
+      "brier": 0.228145,
+      "mae": 10.1963,
+      "games": 815
+    },
+    "without_drive": {
+      "hits": 512,
+      "n": 812,
+      "brier": 0.229592,
+      "mae": 10.3032,
+      "games": 815
+    },
+    "without_special": {
+      "hits": 504,
+      "n": 812,
+      "brier": 0.230606,
+      "mae": 10.3768,
+      "games": 815
+    },
+    "without_situation": {
+      "hits": 506,
+      "n": 812,
+      "brier": 0.228664,
+      "mae": 10.2776,
+      "games": 815
+    },
+    "without_personnel": {
+      "hits": 512,
+      "n": 812,
+      "brier": 0.229092,
+      "mae": 10.2239,
+      "games": 815
+    }
+  },
+  "static_fit": {
+    "lambda": 1.0,
+    "train_seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "train_games": 1583,
+    "beta_points_per_sd": {
+      "pass_matchup": 0.07595831712064044,
+      "rush_matchup": 0.06498978635024923,
+      "pass_exposed": 0.06068647078770284,
+      "rush_exposed": 0.11059750071176211,
+      "early_matchup": 0.034365524244485066,
+      "late_matchup": 0.14677883427493352,
+      "redzone_matchup": 0.042010937737347674,
+      "comp_matchup": 0.15573948999514042,
+      "success_matchup": 0.19749767389206319,
+      "explosive_matchup": -0.1647397890637576,
+      "ypp_matchup": -0.10562984856507547,
+      "turnover_matchup": -0.10443018057805499,
+      "sack_matchup": -0.0036581348579185404,
+      "pressure_matchup": 0.10349212676221127,
+      "penalty_matchup": -0.3997586900049354,
+      "start_matchup": 0.14648911010254484,
+      "ppd_matchup": 0.13452354019465718,
+      "score_drive_matchup": 0.25932574305482453,
+      "clean_drive_matchup": -0.17806817245258505,
+      "st_matchup": -0.06677558898462141,
+      "rest_diff": 0.018131404932065227,
+      "travel_diff": -0.23265582282789463,
+      "wind_pass": 0.22639616976548754,
+      "cold_pass": -0.16121554396542007,
+      "qb_edge": 0.730231759801652,
+      "out_diff": 0.3468936992289174
+    }
+  },
+  "closing_line": {
+    "2018": {
+      "hits": 168,
+      "n": 254
+    },
+    "2019": {
+      "hits": 164,
+      "n": 255
+    },
+    "2020": {
+      "hits": 172,
+      "n": 255
+    },
+    "2021": {
+      "hits": 169,
+      "n": 271
+    },
+    "2022": {
+      "hits": 178,
+      "n": 269
+    },
+    "2023": {
+      "hits": 185,
+      "n": 272
+    },
+    "2024": {
+      "hits": 194,
+      "n": 272
+    },
+    "2025": {
+      "hits": 177,
+      "n": 271
+    },
+    "2026": {
+      "hits": 79,
+      "n": 120
+    }
+  },
+  "coverage": {
+    "team_games": 5520,
+    "qb_found": 5518,
+    "starter_compared": 5520,
+    "starter_agreed": 5092,
+    "team_games_with_out_row": 4767,
+    "unknown_neutral_stadiums": [],
+    "injury_rows_kept": 55874,
+    "weekly_qb_charts": 5308,
+    "daily_qb_clubs": 32
+  },
+  "play_rows": {
+    "2016": {
+      "epa": 32291,
+      "pass": 19344,
+      "rush": 12947,
+      "early": 25113,
+      "late": 7178,
+      "redzone": 4635,
+      "comp": 24811,
+      "success": 32291,
+      "explosive": 32291,
+      "yards": 32291,
+      "turnover": 32291,
+      "sack": 19344,
+      "pressure": 19344,
+      "penalty": 32291,
+      "start": 5654,
+      "ppd": 5584,
+      "score_drive": 5654,
+      "clean_drive": 5654,
+      "st": 7171
+    },
+    "2017": {
+      "epa": 31987,
+      "pass": 18630,
+      "rush": 13357,
+      "early": 24710,
+      "late": 7277,
+      "redzone": 4280,
+      "comp": 24567,
+      "success": 31987,
+      "explosive": 31987,
+      "yards": 31987,
+      "turnover": 31987,
+      "sack": 18630,
+      "pressure": 18630,
+      "penalty": 31987,
+      "start": 5711,
+      "ppd": 5619,
+      "score_drive": 5711,
+      "clean_drive": 5711,
+      "st": 7155
+    },
+    "2018": {
+      "epa": 31751,
+      "pass": 18876,
+      "rush": 12875,
+      "early": 24814,
+      "late": 6937,
+      "redzone": 4539,
+      "comp": 23636,
+      "success": 31751,
+      "explosive": 31751,
+      "yards": 31751,
+      "turnover": 31751,
+      "sack": 18876,
+      "pressure": 18876,
+      "penalty": 31751,
+      "start": 5552,
+      "ppd": 5473,
+      "score_drive": 5552,
+      "clean_drive": 5552,
+      "st": 7029
+    },
+    "2019": {
+      "epa": 32046,
+      "pass": 19055,
+      "rush": 12991,
+      "early": 24968,
+      "late": 7078,
+      "redzone": 4607,
+      "comp": 24303,
+      "success": 32046,
+      "explosive": 32047,
+      "yards": 32047,
+      "turnover": 32047,
+      "sack": 19056,
+      "pressure": 19056,
+      "penalty": 32047,
+      "start": 5549,
+      "ppd": 5470,
+      "score_drive": 5549,
+      "clean_drive": 5549,
+      "st": 6954
+    },
+    "2020": {
+      "epa": 32444,
+      "pass": 19069,
+      "rush": 13375,
+      "early": 25374,
+      "late": 7070,
+      "redzone": 5043,
+      "comp": 24625,
+      "success": 32444,
+      "explosive": 32444,
+      "yards": 32444,
+      "turnover": 32444,
+      "sack": 19069,
+      "pressure": 19069,
+      "penalty": 32444,
+      "start": 5397,
+      "ppd": 5337,
+      "score_drive": 5397,
+      "clean_drive": 5397,
+      "st": 6967
+    },
+    "2021": {
+      "epa": 33986,
+      "pass": 19889,
+      "rush": 14097,
+      "early": 26271,
+      "late": 7715,
+      "redzone": 5255,
+      "comp": 25474,
+      "success": 33986,
+      "explosive": 33986,
+      "yards": 33986,
+      "turnover": 33986,
+      "sack": 19889,
+      "pressure": 19889,
+      "penalty": 33986,
+      "start": 5701,
+      "ppd": 5636,
+      "score_drive": 5701,
+      "clean_drive": 5701,
+      "st": 7139
+    },
+    "2022": {
+      "epa": 33652,
+      "pass": 19305,
+      "rush": 14347,
+      "early": 25992,
+      "late": 7660,
+      "redzone": 4905,
+      "comp": 26643,
+      "success": 33652,
+      "explosive": 33652,
+      "yards": 33652,
+      "turnover": 33652,
+      "sack": 19305,
+      "pressure": 19305,
+      "penalty": 33652,
+      "start": 5721,
+      "ppd": 5655,
+      "score_drive": 5721,
+      "clean_drive": 5721,
+      "st": 7147
+    },
+    "2023": {
+      "epa": 33836,
+      "pass": 19658,
+      "rush": 14178,
+      "early": 25903,
+      "late": 7933,
+      "redzone": 4943,
+      "comp": 26080,
+      "success": 33836,
+      "explosive": 33836,
+      "yards": 33836,
+      "turnover": 33836,
+      "sack": 19658,
+      "pressure": 19658,
+      "penalty": 33836,
+      "start": 5824,
+      "ppd": 5751,
+      "score_drive": 5824,
+      "clean_drive": 5824,
+      "st": 7190
+    },
+    "2024": {
+      "epa": 33335,
+      "pass": 19054,
+      "rush": 14281,
+      "early": 25743,
+      "late": 7592,
+      "redzone": 5147,
+      "comp": 25764,
+      "success": 33335,
+      "explosive": 33335,
+      "yards": 33335,
+      "turnover": 33335,
+      "sack": 19054,
+      "pressure": 19054,
+      "penalty": 33335,
+      "start": 5628,
+      "ppd": 5572,
+      "score_drive": 5628,
+      "clean_drive": 5628,
+      "st": 7216
+    },
+    "2025": {
+      "epa": 32813,
+      "pass": 18645,
+      "rush": 14168,
+      "early": 25130,
+      "late": 7683,
+      "redzone": 5141,
+      "comp": 25438,
+      "success": 32813,
+      "explosive": 32813,
+      "yards": 32813,
+      "turnover": 32813,
+      "sack": 18645,
+      "pressure": 18645,
+      "penalty": 32813,
+      "start": 5518,
+      "ppd": 5453,
+      "score_drive": 5518,
+      "clean_drive": 5518,
+      "st": 7083
+    },
+    "2026": {
+      "epa": 14851,
+      "pass": 8527,
+      "rush": 6324,
+      "early": 11409,
+      "late": 3442,
+      "redzone": 2365,
+      "comp": 11897,
+      "success": 14851,
+      "explosive": 14851,
+      "yards": 14851,
+      "turnover": 14851,
+      "sack": 8527,
+      "pressure": 8527,
+      "penalty": 14851,
+      "start": 2559,
+      "ppd": 2544,
+      "score_drive": 2559,
+      "clean_drive": 2559,
+      "st": 3223
+    }
+  },
+  "omitted": [
+    {
+      "name": "snap counts",
+      "reason": "The snap file is a postgame count. Last week's snaps are already inside the next week's EPA, so they are not a separate pregame input."
+    },
+    {
+      "name": "closing spread, moneyline, and total",
+      "reason": "Market numbers. The closing spread is scored as a comparison and is not a feature."
+    },
+    {
+      "name": "current-game participation",
+      "reason": "Who played the snaps is known after the game. The screen uses the depth chart and the injury report instead."
+    },
+    {
+      "name": "coaches, referees, and division flags",
+      "reason": "They are on the schedule. A separate flag per coach would memorize clubs. They are not aspect weights."
+    },
+    {
+      "name": "relocation priors",
+      "reason": "Oakland's 2019 rating is not copied onto Las Vegas in 2020, and San Diego is not copied onto the Chargers. Those week-1 handoffs stay at the league rate. The published EPA blend does the same."
+    }
+  ],
+  "personnel_rule": "Expected starter is the first offense-chart quarterback who is not Out or Doubtful. Weekly charts are the chart for that week. Daily charts, from 2025 on, use the last snapshot dated before gameday. Injury rows with a timestamp after gameday are dropped. Seasons whose injury file has no timestamp keep the week's report. out_diff counts players ruled Out, except kickers, punters, and long snappers. qb_edge is that starter's career pass EPA from 1999 on, shrunk with 300 prior plays toward zero, home minus away. Same-week games do not use each other's plays, matching the published EPA week cut.",
+  "static_frozen_note": "Equal-weight ridge fit on 2018-2023 only, then frozen. Those six seasons are in-sample for the static row. 2024-2026 are a comparison. The static row cannot replace the dynamic model after the check is known."
+}

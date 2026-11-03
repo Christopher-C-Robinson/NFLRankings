@@ -30,6 +30,7 @@ sys.path.insert(0, str(ROOT))
 from nflrankings.rating import adjust  # noqa: E402
 from nflrankings.schedule import BLEND_PRIOR_GAMES, blend_v2, shrink_prior_v2  # noqa: E402
 from nflrankings.units import (  # noqa: E402
+    drive_points_observations,
     drive_start_observations,
     explosive_observations,
     special_teams_observations,
@@ -93,32 +94,6 @@ def _scrimmage_epa(plays: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def _drive_points(plays: pd.DataFrame) -> pd.DataFrame:
-    """Points scored by the drive's offense, one row per drive."""
-    needed = {"game_id", "fixed_drive", "play_id", "play_type", "posteam", "defteam", "week", "posteam_score", "posteam_score_post"}
-    if not needed.issubset(plays.columns):
-        return pd.DataFrame(columns=["week", "posteam", "defteam", "epa"])
-    scr = plays[plays["play_type"].isin(["pass", "run"]) & plays["posteam"].notna() & plays["fixed_drive"].notna()]
-    scr = scr.sort_values(["game_id", "fixed_drive", "play_id"])
-    if scr.empty:
-        return pd.DataFrame(columns=["week", "posteam", "defteam", "epa"])
-    first = scr.groupby(["game_id", "fixed_drive"], as_index=False).nth(0)
-    owned = plays[plays["fixed_drive"].notna() & plays["posteam"].notna()].sort_values("play_id")
-    last = owned.groupby(["game_id", "fixed_drive"], as_index=False).nth(-1)
-    merged = first[["game_id", "fixed_drive", "week", "posteam", "defteam", "posteam_score"]].merge(
-        last[["game_id", "fixed_drive", "posteam", "posteam_score_post"]].rename(
-            columns={"posteam": "end_team", "posteam_score_post": "end_score"}
-        ),
-        on=["game_id", "fixed_drive"],
-        how="left",
-    )
-    same = merged["end_team"].eq(merged["posteam"])
-    points = np.where(same, merged["end_score"] - merged["posteam_score"], np.nan)
-    out = merged.assign(epa=points)
-    out = out[out["epa"].notna() & out["posteam"].notna() & out["defteam"].notna()]
-    return out[["week", "posteam", "defteam", "epa"]]
-
-
 def _net(frame: pd.DataFrame, teams: list[str]) -> dict[str, float]:
     if frame.empty or frame["posteam"].nunique() < 2 or frame["defteam"].nunique() < 2:
         return {team: 0.0 for team in teams}
@@ -163,7 +138,7 @@ def main() -> None:
             "start_fp": drive_start_observations(plays),
             "success": success_observations(plays),
             "explosive": explosive_observations(plays),
-            "ppd": _drive_points(plays),
+            "ppd": drive_points_observations(plays),
         }
         print(f"  {year} drives {len(features[year]['ppd'])} st {len(features[year]['st'])}", flush=True)
 
