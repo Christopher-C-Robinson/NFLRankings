@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NFL Rankings — schedule-adjusted EPA</title>
-<meta name="description" content="Free NFL power rankings built from nflverse play-by-play data.">
+<title>NFL Rankings — average win chance</title>
+<meta name="description" content="NFL power rankings by average neutral-site win chance, from schedule-adjusted EPA and free nflverse data.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -14,30 +14,31 @@
 <body>
 <header class="masthead"><div class="wrap">
   <h1>NFL Rankings</h1>
-  <p>Schedule-adjusted EPA margin, from free nflverse data.</p>
+  <p>Average neutral win chance against the other 31 teams, from schedule-adjusted EPA.</p>
   <div class="nav"><a href="methodology.html">Methodology</a>
     <a href="https://github.com/nflverse">nflverse</a></div>
 </div></header>
 <main class="wrap">
   <div class="controls">
-    <div><span class="lbl" id="model-lbl" style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#5d584b;margin-bottom:3px">Model</span>
-      <div class="seg" role="group" aria-labelledby="model-lbl">
-        <button type="button" id="m-v2" aria-pressed="true">v2 EPA</button>
-        <button type="button" id="m-legacy" aria-pressed="false">Legacy FUNCTION</button>
-      </div></div>
     <label>Season <select id="season"></select></label>
     <label>Conference <select id="conf"><option value="">All</option><option>AFC</option><option>NFC</option></select></label>
     <label>Division <select id="div"><option value="">All</option></select></label>
     <label>Search <input id="q" type="search" placeholder="Team name" autocomplete="off"></label>
+    <button type="button" id="export" disabled>Download CSV</button>
   </div>
   <div class="fresh" id="fresh" aria-live="polite">Loading…</div>
+  <p class="count" id="count" aria-live="polite"></p>
   <div class="tablewrap" id="tablewrap">
-    <table id="tbl"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
+    <table id="tbl">
+      <caption class="sr-only">Teams ranked by average neutral-site win chance. Filters hide teams and do not renumber ranks.</caption>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
   </div>
   <div class="state" id="state" hidden></div>
-  <p class="fresh">Click a row to see legacy components and raw EPA. <a href="methodology.html">How this works</a>.</p>
+  <p class="fresh">Click a row for EPA detail. Ranks stay the full-league order when you filter. <a href="methodology.html">How this works</a>.</p>
 </main>
-<footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a> via nfl_data_py. Free data only.</div></footer>
+<footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a> via nfl_data_py. Free data only. Logos and colors from nflverse team metadata.</div></footer>
 <script src="assets/app.js"></script>
 </body>
 </html>

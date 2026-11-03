@@ -18,55 +18,48 @@
 </div></header>
 <main class="wrap prose">
 
-<h2>v2: schedule-adjusted EPA margin (default)</h2>
-<p>Expected points added (EPA) per play comes from <a href="https://github.com/nflverse">nflverse</a> play-by-play data. For each team we take every regular-season scrimmage play (pass or run, no penalty-only plays, no two-point tries) with a non-null EPA, and compute:</p>
+<h2>What the board ranks</h2>
+<p>Each team plays each of the other 31 teams once, on a neutral field. Its score is the average of those 31 win chances. Expected wins on that hypothetical schedule are the sum, which is the average times 31. Sort by the average, then by average neutral point margin, then by team name. Ranks are 1 through 32 from that full list.</p>
+<p>Conference, division, and search filters only hide rows. A team's rank is the full-league rank and does not change when the list gets shorter. Display rounding does not decide ties: the sort uses the unrounded average.</p>
+<p>This is the same summary shape as College Football Index's neutral round robin. It is not a prediction of the team's real schedule, and it is not a blend of several rating weights.</p>
+
+<h2>From EPA margin to a point spread</h2>
+<p>Team strength is the schedule-adjusted EPA margin described below (<code>v2 = adj_off − adj_def</code>, EPA per play). For a neutral game the point spread is:</p>
+<pre>neutral margin = 48.67 × (v2_for − v2_against)</pre>
+<p><code>48.67</code> is the points associated with a 1.0 EPA/play gap. It is in the neighborhood of a game's offensive play count, and it is estimated rather than assumed. Figures on this page are rounded to the hundredth; <code>conversion.json</code> keeps more digits, and the board uses that file. A real home game adds one league home-field number:</p>
+<pre>home margin = neutral margin + 1.78</pre>
+<p>Home field is one number for the whole league, not a team effect. The ranking does not add it. Every hypothetical game on the board is neutral, so a venue cannot move a team up or down. The row detail still shows what the average margin would be if that team hosted every opponent (<code>neutral margin + 1.78</code>).</p>
+
+<h2>How those two numbers were fit</h2>
+<p>Both come from an ordinary least-squares fit on nflverse regular-season finals, seasons <strong>2016–2025</strong>, 2639 games (10 ties, 46 neutral-site games):</p>
+<pre>home score − away score
+  = 1.78 × (1 if the game is at the home stadium, else 0)
+  + 48.67 × (v2_home − v2_away)
+  + error</pre>
+<p>Each season's <code>v2</code> is that season's full regular-season rating, the same definition the board uses. Neutral-site games (nflverse <code>location = Neutral</code>, mostly international) stay in the slope with home field set to zero. A missing location counts as a home game. Final scores include overtime. The fit's R² is 0.317. The residual standard deviation is 11.74 points.</p>
+<p>Home teams won 54.7% of the decisive games in that sample. The fitted spread's average home win probability on those games is 54.9%.</p>
+<p><strong>Assumption to keep in mind:</strong> the rating is fit on the same games it is then asked to describe. That is the right conversion if the question is "what point spread does this season-long EPA margin correspond to?" It is not a pre-game forecast, and it is not a backtest. The weekly data refresh does not refit these coefficients. They live in <code>nflrankings/conversion.json</code>.</p>
+
+<h2>Win chance</h2>
+<pre>P(win) = 1 / (1 + exp(−point margin / 7.04))</pre>
+<p>The scale <code>7.04</code> is the logistic scale fit by maximum likelihood on the same games, using the fitted point spread. Ties stay in the point regression with margin 0 and stay out of the win/loss likelihood. A 0-point spread is a 50% chance. A 3-point margin is a 60.5% win chance. That scale also lines up with the 11.74-point residual: a normal residual converts to a logistic scale of about 0.55 times the standard deviation. This is an analytic logistic, not a Monte Carlo draw of scores.</p>
+<p>The published percentage is the <em>average of the win chances</em> against the other 31 teams. That is not the win chance against an average team. Those two numbers differ because the logistic is curved. The order does not differ: a higher <code>v2</code> produces a higher average win chance against this shared field, so the rank column and the EPA order agree. <code>v2</code> stays on the board so the EPA margin is still visible.</p>
+
+<h2>Schedule-adjusted EPA</h2>
+<p>Expected points added (EPA) per play comes from <a href="https://github.com/nflverse">nflverse</a> play-by-play. For each team we take every regular-season scrimmage play (pass or run, not a two-point try, with both teams set) with a non-null EPA, and compute:</p>
 <ul>
 <li><strong>Raw offensive EPA</strong>: play-weighted mean EPA on the team's offensive plays.</li>
 <li><strong>Raw defensive EPA</strong>: play-weighted mean EPA the team allowed. Lower is better.</li>
 </ul>
-<p>We then adjust for opponents over 20 iterations. Each iteration, a team's offense is its raw EPA minus the play-weighted mean adjusted defensive EPA of the defenses it faced; its defense is raw EPA allowed minus the play-weighted mean adjusted offensive EPA of the offenses it faced. After every iteration both sides are re-centered so the league mean of the adjusted values equals the league mean of the raw values. The rating is <code>v2 = adj_off &minus; adj_def</code>, in EPA per play; higher is better.</p>
-<p><strong>What it is not:</strong> it is not DVOA, it does not adjust for injuries, garbage time, weather or home field, and it is not a betting model. It is a transparent descriptive ranking of what teams have done so far.</p>
+<p>We then adjust for opponents over 20 iterations. Each iteration, a team's offense is its raw EPA minus the play-weighted mean adjusted defensive EPA of the defenses it faced; its defense is raw EPA allowed minus the play-weighted mean adjusted offensive EPA of the offenses it faced. After every iteration both sides are re-centered so the league mean of the adjusted values equals the league mean of the raw values. The rating is <code>v2 = adj_off − adj_def</code>, in EPA per play; higher is better. Opening a row shows the raw and adjusted EPA figures.</p>
+<p>Penalty-only rows are not scrimmage plays. The current nflverse file has no separate <code>no_play</code> column; if that column is present, those rows are dropped too.</p>
 
-<h2>Legacy v1 FUNCTION</h2>
-<p>The original ranking was a spreadsheet formula (NFL2022 workbook). It is kept as a secondary view. For one offense, or one defense (using the opponent versions of the same stats):</p>
-<pre>FUNCTION =
-  ((pts_per_drive * (fg_pct + xp_pct))
-   + (yards_per_play * (first_down_pct + third_down_rate)))
-  * (score_pct + (100 - turnover_pct))
-
-net FUNCTION = offense FUNCTION - defense FUNCTION   (higher is better)</pre>
-
-<h3>The column correction</h3>
-<p>The notes extracted from the workbook described the kicking term as "FGA+FGM" and one of the drive terms as "EXP". <strong>Those labels are wrong.</strong> The cells reproduce every 2022 FUNCTION value (max absolute error about 1e-10) only with:</p>
-<table>
-<tr><th>Term</th><th>Workbook column</th><th>Not</th></tr>
-<tr><td><code>fg_pct + xp_pct</code></td><td>kicking FG% and XP% (Numbers columns Q and T)</td><td>FGA + FGM</td></tr>
-<tr><td><code>first_down_pct</code></td><td>calculated 1stD% (Numbers column AC)</td><td>EXP (unused by the formula)</td></tr>
-</table>
-<p>v1 follows the cells that were actually sorted, not the prose. A test recomputes all 64 offense/defense FUNCTION values and the 32 net values from the exported 2022 CSVs.</p>
-
-<h3>The scale quirk</h3>
-<p>Scales are kept exactly as stored in the workbook. <code>fg_pct</code>, <code>xp_pct</code> and <code>third_down_rate</code> (3D%) are <em>fractions</em> (0.415, because that is how the Numbers paste stored them). <code>first_down_pct</code>, <code>score_pct</code> and <code>turnover_pct</code> are <em>percentage points</em> (30.91, 36.8, 11.1). They are not "fixed", since doing so would change the ranking.</p>
-
-<h3>Reading a negative FUNCTION</h3>
-<p>Net FUNCTION is offense minus defense. A negative value means the team's defensive FUNCTION is larger than its offensive FUNCTION: opponents' production against it outweighs its own. For defense, a <em>lower</em> FUNCTION is better, which is why the net is a subtraction.</p>
-
-<h2>nflverse approximations for live legacy inputs</h2>
-<p>The 2022 workbook used Pro Football Reference tables. Live seasons derive the same eight inputs from nflverse play-by-play (regular season only). Defense values are the same statistics over plays and drives where the team is the defense. Expect magnitudes in the same ballpark, not identical numbers.</p>
-<ul>
-<li><strong>Scrimmage plays:</strong> <code>play_type</code> pass or run, excluding no-plays, rows without a possession team, and two-point attempts.</li>
-<li><strong>yards_per_play:</strong> sum of yards gained / scrimmage plays.</li>
-<li><strong>first_down_pct:</strong> 100 &times; (pass + rush + penalty first downs) / scrimmage plays. If those columns are missing, 100 &times; <code>first_down</code> / plays.</li>
-<li><strong>third_down_rate:</strong> converted / (converted + failed), as a fraction; 0 if none.</li>
-<li><strong>fg_pct, xp_pct:</strong> made / attempts, as fractions; 0 if no attempts.</li>
-<li><strong>Drives:</strong> unique (game, possession team, fixed drive id), ignoring kickoffs and null drive ids.</li>
-<li><strong>score_pct:</strong> 100 &times; drives with an offensive touchdown or made field goal / drives. nflverse's <code>drive_ended_with_score</code> also flags defensive scores (pick-sixes, safeties), so it only counts when the drive result is a touchdown or field goal.</li>
-<li><strong>turnover_pct:</strong> 100 &times; drives containing an offensive interception or lost fumble / drives.</li>
-<li><strong>pts_per_drive:</strong> offensive points (6 per offensive TD, 3 per FG, 1 per XP, 2 per two-point conversion) / drives. Defensive and special-teams scores are excluded.</li>
-</ul>
+<h2>What this is not</h2>
+<p>It is not DVOA. It does not add an injury, weather, or garbage-time adjustment beyond whatever is already inside nflverse EPA. It is not a betting model. Special teams are not given their own term. Home field is not team-specific.</p>
+<p>Not on this board yet: a matchup simulator, team pages, a week-by-week games view, live scores, and an accuracy backtest. <code>predict_matchup</code> already turns two ratings and a venue into one spread and one win chance for a later matchup view. It does not simulate draws.</p>
 
 <h2>Data</h2>
-<p>All data is free: <a href="https://github.com/nflverse">nflverse</a> play-by-play, schedules and team metadata, fetched with the <code>nfl_data_py</code> package. Nothing is scraped, and Pro Football Reference is not used for live data. Records and point differential come from played regular-season games only.</p>
+<p>All data is free: <a href="https://github.com/nflverse">nflverse</a> play-by-play, schedules, and team metadata, fetched with <code>nfl_data_py</code>. Nothing is scraped. Records and point differential come from played regular-season games only. Logos prefer <code>team_logo_espn</code>, then <code>team_logo_wikipedia</code>, and only https URLs are kept. Colors are <code>team_color</code> and <code>team_color2</code> when they are hex colors.</p>
 </main>
 <footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a>. <a href="index.html">Back to rankings</a></div></footer>
 </body>

@@ -1,0 +1,18 @@
+{
+  "method": "epa-spread-logistic-v1",
+  "ranking": "neutral-round-robin",
+  "fit_seasons_first": 2016,
+  "fit_seasons_last": 2025,
+  "fit_games": 2639,
+  "fit_ties": 10,
+  "neutral_games": 46,
+  "dropped_games": 0,
+  "epa_to_points": 48.668505,
+  "home_field_points": 1.77685,
+  "win_prob_scale": 7.036047,
+  "margin_r2": 0.317251,
+  "margin_residual_sd": 11.743215,
+  "home_win_rate": 0.5466,
+  "mean_predicted_home_win": 0.5489,
+  "source": "nflverse regular-season finals via nfl_data_py, described by each season's full-season v2 rating"
+}

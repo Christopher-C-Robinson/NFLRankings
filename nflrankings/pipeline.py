@@ -1,29 +1,61 @@
-"""Download nflverse data, aggregate, rate and write JSON/CSV under docs/data."""
+"""Download nflverse data, rate, and write JSON/CSV under docs/data."""
 
 from __future__ import annotations
 
 import json
 import math
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
 
 from . import rating
-from .aggregate import COMPONENT_KEYS, PBP_COLUMNS, epa_plays, regular_season, team_components
-from .legacy import competition_ranks, legacy_from_components, legacy_net
+from .aggregate import PBP_COLUMNS, epa_plays, regular_season
+from .winprob import apply_win_chances, load_conversion
 
 SOURCE = "nflverse via nfl_data_py (https://github.com/nflverse)"
 SCHEDULE_FALLBACK = "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv"
 DEFAULT_OUT = Path(__file__).resolve().parent.parent / "docs" / "data"
 
-# Historical / alternate abbreviations -> abbreviations used in the pbp.
+# Historical / alternate abbreviations -> abbreviations used in recent pbp.
 ABBR_FIX = {"LAR": "LA", "STL": "LA", "WSH": "WAS", "OAK": "LV", "SD": "LAC", "JAC": "JAX"}
+_HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
+_HTTPS = re.compile(r"^https://[^\s\\]+$")
+
+CSV_COLUMNS = [
+    "win_chance_rank", "team", "name", "conference", "division",
+    "wins", "losses", "ties", "point_diff",
+    "win_chance", "mean_margin", "expected_wins", "opponents",
+    "v2", "v2_rank", "off_epa", "def_epa", "off_epa_adj", "def_epa_adj",
+    "color", "color2", "logo",
+]
+
+
+def align_abbr(abbr, known: set[str] | None = None):
+    """Map a schedule abbreviation onto the pbp rating index.
+
+    With no ``known`` set, apply the historical rename table only.
+    """
+    if abbr is None or (isinstance(abbr, float) and math.isnan(abbr)):
+        return None
+    raw = str(abbr)
+    if known is None:
+        return ABBR_FIX.get(raw, raw)
+    if raw in known:
+        return raw
+    fixed = ABBR_FIX.get(raw)
+    if fixed in known:
+        return fixed
+    for src, dst in ABBR_FIX.items():
+        if dst == raw and src in known:
+            return src
+    return None
 
 
 def norm_abbr(abbr):
-    """Normalize a team abbreviation to the form used in nflverse pbp."""
-    return ABBR_FIX.get(abbr, abbr)
+    """Normalize a team abbreviation to the recent pbp form."""
+    return align_abbr(abbr)
 
 
 def download_pbp(season: int) -> pd.DataFrame:
@@ -33,15 +65,14 @@ def download_pbp(season: int) -> pd.DataFrame:
     for cols in (PBP_COLUMNS, None):
         try:
             kwargs = {"columns": cols} if cols else {}
-            df = nfl.import_pbp_data([season], include_participation=False, downcast=True, cache=False, **kwargs)
-            return df
+            return nfl.import_pbp_data([season], include_participation=False, downcast=True, cache=False, **kwargs)
         except Exception as exc:  # noqa: BLE001 - missing column or missing season
             print(f"pbp import ({'filtered' if cols else 'all columns'}) failed for {season}: {exc}")
     return pd.DataFrame()
 
 
 def download_schedule(season: int) -> pd.DataFrame:
-    """Download the schedule, falling back to the nflverse release CSV."""
+    """Download one season's schedule, falling back to the nflverse release CSV."""
     import nfl_data_py as nfl
 
     try:
@@ -60,83 +91,120 @@ def download_teams() -> pd.DataFrame:
     return nfl.import_team_desc()
 
 
-def records(sched: pd.DataFrame) -> pd.DataFrame:
+def records(sched: pd.DataFrame, known: set[str]) -> pd.DataFrame:
     """Wins, losses, ties and point differential from played REG games."""
-    g = sched[(sched["game_type"] == "REG") & sched["home_score"].notna() & sched["away_score"].notna()]
+    games = sched[(sched["game_type"] == "REG") & sched["home_score"].notna() & sched["away_score"].notna()]
     rows = {}
-    for _, r in g.iterrows():
-        for team, pf, pa in ((r["home_team"], r["home_score"], r["away_score"]),
-                             (r["away_team"], r["away_score"], r["home_score"])):
-            t = norm_abbr(team)
-            d = rows.setdefault(t, {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0})
-            d["wins"] += int(pf > pa)
-            d["losses"] += int(pf < pa)
-            d["ties"] += int(pf == pa)
-            d["point_diff"] += int(pf - pa)
+    for record in games.itertuples(index=False):
+        sides = (
+            (align_abbr(record.home_team, known), record.home_score, record.away_score),
+            (align_abbr(record.away_team, known), record.away_score, record.home_score),
+        )
+        if sides[0][0] is None or sides[1][0] is None:
+            continue
+        for team, points_for, points_against in sides:
+            bucket = rows.setdefault(team, {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0})
+            bucket["wins"] += int(points_for > points_against)
+            bucket["losses"] += int(points_for < points_against)
+            bucket["ties"] += int(points_for == points_against)
+            bucket["point_diff"] += int(points_for - points_against)
     return pd.DataFrame.from_dict(rows, orient="index")
 
 
-def _clean(x, nd=6):
+def _clean(value, digits=6):
     """Round a float, raising if it is not finite."""
-    x = float(x)
-    if not math.isfinite(x):
+    value = float(value)
+    if not math.isfinite(value):
         raise ValueError("non-finite value in output")
-    return round(x, nd)
+    return round(value, digits)
 
 
-def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame) -> list[dict]:
-    """Combine components, legacy and v2 ratings, metadata and records."""
-    comps = team_components(pbp)
-    adj = rating.adjust(epa_plays(pbp))
-    rec = records(sched)
+def _css_color(value) -> str:
+    """Keep a #RRGGBB color; drop anything else so it cannot break CSS."""
+    if not isinstance(value, str):
+        return ""
+    text = value.strip()
+    return text.upper() if _HEX.match(text) else ""
+
+
+def _https_url(value) -> str:
+    """Keep an https URL; drop other schemes."""
+    if not isinstance(value, str):
+        return ""
+    text = value.strip()
+    return text if _HTTPS.match(text) else ""
+
+
+def _logo(meta) -> str:
+    """Prefer the nflverse ESPN logo, then the Wikipedia logo."""
+    if meta is None:
+        return ""
+    return _https_url(meta.get("team_logo_espn")) or _https_url(meta.get("team_logo_wikipedia"))
+
+
+def _cell(meta, column: str) -> str:
+    if meta is None or column not in meta.index:
+        return ""
+    value = meta[column]
+    if value is None or (isinstance(value, float) and math.isnan(value)):
+        return ""
+    return str(value)
+
+
+def ranking_block(params: dict) -> dict:
+    """Season-level conversion facts copied onto every payload."""
+    keys = (
+        "method", "ranking", "fit_seasons_first", "fit_seasons_last", "fit_games", "fit_ties",
+        "neutral_games", "epa_to_points", "home_field_points", "win_prob_scale",
+        "margin_r2", "margin_residual_sd", "home_win_rate", "mean_predicted_home_win",
+    )
+    return {key: params[key] for key in keys if key in params}
+
+
+def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame, params: dict | None = None) -> list[dict]:
+    """Combine v2 EPA, neutral win chance, metadata and records."""
+    params = load_conversion() if params is None else params
+    adjusted = rating.adjust(epa_plays(pbp))
+    known = set(adjusted.index)
+    rec = records(sched, known)
     desc = team_desc.copy()
-    desc["abbr"] = desc["team_abbr"].map(norm_abbr)
+    desc["abbr"] = desc["team_abbr"].map(lambda abbr: align_abbr(abbr, known) or norm_abbr(abbr))
     desc = desc.drop_duplicates("abbr", keep="first").set_index("abbr")
 
-    teams = sorted(comps)
     rows = []
-    for t in teams:
-        off_f = legacy_from_components(comps[t]["offense"])
-        def_f = legacy_from_components(comps[t]["defense"])
-        meta = desc.loc[t] if t in desc.index else None
-        r = rec.loc[t] if t in rec.index else {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0}
+    for team in sorted(known):
+        meta = desc.loc[team] if team in desc.index else None
+        record = rec.loc[team] if team in rec.index else {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0}
         rows.append({
-            "team": t,
-            "name": str(meta["team_name"]) if meta is not None else t,
-            "conference": str(meta["team_conf"]) if meta is not None else "",
-            "division": str(meta["team_division"]) if meta is not None else "",
-            "wins": int(r["wins"]), "losses": int(r["losses"]), "ties": int(r["ties"]),
-            "point_diff": int(r["point_diff"]),
-            "v2": _clean(adj.loc[t, "v2"]),
-            "off_epa": _clean(adj.loc[t, "off_epa"]), "def_epa": _clean(adj.loc[t, "def_epa"]),
-            "off_epa_adj": _clean(adj.loc[t, "off_epa_adj"]), "def_epa_adj": _clean(adj.loc[t, "def_epa_adj"]),
-            "legacy": _clean(legacy_net(off_f, def_f), 4),
-            "off_function": _clean(off_f, 4), "def_function": _clean(def_f, 4),
-            "components": {
-                side: {k: (v if k in ("plays", "drives") else _clean(v, 6)) for k, v in comps[t][side].items()}
-                for side in ("offense", "defense")
-            },
+            "team": team,
+            "name": _cell(meta, "team_name") or team,
+            "conference": _cell(meta, "team_conf"),
+            "division": _cell(meta, "team_division"),
+            "wins": int(record["wins"]),
+            "losses": int(record["losses"]),
+            "ties": int(record["ties"]),
+            "point_diff": int(record["point_diff"]),
+            "v2": _clean(adjusted.loc[team, "v2"]),
+            "off_epa": _clean(adjusted.loc[team, "off_epa"]),
+            "def_epa": _clean(adjusted.loc[team, "def_epa"]),
+            "off_epa_adj": _clean(adjusted.loc[team, "off_epa_adj"]),
+            "def_epa_adj": _clean(adjusted.loc[team, "def_epa_adj"]),
+            "color": _css_color(meta["team_color"]) if meta is not None and "team_color" in meta.index else "",
+            "color2": _css_color(meta["team_color2"]) if meta is not None and "team_color2" in meta.index else "",
+            "logo": _logo(meta),
         })
-    for key, field, hib in (("v2_rank", "v2", True), ("legacy_rank", "legacy", True),
-                            ("off_function_rank", "off_function", True),
-                            ("def_function_rank", "def_function", False)):
-        for row, rk in zip(rows, competition_ranks([r[field] for r in rows], hib)):
-            row[key] = rk
-    rows.sort(key=lambda r: (r["v2_rank"], r["team"]))
+    # Rank from the rounded EPA values so a reader of the file gets the same chances.
+    apply_win_chances(rows, params)
+    for row in rows:
+        row["win_chance"] = _clean(row["win_chance"])
+        row["mean_margin"] = _clean(row["mean_margin"], 4)
+        row["expected_wins"] = _clean(row["expected_wins"], 4)
     return rows
 
 
-def flat_row(t: dict) -> dict:
-    """Flatten a team object for CSV output."""
-    flat = {k: v for k, v in t.items() if k != "components"}
-    for side, pre in (("offense", "off_"), ("defense", "def_")):
-        for k in COMPONENT_KEYS:
-            flat[pre + k] = t["components"][side][k]
-    return flat
-
-
-def build_season(season: int):
-    """Build one season; return (payload dict, teams) or None if no REG plays."""
+def build_season(season: int, params: dict | None = None):
+    """Build one season; return a payload dict, or None if there are no REG plays."""
+    params = load_conversion() if params is None else params
     pbp = download_pbp(season)
     if pbp.empty:
         return None
@@ -144,18 +212,23 @@ def build_season(season: int):
     if reg.empty or not reg["play_type"].isin(["pass", "run"]).any():
         return None
     sched = download_schedule(season)
-    teams = build_teams(pbp, sched, download_teams())
+    teams = build_teams(pbp, sched, download_teams(), params)
+    return _payload(season, teams, reg, sched, params)
+
+
+def _payload(season, teams, reg, sched, params) -> dict:
     weeks = pd.to_numeric(reg["week"], errors="coerce").dropna()
     played = sched[(sched["game_type"] == "REG") & sched["home_score"].notna()]
-    payload = {
+    return {
         "season": season,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": SOURCE,
-        "week_min": int(weeks.min()), "week_max": int(weeks.max()),
+        "week_min": int(weeks.min()),
+        "week_max": int(weeks.max()),
         "games_played": int(len(played)),
+        "ranking": ranking_block(params),
         "teams": teams,
     }
-    return payload
 
 
 def write_season(payload: dict, out_dir: Path) -> None:
@@ -163,7 +236,9 @@ def write_season(payload: dict, out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     season = payload["season"]
     (out_dir / f"{season}.json").write_text(json.dumps(payload, indent=1) + "\n")
-    pd.DataFrame([flat_row(t) for t in payload["teams"]]).to_csv(out_dir / f"{season}.csv", index=False)
+    frame = pd.DataFrame(payload["teams"])
+    frame = frame.reindex(columns=[c for c in CSV_COLUMNS if c in frame.columns])
+    frame.to_csv(out_dir / f"{season}.csv", index=False)
     idx_path = out_dir / "index.json"
     seasons = set()
     if idx_path.exists():
@@ -175,22 +250,25 @@ def write_season(payload: dict, out_dir: Path) -> None:
         "default_season": seasons[0],
         "generated_at": payload["generated_at"],
         "source": SOURCE,
+        "ranking": payload.get("ranking", {}).get("ranking", "neutral-round-robin"),
     }
     idx_path.write_text(json.dumps(index, indent=1) + "\n")
 
 
 def run(season: str, out_dir: Path = DEFAULT_OUT) -> int:
     """Build ``season`` (an int string or 'latest'); return the season written."""
+    params = load_conversion()
     if season == "latest":
         year = datetime.now(timezone.utc).year
         candidates = [year, year - 1]
     else:
         candidates = [int(season)]
-    for y in candidates:
-        payload = build_season(y)
-        if payload is not None:
-            write_season(payload, out_dir)
-            print(f"wrote season {y}: {len(payload['teams'])} teams")
-            return y
-        print(f"no regular-season plays for {y}")
+    for candidate in candidates:
+        payload = build_season(candidate, params)
+        if payload is None:
+            print(f"no regular-season plays for {candidate}")
+            continue
+        write_season(payload, out_dir)
+        print(f"wrote season {candidate}: {len(payload['teams'])} teams")
+        return candidate
     raise SystemExit(f"no data available for {season}")
