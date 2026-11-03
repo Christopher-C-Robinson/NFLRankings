@@ -6,7 +6,19 @@ import pandas as pd
 
 from .aggregate import rated_plays
 from .rating import adjust
-from .winprob import project_game
+from .winprob import project_game, shrink_rate
+
+# k = 14 team-games, the middle of the 12–16 band. Selected on 2025 pregame
+# results with 2024 as the prior, among k in {12, 14, 16} and shrink strengths
+# in {8, 14, 20, 28}. 2026 was not used to pick it. One game a week means the
+# live rating is still the smaller part after four games (4/18) and matches
+# the prior only after 14 games.
+BLEND_PRIOR_GAMES = 14
+# A 17-game final rating keeps 17/45 of its gap to the league. The same 2025
+# grid preferred this over a milder shrink: half-strength priors still swung
+# too many early picks.
+PRIOR_SHRINK_GAMES = 28
+LEAGUE_V2 = 0.0
 
 _EMPTY = {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0, "points_for": 0, "points_against": 0}
 
@@ -158,12 +170,56 @@ def attach_outlook(teams: list[dict], games: list[dict]) -> None:
         team["projected_losses"] = team["losses"] + (remaining - remaining_expected)
 
 
-def attach_pregame(teams: list[dict], games: list[dict], pbp: pd.DataFrame, params: dict, cold_ppg: float = 22.0) -> None:
+def shrink_prior_v2(prior_v2: float, games: int, shrink_games: int = PRIOR_SHRINK_GAMES) -> float:
+    """Pull one team's previous-season v2 toward the league average.
+
+    ``games`` is how many games that rating summarizes. Zero games stays at
+    the league. The league v2 is 0 because the margin is already centered.
+    """
+    return shrink_rate(float(prior_v2), int(games), LEAGUE_V2, int(shrink_games))
+
+
+def blend_v2(live_v2: float, prior_v2_shrunk: float, games_played: int, k: int = BLEND_PRIOR_GAMES) -> float:
+    """Bayesian mix of the current rating and a shrunk prior.
+
+    ``w = n / (n + k)`` with ``n`` games played so far. ``k`` of 0 uses the
+    live rating only. This is not a hard cutoff: the prior fades as games arrive.
+    """
+    n = int(games_played)
+    strength = int(k)
+    if n < 0 or strength < 0:
+        raise ValueError("game counts must be non-negative")
+    if strength == 0:
+        return float(live_v2)
+    weight = n / (n + strength)
+    return weight * float(live_v2) + (1.0 - weight) * float(prior_v2_shrunk)
+
+
+def prior_ratings_from_teams(teams: list[dict]) -> dict[str, float]:
+    """Shrunk end-of-season v2 keyed by abbreviation."""
+    ratings = {}
+    for team in teams:
+        games = int(team.get("wins", 0)) + int(team.get("losses", 0)) + int(team.get("ties", 0))
+        ratings[str(team["team"])] = shrink_prior_v2(float(team["v2"]), games)
+    return ratings
+
+
+def attach_pregame(
+    teams: list[dict],
+    games: list[dict],
+    pbp: pd.DataFrame,
+    params: dict,
+    cold_ppg: float = 22.0,
+    prior_v2: dict[str, float] | None = None,
+) -> None:
     """Fill frozen pregame projections from plays strictly before each week.
 
-    Week 1 has no plays yet, so every team is at the league rating and only
-    home field moves the spread. Scoring rates use points from earlier weeks,
-    shrunk toward the league rate of those earlier games.
+    With no prior, week 1 has no plays yet, so every team is at the league
+    rating and only home field moves the spread. When ``prior_v2`` has shrunk
+    previous-season ratings, a thin sample is blended toward that prior:
+    ``w * live + (1 - w) * prior`` with ``w = games / (games + 14)``. Scoring
+    rates still use points from earlier weeks only, shrunk toward the league
+    rate of those earlier games.
     """
     ids = [team["team"] for team in teams]
     plays = rated_plays(pbp)
@@ -185,6 +241,13 @@ def attach_pregame(teams: list[dict], games: list[dict], pbp: pd.DataFrame, para
         else:
             rated = adjust(prior[["posteam", "defteam", "epa"]]).reindex(ids).fillna(0.0)
             ratings = {team: float(rated.loc[team, "v2"]) for team in ids}
+        if prior_v2:
+            for team in ids:
+                ratings[team] = blend_v2(
+                    ratings[team],
+                    float(prior_v2.get(team, LEAGUE_V2)),
+                    played_games[team],
+                )
         seen = sum(played_games.values())
         league = (sum(points_for.values()) / seen) if seen else float(cold_ppg)
 

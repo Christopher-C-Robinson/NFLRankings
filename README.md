@@ -39,7 +39,7 @@ score, and an 80% margin range from the fitted residual. Pass and rush EPA are
 shown and are not added into the spread. Team pages (`docs/team.html`) list the
 schedule, expected wins, a projected record, and the season EPA chart. Those
 schedule projections use the current season rating. The week board and the
-accuracy page use a separate frozen pregame rating from earlier weeks only.
+accuracy page use a separate frozen pregame rating from earlier weeks, blended with the previous season while that sample is thin.
 Final scores are nflverse results. A live score feed is not wired up.
 
 ## Data
@@ -57,12 +57,14 @@ so it is installed with `--no-deps` after the other requirements:
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
 pip install --no-deps nfl_data_py==0.3.3
-scripts/refresh.sh latest          # or: python -m nflrankings --season 2022
+scripts/refresh.sh latest          # or: python -m nflrankings --season 2025
 ```
 
 `--season latest` uses the current UTC year and falls back to the previous year if
 there are no regular-season plays yet. Output goes to `docs/data/{season}.json`,
-`{season}.csv` and `index.json`. Styles, scripts, and JSON use root-absolute
+`{season}.csv` and `index.json`. Seasons before 2025 are not written there and
+do not appear on the site. Pass `--out` to keep an older backfill in another
+directory. 2022 is not a public season. Styles, scripts, and JSON use root-absolute
 `/NFLRankings/...` URLs, the same path GitHub project Pages serves. Preview
 under that prefix:
 
