@@ -1,5 +1,11 @@
 (function () {
   "use strict";
+  var site = window.NFLSite;
+  if (!site) {
+    var missing = document.getElementById("fresh");
+    if (missing) missing.textContent = "Could not load this page. Hard-refresh and try again.";
+    return;
+  }
   var $ = function (id) { return document.getElementById(id); };
   var state = { data: null, names: {} };
 
@@ -41,11 +47,15 @@
   }
 
   function render() {
-    var t = team($("team").value);
+    var sel = $("team");
+    if (!sel || !state.data) return;
+    var t = team(sel.value);
     if (!t) return;
     document.title = t.name + " — NFL Rankings";
-    $("title").textContent = t.name;
-    $("dek").textContent = "Rank " + t.win_chance_rank + " · " + (t.win_chance * 100).toFixed(1) + "% average neutral win chance · " + (t.division || t.conference || "");
+    var title = $("title");
+    if (title) title.textContent = t.name;
+    var dek = $("dek");
+    if (dek) dek.textContent = "Rank " + t.win_chance_rank + " · " + (t.win_chance * 100).toFixed(1) + "% average neutral win chance · " + (t.division || t.conference || "");
     var games = (state.data.games || []).filter(function (g) { return g.home === t.team || g.away === t.team; });
     var rows = games.map(function (g) {
       var home = g.home === t.team;
@@ -56,11 +66,14 @@
       var projFor = home ? g.proj_home : g.proj_away;
       var projAgainst = home ? g.proj_away : g.proj_home;
       var result = g.played ? (home ? g.home_score + "–" + g.away_score : g.away_score + "–" + g.home_score) : "—";
-      var href = "matchup.html?season=" + state.data.season + "&a=" + encodeURIComponent(t.team) + "&b=" + encodeURIComponent(opp) + "&venue=" + (g.neutral ? "neutral" : home ? "a_home" : "b_home");
-      return "<tr><td>" + g.week + "</td><td>" + where + "</td><td><a class=\"teamlink\" href=\"team.html?team=" + esc(opp) + "&season=" + state.data.season + "\">" + esc(state.names[opp] || opp) + "</a></td><td class=\"num\">" + result + "</td><td class=\"num\">" + signed(spread, 1) + "</td><td class=\"num\">" + (chance * 100).toFixed(1) + "%</td><td class=\"num\"><a class=\"teamlink\" href=\"" + href + "\">" + fmt(projFor, 1) + "–" + fmt(projAgainst, 1) + "</a></td></tr>";
+      var href = site.page("matchup.html?season=" + state.data.season + "&a=" + encodeURIComponent(t.team) + "&b=" + encodeURIComponent(opp) + "&venue=" + (g.neutral ? "neutral" : home ? "a_home" : "b_home"));
+      var oppHref = site.page("team.html?team=" + encodeURIComponent(opp) + "&season=" + state.data.season);
+      return "<tr><td>" + g.week + "</td><td>" + where + "</td><td><a class=\"teamlink\" href=\"" + oppHref + "\">" + esc(state.names[opp] || opp) + "</a></td><td class=\"num\">" + result + "</td><td class=\"num\">" + signed(spread, 1) + "</td><td class=\"num\">" + (chance * 100).toFixed(1) + "%</td><td class=\"num\"><a class=\"teamlink\" href=\"" + href + "\">" + fmt(projFor, 1) + "–" + fmt(projAgainst, 1) + "</a></td></tr>";
     }).join("");
     var color = /^#[0-9A-Fa-f]{6}$/.test(t.color || "") ? t.color : "#0e3b2e";
-    $("result").innerHTML =
+    var resultBox = $("result");
+    if (!resultBox) return;
+    resultBox.innerHTML =
       '<section class="teamhead" style="--accent:' + color + '">' +
       (t.logo ? '<img class="teamlogo" alt="" src="' + esc(t.logo) + '" width="56" height="56">' : "") +
       "<div><p class=\"record\">" + record(t) + "</p><p>Projected record <strong>" + fmt(t.projected_wins, 1) + "–" + fmt(t.projected_losses, 1) + "</strong> · schedule expected wins " + fmt(t.schedule_expected_wins, 1) + " · opponent EPA " + fmt(t.sos, 3) + "</p></div></section>" +
@@ -71,36 +84,42 @@
     var q = new URLSearchParams();
     q.set("team", t.team);
     q.set("season", state.data.season);
-    history.replaceState(null, "", "team.html?" + q.toString());
+    history.replaceState(null, "", site.page("team.html?" + q.toString()));
   }
 
   function load(season, abbr) {
-    return fetch("data/" + season + ".json", { cache: "no-cache" }).then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    }).then(function (data) {
+    return site.getJSON(site.data(season + ".json")).then(function (data) {
       state.data = data;
       state.names = {};
       data.teams.forEach(function (t) { state.names[t.team] = t.name; });
+      var sel = $("team");
+      if (!sel) throw new Error("team control is missing");
       var teams = data.teams.slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
-      $("team").innerHTML = teams.map(function (t) { return '<option value="' + esc(t.team) + '">' + esc(t.name) + "</option>"; }).join("");
-      if (abbr && state.names[abbr]) $("team").value = abbr;
-      $("fresh").textContent = "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10);
+      sel.innerHTML = teams.map(function (t) { return '<option value="' + esc(t.team) + '">' + esc(t.name) + "</option>"; }).join("");
+      if (abbr && state.names[abbr]) sel.value = abbr;
+      site.setText("fresh", "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10));
       render();
     });
   }
 
   function init() {
     var q = new URLSearchParams(location.search);
-    $("team").onchange = render;
-    fetch("data/index.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (idx) {
-      $("season").innerHTML = idx.seasons.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("");
+    var team = $("team");
+    if (team) team.onchange = render;
+    site.getJSON(site.data("index.json")).then(function (idx) {
+      var sel = $("season");
+      if (!sel || !idx || !idx.seasons) throw new Error("season list missing");
+      sel.innerHTML = idx.seasons.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("");
       var season = q.get("season") && idx.seasons.indexOf(Number(q.get("season"))) >= 0 ? q.get("season") : idx.default_season;
-      $("season").value = season;
-      $("season").onchange = function () { load($("season").value, $("team").value); };
+      sel.value = season;
+      sel.onchange = function () {
+        var current = $("team");
+        load(sel.value, current ? current.value : "");
+      };
       return load(season, q.get("team"));
     }).catch(function (e) {
-      $("fresh").textContent = "Could not load this team. " + e.message;
+      var msg = e && e.message ? e.message : "request failed";
+      site.setText("fresh", "Could not load this team (" + msg + ").");
     });
   }
   init();

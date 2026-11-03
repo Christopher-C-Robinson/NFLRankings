@@ -91,15 +91,34 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 }
 .skip-link {
   position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link:focus {
   left: 12px;
-  top: -48px;
+  top: 8px;
   z-index: 40;
+  width: auto;
+  height: auto;
+  margin: 0;
   padding: 8px 12px;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  white-space: normal;
   border-radius: 6px;
   background: var(--ink);
   color: var(--paper);
 }
-.skip-link:focus { top: 8px; }
 .sr-only {
   position: absolute;
   width: 1px;

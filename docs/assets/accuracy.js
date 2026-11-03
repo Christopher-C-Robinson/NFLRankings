@@ -1,5 +1,11 @@
 (function () {
   "use strict";
+  var site = window.NFLSite;
+  if (!site) {
+    var missing = document.getElementById("fresh");
+    if (missing) missing.textContent = "Could not load this page. Hard-refresh and try again.";
+    return;
+  }
   var $ = function (id) { return document.getElementById(id); };
 
   function decisive(g) {
@@ -32,22 +38,27 @@
     var weeks = [];
     games.forEach(function (g) { if (weeks.indexOf(g.week) < 0) weeks.push(g.week); });
     weeks.sort(function (a, b) { return a - b; });
-    $("fresh").textContent = "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10);
-    $("result").innerHTML = '<div class="tablewrap"><table class="schedule"><thead><tr><th>Slice</th><th class="num">Picks</th><th class="num">Winners</th><th class="num">Brier</th></tr></thead><tbody>' +
+    site.setText("fresh", "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10));
+    var result = $("result");
+    if (!result) return;
+    result.innerHTML = '<div class="tablewrap"><table class="schedule"><thead><tr><th>Slice</th><th class="num">Picks</th><th class="num">Winners</th><th class="num">Brier</th></tr></thead><tbody>' +
       row("Season", games) +
       weeks.map(function (w) { return row("Week " + w, games.filter(function (g) { return g.week === w; })); }).join("") +
       "</tbody></table></div>";
   }
-  function load(season) {
-    fetch("data/" + season + ".json", { cache: "no-cache" }).then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    }).then(render).catch(function (e) { $("fresh").textContent = "Could not load accuracy. " + e.message; });
+  function fail(e) {
+    var msg = e && e.message ? e.message : "request failed";
+    site.setText("fresh", "Could not load accuracy (" + msg + ").");
   }
-  fetch("data/index.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (idx) {
-    $("season").innerHTML = idx.seasons.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("");
-    $("season").value = idx.default_season;
-    $("season").onchange = function () { load($("season").value); };
-    load(idx.default_season);
-  });
+  function load(season) {
+    return site.getJSON(site.data(season + ".json")).then(render).catch(fail);
+  }
+  site.getJSON(site.data("index.json")).then(function (idx) {
+    var sel = $("season");
+    if (!sel || !idx || !idx.seasons) throw new Error("season list missing");
+    sel.innerHTML = idx.seasons.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("");
+    sel.value = idx.default_season;
+    sel.onchange = function () { load(sel.value); };
+    return load(idx.default_season);
+  }).catch(fail);
 })();
