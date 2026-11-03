@@ -18,6 +18,7 @@ from .schedule import (
     attach_wins_above_expected,
     league_ppg,
     opponent_strength,
+    prior_ratings_from_teams,
     season_games,
     unit_ratings,
     weekly_v2,
@@ -241,14 +242,21 @@ def _round_game(game: dict) -> dict:
     return game
 
 
-def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: set[str], pbp: pd.DataFrame | None = None) -> tuple[list[dict], float]:
+def enrich_games(
+    teams: list[dict],
+    sched: pd.DataFrame,
+    params: dict,
+    known: set[str],
+    pbp: pd.DataFrame | None = None,
+    prior_v2: dict[str, float] | None = None,
+) -> tuple[list[dict], float]:
     """Add schedule projections. Returns (games, league points per team-game)."""
     ppg = league_ppg(pd.DataFrame(teams).set_index("team")) if teams else 0.0
     fitted = dict(params)
     fitted["_league_ppg"] = ppg
     games = season_games(sched, teams, fitted, known, align_abbr)
     if pbp is not None:
-        attach_pregame(teams, games, pbp, params)
+        attach_pregame(teams, games, pbp, params, prior_v2=prior_v2)
         attach_wins_above_expected(teams, games)
     games = [_round_game(game) for game in games]
     attach_outlook(teams, games)
@@ -264,7 +272,26 @@ def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: se
     return games, _clean(ppg) if ppg else 0.0
 
 
-def build_season(season: int, params: dict | None = None):
+def ensure_prior_season(season: int, out_dir: Path, params: dict) -> dict[str, float]:
+    """Load season-1 end ratings, building that season first when the file is missing.
+
+    The nested build does not itself fetch a prior, so a 2026 refresh materializes
+    2025 and stops there. An empty result means there is nothing to blend.
+    """
+    prior_year = season - 1
+    path = out_dir / f"{prior_year}.json"
+    if not path.exists():
+        payload = build_season(prior_year, params, out_dir=out_dir, fetch_prior=False)
+        if payload is None:
+            print(f"no prior season {prior_year}")
+            return {}
+        write_season(payload, out_dir)
+        print(f"materialized prior season {prior_year}: {len(payload['teams'])} teams")
+    data = json.loads(path.read_text())
+    return prior_ratings_from_teams(data.get("teams", []))
+
+
+def build_season(season: int, params: dict | None = None, *, out_dir: Path | None = None, fetch_prior: bool = True):
     """Build one season; return a payload dict, or None if there are no REG plays."""
     params = load_conversion() if params is None else params
     pbp = download_pbp(season)
@@ -276,7 +303,8 @@ def build_season(season: int, params: dict | None = None):
     sched = download_schedule(season)
     teams = build_teams(pbp, sched, download_teams(), params)
     known = {team["team"] for team in teams}
-    games, ppg = enrich_games(teams, sched, params, known, pbp)
+    prior = ensure_prior_season(season, out_dir or DEFAULT_OUT, params) if fetch_prior else {}
+    games, ppg = enrich_games(teams, sched, params, known, pbp, prior or None)
     return _payload(season, teams, reg, sched, params, games, ppg)
 
 
