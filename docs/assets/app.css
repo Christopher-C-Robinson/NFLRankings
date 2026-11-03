@@ -31,7 +31,9 @@ a:hover { color: var(--leather); }
 .tablewrap { overflow-x: auto; border: 1px solid var(--ink); background: #faf7ee; max-height: 75vh; -webkit-overflow-scrolling: touch; }
 table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; font-size: .9rem; font-variant-numeric: tabular-nums; }
 th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--rule); white-space: nowrap; }
-th { position: sticky; top: 0; z-index: 2; background: var(--ink); color: var(--paper); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; }
+th { font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; }
+thead th { position: sticky; top: 0; z-index: 2; background: var(--ink); color: var(--paper); }
+tbody th { position: static; background: transparent; color: var(--ink); text-align: left; }
 th.num, td.num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
 tbody tr.team { cursor: pointer; box-shadow: inset 4px 0 0 var(--accent, transparent); }
 tbody tr.team:hover { background: var(--row); }
@@ -64,34 +66,57 @@ footer { padding: 20px 0 40px; font-size: .8rem; color: var(--muted); }
 .prose table { min-width: 0; font-size: .85rem; } .prose td, .prose th { white-space: normal; }
 .prose th { position: static; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+a.teamlink { color: inherit; text-decoration-thickness: 1px; }
+a.teamlink:hover { color: var(--leather); }
+.detail-link { margin: 8px 0 0; font-size: .85rem; }
+.matchup { border: 1px solid var(--ink); background: #faf7ee; padding: 16px; margin-top: 8px; }
+.matchup-venue { margin: 0; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .75rem; }
+.matchup-score { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 12px; }
+.matchup-score strong { display: block; font-family: var(--serif); font-size: clamp(2rem, 6vw, 3rem); color: var(--green); line-height: 1.1; }
+.matchup-score span, .matchup-score a { display: block; }
+.matchup-facts { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; margin: 0 0 16px; }
+.matchup-facts dt { color: var(--muted); }
+.matchup-facts dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+table.units, table.schedule { min-width: 0; }
+.teamhead { display: flex; gap: 14px; align-items: center; border-left: 6px solid var(--accent, var(--green)); padding: 8px 0 8px 12px; margin: 8px 0 16px; }
+.teamlogo { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 6px; }
+.record { font-family: var(--serif); font-size: 1.8rem; margin: 0; color: var(--green); }
+.teamhead p { margin: 0; }
+h2 { font-family: var(--serif); color: var(--green); font-size: 1.4rem; }
+.chart { width: 100%; height: auto; background: #faf7ee; border: 1px solid var(--ink); }
+.chart path { fill: none; stroke: var(--green); stroke-width: 2.5; }
+.chart circle { fill: var(--leather); }
+.chart text { fill: var(--muted); font-size: 11px; font-family: var(--sans); }
+.chart .axis { stroke: var(--rule); stroke-width: 1; }
 @media (max-width: 720px) {
   .controls { flex-direction: column; align-items: stretch; }
   .controls label, .controls button { width: 100%; }
-  .tablewrap { overflow: visible; max-height: none; border: 0; background: transparent; }
-  table { display: block; min-width: 0; }
-  thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
-  tbody { display: block; }
-  tbody tr.team {
+  #tablewrap { overflow: visible; max-height: none; border: 0; background: transparent; }
+  .tablewrap { max-width: 100%; }
+  #tbl { display: block; min-width: 0; }
+  #tbl thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+  #tbl tbody { display: block; }
+  #tbl tbody tr.team {
     display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px;
     margin: 0 0 10px; padding: 12px; border: 1px solid var(--ink);
     border-left: 4px solid var(--accent, var(--green)); box-shadow: none; background: #faf7ee;
   }
-  tbody tr.team td { display: block; border: 0; padding: 0; white-space: normal; text-align: left; }
-  tbody tr.team td.num { text-align: left; }
-  tbody tr.team td.rank { display: none; }
-  tbody tr.team td.teamcell { grid-column: 1 / -1; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
-  tbody tr.team td.win { grid-column: 1 / -1; font-family: var(--serif); font-size: 1.5rem; color: var(--green); }
+  #tbl tbody tr.team td { display: block; border: 0; padding: 0; white-space: normal; text-align: left; }
+  #tbl tbody tr.team td.num { text-align: left; }
+  #tbl tbody tr.team td.rank { display: none; }
+  #tbl tbody tr.team td.teamcell { grid-column: 1 / -1; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  #tbl tbody tr.team td.win { grid-column: 1 / -1; font-family: var(--serif); font-size: 1.5rem; color: var(--green); }
   .rankbadge {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: 1.6em; font-weight: 700; color: var(--green);
   }
-  tbody tr.team td[data-label]::before {
+  #tbl tbody tr.team td[data-label]::before {
     content: attr(data-label); display: block; margin-bottom: 2px;
     color: var(--muted); font-size: .68rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
   }
-  tr.first { background: #e4ecdf; }
-  tr.first td { background: transparent; border-bottom: 0; }
-  tr.detail { display: block; margin: -10px 0 10px; border: 1px solid var(--ink); border-top: 0; }
-  tr.detail td { display: block; white-space: normal; }
+  #tbl tr.first { background: #e4ecdf; }
+  #tbl tr.first td { background: transparent; border-bottom: 0; }
+  #tbl tr.detail { display: block; margin: -10px 0 10px; border: 1px solid var(--ink); border-top: 0; }
+  #tbl tr.detail td { display: block; white-space: normal; }
   th, td { padding: 8px; }
 }

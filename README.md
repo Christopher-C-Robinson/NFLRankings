@@ -32,9 +32,12 @@ Refit with:
 python -m nflrankings.fit_history --first 2016 --last 2025
 ```
 
-A single game (neutral, team A home, or team B home) is `predict_matchup` in
-`nflrankings/winprob.py`. A Monte Carlo simulator, team pages, a week board,
-live scores, and accuracy backtests are not part of this site yet.
+The matchup page (`docs/matchup.html`) projects one game: spread, win chance,
+score, and an 80% margin range from the fitted residual. Pass and rush EPA are
+shown and are not added into the spread. Team pages (`docs/team.html`) list the
+schedule, expected wins, a projected record, and the season EPA chart. Those
+schedule projections use the current season rating. A week board, frozen
+pregame accuracy, and live scores are not part of this page yet.
 
 ## Data
 

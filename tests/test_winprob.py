@@ -6,14 +6,18 @@ import numpy as np
 import pytest
 
 from nflrankings.winprob import (
+    MARGIN_Z80,
     apply_ranks,
     apply_win_chances,
     average_win_chances,
     fit_margin,
     fit_win_prob_scale,
     load_conversion,
+    margin_interval,
     point_spread,
     predict_matchup,
+    project_game,
+    projected_total,
     win_probability,
 )
 
@@ -122,6 +126,27 @@ def test_logistic_scale_recovers():
     scale = fit_win_prob_scale(spreads, won.astype(float))
     assert scale == pytest.approx(truth, rel=0.05)
     assert math.isfinite(scale)
+
+
+def test_margin_range_and_projected_score():
+    low, high = margin_interval(3, 10)
+    assert low == pytest.approx(3 - MARGIN_Z80 * 10)
+    assert high == pytest.approx(3 + MARGIN_Z80 * 10)
+    assert high - low == pytest.approx(2 * MARGIN_Z80 * 10)
+    total = projected_total(30, 20, 8, 10, 30, 8, 22)
+    assert total == pytest.approx(44.6666666667)
+    cold = projected_total(0, 0, 0, 0, 0, 0, 22)
+    assert cold == pytest.approx(44)
+    game = project_game(
+        0.2, 0.0, {**PARAMS, "margin_residual_sd": 10}, "a_home",
+        {"points_for": 200, "points_against": 160, "games": 8},
+        {"points_for": 160, "points_against": 200, "games": 8},
+        22,
+    )
+    assert game["score_a"] + game["score_b"] == pytest.approx(game["total"])
+    assert game["margin"] > point_spread(0.2, 50)
+    assert game["margin_low"] < game["margin"] < game["margin_high"]
+    assert game["win_probability"] > 0.5
 
 
 def test_shipped_conversion_is_usable():

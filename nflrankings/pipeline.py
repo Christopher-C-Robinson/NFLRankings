@@ -12,6 +12,7 @@ import pandas as pd
 
 from . import rating
 from .aggregate import PBP_COLUMNS, epa_plays, regular_season
+from .schedule import attach_outlook, league_ppg, opponent_strength, season_games, unit_ratings, weekly_v2
 from .winprob import apply_win_chances, load_conversion
 
 SOURCE = "nflverse via nfl_data_py (https://github.com/nflverse)"
@@ -29,6 +30,9 @@ CSV_COLUMNS = [
     "win_chance", "mean_margin", "expected_wins", "opponents",
     "v2", "v2_rank", "off_epa", "def_epa", "off_epa_adj", "def_epa_adj",
     "color", "color2", "logo",
+    "points_for", "points_against",
+    "off_pass_epa_adj", "def_pass_epa_adj", "off_rush_epa_adj", "def_rush_epa_adj",
+    "schedule_expected_wins", "projected_wins", "projected_losses", "sos",
 ]
 
 
@@ -103,11 +107,15 @@ def records(sched: pd.DataFrame, known: set[str]) -> pd.DataFrame:
         if sides[0][0] is None or sides[1][0] is None:
             continue
         for team, points_for, points_against in sides:
-            bucket = rows.setdefault(team, {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0})
+            bucket = rows.setdefault(team, {
+                "wins": 0, "losses": 0, "ties": 0, "point_diff": 0, "points_for": 0, "points_against": 0,
+            })
             bucket["wins"] += int(points_for > points_against)
             bucket["losses"] += int(points_for < points_against)
             bucket["ties"] += int(points_for == points_against)
             bucket["point_diff"] += int(points_for - points_against)
+            bucket["points_for"] += int(points_for)
+            bucket["points_against"] += int(points_against)
     return pd.DataFrame.from_dict(rows, orient="index")
 
 
@@ -174,7 +182,9 @@ def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame,
     rows = []
     for team in sorted(known):
         meta = desc.loc[team] if team in desc.index else None
-        record = rec.loc[team] if team in rec.index else {"wins": 0, "losses": 0, "ties": 0, "point_diff": 0}
+        record = rec.loc[team] if team in rec.index else {
+            "wins": 0, "losses": 0, "ties": 0, "point_diff": 0, "points_for": 0, "points_against": 0,
+        }
         rows.append({
             "team": team,
             "name": _cell(meta, "team_name") or team,
@@ -184,6 +194,8 @@ def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame,
             "losses": int(record["losses"]),
             "ties": int(record["ties"]),
             "point_diff": int(record["point_diff"]),
+            "points_for": int(record["points_for"]),
+            "points_against": int(record["points_against"]),
             "v2": _clean(adjusted.loc[team, "v2"]),
             "off_epa": _clean(adjusted.loc[team, "off_epa"]),
             "def_epa": _clean(adjusted.loc[team, "def_epa"]),
@@ -195,11 +207,38 @@ def build_teams(pbp: pd.DataFrame, sched: pd.DataFrame, team_desc: pd.DataFrame,
         })
     # Rank from the rounded EPA values so a reader of the file gets the same chances.
     apply_win_chances(rows, params)
+    units = unit_ratings(pbp, [row["team"] for row in rows])
+    weeks = weekly_v2(pbp, [row["team"] for row in rows])
     for row in rows:
         row["win_chance"] = _clean(row["win_chance"])
         row["mean_margin"] = _clean(row["mean_margin"], 4)
         row["expected_wins"] = _clean(row["expected_wins"], 4)
+        for key, value in units[row["team"]].items():
+            row[key] = value if isinstance(value, int) or value is None else _clean(value)
+        row["weeks"] = [{"week": point["week"], "v2": _clean(point["v2"])} for point in weeks[row["team"]]]
     return rows
+
+
+def _round_game(game: dict) -> dict:
+    for key in ("spread_home", "home_win_chance", "proj_home", "proj_away", "margin_low", "margin_high"):
+        game[key] = _clean(game[key], 4 if key != "home_win_chance" else 6)
+    return game
+
+
+def enrich_games(teams: list[dict], sched: pd.DataFrame, params: dict, known: set[str]) -> tuple[list[dict], float]:
+    """Add schedule projections. Returns (games, league points per team-game)."""
+    ppg = league_ppg(pd.DataFrame(teams).set_index("team")) if teams else 0.0
+    fitted = dict(params)
+    fitted["_league_ppg"] = ppg
+    games = [_round_game(game) for game in season_games(sched, teams, fitted, known, align_abbr)]
+    attach_outlook(teams, games)
+    opponent_strength(teams, games)
+    for team in teams:
+        team["schedule_expected_wins"] = _clean(team["schedule_expected_wins"], 4)
+        team["projected_wins"] = _clean(team["projected_wins"], 4)
+        team["projected_losses"] = _clean(team["projected_losses"], 4)
+        team["sos"] = None if team["sos"] is None else _clean(team["sos"])
+    return games, _clean(ppg) if ppg else 0.0
 
 
 def build_season(season: int, params: dict | None = None):
@@ -213,10 +252,12 @@ def build_season(season: int, params: dict | None = None):
         return None
     sched = download_schedule(season)
     teams = build_teams(pbp, sched, download_teams(), params)
-    return _payload(season, teams, reg, sched, params)
+    known = {team["team"] for team in teams}
+    games, ppg = enrich_games(teams, sched, params, known)
+    return _payload(season, teams, reg, sched, params, games, ppg)
 
 
-def _payload(season, teams, reg, sched, params) -> dict:
+def _payload(season, teams, reg, sched, params, games=None, league_points=None) -> dict:
     weeks = pd.to_numeric(reg["week"], errors="coerce").dropna()
     played = sched[(sched["game_type"] == "REG") & sched["home_score"].notna()]
     return {
@@ -226,8 +267,11 @@ def _payload(season, teams, reg, sched, params) -> dict:
         "week_min": int(weeks.min()),
         "week_max": int(weeks.max()),
         "games_played": int(len(played)),
+        "league_ppg": league_points if league_points is not None else 0.0,
+        "rating_basis": "season",
         "ranking": ranking_block(params),
         "teams": teams,
+        "games": games or [],
     }
 
 
