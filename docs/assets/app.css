@@ -567,6 +567,15 @@ h2 { margin: 18px 0 8px; font-size: 18px; }
   :root:not([data-theme="light"]) .hit { color: #9ce0c3; }
 }
 
+.power-panel { margin-top: 16px; padding: 16px 14px 14px; }
+.power-columns { display: grid; gap: 12px; margin-top: 12px; align-items: start; }
+table.power { min-width: 0; }
+@media (min-width: 800px) {
+  .week-controls { grid-template-columns: 120px minmax(280px, 2fr) minmax(120px, 1fr) minmax(130px, 1fr) minmax(150px, 1fr); }
+  .power-columns { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+  .power-panel { padding: 20px 20px 16px; }
+}
+
 footer { padding: 8px 0 36px; color: var(--ink-soft); font-size: 12px; }
 footer .section-shell { padding-top: 0; }
 .prose { max-width: 740px; padding-bottom: 12px; }

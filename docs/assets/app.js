@@ -37,6 +37,8 @@
     if (count) count.textContent = "";
     var s = $("state");
     if (s) { s.hidden = false; s.className = "state error"; s.textContent = msg; }
+    var power = $("power-panel");
+    if (power) power.hidden = true;
   }
   function showEmpty(msg) {
     var board = $("board");
@@ -91,6 +93,8 @@
       stat("Off pass EPA", fmt(t.off_pass_epa_adj, 3), t.off_pass_epa_adj < 0) +
       stat("Off rush EPA", fmt(t.off_rush_epa_adj, 3), t.off_rush_epa_adj < 0) +
       stat("Division", esc(t.division || t.conference || "–"), false) +
+      (t.division_power == null ? "" : stat("Division power", signed(t.division_power, 1), t.division_power < 0)) +
+      (t.conference_power == null ? "" : stat("Conference power", signed(t.conference_power, 1), t.conference_power < 0)) +
       "</dl><p class=\"detail-link\"><a href=\"" + href + "\">Team page</a></p></div>";
   }
 
@@ -140,12 +144,14 @@
     if (!state.data) return;
     var rows = [["Rank", "Team", "Abbr", "Conference", "Division", "Wins", "Losses", "Ties",
       "Avg win chance", "Neutral margin", "Expected wins", "v2 EPA", "v2 rank",
-      "Adj off EPA", "Adj def EPA", "Point diff", "SOS", "Wins above expected"]];
+      "Adj off EPA", "Adj def EPA", "Point diff", "SOS", "Wins above expected", "Division power", "Conference power"]];
     visible().forEach(function (t) {
       rows.push([t.win_chance_rank, t.name, t.team, t.conference, t.division, t.wins, t.losses, t.ties,
         (t.win_chance * 100).toFixed(2), Number(t.mean_margin).toFixed(2), Number(t.expected_wins).toFixed(2),
         Number(t.v2).toFixed(3), t.v2_rank, Number(t.off_epa_adj).toFixed(3), Number(t.def_epa_adj).toFixed(3), t.point_diff,
-        t.sos == null ? "" : Number(t.sos).toFixed(3), t.wins_above_expected == null ? "" : Number(t.wins_above_expected).toFixed(2)]);
+        t.sos == null ? "" : Number(t.sos).toFixed(3), t.wins_above_expected == null ? "" : Number(t.wins_above_expected).toFixed(2),
+        t.division_power == null ? "" : Number(t.division_power).toFixed(2),
+        t.conference_power == null ? "" : Number(t.conference_power).toFixed(2)]);
     });
     var blob = new Blob([rows.map(function (r) { return r.map(csvCell).join(","); }).join("\n") + "\n"], { type: "text/csv;charset=utf-8" });
     var link = document.createElement("a");
@@ -182,6 +188,33 @@
     if (note && hfa != null) note.textContent = "Home field is " + signed(hfa, 2) + " points and is not used in the rank. Every team faces the other 31 on a neutral field.";
   }
 
+  function renderPower() {
+    var panel = $("power-panel");
+    var board = $("power-board");
+    var gp = state.data && state.data.group_power;
+    if (!panel || !board) return;
+    if (!gp || !gp.conferences || !gp.divisions) {
+      panel.hidden = true;
+      return;
+    }
+    panel.hidden = false;
+    var note = $("power-note");
+    if (note) note.textContent = gp.tuning || "";
+    function body(items, withConference) {
+      return items.map(function (item) {
+        return "<tr><th scope=\"row\">" + esc(item.name) + "</th>" +
+          (withConference ? "<td>" + esc(item.conference || "") + "</td>" : "") +
+          "<td class=\"num\">" + signed(item.points, 1) + "</td><td class=\"num\">" + item.teams + "</td></tr>";
+      }).join("");
+    }
+    board.innerHTML =
+      '<div class="power-columns">' +
+      '<div class="tablewrap"><table class="power"><thead><tr><th>Conference</th><th class="num">Power</th><th class="num">Teams</th></tr></thead><tbody>' +
+      body(gp.conferences, false) + "</tbody></table></div>" +
+      '<div class="tablewrap"><table class="power"><thead><tr><th>Division</th><th>Conference</th><th class="num">Power</th><th class="num">Teams</th></tr></thead><tbody>' +
+      body(gp.divisions, true) + "</tbody></table></div></div>";
+  }
+
   function loadSeason(season) {
     return site.getJSON(site.data(season + ".json")).then(function (d) {
       if (!d.teams || !d.teams.length || d.teams[0].win_chance_rank == null) {
@@ -196,6 +229,7 @@
       fillDivisions();
       fresh();
       render();
+      renderPower();
     }).catch(function (e) {
       var msg = e && e.message ? e.message : "request failed";
       site.setText("fresh", "Could not load rankings (" + msg + ").");

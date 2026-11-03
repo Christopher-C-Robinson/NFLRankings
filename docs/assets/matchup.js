@@ -46,6 +46,15 @@
     q.set("venue", venue.value);
     history.replaceState(null, "", site.page("matchup.html?" + q.toString()));
   }
+  function groupFacts(a, b) {
+    if (a.hierarchy_power == null || b.hierarchy_power == null || a.unpooled_power == null || b.unpooled_power == null) return "";
+    var adjustment = (Number(a.hierarchy_power) - Number(b.hierarchy_power)) - (Number(a.unpooled_power) - Number(b.unpooled_power));
+    var division = signed(a.division_power, 1) + " / " + signed(b.division_power, 1);
+    var conference = signed(a.conference_power, 1) + " / " + signed(b.conference_power, 1);
+    return "<dt>Division power, A / B</dt><dd>" + division + "</dd>" +
+      "<dt>Conference power, A / B</dt><dd>" + conference + "</dd>" +
+      "<dt>Division / conference adjustment</dt><dd>" + signed(adjustment, 1) + "</dd>";
+  }
   function unit(label, a, b, key) {
     return "<tr><th scope=\"row\">" + label + "</th><td class=\"num\">" + fmt(a[key], 3) + "</td><td class=\"num\">" + fmt(b[key], 3) + "</td></tr>";
   }
@@ -75,7 +84,9 @@
       "<dt>Projected total</dt><dd>" + fmt(proj.total, 1) + "</dd>" +
       "<dt>A pass vs B defense</dt><dd>" + signed(passEdge, 3) + " EPA/play</dd>" +
       "<dt>A rush vs B defense</dt><dd>" + signed(rushEdge, 3) + " EPA/play</dd>" +
+      groupFacts(a, b) +
       "</dl>" +
+      (a.hierarchy_power == null ? "" : '<p class="fresh">Division and conference adjustment is the change versus team ratings fit from the same scores with no division or conference pool. It is not added to the EPA spread above. It can be nonzero inside one division.</p>') +
       '<table class="units"><thead><tr><th></th><th class="num">' + esc(a.team) + '</th><th class="num">' + esc(b.team) + "</th></tr></thead><tbody>" +
       unit("Off pass EPA", a, b, "off_pass_epa_adj") +
       unit("Off rush EPA", a, b, "off_rush_epa_adj") +
