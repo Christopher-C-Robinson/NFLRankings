@@ -84,7 +84,7 @@
       options($("team-a"), teams, picked.a || teams[0].team);
       options($("team-b"), teams, picked.b || teams[1].team);
       if (picked.venue) $("venue").value = picked.venue;
-      $("fresh").textContent = "Season " + data.season + " · current rating, weeks " + data.week_min + "–" + data.week_max + " · home field " + Number(data.ranking.home_field_points).toFixed(2) + " pts";
+      $("fresh").textContent = "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10);
       render();
     });
   }

@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
-  var state = { index: null, data: null, open: null };
+  var state = { index: null, data: null, open: {} };
 
   function fmt(x, d) {
     if (x === null || x === undefined || isNaN(x)) return "–";
@@ -25,10 +25,11 @@
   function showError(msg) {
     $("tablewrap").hidden = true;
     $("export").disabled = true;
+    $("count").textContent = "";
     var s = $("state"); s.hidden = false; s.className = "state error"; s.textContent = msg;
   }
   function showEmpty(msg) {
-    $("tbody").innerHTML = "";
+    $("board").innerHTML = "";
     var s = $("state"); s.hidden = false; s.className = "state"; s.textContent = msg;
     $("tablewrap").hidden = false;
   }
@@ -41,59 +42,45 @@
     });
   }
 
-  var COLS = [
-    ["Rank", "rank"], ["Team", "team"], ["Avg win chance", "num"], ["Neutral margin", "num"],
-    ["v2 EPA", "num"], ["Record", "num"], ["Point diff", "num"], ["SOS", "num"], ["WAE", "num"]
-  ];
-
-  function head() {
-    $("thead").innerHTML = "<tr>" + COLS.map(function (c) {
-      var tip = c[0] === "Neutral margin" ? ' title="Average point margin if this team played each of the other 31 on a neutral field"' : "";
-      var tip2 = c[0] === "v2 EPA" ? ' title="Schedule-adjusted EPA per play, offense minus defense"' : "";
-      var tip3 = c[0] === "Avg win chance" ? ' title="Average chance to beat each of the other 31 teams on a neutral field"' : "";
-      return '<th scope="col"' + (c[1] === "num" ? ' class="num"' : "") + tip + tip2 + tip3 + ">" + c[0] + "</th>";
-    }).join("") + "</tr>";
-  }
-
   function logo(t) {
     var color = accent(t);
     var src = https(t.logo);
-    var style = color ? ' style="background:' + esc(color) + '"' : "";
+    var style = color ? ' style="border-color:' + esc(color) + '"' : "";
     var img = src
-      ? '<img alt="" width="28" height="28" src="' + esc(src) + '" loading="lazy" decoding="async" onerror="this.remove()">'
+      ? '<img alt="" width="30" height="30" src="' + esc(src) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentNode.setAttribute(\'data-logo\',\'loaded\')" onerror="this.remove()">'
       : "";
     return '<span class="logo"' + style + ">" +
-      '<span class="logo-fallback">' + esc(t.team) + "</span>" + img + "</span>";
+      '<span class="logo-fallback" aria-hidden="true">' + esc(t.team) + "</span>" + img + "</span>";
   }
 
-  function detail(t) {
+  function stat(label, value, neg) {
+    return "<div><dt>" + label + "</dt><dd" + (neg ? ' class="neg"' : "") + ">" + value + "</dd></div>";
+  }
+
+  function detail(t, open) {
     var rank = state.data.ranking || {};
     var hfa = Number(rank.home_field_points);
-    var homeLine = isNaN(hfa) ? "" : "<dt>Home margin vs the field</dt><dd>" + signed(t.mean_margin + hfa, 1) + "</dd>";
-    return '<tr class="detail"><td colspan="' + COLS.length + '"><div class="grid">' +
-      "<div><h4>Win chance</h4><dl>" +
-      "<dt>Avg win chance</dt><dd>" + pct(t.win_chance) + "</dd>" +
-      "<dt>Expected wins vs 31</dt><dd>" + fmt(t.expected_wins, 2) + "</dd>" +
-      "<dt>Neutral margin</dt><dd>" + signed(t.mean_margin, 1) + "</dd>" +
-      homeLine +
-      "<dt>v2 rank</dt><dd>" + t.v2_rank + "</dd>" +
-      "</dl></div>" +
-      "<div><h4>EPA per play</h4><dl>" +
-      "<dt>Off EPA (raw)</dt><dd>" + fmt(t.off_epa, 3) + "</dd>" +
-      "<dt>Def EPA (raw)</dt><dd>" + fmt(t.def_epa, 3) + "</dd>" +
-      "<dt>Off EPA (adj)</dt><dd>" + fmt(t.off_epa_adj, 3) + "</dd>" +
-      "<dt>Def EPA (adj)</dt><dd>" + fmt(t.def_epa_adj, 3) + "</dd>" +
-      "<dt>v2 margin</dt><dd>" + fmt(t.v2, 3) + "</dd>" +
-      "<dt>Off pass EPA</dt><dd>" + fmt(t.off_pass_epa_adj, 3) + "</dd>" +
-      "<dt>Off rush EPA</dt><dd>" + fmt(t.off_rush_epa_adj, 3) + "</dd>" +
-      "</dl><p class=\"detail-link\"><a href=\"" +
-      ("team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season)) +
-      "\">Team page</a></p></div>" +
-      "<div><h4>" + esc(t.conference || "League") + "</h4><dl>" +
-      "<dt>Division</dt><dd>" + esc(t.division || "–") + "</dd>" +
-      "<dt>Record</dt><dd>" + record(t) + "</dd>" +
-      "<dt>Point diff</dt><dd>" + signed(t.point_diff, 0) + "</dd>" +
-      "</dl></div></div></td></tr>";
+    var home = isNaN(hfa) ? "" : stat("Home margin vs field", signed(t.mean_margin + hfa, 1), t.mean_margin + hfa < 0);
+    var href = "team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season);
+    return '<div class="rank-detail" id="detail-' + esc(t.team) + '"' + (open ? "" : " hidden") + ">" +
+      '<dl class="stat-grid">' +
+      stat("Neutral margin", signed(t.mean_margin, 1), t.mean_margin < 0) +
+      stat("v2 EPA", fmt(t.v2, 3), t.v2 < 0) +
+      stat("Record", record(t), false) +
+      stat("Point diff", signed(t.point_diff, 0), t.point_diff < 0) +
+      stat("SOS", fmt(t.sos, 3), t.sos < 0) +
+      stat("Wins above expected", signed(t.wins_above_expected, 1), t.wins_above_expected < 0) +
+      stat("Expected wins vs 31", fmt(t.expected_wins, 2), false) +
+      stat("v2 rank", t.v2_rank, false) +
+      home +
+      stat("Off EPA (adj)", fmt(t.off_epa_adj, 3), t.off_epa_adj < 0) +
+      stat("Def EPA (adj)", fmt(t.def_epa_adj, 3), false) +
+      stat("Off EPA (raw)", fmt(t.off_epa, 3), t.off_epa < 0) +
+      stat("Def EPA (raw)", fmt(t.def_epa, 3), false) +
+      stat("Off pass EPA", fmt(t.off_pass_epa_adj, 3), t.off_pass_epa_adj < 0) +
+      stat("Off rush EPA", fmt(t.off_rush_epa_adj, 3), t.off_rush_epa_adj < 0) +
+      stat("Division", esc(t.division || t.conference || "–"), false) +
+      "</dl><p class=\"detail-link\"><a href=\"" + href + "\">Team page</a></p></div>";
   }
 
   function visible() {
@@ -109,34 +96,23 @@
   function render() {
     if (!state.data) return;
     var rows = visible();
-    head();
     var total = state.data.teams.length;
     $("count").textContent = rows.length === total
-      ? total + " teams. Ranks are the full-league order."
-      : "Showing " + rows.length + " of " + total + ". Ranks stay the full-league order.";
+      ? total + " teams shown · " + total + " rated · full league"
+      : "Showing " + rows.length + " of " + total + " · ranks stay the full-league order";
     if (!rows.length) { showEmpty("No teams match these filters."); return; }
     hideState();
-    $("tbody").innerHTML = rows.map(function (t) {
-      var color = accent(t);
-      var style = color ? ' style="--accent:' + esc(color) + '"' : "";
-      var open = state.open === t.team;
+    $("board").innerHTML = rows.map(function (t) {
+      var open = !!state.open[t.team];
       var href = "team.html?team=" + encodeURIComponent(t.team) + "&season=" + encodeURIComponent(state.data.season);
-      var nm = '<td class="teamcell"><span class="rankbadge">' + t.win_chance_rank + "</span>" + logo(t) +
-        '<span class="teamname"><a class="teamlink" href="' + href + '">' + esc(t.name) + "</a><small>" + esc(t.team) + "</small></span></td>";
-      var cells = [
-        '<td class="num rank">' + t.win_chance_rank + "</td>",
-        nm,
-        '<td class="num win" data-label="Avg win chance">' + pct(t.win_chance) + "</td>",
-        '<td class="num" data-label="Neutral margin">' + signed(t.mean_margin, 1) + "</td>",
-        '<td class="num" data-label="v2 EPA">' + fmt(t.v2, 3) + "</td>",
-        '<td class="num" data-label="Record">' + record(t) + "</td>",
-        '<td class="num' + (t.point_diff < 0 ? " neg" : "") + '" data-label="Point diff">' + signed(t.point_diff, 0) + "</td>",
-        '<td class="num" data-label="SOS">' + fmt(t.sos, 3) + "</td>",
-        '<td class="num' + (t.wins_above_expected < 0 ? " neg" : "") + '" data-label="Wins above expected">' + signed(t.wins_above_expected, 1) + "</td>"
-      ];
-      var first = t.win_chance_rank === 1 ? " first" : "";
-      return '<tr class="team' + first + '" tabindex="0" role="button" aria-expanded="' + open + '" data-team="' + esc(t.team) + '"' + style + ">" +
-        cells.join("") + "</tr>" + (open ? detail(t) : "");
+      return '<article class="rank-row' + (open ? " is-expanded" : "") + '" role="listitem" data-team="' + esc(t.team) + '">' +
+        '<div class="rank-main">' +
+        '<span class="rank-number">' + t.win_chance_rank + "</span>" +
+        logo(t) +
+        '<a class="rank-team" href="' + href + '"><span class="rank-team-name">' + esc(t.name) + '</span><span class="rank-abbr">' + esc(t.team) + "</span></a>" +
+        '<span class="rank-index" title="Average chance to beat each of the other 31 teams on a neutral field"><span class="rank-index-label">Neutral win</span>' + pct(t.win_chance) + "</span>" +
+        '<button type="button" class="rank-toggle" data-team="' + esc(t.team) + '" data-name="' + esc(t.name) + '" aria-expanded="' + (open ? "true" : "false") + '" aria-controls="detail-' + esc(t.team) + '" aria-label="' + (open ? "Hide" : "Show") + " ranking details for " + esc(t.name) + '"><span class="rank-toggle-icon" aria-hidden="true"></span></button>' +
+        "</div>" + detail(t, open) + "</article>";
     }).join("");
   }
 
@@ -176,12 +152,15 @@
   }
 
   function fresh() {
-    var d = state.data, rank = d.ranking || {}, parts = ["Season " + d.season];
-    if (d.week_max) parts.push("weeks " + d.week_min + "–" + d.week_max + (d.games_played ? " (" + d.games_played + " games)" : ""));
-    parts.push("ranked by average neutral win chance");
-    if (rank.home_field_points != null) parts.push("home field " + signed(rank.home_field_points, 2) + " pts, not used in the rank");
-    parts.push("generated " + String(d.generated_at).replace("T", " ").replace(/\+00:00$/, " UTC"));
+    var d = state.data;
+    var parts = ["Season " + d.season];
+    if (d.week_max) parts.push("Week " + d.week_max);
+    var gen = String(d.generated_at || "").slice(0, 10);
+    if (gen) parts.push("generated " + gen);
     $("fresh").textContent = parts.join(" · ");
+    var hfa = d.ranking && d.ranking.home_field_points;
+    var note = $("home-note");
+    if (note && hfa != null) note.textContent = "Home field is " + signed(hfa, 2) + " points and is not used in the rank. Every team faces the other 31 on a neutral field.";
   }
 
   function loadSeason(season) {
@@ -191,7 +170,7 @@
         return;
       }
       state.data = d;
-      state.open = null;
+      state.open = {};
       $("export").disabled = false;
       fillDivisions();
       fresh();
@@ -204,22 +183,19 @@
     $("conf").onchange = function () { fillDivisions(); render(); };
     $("div").onchange = render;
     $("q").oninput = render;
-    function toggle(tr) {
-      var t = tr.getAttribute("data-team");
-      state.open = state.open === t ? null : t;
-      render();
-      var again = document.querySelector('tr[data-team="' + t + '"]');
-      if (again) again.focus();
-    }
-    $("tbody").addEventListener("click", function (e) {
-      if (e.target.closest("a")) return;
-      var tr = e.target.closest("tr.team"); if (tr) toggle(tr);
+    $("board").addEventListener("click", function (e) {
+      var btn = e.target.closest(".rank-toggle");
+      if (!btn) return;
+      var team = btn.getAttribute("data-team");
+      var open = !state.open[team];
+      state.open[team] = open;
+      var row = btn.closest(".rank-row");
+      var detailEl = document.getElementById("detail-" + team);
+      if (row) row.classList.toggle("is-expanded", open);
+      if (detailEl) detailEl.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", (open ? "Hide" : "Show") + " ranking details for " + btn.getAttribute("data-name"));
     });
-    $("tbody").addEventListener("keydown", function (e) {
-      if (e.key !== "Enter" && e.key !== " ") return;
-      var tr = e.target.closest("tr.team"); if (tr) { e.preventDefault(); toggle(tr); }
-    });
-    head();
     getJSON("data/index.json").then(function (idx) {
       state.index = idx;
       if (!idx.seasons || !idx.seasons.length) {

@@ -32,7 +32,7 @@
     var weeks = [];
     games.forEach(function (g) { if (weeks.indexOf(g.week) < 0) weeks.push(g.week); });
     weeks.sort(function (a, b) { return a - b; });
-    $("fresh").textContent = "Season " + data.season + " · " + games.filter(function (g) { return g.played; }).length + " finals in the file";
+    $("fresh").textContent = "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10);
     $("result").innerHTML = '<div class="tablewrap"><table class="schedule"><thead><tr><th>Slice</th><th class="num">Picks</th><th class="num">Winners</th><th class="num">Brier</th></tr></thead><tbody>' +
       row("Season", games) +
       weeks.map(function (w) { return row("Week " + w, games.filter(function (g) { return g.week === w; })); }).join("") +

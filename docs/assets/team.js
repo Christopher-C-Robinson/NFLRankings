@@ -85,7 +85,7 @@
       var teams = data.teams.slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
       $("team").innerHTML = teams.map(function (t) { return '<option value="' + esc(t.team) + '">' + esc(t.name) + "</option>"; }).join("");
       if (abbr && state.names[abbr]) $("team").value = abbr;
-      $("fresh").textContent = "Season " + data.season + " · weeks " + data.week_min + "–" + data.week_max + " · " + data.games_played + " games played";
+      $("fresh").textContent = "Season " + data.season + " · Week " + data.week_max + " · generated " + String(data.generated_at || "").slice(0, 10);
       render();
     });
   }

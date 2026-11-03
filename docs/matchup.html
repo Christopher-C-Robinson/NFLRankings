@@ -5,24 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Matchup — NFL Rankings</title>
 <meta name="description" content="Compare two NFL teams: point spread, win chance, projected score, and margin range.">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,wght@0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230e3b2e'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23255b7a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<header class="masthead"><div class="wrap">
-  <h1>Matchup</h1>
-  <p>One game from the current season rating. Pass and rush splits are shown beside the spread. They do not change it.</p>
-  <div class="nav"><a href="index.html">Rankings</a>
-    <a href="matchup.html">Matchup</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NFL Rankings home"><span class="brand-mark" aria-hidden="true">NF</span><span class="brand-name">NFL <b>RANKINGS</b></span></a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="index.html">Rankings</a>
     <a href="week.html">Week</a>
+    <a href="matchup.html" aria-current="page">Matchups</a>
     <a href="accuracy.html">Accuracy</a>
-    <a href="methodology.html">Methodology</a>
-    <button type="button" class="theme" data-theme-toggle>Theme</button></div>
-</div></header>
-<main class="wrap">
+    <a href="methodology.html">Model &amp; data</a>
+  </nav>
+  <p class="data-status"><span class="status-dot" aria-hidden="true"></span><span id="fresh">Loading…</span></p>
+  <button type="button" class="theme" data-theme-toggle>Theme</button>
+</header>
+<main id="main" class="section-shell">
+  <div class="page-head">
+    <h1>Matchup</h1>
+    <p>One game from the current season rating. Pass and rush splits are shown beside the spread. They do not change it.</p>
+  </div>
   <div class="controls">
     <label>Season <select id="season"></select></label>
     <label>Team A <select id="team-a"></select></label>
@@ -33,11 +41,10 @@
       <option value="b_home">Team B home</option>
     </select></label>
   </div>
-  <div class="fresh" id="fresh">Loading…</div>
   <div id="result"></div>
   <p class="fresh">The 80% margin range is the fitted normal residual around the spread, the same summary a draw from that residual would estimate. <a href="methodology.html">Methodology</a>.</p>
 </main>
-<footer><div class="wrap">Data: <a href="https://github.com/nflverse">nflverse</a>. Projections use the published season rating, not a frozen pregame pick.</div></footer>
+<footer><div class="section-shell">Data: <a href="https://github.com/nflverse">nflverse</a>. Projections use the published season rating, not a frozen pregame pick.</div></footer>
 <script src="assets/theme.js"></script>
 <script src="assets/model.js"></script>
 <script src="assets/matchup.js"></script>
