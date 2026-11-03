@@ -35,19 +35,40 @@ def test_html_uses_project_root_for_local_urls():
     assert "Hard-refresh" in index
 
 
+PRESENTATION = {"chart-colors.js", "game-cards.js", "season-outlook.js"}
+
+
 def test_scripts_fetch_through_the_project_root():
     site = (DOCS / "assets" / "site.js").read_text()
     assert 'var ROOT = "/NFLRankings/"' in site
     assert "timed out after 8s" in site
     assert "fetch(url" in site
     for path in (DOCS / "assets").glob("*.js"):
-        if path.name in ("site.js", "theme.js", "model.js"):
-            continue
         text = path.read_text()
-        assert "fetch(" not in text, path.name
+        assert "fetch(" not in text or path.name == "site.js", path.name
+        assert 'textContent = "Loading' not in text
+        if path.name in ("site.js", "theme.js", "model.js") or path.name in PRESENTATION:
+            continue
         assert 'site.data("index.json")' in text
         assert "NFLSite" in text
-        assert 'textContent = "Loading' not in text
+
+
+def test_cfi_port_uses_project_root_assets():
+    week = (DOCS / "week.html").read_text()
+    team = (DOCS / "team.html").read_text()
+    assert 'href="/NFLRankings/assets/cfi-ui.css"' in week
+    assert 'src="/NFLRankings/assets/chart-colors.js"' in week
+    assert 'src="/NFLRankings/assets/game-cards.js"' in week
+    assert 'id="games-content"' in week
+    assert "<tbody id=\"rows\">" not in week
+    assert 'href="/NFLRankings/assets/cfi-ui.css"' in team
+    assert 'src="/NFLRankings/assets/season-outlook.js"' in team
+    cards = (DOCS / "assets" / "game-cards.js").read_text()
+    outlook = (DOCS / "assets" / "season-outlook.js").read_text()
+    assert "game-day-probability" in cards
+    assert "pregame" in cards.lower()
+    assert "season-chart-bar" in outlook
+    assert "weeks[].v2" in outlook
     app = (DOCS / "assets" / "app.js").read_text()
     assert '$("export").' not in app
     assert "if (exp)" in app

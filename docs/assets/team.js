@@ -161,7 +161,7 @@
       '<p class="forecast-analytics-note">' + note + "</p></section>";
   }
 
-  function matchupCard(g, selected) {
+  function matchupCard(g, selected, index) {
     var away = teamOr(g.away);
     var home = teamOr(g.home);
     var homeChance = Number(g.home_win_chance);
@@ -208,7 +208,7 @@
       center += '<span class="forecast-matchup-probability" title="Positive favors ' + esc(selected.name) + '">Spread ' + signed(spread, 1) + "</span>";
     }
     var label = left.name + " versus " + right.name + ", week " + g.week + ", " + siteLabel + ".";
-    return '<article class="forecast-game is-compact-game' + winnerClass + '"' +
+    return '<article id="season-game-' + index + '" class="forecast-game is-compact-game' + winnerClass + '"' +
       (winnerRgb ? ' style="--game-winner-rgb:' + winnerRgb + '"' : "") +
       ' role="listitem" aria-label="' + esc(label) + '">' +
       '<div class="forecast-game-heading"><div class="forecast-date">WK ' + esc(g.week) + "<span>" + esc(siteLabel) + "</span></div>" +
@@ -234,8 +234,14 @@
     var dek = $("dek");
     if (dek) dek.textContent = "Rank " + t.win_chance_rank + " · " + (t.win_chance * 100).toFixed(1) + "% average neutral win chance · " + (t.division || t.conference || "");
     var games = (state.data.games || []).filter(function (g) { return g.home === t.team || g.away === t.team; });
-    games.sort(function (a, b) { return a.week - b.week || String(a.home).localeCompare(String(b.home)); });
-    var cards = games.map(function (g) { return matchupCard(g, t); }).join("");
+    games.sort(function (a, b) {
+      return a.week - b.week || String(a.home).localeCompare(String(b.home)) || String(a.away).localeCompare(String(b.away));
+    });
+    var outlook = window.NFLSeasonOutlook ? window.NFLSeasonOutlook.build(t, state.data.games || [], state.data.teams, {
+      season: state.data.season,
+      generatedAt: state.data.generated_at
+    }) : null;
+    var cards = games.map(function (g, index) { return matchupCard(g, t, index); }).join("");
     var color = hexOk(t.color) ? t.color : "#0e3b2e";
     var resultBox = $("result");
     if (!resultBox) return;
@@ -243,7 +249,8 @@
       '<section class="teamhead" style="--accent:' + color + '">' +
       (t.logo ? '<img class="teamlogo" alt="" src="' + esc(t.logo) + '" width="56" height="56">' : "") +
       "<div><p class=\"record\">" + record(t) + "</p><p>Projected record <strong>" + fmt(t.projected_wins, 1) + "–" + fmt(t.projected_losses, 1) + "</strong> · schedule expected wins " + fmt(t.schedule_expected_wins, 1) + " · opponent EPA " + fmt(t.sos, 3) + "</p></div></section>" +
-      "<h2>Season rating</h2>" + chart(t.weeks) +
+      (outlook ? window.NFLSeasonOutlook.render(outlook) : "") +
+      "<h2>Season rating</h2><p class=\"chart-caption\">Schedule-adjusted EPA after each played week. This line is weeks[].v2. The bars above are win chance by game.</p>" + chart(t.weeks) +
       "<h2>Schedule</h2>" +
       '<p class="schedule-note">Away on the left, home on the right. The bar is each side’s win chance from the current rating.</p>' +
       (cards ? '<div class="forecast-ledger" role="list">' + cards + "</div>" : "<p>No games listed.</p>");
@@ -251,7 +258,8 @@
     var q = new URLSearchParams();
     q.set("team", t.team);
     q.set("season", state.data.season);
-    history.replaceState(null, "", site.page("team.html?" + q.toString()));
+    var hash = /^#season-game-\d+$/.test(location.hash) ? location.hash : "";
+    history.replaceState(null, "", site.page("team.html?" + q.toString()) + hash);
   }
 
   function load(season, abbr) {

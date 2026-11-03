@@ -7,18 +7,8 @@
     return;
   }
   var $ = function (id) { return document.getElementById(id); };
-  var state = { data: null, conf: {} };
+  var state = { data: null, conf: {}, divisionRank: {}, divisionSize: {} };
 
-  function esc(s) {
-    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
-    });
-  }
-  function fmt(x, d) {
-    var s = Number(x).toFixed(d);
-    return s.indexOf("-") === 0 ? "−" + s.slice(1) : s;
-  }
-  function signed(x, d) { var n = Number(x); return (n > 0 ? "+" : "") + fmt(n, d); }
   function name(abbr) { return (state.conf[abbr] && state.conf[abbr].name) || abbr; }
   function grade(g) {
     if (!g.played || g.home_score === g.away_score || g.pregame_home_win_chance == null) return null;
@@ -53,26 +43,97 @@
     var hits = graded.filter(Boolean).length;
     var count = $("count");
     if (count) count.textContent = games.length + " games" + (graded.length ? " · winner hit rate " + hits + "/" + graded.length + " (" + (100 * hits / graded.length).toFixed(0) + "%)" : "");
-    var body = $("rows");
+    var body = $("games-content");
     if (!body) return;
-    body.innerHTML = games.map(function (g) {
-      var result = grade(g);
-      var pick = result === null ? (g.played ? "Tie" : "—") : (result ? "Hit" : "Miss");
-      var finalScore = g.played ? g.away_score + "–" + g.home_score : "—";
-      return "<tr><td><a class=\"teamlink\" href=\"" + site.page("team.html?team=" + encodeURIComponent(g.away) + "&season=" + state.data.season) + "\">" + esc(name(g.away)) + "</a> at <a class=\"teamlink\" href=\"" + site.page("team.html?team=" + encodeURIComponent(g.home) + "&season=" + state.data.season) + "\">" + esc(name(g.home)) + "</a>" + (g.neutral ? " · neutral" : "") + "</td>" +
-        "<td class=\"num game-score\">" + fmt(g.pregame_proj_away, 1) + "–" + fmt(g.pregame_proj_home, 1) + "</td>" +
-        "<td class=\"num\">" + signed(g.pregame_spread_home, 1) + "</td>" +
-        "<td class=\"num\">" + (g.pregame_home_win_chance * 100).toFixed(1) + "%</td>" +
-        "<td class=\"num\">" + finalScore + "</td>" +
-        "<td class=\"" + (result === true ? "hit" : result === false ? "miss" : "") + "\">" + pick + "</td></tr>";
-    }).join("");
+    if (!window.NFLGameCards) {
+      body.innerHTML = '<div class="game-day-empty"><h3>Game cards did not load</h3><p>Hard-refresh and try again.</p></div>';
+      return;
+    }
+    body.innerHTML = window.NFLGameCards.renderGameDayRows(games.map(cardRow));
+    window.NFLGameCards.bindLogos(body);
+  }
+
+  function cardTeam(abbr) {
+    var t = state.conf[abbr] || { team: abbr, name: name(abbr) };
+    return {
+      name: t.name || abbr,
+      abbreviation: abbr,
+      href: site.page("team.html?team=" + encodeURIComponent(abbr) + "&season=" + state.data.season),
+      color: t.color,
+      alternateColor: t.color2,
+      logo: t.logo,
+      conference: t.conference || "",
+      division: t.division || "",
+      wins: t.wins,
+      losses: t.losses,
+      ties: t.ties,
+      projectedWins: t.projected_wins,
+      projectedLosses: t.projected_losses,
+      remainingGames: t.remaining_games,
+      neutralRank: t.win_chance_rank,
+      divisionRank: state.divisionRank[abbr],
+      divisionFieldSize: state.divisionSize[t.division],
+      passOff: t.off_pass_epa_adj,
+      passDef: t.def_pass_epa_adj,
+      rushOff: t.off_rush_epa_adj,
+      rushDef: t.def_rush_epa_adj
+    };
+  }
+
+  function cardRow(g) {
+    var ranking = state.data.ranking || {};
+    var hfa = typeof ranking.home_field_points === "number" ? ranking.home_field_points : null;
+    var prediction = null;
+    if ([g.pregame_proj_home, g.pregame_proj_away, g.pregame_spread_home, g.pregame_home_win_chance, g.pregame_margin_low, g.pregame_margin_high].every(function (value) {
+      return typeof value === "number" && isFinite(value);
+    })) {
+      prediction = {
+        projectedHomeScore: g.pregame_proj_home,
+        projectedAwayScore: g.pregame_proj_away,
+        predictedMargin: g.pregame_spread_home,
+        simulatedHomeWinProbability: g.pregame_home_win_chance,
+        marginLow80: g.pregame_margin_low,
+        marginHigh80: g.pregame_margin_high,
+        predictedTotal: g.pregame_proj_home + g.pregame_proj_away
+      };
+    }
+    var result = grade(g);
+    var pick = null;
+    if (g.played) {
+      if (g.home_score === g.away_score) pick = "Tie";
+      else if (result === true) pick = "Hit";
+      else if (result === false) pick = "Miss";
+      else pick = "No grade";
+    }
+    return {
+      week: g.week,
+      status: g.played ? "final" : "upcoming",
+      neutral: !!g.neutral,
+      venuePoints: g.neutral ? 0 : hfa,
+      away: cardTeam(g.away),
+      home: cardTeam(g.home),
+      prediction: prediction,
+      actual: g.played && g.home_score != null && g.away_score != null ? { home: g.home_score, away: g.away_score } : null,
+      pick: pick
+    };
   }
 
   function load(season) {
     return site.getJSON(site.data(season + ".json")).then(function (data) {
       state.data = data;
       state.conf = {};
-      data.teams.forEach(function (t) { state.conf[t.team] = t; });
+      state.divisionRank = {};
+      state.divisionSize = {};
+      var groups = {};
+      data.teams.forEach(function (t) {
+        state.conf[t.team] = t;
+        (groups[t.division] = groups[t.division] || []).push(t);
+      });
+      Object.keys(groups).forEach(function (key) {
+        groups[key].sort(function (a, b) { return a.win_chance_rank - b.win_chance_rank; });
+        state.divisionSize[key] = groups[key].length;
+        groups[key].forEach(function (t, index) { state.divisionRank[t.team] = index + 1; });
+      });
       var week = $("week");
       if (!week) throw new Error("week control is missing");
       var weeks = [];
